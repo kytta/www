@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			var language = (navigator.language || navigator.browserLanguage).split('-')[0];
+			if (language == 'ru'){
+				window.location.replace("ru/index.html"); //Russian
+			}
+			else if (language == 'de'){
+				window.location.replace("de/index.html"); //German
+			}
+			else {
+				window.location.replace("en/index.html"); //English
+			}
+		</script>
+	</head>
+</html>
