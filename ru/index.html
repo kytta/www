@@ -1,136 +1,305 @@
-<!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-<head>
-	<title>Никита Карамов</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<!--[if lte IE 8]><script src="assets/css/ie/html5shiv.js"></script><![endif]-->
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie/v8.css" /><![endif]-->
-	<!--[if lte IE 8]><script src="assets/css/ie/respond.min.js"></script><![endif]-->
+<!DOCTYPE html>
+<html lang="en">
 
-	<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
-<link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192">
-<link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
-<link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="favicons/manifest.json">
-<meta name="msapplication-TileColor" content="#2d89ef">
-<meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
-<meta name="theme-color" content="#e58b33">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Stylish Portfolio - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
-<body id="top">
 
-<!-- Header -->
-<header id="header">
-	<a class="image avatar"><img src="images/avatar.png" alt="" /></a>
-	<h1>Я <strong>Никита Карамов</strong>, программист,<br />
-		видеомейкер и просто хороший<br />
-		человек,живущий в Казани, Россия.</h1>
-</header>
+<body>
 
-<!-- Main -->
-<div id="main">
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="#top"  onclick = $("#menu-close").click(); >Start Bootstrap</a>
+            </li>
+            <li>
+                <a href="#top" onclick = $("#menu-close").click(); >Home</a>
+            </li>
+            <li>
+                <a href="#about" onclick = $("#menu-close").click(); >About</a>
+            </li>
+            <li>
+                <a href="#services" onclick = $("#menu-close").click(); >Services</a>
+            </li>
+            <li>
+                <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
+            </li>
+            <li>
+                <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
+            </li>
+        </ul>
+    </nav>
 
-	<!-- One -->
-	<section id="one">
-		<header class="major">
-			<h2>Обо мне</h2>
-		</header>
-		<p>Я родился в 1999 году в городе Казань. Сколько я себя помню, я все время интересовался высокими технологиями, вроде компьютеров, мобильников (даже кнопочные помню) и так далее. В 13 лет я решил стать программистом и делаю всё возможное для достижения этой цели. Здесь вы найдете все мои проекты.</p>
-		<p><strong>Знаю языки: </strong>C#, Java, Python, HTML, CSS, Markdown</p>
-		<p><strong>Так же могу работать с: </strong>Photoshop, Premiere Pro, After Effects, Audition, Final Cut Pro X, Motion 5</p>
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1>Start Bootstrap</h1>
+            <h3>Free Bootstrap Themes &amp; Templates</h3>
+            <br>
+            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+        </div>
+    </header>
 
-	</section>
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
+                    <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
 
-	<!-- Two -->
-	<section id="two">
-		<h2>Портфолио</h2>
-		<div class="row">
-			<article class="6u 12u$(xsmall) work-item">
-				<a href="images/fulls/8.jpg" class="image fit thumb"><img src="images/thumbs/8.jpg" alt="" /></a>
-				<h3>Этот сайт </h3>
-				<p>Этот сайт я построил на бесплатном шаблоне (да, я ленив, но я все отредактировал!)</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item">
-				<a href="images/fulls/7.jpg" class="image fit thumb"><img src="images/thumbs/7.jpg" alt="" /></a>
-				<h3>Блог Hey! Apps <a href="http://heyapps.github.io"><i class="fa fa-external-link"></i> </a> </h3>
-				<p>Это блог нашей компании, которая сделала Конвертер и Studyist (ниже)</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item">
-				<a href="images/fulls/6.jpg" class="image fit thumb"><img src="images/thumbs/6.jpg" alt="" /></a>
- 				<h3>Studyist <a href="http://studyist.nikkeycompany.ru/en.html"><i class="fa fa-external-link"></i></a></h3>
-				<p>Studyist - это приложение, которое сможет помочь вам в школьном и высшем образовании.</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item">
-				<a href="images/fulls/5.jpg" class="image fit thumb"><img src="images/thumbs/5.jpg" alt="" /></a>
-				<h3>Конвертер </h3>
-				<p>Конвертер - это приложение, конвертирующее величины в 15 категориях.</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item">
-				<a href="images/fulls/4.jpg" class="image fit thumb"><img src="images/thumbs/4.jpg" alt="" /></a>
-				<h3>Сайт художника Василия Бусова <a href="http://bussow.ru"><i class="fa fa-external-link"></i></a></h3>
-				<p>Василий Бусов - художник, рисующий городские пейзажи Казани, Барселоны, Венеции и так далее.</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item">
-				<a href="images/fulls/3.jpg" class="image fit thumb"><img src="images/thumbs/3.jpg" alt="" /></a>
-				<h3>Сайт Nick K. company <a href="http://nikkeycompany.ru"><i class="fa fa-external-link"></i></a></h3>
-				<p>Nick K. company делает видеоролики и презентации из ваших фото и видео за небольшую цену.</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item">
-				<a href="images/fulls/2.jpg" class="image fit thumb"><img src="images/thumbs/2.jpg" alt="" /></a>
-				<h3>Nick K. TV <a href="http://youtube.com/NiKKeyTV"><i class="fa fa-external-link"></i></a></h3>
-				<p>Мой канал на YouTube с кучей контента: озвучки, шоу и многое другое!</p>
-			</article>
-			<article class="6u 12u$(xsmall) work-item">
-				<a href="images/fulls/1.jpg" class="image fit thumb"><img src="images/thumbs/1.jpg" alt="" /></a>
-				<h3>nCalc <a href="files/nCalc.exe" download><i class="fa fa-download"></i></a></h3>
-				<p>Калькулятор на C#, написанный с помощью уроков на YouTube в 2011 в возрасте 11 лет</p>
-			</article>
-		</div>
-	</section>
-</div>
+    <!-- Services -->
+    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+    <section id="services" class="services bg-primary">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2>Our Services</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-cloud fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Service Name</strong>
+                                </h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <a href="#" class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-compass fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Service Name</strong>
+                                </h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <a href="#" class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Service Name</strong>
+                                </h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <a href="#" class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-shield fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Service Name</strong>
+                                </h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <a href="#" class="btn btn-light">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
 
-<!-- Footer -->
-<footer id="footer">
-	<ul class="icons">
-		<li><a href="http://vk.com/karamoffnikk" class="icon fa-vk"><span class="label">ВКонтакте</span></a></li>
-		<li><a href="http://facebook.com/karamoffnikk" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-		<li><a href="http://twitter.com/karamoffnikk" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-		<li><a href="http://gplus.to/karamoffnikk" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
-		<li><a href="mailto:nikita.karamoff@gmail.com" class="icon fa-envelope-o"><span class="label">E-Mail</span></a></li>
-	</ul>
-	<ul class="copyright">
-		<li>&copy; Никита Карамов 2015</li>
-		<li>Дизайн: <a href="http://html5up.net">HTML5 UP</a></li>
-	</ul>
-	<ul class="copyright">
-		<li><a href="http://NickKaramoff.github.io/en">English</a></li>
-		<li>Русский</li>
-		<li><a href="http://NickKaramoff.github.io/de">Deutsch</a></li>
-	</ul>
-</footer>
+    <!-- Callout -->
+    <aside class="callout">
+        <div class="text-vertical-center">
+            <h1>Vertically Centered Text</h1>
+        </div>
+    </aside>
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.poptrox.min.js"></script>
-<script src="assets/js/skel.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h2>Our Work</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                    <a href="#" class="btn btn-dark">View More Items</a>
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Call to Action -->
+    <aside class="call-to-action bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3>The buttons below are impossible to resist.</h3>
+                    <a href="#" class="btn btn-lg btn-light">Click Me!</a>
+                    <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Map -->
+    <section id="contact" class="map">
+        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+        <br />
+        <small>
+            <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
+        </small>
+        </iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>Start Bootstrap</strong>
+                    </h4>
+                    <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
+                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
 
 </body>
+
 </html>
