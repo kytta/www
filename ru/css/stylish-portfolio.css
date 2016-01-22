@@ -13,7 +13,7 @@ body {
 }
 
 body {
-    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Fira Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .text-vertical-center {
@@ -160,6 +160,7 @@ hr.small {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    color: white;
 }
 
 /* About */
