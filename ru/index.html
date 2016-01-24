@@ -31,29 +31,24 @@
     <a href="#top" class="btn btn-dark btn-lg toggle up-button"><i class="fa fa-chevron-up"></i></a>
 
     <!-- Navigation -->
-    <!--<a href="#" class="btn btn-dark btn-lg toggle menu-toggle">EN</a>-->
-    <!--<a href="#" class="btn btn-dark btn-lg toggle menu-toggle" style="top: 50px;">DE</a>-->
+    <a href="#" class="btn btn-dark toggle menu-toggle">English</a>
+    <a href="#" class="btn btn-dark toggle menu-toggle" style="top: 40px;">Deutsch</a>
     <!--<nav id="sidebar-wrapper">-->
         <!--<ul class="sidebar-nav">-->
             <!--<a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>-->
             <!--<li class="sidebar-brand">-->
-                <!--<a href="#top"  onclick = $("#menu-close").click(); >Start Bootstrap</a>-->
+                <!--&lt;!&ndash;<a href="#top"  onclick = $("#menu-close").click(); >Start Bootstrap</a>&ndash;&gt;-->
             <!--</li>-->
             <!--<li>-->
-                <!--<a href="#top" onclick = $("#menu-close").click(); >Home</a>-->
+                <!--<a onclick = $("#menu-close").click(); ><b>Русский</b></a>-->
             <!--</li>-->
             <!--<li>-->
-                <!--<a href="#about" onclick = $("#menu-close").click(); >About</a>-->
+                <!--<a href="#" onclick = $("#menu-close").click(); >English</a>-->
             <!--</li>-->
             <!--<li>-->
-                <!--<a href="#services" onclick = $("#menu-close").click(); >Services</a>-->
+                <!--<a href="#" onclick = $("#menu-close").click(); >Deutsch</a>-->
             <!--</li>-->
-            <!--<li>-->
-                <!--<a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>-->
-            <!--</li>-->
-            <!--<li>-->
-                <!--<a href="#contact" onclick = $("#menu-close").click(); >Contact</a>-->
-            <!--</li>-->
+
         <!--</ul>-->
     <!--</nav>-->
 
@@ -152,29 +147,77 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
+                                <a href="#" data-toggle="modal" data-target="#nCalc">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio/portfolio-1.jpg">
+                                    <p>nCalc ∙ <small>2011</small></p>
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
+                                <a href="#" data-toggle="modal" data-target="#bussow.ru">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio/portfolio-1.jpg">
+                                    <p>bussow.ru ∙ <small>2014</small></p>
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
+                                <a href="#" data-toggle="modal" data-target="#Converter">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio/portfolio-1.jpg">
+                                    <p>Конвертер ∙ <small>2014</small></p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <a href="#" data-toggle="modal" data-target="#Studyist">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio/portfolio-1.jpg">
+                                    <p>Studyist ∙ <small>2015</small></p>
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
+                                <a href="#" data-toggle="modal" data-target="#sluh_krut">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio/portfolio-1.jpg">
+                                    <p>Байтик: Подслушано ∙ <small>2015</small></p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <a href="#" data-toggle="modal" data-target="#RoadTo2M">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio/portfolio-1.jpg">
+                                    <p>Road to 2M ∙ <small>2015</small></p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <a href="#" data-toggle="modal" data-target="#koduosite">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio/portfolio-1.jpg">
+                                    <p>Сайт-блог koduo ∙ <small>2015</small></p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <a href="#" data-toggle="modal" data-target="#studyist.ru">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio/portfolio-1.jpg">
+                                    <p>studyist.ru ∙ <small>2015</small></p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <a href="#" data-toggle="modal" data-target="#thissite">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio/portfolio-1.jpg">
+                                    <p>Этот сайт ∙ <small>2016</small></p>
                                 </a>
                             </div>
                         </div>
@@ -187,6 +230,154 @@
         </div>
         <!-- /.container -->
     </section>
+
+
+    <div class="modal fade" id="nCalc" tabindex="-1" role="dialog" aria-labelledby="nCalc">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Скачать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="bussow.ru" tabindex="-1" role="dialog" aria-labelledby="bussow.ru">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Скачать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Converter" tabindex="-1" role="dialog" aria-labelledby="Конвертер">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Скачать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="Studyist" tabindex="-1" role="dialog" aria-labelledby="Studyist">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Скачать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="sluh_krut" tabindex="-1" role="dialog" aria-labelledby="Байтик: Подслушано">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Скачать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="RoadTo2M" tabindex="-1" role="dialog" aria-labelledby="Road to 2M">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Скачать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="koduosite" tabindex="-1" role="dialog" aria-labelledby="Сайт-блог koduo">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Скачать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="studyist.ru" tabindex="-1" role="dialog" aria-labelledby="studyist.ru">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Скачать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="thissite" tabindex="-1" role="dialog" aria-labelledby="Этот сайт">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Скачать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <!-- Call to Action -->
     <aside class="call-to-action bg-primary">
