@@ -260,3 +260,13 @@ footer {
     margin-bottom: 25px;
     border: solid white thick;
 }
+
+.img-portfolio-item {
+    margin:15px;
+    border-radius: 3px;
+}
+
+.img-portfolio-container {
+    width: 100%;
+    text-align: center;
+}
