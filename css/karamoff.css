@@ -254,3 +254,9 @@ footer {
 .btn-portfolio {
     background-color: #337ab7;
 }
+
+.img-header {
+    width: 10em;
+    margin-bottom: 25px;
+    border: solid white thick;
+}
