@@ -262,11 +262,15 @@ footer {
 }
 
 .img-portfolio-item {
-    margin:15px;
+    margin-bottom: 15px;
     border-radius: 3px;
 }
 
 .img-portfolio-container {
     width: 100%;
-    text-align: center;
+    text-align: center !important;
+}
+
+.img-responsive {
+    display: inline-block !important;
 }
