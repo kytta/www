@@ -1,11 +1,10 @@
 body {
     font: {
         family: "Roboto Mono", "Monaco", monospace;
+        size: 16px;
+        weight: 400;
     }
-    padding: {
-        left: 20px;
-        top: 20px;
-    }
+    padding: 20px;
 }
 
 h1,
@@ -27,4 +26,44 @@ h2 {
         size: 20px;
     }
     margin-bottom: 5px;
+}
+
+.social-buttons {
+    padding: 0;
+    margin-top: 25px;
+    li {
+        display: inline;
+        list-style-type: none;
+        margin-right: 15px;
+        text-transform: uppercase;
+        font-size: 14px;
+        a {
+            text-decoration: underline solid;
+            color: #00538a;
+        }
+        .vk-link:hover {
+            color: #45668e;
+        }
+        .tw-link:hover {
+            color: #1da1f2;
+        }
+        .tg-link:hover {
+            color: #0088cc;
+        }
+        .gh-link:hover {
+            color: #333;
+        }
+        .em-link:hover {
+            color: #239ab9;
+        }
+    }
+}
+
+@media (max-width: 767.99px) {
+    .social-buttons {
+        li {
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+    }
 }
