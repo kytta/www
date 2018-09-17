@@ -8,6 +8,16 @@ body {
     padding: 20px;
 }
 
+.subtitle-menu {
+    a {
+        text-decoration: none;
+        color: initial;
+        &:hover {
+            color: #999;
+        }
+    }
+}
+
 .section {
     margin-bottom: 60px;
     .skills {
