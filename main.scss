@@ -4,11 +4,30 @@ body {
         size: 16px;
         weight: 400;
     }
+    max-width: 540px;
     padding: 20px;
 }
 
 .section {
     margin-bottom: 60px;
+    .skills {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: row;
+        div {
+            display: inline-block;
+            vertical-align: top;
+            width: auto;
+        }
+        .skills-title {
+            margin-bottom: 5px;
+            margin-right: 10px;
+            strong {
+                font-weight: 700;
+                background-color: #fce883;
+            }
+        }
+    }
 }
 
 h1,
@@ -19,40 +38,40 @@ h3 {
 
 h1 {
     font: {
-        weight: 500;
         size: 40px;
+        weight: 500;
     }
     margin-bottom: 10px;
 }
 
 h2 {
     font: {
-        weight: 400;
         size: 24px;
+        weight: 400;
     }
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 h3 {
     font: {
-        weight: 400;
         size: 20px;
+        weight: 400;
     }
     margin-bottom: 5px;
 }
 
 .social-buttons {
-    padding: 0;
     margin-top: 25px;
+    padding: 0;
     li {
         display: inline;
+        font-size: 14px;
         list-style-type: none;
         margin-right: 15px;
         text-transform: uppercase;
-        font-size: 14px;
         a {
-            text-decoration: underline solid;
             color: #00538a;
+            text-decoration: underline solid;
         }
         .vk-link:hover {
             color: #45668e;
@@ -72,11 +91,18 @@ h3 {
     }
 }
 
-@media (max-width: 767.99px) {
+@media (max-width: 374.98px) {
+    .section {
+        .skills {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
     .social-buttons {
         li {
-            display: inline-block;
-            margin-bottom: 15px;
+            display: inline-block; // margin-bottom: 15px;
         }
     }
 }
