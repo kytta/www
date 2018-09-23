@@ -18,23 +18,31 @@ body {
     }
 }
 
+strong {
+    // background-color: #fce883;
+    font-weight: 700;
+}
+
 .section {
-    margin-bottom: 60px;
-    .skills {
-        align-items: flex-start;
-        display: flex;
-        flex-direction: row;
-        div {
-            display: inline-block;
-            vertical-align: top;
+    margin-bottom: 40px;
+    table.skills {
+        background: transparent;
+        tr {
+            text-align: left;
             width: auto;
-        }
-        .skills-title {
-            margin-bottom: 5px;
-            margin-right: 10px;
-            strong {
-                font-weight: 700;
-                background-color: #fce883;
+            td {
+                border-bottom: solid transparent 5px;
+                border-right: solid transparent 5px;
+                line-height: 1.5em;
+                vertical-align: top;
+                &.skills-title {
+                    text-align: right;
+                    white-space: nowrap;
+                }
+                .learning {
+                    font-style: italic;
+                    opacity: .3;
+                }
             }
         }
     }
@@ -74,7 +82,7 @@ h3 {
     margin-top: 25px;
     padding: 0;
     li {
-        display: inline;
+        display: inline-block;
         font-size: 14px;
         list-style-type: none;
         margin-right: 15px;
@@ -112,7 +120,8 @@ h3 {
 @media (max-width: 767.98px) {
     .social-buttons {
         li {
-            display: inline-block; // margin-bottom: 15px;
+            display: inline-block;
+            margin-bottom: 5px;
         }
     }
 }
