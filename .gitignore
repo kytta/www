@@ -1,5 +1,6 @@
 
-# Created by https://www.gitignore.io/api/linux,macos,windows,webstorm+all
+# Created by https://www.gitignore.io/api/windows,macos,linux,webstorm+all,visualstudiocode
+# Edit at https://www.gitignore.io/?templates=windows,macos,linux,webstorm+all,visualstudiocode
 
 ### Linux ###
 *~
@@ -43,6 +44,17 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
 
 ### WebStorm+all ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm
@@ -109,6 +121,9 @@ fabric.properties
 # Editor-based Rest Client
 .idea/httpRequests
 
+# Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
+
 ### WebStorm+all Patch ###
 # Ignores the whole .idea folder and all .iml files
 # See https://github.com/joeblau/gitignore.io/issues/186 and https://github.com/joeblau/gitignore.io/issues/360
@@ -147,5 +162,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-
-# End of https://www.gitignore.io/api/linux,macos,windows,webstorm+all
+# End of https://www.gitignore.io/api/windows,macos,linux,webstorm+all,visualstudiocode
