@@ -1,3 +1,7 @@
+$clr-link: #01426d;
+$clr-vk: #45668e;
+$clr-twitter: #1da1f2;
+
 body {
     font: {
         family: "Roboto Mono", "Monaco", monospace;
@@ -66,8 +70,7 @@ h2 {
     font: {
         size: 24px;
         weight: 400;
-    }
-    // text-decoration: underline wavy #ED7B1C;
+    } // text-decoration: underline wavy #ED7B1C;
     margin-bottom: 15px;
 }
 
@@ -81,33 +84,44 @@ h3 {
 
 .social-buttons {
     margin-top: 25px;
+    margin-left: -10px;
     padding: 0;
     li {
         display: inline-block;
         font-size: 14px;
         list-style-type: none;
-        margin-right: 15px;
+        margin-right: 5px;
         text-transform: uppercase;
         font-weight: 500;
         letter-spacing: 1.5px;
         a {
-            color: #00538a;
+            color: $clr-link;
             text-decoration: underline solid;
+            background-position: 0% 100%;
+            background-size: 0% 100%;
+            background-repeat: no-repeat;
+            transition-property: color background-size;
+            transition-duration: .3s;
+            padding: 5px 10px;
+            &:hover {
+                color: white;
+                background-size: 100% 100%;
+            }
         }
-        .vk-link:hover {
-            color: #45668e;
+        .vk-link {
+            background-image: linear-gradient($clr-vk, $clr-vk);
         }
-        .tw-link:hover {
-            color: #1da1f2;
+        .tw-link {
+            background-image: linear-gradient($clr-twitter, $clr-twitter);
         }
-        .tg-link:hover {
-            color: #0088cc;
+        .tg-link {
+            background-image: linear-gradient(#0088cc,#0088cc);
         }
-        .gh-link:hover {
-            color: #333;
+        .gh-link {
+            background-image: linear-gradient(#333,#333);
         }
-        .em-link:hover {
-            color: #239ab9;
+        .em-link {
+            background-image: linear-gradient(#239ab9,#239ab9);
         }
     }
 }
