@@ -1,6 +1,9 @@
 $clr-link: #01426d;
 $clr-vk: #45668e;
 $clr-twitter: #1da1f2;
+$clr-telegram: #0088cc;
+$clr-github: #000;
+$clr-email: #239ab9;
 
 body {
     font: {
@@ -91,6 +94,7 @@ h3 {
         font-size: 14px;
         list-style-type: none;
         margin-right: 5px;
+        margin-bottom: 10px;
         text-transform: uppercase;
         font-weight: 500;
         letter-spacing: 1.5px;
@@ -115,13 +119,13 @@ h3 {
             background-image: linear-gradient($clr-twitter, $clr-twitter);
         }
         .tg-link {
-            background-image: linear-gradient(#0088cc,#0088cc);
+            background-image: linear-gradient($clr-telegram, $clr-telegram);
         }
         .gh-link {
-            background-image: linear-gradient(#333,#333);
+            background-image: linear-gradient($clr-github, $clr-github);
         }
         .em-link {
-            background-image: linear-gradient(#239ab9,#239ab9);
+            background-image: linear-gradient($clr-email, $clr-email);
         }
     }
 }
@@ -135,10 +139,14 @@ h3 {
 }
 
 @media (max-width: 767.98px) {
+    .section {
+        margin-bottom: 30px;
+    }
     .social-buttons {
         li {
-            display: inline-block;
-            margin-bottom: 5px;
+            // display: inline-block;
+            margin-right: 0;
+            margin-bottom: 15px;
         }
     }
 }
