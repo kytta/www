@@ -1,9 +1,15 @@
+$clr-text: black;
+
 $clr-link: #01426d;
+$clr-link-hover-text: white;
 $clr-vk: #45668e;
 $clr-twitter: #1da1f2;
 $clr-telegram: #0088cc;
 $clr-github: #000;
+$clr-linkedin: #0077b5;
 $clr-email: #239ab9;
+
+$clr-project-date: #999;
 
 body {
     font: {
@@ -11,18 +17,9 @@ body {
         size: 16px;
         weight: 400;
     }
+    color: $clr-text;
     max-width: 640px;
     padding: 20px;
-}
-
-.subtitle-menu {
-    a {
-        text-decoration: none;
-        color: initial;
-        &:hover {
-            color: #999;
-        }
-    }
 }
 
 strong {
@@ -77,7 +74,7 @@ h2 {
     margin-bottom: 15px;
 }
 
-h3 {
+h3.subtitle {
     font: {
         size: 20px;
         weight: 400;
@@ -86,7 +83,7 @@ h3 {
 }
 
 .social-buttons {
-    margin-top: 25px;
+    margin-top: 20px;
     margin-left: -10px;
     padding: 0;
     li {
@@ -108,7 +105,7 @@ h3 {
             transition-duration: .3s;
             padding: 5px 10px;
             &:hover {
-                color: white;
+                color: $clr-link-hover-text;
                 background-size: 100% 100%;
             }
         }
@@ -124,12 +121,40 @@ h3 {
         .gh-link {
             background-image: linear-gradient($clr-github, $clr-github);
         }
+        .in-link {
+            background-image: linear-gradient($clr-linkedin, $clr-linkedin);
+        }
         .em-link {
             background-image: linear-gradient($clr-email, $clr-email);
         }
     }
 }
 
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    .project {
+        border: #000 solid 1px;
+        padding: 20px 10px;
+
+        .project-pic {
+            width: 100%;
+        }
+        .project-title {
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .project-date {
+            color: $clr-project-date;
+            font-size: 14;
+            margin: 0 0 10px;
+        }
+        .project-tech {}
+    }
+}
+
+// SMALL PHONES
 @media (max-width: 374.98px) {
     .section {
         .skills {
@@ -138,6 +163,7 @@ h3 {
     }
 }
 
+// PHONES -> PORTRAIT TABLETS
 @media (max-width: 767.98px) {
     .section {
         margin-bottom: 30px;
