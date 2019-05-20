@@ -54,7 +54,8 @@ table.skills {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     margin-top: 0;
     font-family: $font-sans;
 }
@@ -71,7 +72,7 @@ h1 {
 h2 {
     font: {
         size: 24px;
-        weight: 400;
+        weight: 500;
     }
 
     // text-decoration: underline wavy #ED7B1C;
@@ -146,10 +147,64 @@ h2 {
     }
 }
 
-// SMALL PHONES
-@media (max-width: 374.98px) {
-    
+.portfolio {
+    list-style-type: none;
+    padding-left: 0;
+
 }
+
+.project {
+    display: block;
+
+    padding: $pad-project;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+
+    color: $clr-text;
+    text-decoration: none;
+
+    background-image: linear-gradient(#eee, #eee);
+    background-position: 0% 100%;
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    transition-property: color background-size;
+    transition-duration: 100ms;
+
+    &:hover {
+        background-size: $pad-project/2 100%;
+    }
+}
+
+.project:last-of-type {
+    border: none;
+}
+
+.project-info {
+    vertical-align: middle;
+    display: inline-block;
+    max-width: 480px;
+}
+
+.project-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.project-desc {
+    margin: 0;
+}
+
+.project-date {
+    display: inline-block;
+    position: absolute;
+    right: $pad-project;
+    color: lighten($clr-text, 50);
+}
+
+// SMALL PHONES
+@media (max-width: 374.98px) {}
 
 // PHONES -> PORTRAIT TABLETS
 @media (max-width: 767.98px) {
@@ -162,5 +217,9 @@ h2 {
             margin-right: 0;
             margin-bottom: 15px;
         }
+    }
+
+    .project-title {
+        text-decoration: underline #eee;
     }
 }
