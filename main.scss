@@ -146,41 +146,9 @@ h2 {
     }
 }
 
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.project {
-    border: #000 solid 1px;
-    padding: 20px 10px;
-
-    .project-pic {
-        width: 100%;
-    }
-
-    .project-title {
-        font-weight: 700;
-        font-size: 18px;
-        margin-bottom: 5px;
-    }
-
-    .project-date {
-        color: $clr-project-date;
-        font-size: 14;
-        margin: 0 0 10px;
-    }
-
-    .project-tech {}
-}
-
 // SMALL PHONES
 @media (max-width: 374.98px) {
-    .section {
-        .skills {
-            flex-wrap: wrap;
-        }
-    }
+    
 }
 
 // PHONES -> PORTRAIT TABLETS
@@ -191,7 +159,6 @@ h2 {
 
     .social-buttons {
         li {
-            // display: inline-block;
             margin-right: 0;
             margin-bottom: 15px;
         }
