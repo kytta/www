@@ -1,54 +1,52 @@
+@import 'variables';
 @import '_normalize.scss';
 
-$clr-text: black;
-
-$clr-link: #01426d;
-$clr-link-hover-text: white;
-$clr-vk: #45668e;
-$clr-twitter: #1da1f2;
-$clr-telegram: #0088cc;
-$clr-github: #000;
-$clr-linkedin: #0077b5;
-$clr-email: #239ab9;
-
-$clr-project-date: #999;
+.center {
+    text-align: center;
+}
 
 body {
     font: {
-        family: "Roboto Mono", "Monaco", monospace;
+        family: $font-mono;
         size: 16px;
         weight: 400;
     }
+
     color: $clr-text;
-    max-width: 640px;
-    padding: 20px;
 }
 
-strong {
-    // background-color: #fce883;
-    font-weight: 700;
+.container {
+    max-width: 640px;
+    padding: 30px 20px;
+    margin: 0 auto;
 }
 
 .section {
     margin-bottom: 50px;
-    table.skills {
-        background: transparent;
-        tr {
-            text-align: left;
-            width: auto;
-            td {
-                border-bottom: solid transparent 10px;
-                border-right: solid transparent 15px;
-                line-height: 1.5em;
-                vertical-align: top;
-                &.skills-title {
-                    text-align: right;
-                    white-space: nowrap;
-                }
-                .learning {
-                    font-style: italic;
-                    opacity: .3;
-                }
+}
+
+table.skills {
+    background: transparent;
+
+    tr {
+        text-align: left;
+        width: auto;
+
+        td {
+            border-bottom: solid transparent 10px;
+            border-right: solid transparent 15px;
+            line-height: 1.5em;
+            vertical-align: top;
+
+            &.skills-title {
+                text-align: right;
+                white-space: nowrap;
+                font-weight: 700;
+            }
+
+            .learning {
+                font-style: italic;
+                opacity: .3;
             }
         }
     }
@@ -58,6 +56,7 @@ h1,
 h2,
 h3 {
     margin-top: 0;
+    font-family: $font-sans;
 }
 
 h1 {
@@ -65,6 +64,7 @@ h1 {
         size: 40px;
         weight: 500;
     }
+
     margin-bottom: 10px;
 }
 
@@ -72,22 +72,27 @@ h2 {
     font: {
         size: 24px;
         weight: 400;
-    } // text-decoration: underline wavy #ED7B1C;
+    }
+
+    // text-decoration: underline wavy #ED7B1C;
     margin-bottom: 15px;
 }
 
-h3.subtitle {
+.subtitle {
     font: {
         size: 20px;
         weight: 400;
     }
-    margin-bottom: 5px;
+
+    margin-top: 0;
+    margin-bottom: 35px;
 }
 
 .social-buttons {
     margin-top: 20px;
     margin-left: -10px;
     padding: 0;
+
     li {
         display: inline-block;
         font-size: 14px;
@@ -97,35 +102,44 @@ h3.subtitle {
         text-transform: uppercase;
         font-weight: 500;
         letter-spacing: 1.5px;
+
         a {
             color: $clr-link;
-            text-decoration: underline solid;
-            background-position: 0% 100%;
-            background-size: 0% 100%;
+            // text-decoration: underline solid;
+            text-decoration: none;
+            background-position: 50% 100%;
+            background-size: 95% 7%;
             background-repeat: no-repeat;
             transition-property: color background-size;
-            transition-duration: .3s;
+            transition-duration: 100ms;
             padding: 5px 10px;
+
             &:hover {
                 color: $clr-link-hover-text;
-                background-size: 100% 100%;
+                background-size: 95% 100%;
             }
         }
+
         .vk-link {
             background-image: linear-gradient($clr-vk, $clr-vk);
         }
+
         .tw-link {
             background-image: linear-gradient($clr-twitter, $clr-twitter);
         }
+
         .tg-link {
             background-image: linear-gradient($clr-telegram, $clr-telegram);
         }
+
         .gh-link {
             background-image: linear-gradient($clr-github, $clr-github);
         }
+
         .in-link {
             background-image: linear-gradient($clr-linkedin, $clr-linkedin);
         }
+
         .em-link {
             background-image: linear-gradient($clr-email, $clr-email);
         }
@@ -135,25 +149,29 @@ h3.subtitle {
 .projects {
     display: flex;
     flex-wrap: wrap;
-    .project {
-        border: #000 solid 1px;
-        padding: 20px 10px;
+}
 
-        .project-pic {
-            width: 100%;
-        }
-        .project-title {
-            font-weight: 700;
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-        .project-date {
-            color: $clr-project-date;
-            font-size: 14;
-            margin: 0 0 10px;
-        }
-        .project-tech {}
+.project {
+    border: #000 solid 1px;
+    padding: 20px 10px;
+
+    .project-pic {
+        width: 100%;
     }
+
+    .project-title {
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .project-date {
+        color: $clr-project-date;
+        font-size: 14;
+        margin: 0 0 10px;
+    }
+
+    .project-tech {}
 }
 
 // SMALL PHONES
@@ -170,6 +188,7 @@ h3.subtitle {
     .section {
         margin-bottom: 30px;
     }
+
     .social-buttons {
         li {
             // display: inline-block;

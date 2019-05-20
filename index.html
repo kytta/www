@@ -8,19 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- TODO: Figure out which fonts I don't need -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500|Roboto+Mono:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
     
-    <link rel="stylesheet" type="text/css" media="screen" href="normalize.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.min.css" />
 </head>
 
 <body>
-    <div class="section">
+<main class="container">
+    <section class="section">
         <h1>Никита Карамов</h1>
-        <h3 class="subtitle">
+        <p class="subtitle">
             Фуллстек-разработчик
-        </h3>
-        <ul class="social-buttons">
+        </p>
+        <ul class="social-buttons center">
             <li><a href="https://vk.com/nickkaramoff" class="vk-link">ВКонтакте</a></li>
             <li><a href="https://twitter.com/nickkaramoff" class="tw-link">Твиттер</a></li>
             <li><a href="https://t.me/nickkaramoff" class="tg-link">Телеграм</a></li>
@@ -28,57 +28,64 @@
             <li><a href="https://linkedin.com/in/nickkaramoff" class="in-link">Линкедин</a></li>
             <li><a href="mailto:nick@karamoff.ru" class="em-link">Почта</a></li>
         </ul>
-    </div>
-    <div class="section" id="skills">
+    </section>
+    <section class="section" id="skills">
         <h2>Навыки</h2>
         <!-- <p><span style="opacity: .3;font-style: italic;">Серым цветом</span> выделены технологии, которые я изучаю в настоящий момент.</p> -->
         <table class="skills">
             <tr>
-                <td class="skills-title"><strong>Веб:</strong></td>
+                <td class="skills-title">Фронт:</td>
                 <td>
-                    Django,
-                    Java EE Servlets,
                     Vue.js,
                     Webpack,
                     Babel,
                     Bootstrap,
-                    Sass,
-                    Less,
-                    <span class="learning">jQuery</span>,
-                    <span class="learning">Gulp</span>
+                    Gulp,
+                    <span class="learning">React</span>
                 </td>
             </tr>
             <tr>
-                <td class="skills-title"><strong>Клиент:</strong></td>
+                <td class="skills-title">Бэк:</td>
+                <td>
+                    Django,
+                    Spring Boot
+                </td>
+            </tr>
+            <tr>
+                <td class="skills-title">Клиент:</td>
                 <td>
                     Android,
                     Electron
                 </td>
             </tr>
             <tr>
-                <td class="skills-title"><strong>БД:</strong></td>
+                <td class="skills-title">БД:</td>
                 <td>
                     PostgreSQL,
                     SQLite
                 </td>
             </tr>
             <tr>
-                <td class="skills-title"><strong>Языки:</strong></td>
+                <td class="skills-title">Языки:</td>
                 <td>
-                    Java, Python 3, ECMAScript 2017,
-                    <span class="learning">Kotlin</span>
+                    Java, 
+                    Python, 
+                    JavaScript,
+                    <span class="learning">Kotlin</span>,
+                    <span class="learning">TypeScript</span>
                 </td>
             </tr>
             <tr>
-                <td class="skills-title"><strong>Тулз:</strong></td>
+                <td class="skills-title">Тулз:</td>
                 <td>
-                    JetBrains IDEs, Git, 
-                    <span class="learning">Docker</span>
+                    JetBrains IDEs, 
+                    Git, 
+                    Docker
                 </td>
             </tr>
         </table>
-    </div>
-    <div class="section" id="portfolio">
+    </section>
+    <!-- <section class="section" id="portfolio">
         <h2>Портфолио</h2>
         <div class="projects">
             <div class="project">
@@ -88,11 +95,12 @@
                 <div class="project-tech">Android, Java</div>
             </div>
         </div>
-    </div>
-    <div class="section" id="other">
+    </section>
+    <section class="section" id="other">
         <h2>Другое</h2>
 
-    </div>
+    </section> -->
+    </main>
 </body>
 
 </html>
