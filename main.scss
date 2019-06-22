@@ -23,7 +23,32 @@ body {
 
 .section {
     margin-bottom: 50px;
+
+    &.bio {
+        line-height: 1.5;
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+        .me {
+            width: 70px;
+            border-radius: 16px;
+            border-top-right-radius: 0;
+            flex-shrink: 0;
+            margin-right: 10px;
+        }
+
+        p {
+            margin: 0;
+            border: 1px solid #ddd;
+            border-radius: 16px;
+            border-top-left-radius: 0;
+            padding: 16px;
+        }
+    }
 }
+
 
 table.skills {
     background: transparent;
@@ -210,6 +235,17 @@ h2 {
 @media (max-width: 767.98px) {
     .section {
         margin-bottom: 30px;
+
+        &.bio {
+            margin-bottom: 24px;
+            flex-direction: column;
+
+            .me {
+                border-radius: 16px;
+                border-bottom-left-radius: 0;
+                margin-bottom: 10px;
+            }
+        }
     }
 
     .social-buttons {
