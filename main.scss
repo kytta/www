@@ -24,6 +24,10 @@ body {
 .section {
     margin-bottom: 50px;
 
+    &:last-child {
+        margin-bottom: 0;
+    }
+
     &.bio {
         line-height: 1.5;
         margin-bottom: 24px;
@@ -258,4 +262,11 @@ h2 {
     .project-title {
         text-decoration: underline #eee;
     }
+}
+
+.footer {
+    text-align: center;
+    color: #999;
+    padding: 0 0 24px;
+    font-family: $font-sans;
 }
