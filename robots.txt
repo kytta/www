@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /$
+Disallow: /
+Allow: /en
+Allow: /conspects
+Allow: /sitemap.xml$
+Sitemap: https://karamoff.ru/sitemap.xml
