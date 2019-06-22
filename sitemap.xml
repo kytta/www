@@ -2,9 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"> 
     <url>
         <loc>https://karamoff.ru</loc>
+        <xhtml:link 
+               rel="alternate"
+               hreflang="ru"
+               href="https://karamoff.ru"/>
+        <xhtml:link 
+               rel="alternate"
+               hreflang="en"
+               href="https://karamoff.ru/en"/>
         <lastmod>2019-06-22</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://karamoff.ru/en</loc>
+        <xhtml:link 
+               rel="alternate"
+               hreflang="ru"
+               href="https://karamoff.ru"/>
+        <xhtml:link 
+               rel="alternate"
+               hreflang="en"
+               href="https://karamoff.ru/en"/>
+        <lastmod>2019-06-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://karamoff.ru/conspects</loc>
