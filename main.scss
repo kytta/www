@@ -1,7 +1,7 @@
 @import 'variables';
 @import '_normalize.scss';
 
-.center {
+.c {
     text-align: center;
 }
 
@@ -21,7 +21,7 @@ body {
     margin: 0 auto;
 }
 
-.section {
+.sect {
     margin-bottom: 50px;
 
     &:last-child {
@@ -54,7 +54,7 @@ body {
 }
 
 
-table.skills {
+table.sk {
     background: transparent;
 
     tr {
@@ -67,7 +67,7 @@ table.skills {
             line-height: 1.5em;
             vertical-align: top;
 
-            &.skills-title {
+            &.sk-name {
                 text-align: right;
                 white-space: nowrap;
                 font-weight: 700;
@@ -108,17 +108,7 @@ h2 {
     margin-bottom: 15px;
 }
 
-.subtitle {
-    font: {
-        size: 20px;
-        weight: 400;
-    }
-
-    margin-top: 0;
-    margin-bottom: 35px;
-}
-
-.social-buttons {
+.social {
     margin-top: 20px;
     margin-left: -10px;
     padding: 0;
@@ -182,7 +172,7 @@ h2 {
 
 }
 
-.project {
+.proj {
     display: block;
 
     padding: $pad-project;
@@ -204,28 +194,28 @@ h2 {
     }
 }
 
-.project:last-of-type {
+.proj:last-of-type {
     border: none;
 }
 
-.project-info {
+.proj-info {
     vertical-align: middle;
     display: inline-block;
     max-width: 480px;
 }
 
-.project-title {
+.proj-name {
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 20px;
     font-weight: 500;
 }
 
-.project-desc {
+.proj-desc {
     margin: 0;
 }
 
-.project-date {
+.proj-date {
     display: inline-block;
     position: absolute;
     right: $pad-project;
@@ -237,7 +227,7 @@ h2 {
 
 // PHONES -> PORTRAIT TABLETS
 @media (max-width: 767.98px) {
-    .section {
+    .sect {
         margin-bottom: 30px;
 
         &.bio {
@@ -252,14 +242,14 @@ h2 {
         }
     }
 
-    .social-buttons {
+    .social {
         li {
             margin-right: 0;
             margin-bottom: 15px;
         }
     }
 
-    .project-title {
+    .proj-name {
         text-decoration: underline #eee;
     }
 }
