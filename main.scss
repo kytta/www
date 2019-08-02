@@ -1,6 +1,10 @@
 @import 'variables';
 @import '_normalize.scss';
 
+#cl {
+    display: none;
+}
+
 .c {
     text-align: center;
 }
@@ -19,6 +23,23 @@ body {
     max-width: 640px;
     padding: 30px 20px;
     margin: 0 auto;
+}
+
+.my-name {
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+.lang-btn {
+    display: inline-block;
+    font-size: 14px;
+    background: none;
+    box-shadow: none;
+    border: none;
+    text-decoration: underline;
+    color: $clr-project-date;
+    cursor: pointer;
+    padding-left: 0;
 }
 
 .sect {
