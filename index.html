@@ -25,6 +25,8 @@
 </head>
 
 <body>
+    <span id="cl" data-vavilon="lang" class="vavilon">ru</span>
+
     <main class="container" itemscope itemtype="https://schema.org/Person">
 
         <section class="sect bio" id="bio">
@@ -40,7 +42,10 @@
             </p>
         </section>
         <section class="sect" id="info">
-            <h1 itemprop="name" class="vavilon" data-vavilon="name">Никита Карамов</h1>
+            <h1 itemprop="name" class="my-name">
+                <span class="vavilon" data-vavilon="name">Никита Карамов</span>
+                <button class="lang-btn vavilon" data-vavilon="other-lang" onclick="tL()">in English</button>
+            </h1>
             <ul class="social c">
                 <li><a itemprop="sameAs" href="https://vk.com/nickkaramoff" class="vk-link vavilon" data-vavilon="vk">
                     ВКонтакте
@@ -141,6 +146,8 @@
     <footer class="footer">
         &copy;&nbsp;2019
     </footer>
+
+    <script>function tL(){const l=document.getElementById('cl').innerText;if(l === 'ru')setLang('en');else setLang('ru')}</script>
 </body>
 
 </html>
