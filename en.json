@@ -1,0 +1,33 @@
+{
+    "name": "Nikita Karamov",
+
+    "desc-1": "Hi! I'm a",
+    "desc-jobtitle": "full stack developer",
+    "desc-2": "and a student from Kazan, Russia.",
+    "desc-blog": "",
+    "desc-3": "",
+    "desc-toolbox": "",
+    "desc-4": "",
+
+    "vk": "VKontakte",
+    "twitter": "Twitter",
+    "telegram": "Telegram",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "mail": "E-Mail",
+
+    "skills": "Skills",
+    "client": "Client:",
+    "server": "Server:",
+    "db": "DB:",
+    "build": "Build:",
+    "deploy": "Deploy:",
+
+    "projects": "Projects",
+    "p-vavilon-desc": "An i18n engine for static websites",
+    "p-conspects-name": "TOP conspects",
+    "p-conspects-desc": "Static site built with Bootstrap 4 (in Russian)",
+    "p-arithmaster-desc": "Arithmetical game for Android",
+    "p-bussow-name": "Vasiliy Busov",
+    "p-bussow-desc": "Static site built with Bootstrap 3 (in Russian)"
+}

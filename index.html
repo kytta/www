@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Никита Карамов</title>
+    <title class="vavilon" data-vavilon="name">Никита Карамов</title>
     <meta name="description" content="Фуллстек-разработчик из Казани. Пишу клиенты на Vue, Nuxt, Electron, Bootstrap и серверы на Django, Flask, Express, Spring. Умею настраивать Gulp и Webpack и запихивать всё вышеперечисленное в Docker.">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +18,10 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
 	<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#fb8c00">
-	<link rel="shortcut icon" href="/favicons/favicon.ico">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
+
+    <script type="application/json" data-vavilon-dict="en" src="/en.json"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vavilon@1.0.0/dist/vavilon.min.js"></script>
 </head>
 
 <body>
@@ -27,68 +30,86 @@
         <section class="sect bio" id="bio">
             <img itemprop="photo" class="me" src="/me.png" alt="Фото">
             <p>
-                Привет! Я&nbsp;— <span itemprop="jobTitle">фуллстек-разработчик</span> 
-                и&nbsp;студент из&nbsp;Казани. Люблю дизайн и&nbsp;шрифты, 
-                веду <a href="https://t.me/s/karamoff">блог</a>
-                и&nbsp;<a href="https://t.me/s/TheToolbox">канал c&nbsp;полезностями</a>
-                в&nbsp;Телеграме.
+                <span class="vavilon" data-vavilon="desc-1">Привет! Я&nbsp;—</span>
+                <span itemprop="jobTitle" class="vavilon" data-vavilon="desc-jobtitle">фуллстек-разработчик</span>
+                <span class="vavilon" data-vavilon="desc-2">и&nbsp;студент из&nbsp;Казани. Люблю дизайн и&nbsp;шрифты, веду</span>
+                <a href="https://t.me/s/karamoff" class="vavilon" data-vavilon="desc-blog">блог</a>
+                <span class="vavilon" data-vavilon="desc-3">и&nbsp;</span>
+                <a href="https://t.me/s/TheToolbox" class="vavilon" data-vavilon="desc-toolbox">канал c&nbsp;полезностями</a>
+                <span class="vavilon" data-vavilon="desc-4">в&nbsp;Телеграме.</span>
             </p>
         </section>
         <section class="sect" id="info">
-            <h1 itemprop="name">Никита Карамов</h1>
+            <h1 itemprop="name" class="vavilon" data-vavilon="name">Никита Карамов</h1>
             <ul class="social c">
-                <li><a itemprop="sameAs" href="https://vk.com/nickkaramoff" class="vk-link">ВКонтакте</a></li>
-                <li><a itemprop="sameAs" href="https://twitter.com/nickkaramoff" class="tw-link">Твиттер</a></li>
-                <li><a itemprop="sameAs" href="https://t.me/nickkaramoff" class="tg-link">Телеграм</a></li>
-                <li><a itemprop="sameAs" href="https://github.com/nickkaramoff" class="gh-link">Гитхаб</a></li>
-                <li><a itemprop="sameAs" href="https://linkedin.com/in/karamoff" class="in-link">Линкедин</a></li>
-                <li><a href="mailto:nick@karamoff.ru" class="em-link">Почта</a></li>
+                <li><a itemprop="sameAs" href="https://vk.com/nickkaramoff" class="vk-link vavilon" data-vavilon="vk">
+                    ВКонтакте
+                </a></li>
+                <li><a itemprop="sameAs" href="https://twitter.com/nickkaramoff" class="tw-link vavilon" data-vavilon="twitter">
+                    Твиттер
+                </a></li>
+                <li><a itemprop="sameAs" href="https://t.me/nickkaramoff" class="tg-link vavilon" data-vavilon="telegram">
+                    Телеграм
+                </a></li>
+                <li><a itemprop="sameAs" href="https://github.com/nickkaramoff" class="gh-link vavilon" data-vavilon="github">
+                    Гитхаб
+                </a></li>
+                <li><a itemprop="sameAs" href="https://linkedin.com/in/karamoff" class="in-link vavilon" data-vavilon="linkedin">
+                    Линкедин
+                </a></li>
+                <li><a href="mailto:nick@karamoff.ru" class="em-link vavilon" data-vavilon="mail">
+                    Почта
+                </a></li>
                 <meta itemprop="email" content="nick@karamoff.ru">
             </ul>
         </section>
         <section class="sect" id="skills">
-            <h2>Навыки</h2>
+            <h2 class="vavilon" data-vavilon="skills">Навыки</h2>
             <table class="sk">
                 <tr>
-                    <td class="sk-name">Клиент:</td>
+                    <td class="sk-name vavilon" data-vavilon="client">Клиент:</td>
                     <td>Vue.js, Nuxt.js, Bootstrap, Electron, Android</td>
                 </tr>
                 <tr>
-                    <td class="sk-name">Сервер:</td>
+                    <td class="sk-name vavilon" data-vavilon="server">Сервер:</td>
                     <td>Django, Flask, Express, Spring&nbsp;Boot</td>
                 </tr>
                 <tr>
-                    <td class="sk-name">БД:</td>
+                    <td class="sk-name vavilon" data-vavilon="db">БД:</td>
                     <td>PostgreSQL, SQLite, MySQL</td>
                 </tr>
                 <tr>
-                    <td class="sk-name">Сборка:</td>
+                    <td class="sk-name vavilon" data-vavilon="build">Сборка:</td>
                     <td>Gulp, Webpack</td>
                 </tr>
                 <tr>
-                    <td class="sk-name">Деплой:</td>
+                    <td class="sk-name vavilon" data-vavilon="deploy">Деплой:</td>
                     <td>Docker, GitLab&nbsp;CI</td>
                 </tr>
             </table>
         </section>
         <section class="sect" id="projects">
-            <h2>Проекты</h2>
+            <h2 class="vavilon" data-vavilon="projects">Проекты</h2>
             <div class="portfolio">
                 <a href="https://s.karamoff.ru/vavilon-js-github" class="proj">
                     <div class="proj-info">
                         <h4 class="proj-name">
                             vavilon.js
                         </h4>
-                        <p class="proj-desc">i18n-движок для статических сайтов</p>
+                        <p class="proj-desc vavilon" data-vavilon="p-vavilon-desc">
+                            i18n-движок для статических сайтов
+                        </p>
                     </div>
                     <div class="proj-date">2019</div>
                 </a>
                 <a href="https://s.karamoff.ru/topconspects" class="proj">
                     <div class="proj-info">
-                        <h4 class="proj-name">
+                        <h4 class="proj-name vavilon" data-vavilon="p-conspects-name">
                             Топовые конспекты
                         </h4>
-                        <p class="proj-desc">Статический сайт на&nbsp;Bootstrap&nbsp;4</p>
+                        <p class="proj-desc vavilon" data-vavilon="p-conspects-desc">
+                            Статический сайт на&nbsp;Bootstrap&nbsp;4
+                        </p>
                     </div>
                     <div class="proj-date">2018</div>
                 </a>
@@ -97,16 +118,20 @@
                         <h4 class="proj-name">
                             Arithmaster
                         </h4>
-                        <p class="proj-desc">Игра на&nbsp;Android</p>
+                        <p class="proj-desc vavilon" data-vavilon="p-arithmaster-desc">
+                            Игра на&nbsp;Android
+                        </p>
                     </div>
                     <div class="proj-date">2017</div>
                 </a>
                 <a href="https://s.karamoff.ru/bussow" class="proj">
                     <div class="proj-info">
-                        <h4 class="proj-name">
+                        <h4 class="proj-name vavilon" data-vavilon="p-bussow-name">
                             Художник Василий Бусов
                         </h4>
-                        <p class="proj-desc">Статический сайт на&nbsp;Bootstrap&nbsp;3</p>
+                        <p class="proj-desc vavilon" data-vavilon="p-bussow-desc">
+                            Статический сайт на&nbsp;Bootstrap&nbsp;3
+                        </p>
                     </div>
                     <div class="proj-date">2014</div>
                 </a>
