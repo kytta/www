@@ -14,7 +14,7 @@ fs.readdir(inputFolder, function (err, files) {
         const fromPath = path.join(inputFolder, file);
         const toPath = path.join(outputFolder, file);
 
-        fs.rename(fromPath, toPath, function (error) {
+        fs.copyFile(fromPath, toPath, function (error) {
             if (error) {
                 console.error("File moving error.", error);
             }
