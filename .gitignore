@@ -76,4 +76,5 @@ out/
 # JIRA plugin
 atlassian-ide-plugin.xml
 
-public/*.css
+public/**/*.html
+public/**/*.css
