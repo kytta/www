@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title class="vavilon" data-vavilon="name">Никита Карамов</title>
+    <title class="vavilon" data-vavilon="name">{{ name }}</title>
     <meta name="description"
-          content="Фуллстек-разработчик из Казани. Пишу клиенты на Vue, Nuxt, Electron, Bootstrap и серверы на Django, Flask, Express, Spring. Умею настраивать Gulp и Webpack и запихивать всё вышеперечисленное в Docker.">
+          content="{{ decription }}">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,12 +14,12 @@
         href="https://fonts.googleapis.com/css?family=Fira+Sans:500|Roboto+Mono:400,500,700&display=swap&subset=cyrillic"
         rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="/public/style.min.css?v=4.0.0"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="/style.min.css?v=4.0.0"/>
 
-    <link rel="icon" type="image/png" sizes="32x32" href="/public/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/public/favicons/favicon-16x16.png">
-    <link rel="mask-icon" href="/public/favicons/safari-pinned-tab.svg" color="#fb8c00">
-    <link rel="shortcut icon" href="/public/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#fb8c00">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
 
     <script type="application/json" data-vavilon-dict="en" src="/en.json"></script>
     <script src="https://cdn.jsdelivr.net/npm/vavilon@1.1/dist/vavilon.min.js"></script>
@@ -37,14 +37,14 @@
                 <span itemprop="jobTitle" class="vavilon" data-vavilon="desc-jobtitle">фуллстек-разработчик</span>
                 <span class="vavilon" data-vavilon="desc-2">и&nbsp;студент из&nbsp;Казани. Люблю дизайн и&nbsp;шрифты, веду</span>
                 <a href="https://t.me/s/karamoff" class="vavilon" data-vavilon="desc-blog">блог</a>
-                <span class="vavilon" data-vavilon="desc-3">и&nbsp;</span>
+                <span class="vavilon" data-vavilon="desc-3">и</span>
                 <a href="https://t.me/s/TheToolbox" class="vavilon" data-vavilon="desc-toolbox">канал c&nbsp;полезностями</a>
                 <span class="vavilon" data-vavilon="desc-4">в&nbsp;Телеграме.</span>
             </p>
         </section>
         <section class="sect" id="info">
             <h1 itemprop="name" class="my-name">
-                <span class="vavilon" data-vavilon="name">Никита Карамов</span>
+                <span class="vavilon" data-vavilon="name">{{ name }}</span>
                 <button class="lang-btn vavilon" data-vavilon="other-lang" onclick="tL()">in English</button>
             </h1>
             <ul class="social c">
