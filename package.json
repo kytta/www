@@ -20,7 +20,6 @@
   "scripts": {
     "build:handlebars": "node ./build/handlebars.js",
     "build:scss": "node ./build/scss.js",
-    "build:vavilon": "node ./build/vavilon.js",
     "build": "run-p build:*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
