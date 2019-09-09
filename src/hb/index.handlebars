@@ -100,50 +100,19 @@
         <section class="sect" id="projects">
             <h2 class="vavilon" data-vavilon="projects">Проекты</h2>
             <div class="portfolio">
-                <a href="https://s.karamoff.ru/vavilon-js-github" class="proj">
-                    <div class="proj-info">
-                        <h4 class="proj-name">
-                            vavilon.js
-                        </h4>
-                        <p class="proj-desc vavilon" data-vavilon="p-vavilon-desc">
-                            i18n-движок для статических сайтов
-                        </p>
-                    </div>
-                    <div class="proj-date">2019</div>
-                </a>
-                <a href="https://s.karamoff.ru/topconspects" class="proj">
-                    <div class="proj-info">
-                        <h4 class="proj-name vavilon" data-vavilon="p-conspects-name">
-                            Топовые конспекты
-                        </h4>
-                        <p class="proj-desc vavilon" data-vavilon="p-conspects-desc">
-                            Статический сайт на&nbsp;Bootstrap&nbsp;4
-                        </p>
-                    </div>
-                    <div class="proj-date">2018</div>
-                </a>
-                <a href="https://s.karamoff.ru/arithmaster" class="proj">
-                    <div class="proj-info">
-                        <h4 class="proj-name">
-                            Arithmaster
-                        </h4>
-                        <p class="proj-desc vavilon" data-vavilon="p-arithmaster-desc">
-                            Игра на&nbsp;Android
-                        </p>
-                    </div>
-                    <div class="proj-date">2017</div>
-                </a>
-                <a href="https://s.karamoff.ru/bussow" class="proj">
-                    <div class="proj-info">
-                        <h4 class="proj-name vavilon" data-vavilon="p-bussow-name">
-                            Художник Василий Бусов
-                        </h4>
-                        <p class="proj-desc vavilon" data-vavilon="p-bussow-desc">
-                            Статический сайт на&nbsp;Bootstrap&nbsp;3
-                        </p>
-                    </div>
-                    <div class="proj-date">2014</div>
-                </a>
+                {{#each projects}}
+                    <a href="{{this.href}}" class="proj">
+                        <div class="proj-info">
+                            <h4 class="proj-name vavilon" data-vavilon="p-{{ this.id }}-name">
+                                {{ this.name.ru }}
+                            </h4>
+                            <p class="proj-desc vavilon" data-vavilon="p-{{ this.id }}-desc">
+                                {{ this.description.ru }}
+                            </p>
+                        </div>
+                        <div class="proj-date">{{ this.year }}</div>
+                    </a>
+                {{/each}}
             </div>
         </section>
     </main>
