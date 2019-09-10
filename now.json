@@ -2,7 +2,7 @@
     "routes": [
         {
             "src": "/conspects",
-            "dest": "nickkaramoff/conspects"
+            "dest": "https://conspects.nickkaramoff.now.sh/"
         }
     ]
 }
