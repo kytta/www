@@ -2,7 +2,8 @@
     "routes": [
         {
             "src": "/conspects",
-            "dest": "https://conspects.nickkaramoff.now.sh/"
+            "status": 301,
+            "headers": { "Location": "https://conspects.karamoff.ru" }
         }
     ]
 }
