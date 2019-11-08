@@ -3,6 +3,19 @@
   "description": "Фуллстек-разработчик из Казани. Пишу клиенты на Vue, Nuxt, Electron, Bootstrap и серверы на Django, Flask, Express, Spring. Умею настраивать Gulp и Webpack и запихивать всё вышеперечисленное в Docker.",
   "projects": [
     {
+      "id": "pretty-money",
+      "href": "https://s.karamoff.ru/pretty-money",
+      "name": {
+        "ru": "pretty-money",
+        "en": "pretty-money"
+      },
+      "description": {
+        "ru": "JS-библиотека для форматирования валют",
+        "en": "A currency formatting library for JS"
+      },
+      "year": "2019"
+    },
+    {
       "id": "vavilon",
       "href": "https://s.karamoff.ru/vavilon-js-github",
       "name": {
