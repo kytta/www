@@ -14,7 +14,7 @@ fs.readFile(
             process.exit(2);
         }
 
-        const output = Hb.compile(data)(jData);
+        const output = Hb.compile(data)(jData).replace(/\s+/g, ' ');
 
         fs.writeFile(
             htmlOutput,
