@@ -1,0 +1,9 @@
+{
+    "routes": [
+        {
+            "src": "/conspects",
+            "status": 301,
+            "headers": { "Location": "https://conspects.karamoff.ru" }
+        }
+    ]
+}
