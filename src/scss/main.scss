@@ -91,12 +91,8 @@ table.sk {
             &.sk-name {
                 text-align: right;
                 white-space: nowrap;
-                font-weight: 700;
-            }
-
-            .learning {
-                font-style: italic;
-                opacity: .3;
+                font-family: $font-sans;
+                font-weight: 500;
             }
         }
     }
