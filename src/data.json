@@ -1,6 +1,6 @@
 {
   "name": "Никита Карамов",
-  "description": "Фуллстек-разработчик из Казани. Пишу клиенты на Vue, Nuxt, Electron, Bootstrap и серверы на Django, Flask, Express, Spring. Умею настраивать Gulp и Webpack и запихивать всё вышеперечисленное в Docker.",
+  "description": "Фуллстек-разработчик из Казани. Пишу клиенты на Vue/Nuxt и серверы на Django, Flask, Express. Умею настраивать Rollup и Webpack и запихивать всё вышеперечисленное в Docker.",
   "projects": [
     {
       "id": "pretty-money",
