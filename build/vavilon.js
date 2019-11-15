@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const vavilonStrings = require('../src/vavilon/en');
-const {projects} = require('../src/data');
+const {projects} = require('../src/pug.config').locals;
 
 const output = process.cwd() + "/public/en.json";
 
