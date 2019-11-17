@@ -1,9 +1,15 @@
 const fs = require('fs');
 
 const vavilonStrings = require('../src/vavilon/en');
-const {projects} = require('../src/data');
+const {projects} = require('../src/pug.config').locals;
 
-const output = process.cwd() + "/public/en.json";
+const publicFolder = process.cwd() + "/public";
+
+if (!fs.existsSync(publicFolder)) {
+    fs.mkdirSync(publicFolder);
+}
+
+const outputFile = publicFolder + "/en.json";
 
 let projectStrings = {};
 
@@ -17,7 +23,7 @@ const newDict = {
     ...projectStrings
 };
 
-fs.writeFile(output, JSON.stringify(newDict), err => {
+fs.writeFileSync(outputFile, JSON.stringify(newDict), err => {
     if (err) {
         console.error(err);
     }
