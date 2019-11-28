@@ -22,7 +22,7 @@
   },
   "homepage": "https://karamoff.ru",
   "scripts": {
-    "build:parcel": "parcel build ./src/index.pug --out-dir=public",
+    "build:parcel": "parcel build ./src/index.pug --out-dir=public --no-source-maps",
     "build:vavilon": "node ./build/vavilon.js",
     "build": "run-s build:parcel build:vavilon",
     "test": "echo \"Error: no test specified\" && exit 1",
