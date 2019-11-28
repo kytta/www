@@ -5,36 +5,8 @@
 @import 'variables'; // should be imported before every other component!
 @import 'typography';
 
-#lang {
-    display: none;
-}
-
-body {
-    color: $color-primary;
-}
-
+@import "components/i18n";
 @import "components/container";
-
-h1,
-h2,
-h3,
-h4 {
-    margin: 0;
-}
-
-h2 {
-    margin-bottom: 14px;
-}
-
-.lang-toggle {
-    display: inline-block;
-    font-size: $font-size-text-small;
-    text-decoration: underline;
-    color: $color-secondary;
-    cursor: pointer;
-    padding: 0 10px;
-}
-
 @import "components/section";
 @import "components/social";
 @import "components/portfolio";

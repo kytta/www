@@ -1,0 +1,12 @@
+#lang {
+    display: none;
+}
+
+.lang-toggle {
+    display: inline-block;
+    font-size: $font-size-text-small;
+    text-decoration: underline;
+    color: $color-secondary;
+    cursor: pointer;
+    padding: 0 10px;
+}
