@@ -1,275 +1,41 @@
-@import 'variables';
-@import 'normalize';
+@charset 'utf-8';
 
-#cl {
+@import '~sanitize.css/sanitize';
+
+@import 'variables'; // should be imported before every other component!
+@import 'typography';
+
+#lang {
     display: none;
 }
 
-.c {
-    text-align: center;
-}
-
 body {
-    font: {
-        family: $font-mono;
-        size: 16px;
-        weight: 400;
-    }
-
-    color: $clr-text;
+    color: $color-primary;
 }
 
-.container {
-    max-width: 640px;
-    padding: 30px 20px;
-    margin: 0 auto;
-}
-
-.my-name {
-    line-height: 24px;
-    margin-bottom: 10px;
-}
-
-.lang-btn {
-    display: inline-block;
-    font-size: 14px;
-    background: none;
-    box-shadow: none;
-    border: none;
-    text-decoration: underline;
-    color: $clr-project-date;
-    cursor: pointer;
-    padding-left: 0;
-}
-
-.sect {
-    margin-bottom: 50px;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-
-    &.bio {
-        line-height: 1.5;
-        margin-bottom: 24px;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-
-        p {
-            margin: 0;
-            border: 1px solid #ddd;
-            border-radius: 16px;
-            border-top-left-radius: 0;
-            padding: 16px;
-        }
-    }
-}
-
-.me {
-    width: 70px;
-    border-radius: 16px;
-    border-top-right-radius: 0;
-    flex-shrink: 0;
-    margin-right: 10px;
-}
-
-.sk {
-    background: transparent;
-
-    tr {
-        text-align: left;
-        width: auto;
-
-        td {
-            border-bottom: solid transparent 10px;
-            border-right: solid transparent 15px;
-            line-height: 1.5em;
-            vertical-align: top;
-
-            &.sk-name {
-                text-align: right;
-                white-space: nowrap;
-                font-family: $font-sans;
-                font-weight: 500;
-            }
-        }
-    }
-}
+@import "components/container";
 
 h1,
 h2,
 h3,
 h4 {
-    margin-top: 0;
-    font-family: $font-sans;
-}
-
-h1 {
-    font: {
-        size: 40px;
-        weight: 500;
-    }
-
-    margin-bottom: 10px;
-}
-
-h2 {
-    font: {
-        size: 24px;
-        weight: 500;
-    }
-    margin-bottom: 15px;
-}
-
-.social {
-    margin-top: 20px;
-    margin-left: -10px;
-    padding: 0;
-
-    li {
-        display: inline-block;
-        font-size: 14px;
-        list-style-type: none;
-        margin-right: 5px;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-        font-weight: 500;
-        letter-spacing: 1.5px;
-
-        a {
-            color: $clr-link;
-            text-decoration: none;
-            background-position: 50% 100%;
-            background-size: 95% 7%;
-            background-repeat: no-repeat;
-            transition-property: color background-size;
-            transition-duration: 100ms;
-            padding: 5px 10px;
-
-            &:hover {
-                color: $clr-link-hover-text;
-                background-size: 95% 100%;
-            }
-        }
-
-        .vk-link {
-            background-image: linear-gradient($clr-vk, $clr-vk);
-        }
-
-        .tw-link {
-            background-image: linear-gradient($clr-twitter, $clr-twitter);
-        }
-
-        .tg-link {
-            background-image: linear-gradient($clr-telegram, $clr-telegram);
-        }
-
-        .gh-link {
-            background-image: linear-gradient($clr-github, $clr-github);
-        }
-
-        .in-link {
-            background-image: linear-gradient($clr-linkedin, $clr-linkedin);
-        }
-
-        .em-link {
-            background-image: linear-gradient($clr-email, $clr-email);
-        }
-    }
-}
-
-.portfolio {
-    list-style-type: none;
-    padding-left: 0;
-
-}
-
-.proj {
-    display: block;
-
-    padding: $pad-project;
-    position: relative;
-    border-bottom: 1px solid #ddd;
-
-    color: $clr-text;
-    text-decoration: none;
-
-    background-image: linear-gradient(#eee, #eee);
-    background-position: 0% 100%;
-    background-size: 0% 100%;
-    background-repeat: no-repeat;
-    transition-property: color background-size;
-    transition-duration: 100ms;
-
-    &:hover {
-        background-size: $pad-project/2 100%;
-    }
-}
-
-.proj:last-of-type {
-    border: none;
-}
-
-.proj-info {
-    vertical-align: middle;
-    display: inline-block;
-    max-width: 480px;
-}
-
-.proj-name {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.proj-desc {
     margin: 0;
 }
 
-.proj-date {
+h2 {
+    margin-bottom: 14px;
+}
+
+.lang-toggle {
     display: inline-block;
-    position: absolute;
-    right: $pad-project;
-    color: lighten($clr-text, 50);
+    font-size: $font-size-text-small;
+    text-decoration: underline;
+    color: $color-secondary;
+    cursor: pointer;
+    padding: 0 10px;
 }
 
-// SMALL PHONES
-@media (max-width: 374.98px) {}
-
-// PHONES -> PORTRAIT TABLETS
-@media (max-width: 767.98px) {
-    .sect {
-        margin-bottom: 30px;
-
-        &.bio {
-            margin-bottom: 24px;
-            flex-direction: column;
-        }
-    }
-
-    .me {
-        border-radius: 16px;
-        border-bottom-left-radius: 0;
-        margin-bottom: 10px;
-    }
-
-    .social {
-        li {
-            margin-right: 0;
-            margin-bottom: 15px;
-        }
-    }
-
-    .proj-name {
-        text-decoration: underline #eee;
-    }
-}
-
-.footer {
-    text-align: center;
-    color: #999;
-    padding: 0 0 24px;
-    font-family: $font-sans;
-}
+@import "components/section";
+@import "components/social";
+@import "components/portfolio";
+@import "components/footer";

@@ -18,21 +18,3 @@ a {
 img {
     border-style: none
 }
-
-button {
-    font-family: inherit;
-    font-size: 100%;
-    line-height: 1.15;
-    margin: 0;
-    overflow: visible;
-    text-transform: none;
-
-    &::-moz-focus-inner {
-        border-style: none;
-        padding: 0
-    }
-
-    &:-moz-focusring {
-        outline: 1px dotted ButtonText
-    }
-}

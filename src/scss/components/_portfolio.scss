@@ -1,0 +1,60 @@
+.project {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: $padding-project/2 $padding-project*2;
+    position: relative;
+    
+    color: $color-primary;
+    text-decoration: none;
+    border-bottom: 1px solid $color-invisible;
+
+    background-image: linear-gradient($color-invisible, $color-invisible);
+    background-position: 0 0;
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+
+    transition-property: background-size;
+    transition-duration: 100ms;
+
+    &:hover {
+        background-size: $padding-project 100%;
+    }
+
+    &:last-child {
+        border: none;
+    }
+
+    &-info {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+
+        h3 {
+            margin: $padding-project/2 15px $padding-project/2 0;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &-year {
+        color: $color-ternary;
+        padding: 0 $padding-project;
+    }
+}
+
+// SMALL PHONES
+@media (max-width: 424.99px) {
+    .project {
+        &-year {
+            position: absolute;
+            top: $padding-project;
+            right: $padding-project * 2;
+        }
+    }
+}

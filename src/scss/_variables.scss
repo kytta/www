@@ -1,17 +1,45 @@
-$clr-text: black;
+$color-primary:             #000;
+$color-secondary:           #999;
+$color-ternary:             #ccc;
+$color-invisible:           #eee;
 
-$clr-link: #01426d;
-$clr-link-hover-text: white;
-$clr-vk: #45668e;
-$clr-twitter: #1da1f2;
-$clr-telegram: #0088cc;
-$clr-github: #000;
-$clr-linkedin: #0077b5;
-$clr-email: #505264;
+$color-social-text:         #01426d;
+$color-social-text-hover:   #fff;
+
+$color-social: (
+    "vk": #4680C2,
+    "twitter": #1DA1F2,
+    "telegram": #2CA5E0,
+    "github": #171515,
+    "linkedin": #0077B5,
+    "mail": #4F5060
+);
+
+$font-sans: "Fira Sans",
+            "Roboto",
+            "PT Sans", 
+            sans-serif;
+
+$font-mono: "Roboto Mono", 
+            "Fira Mono",
+            Menlo,
+            "Liberation Mono", 
+            monospace;
+
+$font-size-text:        16px;
+$font-size-text-small:  14px;
+
+$padding-section:   18px;
+$padding-container: $padding-section 20px;
+$padding-project:   $font-size-text/2;
+
+$radius-photo: 16px;
+
+$size-social-width:             97%;
+$size-social-height-collapsed:  7%;
+$size-social-height-expanded:   100%;
+
+$clr-text: black;
 
 $clr-project-date: #999;
 
-$font-sans: "Fira Sans", "PT Sans", sans-serif;
-$font-mono: "Roboto Mono", "Monaco", monospace;
-
-$pad-project: 20px;

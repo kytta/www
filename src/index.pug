@@ -22,81 +22,80 @@ html(lang="ru")
         link(href="https://fonts.googleapis.com/css?family=Fira+Sans:500|Roboto+Mono:400,500&display=swap&subset=cyrillic" rel="stylesheet")
 
     body
-        span.vavilon#cl(data-vavilon="lang" aria-hidden="true") ru
+        span.vavilon#lang(data-vavilon="lang" aria-hidden="true") ru
 
         main.container
-            section.sect.bio#bio
-                img.me(src="./me.png" alt="Фото")
-                p
-                    span.vavilon(data-vavilon="desc-1") Привет! Я —
-                    | 
-                    span.vavilon(data-vavilon="desc-jobtitle") фронтенд-разработчик
-                    | 
-                    span.vavilon(data-vavilon="desc-2") и студент. Живу в Брауншвейге (Германия), веду
-                    | 
-                    a.vavilon(href="https://t.me/s/TheToolbox" data-vavilon="desc-toolbox") канал c полезностями
-                    | 
-                    span.vavilon(data-vavilon="desc-3") в Телеграме.
-                    br
-                    br
-                    span.vavilon(data-vavilon="desc-4") К слову, на этом сайте используются куки для запоминания языка. Извините.
-            section.sect#info
-                h1.my-name
-                    span.vavilon(data-vavilon="name") #{name}
-                    | 
-                    button.lang-btn.vavilon(data-vavilon="other-lang" onclick="window.tL()") in English
-                ul.social.c
+            section.bio#bio
+                img(src="./me.png" alt="Фото")
+                .bubble
+                    p
+                        span.vavilon(data-vavilon="desc-1") Привет! Я —
+                        | 
+                        span.vavilon(data-vavilon="desc-jobtitle") фронтенд-разработчик
+                        | 
+                        span.vavilon(data-vavilon="desc-2") и студент. Живу в Брауншвейге (Германия), веду
+                        | 
+                        a.vavilon(href="https://t.me/s/TheToolbox" data-vavilon="desc-toolbox") канал c полезностями
+                        | 
+                        span.vavilon(data-vavilon="desc-3") в Телеграме.
+                    p.vavilon(data-vavilon="desc-4") К слову, на этом сайте используются куки для запоминания языка. Извините.
+            
+            section#info
+                div
+                    h1.vavilon(data-vavilon="name") #{name}
+                        small.lang-toggle.vavilon(data-vavilon="other-lang" onclick="window.tL()") in English
+            section#social
+                ul.social
                     li
-                        a.vk-link.vavilon(href="https://vk.com/nickkaramoff" data-vavilon="vk") ВКонтакте
-                    | 
-                    li
-                        a.tw-link.vavilon(href="https://twitter.com/nickkaramoff" data-vavilon="twitter") Твиттер
+                        a.vk.vavilon(href="https://vk.com/nickkaramoff" data-vavilon="vk") ВКОНТАКТЕ
                     | 
                     li
-                        a.tg-link.vavilon(href="https://t.me/nickkaramoff" data-vavilon="telegram") Телеграм
+                        a.twitter.vavilon(href="https://twitter.com/nickkaramoff" data-vavilon="twitter") ТВИТТЕР
                     | 
                     li
-                        a.gh-link.vavilon(href="https://github.com/nickkaramoff" data-vavilon="github") Гитхаб
+                        a.telegram.vavilon(href="https://t.me/nickkaramoff" data-vavilon="telegram") ТЕЛЕГРАМ
                     | 
                     li
-                        a.in-link.vavilon(href="https://linkedin.com/in/karamoff" data-vavilon="linkedin") Линкедин
+                        a.github.vavilon(href="https://github.com/nickkaramoff" data-vavilon="github") ГИТХАБ
                     | 
                     li
-                        a.em-link.vavilon(href="mailto:nick@karamoff.ru" data-vavilon="mail") Почта
-            section.sect#skills
-                h2.vavilon(data-vavilon="skills") Навыки
-                table.sk
-                    tbody
-                        tr
-                            td.sk-name.vavilon(data-vavilon="client") Клиент:
-                            td Vue.js, Nuxt.js, Bootstrap, Bulma
-                        tr
-                            td.sk-name.vavilon(data-vavilon="server") Сервер:
-                            td Django, Flask, Express.js
-                        tr
-                            td.sk-name.vavilon(data-vavilon="db") БД:
-                            td PostgreSQL, SQLite, MySQL
-                        tr
-                            td.sk-name.vavilon(data-vavilon="build") Сборка:
-                            td Rollup, Webpack, Parcel, Gulp
-                        tr
-                            td.sk-name.vavilon(data-vavilon="deploy") Деплой:
-                            td Docker, Travis CI, GitLab CI
-            section.sect#projects
+                        a.linkedin.vavilon(href="https://linkedin.com/in/karamoff" data-vavilon="linkedin") ЛИНКЕДИН
+                    | 
+                    li
+                        a.mail.vavilon(href="mailto:nick@karamoff.ru" data-vavilon="mail") ПОЧТА
+
+                //- .skills
+                //-     .skill-row
+                //-         .skill-name.vavilon(data-vavilon="client") Клиент:
+                //-         .skill-desc Vue.js, Nuxt.js, Bootstrap, Bulma
+                //-     .skill-row
+                //-         .skill-name.vavilon(data-vavilon="server") Сервер:
+                //-         .skill-desc Django, Flask, Express.js
+                //-     .skill-row
+                //-         .skill-name.vavilon(data-vavilon="db") БД:
+                //-         .skill-desc PostgreSQL, SQLite, MySQL
+                //-     .skill-row
+                //-         .skill-name.vavilon(data-vavilon="build") Сборка:
+                //-         .skill-desc Rollup, Webpack, Parcel, Gulp
+                //-     .skill-row
+                //-         .skill-name.vavilon(data-vavilon="deploy") Деплой:
+                //-         .skill-desc Docker, Travis CI, GitLab CI
+            
+            section#projects
                 h2.vavilon(data-vavilon="projects") Проекты
-                .portfolio
-                    each proj in projects
-                        a.proj(href=proj.href)
-                            .proj-info
-                                h4.proj-name.vavilon(data-vavilon="p-"+proj.id+"-name")= proj.name.ru
-                                p.proj-desc.vavilon(data-vavilon="p-"+proj.id+"-desc")= proj.description.ru
-                            .proj-date= proj.year
+                each proj in projects
+                    a.project(href=proj.href)
+                        .project-info
+                            h3.vavilon(data-vavilon="p-"+proj.id+"-name")= proj.name.ru
+                            p.vavilon(data-vavilon="p-"+proj.id+"-desc")= proj.description.ru
+                        .project-year=proj.year
         
         footer.footer &copy;&nbsp;2019 Nikita&nbsp;Karamov
 
         script.
             window.tL = function() {
-                const lang = document.getElementById('cl').innerText;
+                console.log('Clicked');
+                const lang = document.getElementById('lang').innerText;
                 if (lang === 'ru') {
                     setLang('en');
                 } else {
