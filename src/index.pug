@@ -42,7 +42,8 @@ html(lang="ru")
             
             section#info
                 div
-                    h1.vavilon(data-vavilon="name") #{name}
+                    h1
+                        span.vavilon(data-vavilon="name") #{name}
                         small.lang-toggle.vavilon(data-vavilon="other-lang" onclick="window.tL()") in English
             section#social
                 ul.social
