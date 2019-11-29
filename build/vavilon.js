@@ -1,30 +1,57 @@
-const fs = require('fs');
+const fs = require("fs");
+const path = require("path");
+const pugConfig = require("../src/pug.config").locals;
 
-const vavilonStrings = require('../src/vavilon/en');
-const {projects} = require('../src/pug.config').locals;
+console.log("Building vavilon.js dictionaries...");
 
-const publicFolder = process.cwd() + "/public";
+let outputFolder = path.join(process.cwd(), "public");
 
-if (!fs.existsSync(publicFolder)) {
-    fs.mkdirSync(publicFolder);
+let languages = pugConfig.languages.filter(
+    l => l !== pugConfig.defaultLanguage
+);
+
+let dictionaries = {};
+for (let lang of languages) {
+    dictionaries[lang] = {};
 }
 
-const outputFile = publicFolder + "/en.json";
-
-let projectStrings = {};
-
-for (const p of projects) {
-    projectStrings["p-" + p.id + "-name"] = p.name.en;
-    projectStrings["p-" + p.id + "-desc"] = p.description.en;
-}
-
-const newDict = {
-    ...vavilonStrings,
-    ...projectStrings
-};
-
-fs.writeFileSync(outputFile, JSON.stringify(newDict), err => {
-    if (err) {
-        console.error(err);
+function writeMultilangString(inputKey, outputKey, root = pugConfig) {
+    if (outputKey == undefined) {
+        outputKey = inputKey;
     }
+
+    languages.forEach(lang => {
+        if (typeof root[inputKey] === 'string' || root[inputKey] instanceof String) {
+            dictionaries[lang][outputKey] = root[inputKey];
+        } else {
+            if (root[inputKey].hasOwnProperty(lang)) {
+                if (typeof root[inputKey][lang] === 'string' || root[inputKey][lang] instanceof String) {
+                    dictionaries[lang][outputKey] = root[inputKey][lang];
+                } else if (root[inputKey][lang] instanceof Array) {
+                    for (let idx in root[inputKey][lang]) {
+                        dictionaries[lang][`${outputKey}-${idx}`] = root[inputKey][lang][idx];
+                    }
+                }
+            }
+        }
+    })
+}
+
+["name", "descriptionMeta", "description"].forEach(mls => writeMultilangString(mls));
+
+pugConfig.socials.forEach(soc => writeMultilangString('name', soc.slug, soc));
+
+pugConfig.listModules.forEach(mod => {
+    writeMultilangString('title', `m-${mod.slug}`, mod);
+    mod.items.forEach(item => {
+        writeMultilangString('name', `m-${mod.slug}-${item.slug}-name`, item);
+        writeMultilangString('description', `m-${mod.slug}-${item.slug}-desc`, item);
+    })
+})
+
+languages.forEach(lang => {
+    fs.writeFileSync(
+        path.join(outputFolder, `${lang}.json`), 
+        JSON.stringify(dictionaries[lang])
+    )
 });

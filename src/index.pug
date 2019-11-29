@@ -6,12 +6,15 @@ html(lang=defaultLanguage)
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
         title.vavilon(data-vavilon="name")= name[defaultLanguage]
-        meta(name="description" content=descriptionMeta[defaultLanguage])
+        meta.vavilon(name="description"
+                     content=descriptionMeta[defaultLanguage]
+                     data-vavilon="descriptionMeta")
 
         link(rel="stylesheet" type="text/css" media="screen" href="./scss/main.scss")
 
-        //- script(type="application/json" data-vavilon-dict="en" src="#/en.json")
-        //- script(src="https://cdn.jsdelivr.net/npm/vavilon@1.1/dist/vavilon.min.js")
+        script(type="application/json" data-vavilon-dict="ru" src="#/ru.json")
+        script(type="application/json" data-vavilon-dict="de" src="#/de.json")
+        script(src="https://cdn.jsdelivr.net/npm/vavilon@1.1/dist/vavilon.min.js")
 
         link(rel="apple-touch-icon", sizes="180x180", href="./favicons/apple-touch-icon.png")
         link(rel="icon", type="image/png", sizes="32x32", href="./favicons/favicon-32x32.png")
@@ -29,7 +32,7 @@ html(lang=defaultLanguage)
                 img(src="./me.png" alt="Фото")
                 .bubble
                     each descriptionItem, idx in description[defaultLanguage]
-                        p.vavilon(class="description-"+idx)= descriptionItem
+                        p.vavilon(data-vavilon="description-"+idx)= descriptionItem
             
             section#info
                 div
@@ -66,14 +69,4 @@ html(lang=defaultLanguage)
                                 p.vavilon(data-vavilon="m-"+module.slug+"-"+item.slug+"-desc")= item.description[defaultLanguage]
                             .project-year= item.year
         
-        footer.footer &copy;&nbsp;2019 Nikita&nbsp;Karamov
-
-        script.
-            window.tL = function() {
-                const lang = document.getElementById('lang').innerText;
-                if (lang === 'ru') {
-                    setLang('en');
-                } else {
-                    setLang('ru');
-                }
-            }
+        footer.footer &copy;&nbsp;2019 #{name}
