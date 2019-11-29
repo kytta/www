@@ -60,6 +60,15 @@ module.exports = {
         }
       },
       {
+        slug: "patreon",
+        link: "https://patreon.com/NickKaramoff",
+        name: {
+          ru: "Патреон",
+          en: "Patreon",
+          de: "Patreon"
+        }
+      },
+      {
         slug: "github",
         link: "https://github.com/nickkaramoff",
         name: {
