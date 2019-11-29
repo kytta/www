@@ -43,13 +43,13 @@
     }
 
     &-year {
+        flex-shrink: 0;
         color: $color-ternary;
         padding: 0 $padding-project;
     }
 }
 
-// SMALL PHONES
-@media (max-width: 424.99px) {
+@media (max-width: $media-phones) {
     .project {
         &-year {
             position: absolute;

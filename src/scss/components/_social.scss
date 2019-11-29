@@ -48,3 +48,11 @@
         }
     }
 }
+
+@media (max-width: $media-tablets) {
+    .social {
+        li {
+            padding: 10px 5px;
+        }
+    }
+}

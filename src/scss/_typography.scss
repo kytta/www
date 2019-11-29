@@ -7,6 +7,14 @@ body {
     }
 }
 
+@media (max-width: $media-phones) {
+    body {
+        font: {
+            size: $font-size-text-small;
+        }
+    }
+}
+
 h1,
 h2,
 h3,
@@ -22,6 +30,18 @@ h1 {
     line-height: 40px;
     font: {
         size: 40px;
+    }
+
+    .name {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: $media-phones) {
+    h1 {
+        font: {
+            size: 32px;
+        }
     }
 }
 

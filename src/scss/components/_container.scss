@@ -4,7 +4,7 @@
     margin: 0 auto;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: $media-tablets) {
     .container {
         padding: (nth($list: $padding-container, $n: 1) / 2)
                   nth($list: $padding-container, $n: 2);

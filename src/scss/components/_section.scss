@@ -30,7 +30,17 @@ section {
     }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: $media-phones) {
+    section {
+        &.bio {
+            img {
+                width: 48px;
+            }
+        }
+    }
+}
+
+@media (max-width: $media-tablets) {
     section {
         &.bio {
             flex-direction: column;
