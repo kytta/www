@@ -1,13 +1,11 @@
-#lang {
-    display: none;
-}
+.flags {
+    white-space: nowrap;
 
-.lang-toggle {
-    display: inline-block;
-    font-size: $font-size-text-small;
-    line-height: $font-size-text-small;
-    text-decoration: underline;
-    color: $color-secondary;
-    cursor: pointer;
-    padding: 0 10px;
+    .flag {
+        cursor: pointer;
+        transition: opacity 200ms ease;
+        &:hover {
+            opacity: (2/3)
+        }
+    }
 }

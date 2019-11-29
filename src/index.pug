@@ -25,8 +25,6 @@ html(lang=defaultLanguage)
         link(href="https://fonts.googleapis.com/css?family=Fira+Sans:500|Roboto+Mono:400,500&display=swap&subset=cyrillic" rel="stylesheet")
 
     body
-        span.vavilon#lang(data-vavilon="lang" aria-hidden="true")= defaultLanguage
-
         main.container
             section.bio#bio
                 img(src="./me.png" alt="Фото")
@@ -37,8 +35,11 @@ html(lang=defaultLanguage)
             section#info
                 div
                     h1
-                        span.vavilon(data-vavilon="name")= name[defaultLanguage]
-                        //- small.lang-toggle.vavilon(data-vavilon="other-lang" onclick="window.tL()") по-русски
+                        span.name.vavilon(data-vavilon="name")= name[defaultLanguage]
+                        span.flags
+                            each lang in languages
+                                span.flag(onclick=`setLang('${lang}')`)
+                                    img(src=`./flags/${lang}@2x.png` height=24 alt=lang)
             section#social
                 ul.social
                     each social in socials
