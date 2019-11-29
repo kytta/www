@@ -69,4 +69,6 @@ html(lang=defaultLanguage)
                                 p.vavilon(data-vavilon="m-"+module.slug+"-"+item.slug+"-desc")= item.description[defaultLanguage]
                             .project-year= item.year
         
-        footer.footer &copy;&nbsp;2019 #{name}
+        footer.footer
+            | &copy;&nbsp;2019 
+            span.vavilon(data-vavilon="name")= name[defaultLanguage]
