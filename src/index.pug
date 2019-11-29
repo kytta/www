@@ -1,17 +1,17 @@
 doctype html
-html(lang="ru")
+html(lang=defaultLanguage)
     head
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible" content="ie=edge")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
-        title.vavilon(data-vavilon="name") #{name}
-        meta(name="description" content=description)
+        title.vavilon(data-vavilon="name")= name[defaultLanguage]
+        meta(name="description" content=descriptionMeta[defaultLanguage])
 
         link(rel="stylesheet" type="text/css" media="screen" href="./scss/main.scss")
 
-        script(type="application/json" data-vavilon-dict="en" src="#/en.json")
-        script(src="https://cdn.jsdelivr.net/npm/vavilon@1.1/dist/vavilon.min.js")
+        //- script(type="application/json" data-vavilon-dict="en" src="#/en.json")
+        //- script(src="https://cdn.jsdelivr.net/npm/vavilon@1.1/dist/vavilon.min.js")
 
         link(rel="apple-touch-icon", sizes="180x180", href="./favicons/apple-touch-icon.png")
         link(rel="icon", type="image/png", sizes="32x32", href="./favicons/favicon-32x32.png")
@@ -22,56 +22,30 @@ html(lang="ru")
         link(href="https://fonts.googleapis.com/css?family=Fira+Sans:500|Roboto+Mono:400,500&display=swap&subset=cyrillic" rel="stylesheet")
 
     body
-        span.vavilon#lang(data-vavilon="lang" aria-hidden="true") ru
+        span.vavilon#lang(data-vavilon="lang" aria-hidden="true")= defaultLanguage
 
         main.container
             section.bio#bio
                 img(src="./me.png" alt="Фото")
                 .bubble
-                    p
-                        span.vavilon(data-vavilon="desc-1") Привет! Я —
-                        | 
-                        span.vavilon(data-vavilon="desc-jobtitle") фронтенд-разработчик
-                        | 
-                        span.vavilon(data-vavilon="desc-2") и студент. Живу в Брауншвейге (Германия), веду
-                        | 
-                        a.vavilon(href="https://t.me/s/TheToolbox" data-vavilon="desc-toolbox") канал c полезностями
-                        | 
-                        span.vavilon(data-vavilon="desc-3") в Телеграме.
-                    p.vavilon(data-vavilon="desc-4") К слову, на этом сайте используются куки для запоминания языка. Извините.
+                    each descriptionItem, idx in description[defaultLanguage]
+                        p.vavilon(class="description-"+idx)= descriptionItem
             
             section#info
                 div
                     h1
-                        span.vavilon(data-vavilon="name") #{name}
-                        small.lang-toggle.vavilon(data-vavilon="other-lang" onclick="window.tL()") in English
+                        span.vavilon(data-vavilon="name")= name[defaultLanguage]
+                        //- small.lang-toggle.vavilon(data-vavilon="other-lang" onclick="window.tL()") по-русски
             section#social
                 ul.social
-                    li
-                        a.vk.vavilon(href="https://vk.com/nickkaramoff" data-vavilon="vk") ВКОНТАКТЕ
-                    | 
-                    li
-                        a.twitter.vavilon(href="https://twitter.com/nickkaramoff" data-vavilon="twitter") ТВИТТЕР
-                    | 
-                    li
-                        a.telegram.vavilon(href="https://t.me/nickkaramoff" data-vavilon="telegram") ТЕЛЕГРАМ
-                    | 
-                    li
-                        a.github.vavilon(href="https://github.com/nickkaramoff" data-vavilon="github") ГИТХАБ
-                    | 
-                    li
-                        a.linkedin.vavilon(href="https://linkedin.com/in/karamoff" data-vavilon="linkedin") ЛИНКЕДИН
-                    | 
-                    li
-                        a.mail.vavilon(href="mailto:nick@karamoff.ru" data-vavilon="mail") ПОЧТА
+                    each social in socials
+                        li
+                            a.vavilon(class=social.slug
+                                      data-vavilon=social.slug
+                                      href=social.link)= social.name[defaultLanguage]
+                        | 
 
                 //- .skills
-                //-     .skill-row
-                //-         .skill-name.vavilon(data-vavilon="client") Клиент:
-                //-         .skill-desc Vue.js, Nuxt.js, Bootstrap, Bulma
-                //-     .skill-row
-                //-         .skill-name.vavilon(data-vavilon="server") Сервер:
-                //-         .skill-desc Django, Flask, Express.js
                 //-     .skill-row
                 //-         .skill-name.vavilon(data-vavilon="db") БД:
                 //-         .skill-desc PostgreSQL, SQLite, MySQL
@@ -82,14 +56,15 @@ html(lang="ru")
                 //-         .skill-name.vavilon(data-vavilon="deploy") Деплой:
                 //-         .skill-desc Docker, Travis CI, GitLab CI
             
-            section#projects
-                h2.vavilon(data-vavilon="projects") Проекты
-                each proj in projects
-                    a.project(href=proj.href)
-                        .project-info
-                            h3.vavilon(data-vavilon="p-"+proj.id+"-name")= proj.name.ru
-                            p.vavilon(data-vavilon="p-"+proj.id+"-desc")= proj.description.ru
-                        .project-year=proj.year
+            each module in listModules
+                section(id=module.slug)
+                    h2.vavilon(data-vavilon="m-"+module.slug)= module.title[defaultLanguage]
+                    each item in module.items
+                        a.project(href=item.href)
+                            .project-info
+                                h3.vavilon(data-vavilon="m-"+module.slug+"-"+item.slug+"-name")= item.name[defaultLanguage] || item.name
+                                p.vavilon(data-vavilon="m-"+module.slug+"-"+item.slug+"-desc")= item.description[defaultLanguage]
+                            .project-year= item.year
         
         footer.footer &copy;&nbsp;2019 Nikita&nbsp;Karamov
 
