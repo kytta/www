@@ -1,0 +1,11 @@
+.flags {
+    white-space: nowrap;
+
+    .flag {
+        cursor: pointer;
+        transition: opacity 200ms ease;
+        &:hover {
+            opacity: (2/3)
+        }
+    }
+}

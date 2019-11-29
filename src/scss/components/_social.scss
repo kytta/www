@@ -1,0 +1,58 @@
+.social {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    li {
+        display: inline-block;
+        margin: 0;
+        padding: 5px;
+
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        
+        list-style-type: none;
+
+        a {
+            color: $color-social-text;
+            text-decoration: none;
+            padding: 5px 10px;
+
+            background-position: 50% 100%;
+            background-repeat: no-repeat;
+            background-size: $size-social-width
+                             $size-social-height-collapsed;
+
+            transition-property: color background-size;
+            transition-duration: 150ms;
+            transition-timing-function: ease;
+
+            &:hover {
+                color: $color-social-text-hover;
+                background-size: $size-social-width
+                                 $size-social-height-expanded;
+            }
+        }
+
+        @each $social, $color in $color-social {
+            .#{$social} {
+                background-image: linear-gradient($color, $color);
+            }
+        }
+    }
+}
+
+@media (max-width: $media-tablets) {
+    .social {
+        li {
+            padding: 10px 5px;
+        }
+    }
+}
