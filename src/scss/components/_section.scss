@@ -9,8 +9,10 @@ section {
         .bubble {
             margin: 0;
             border: 1px solid #ddd;
-            border-radius: 0             $radius-photo 
-                           $radius-photo $radius-photo;
+            border-radius: 0
+                                        $radius-photo 
+                                        $radius-photo
+                           $radius-photo;
             padding: 16px;
             p {
                 margin: 0 0 $font-size-text;
@@ -22,8 +24,10 @@ section {
 
         img {
             width: 70px;
-            border-radius: $radius-photo 0
-                           $radius-photo $radius-photo;
+            border-radius: $radius-photo
+                                        0
+                                        $radius-photo
+                           $radius-photo;
             flex: 0 0;
             margin-right: 10px;
         }
@@ -46,8 +50,10 @@ section {
             flex-direction: column;
 
             img {
-                border-radius: $radius-photo $radius-photo 
-                               0 $radius-photo;
+                border-radius: $radius-photo
+                                            $radius-photo 
+                                            $radius-photo
+                               0;
                 margin-bottom: 10px;
             }
         }
