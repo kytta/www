@@ -24,7 +24,9 @@
   "scripts": {
     "build:parcel": "parcel build ./src/index.pug --out-dir=public --no-source-maps --no-cache",
     "build:vavilon": "node ./build/vavilon.js",
-    "build": "run-s build:parcel build:vavilon",
+    "build:seo": "node ./build/seo.js",
+    "build:after-parcel": "run-p build:vavilon build:seo",
+    "build": "run-s build:parcel build:after-parcel",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel ./src/index.pug --out-dir=public"
   },

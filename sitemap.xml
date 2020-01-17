@@ -10,7 +10,11 @@
                rel="alternate"
                hreflang="en"
                href="https://karamoff.dev"/>
-        <lastmod>2019-08-02</lastmod>
+        <xhtml:link 
+               rel="alternate"
+               hreflang="de"
+               href="https://karamoff.dev"/>
+        <lastmod>2020-01-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
