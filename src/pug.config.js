@@ -107,6 +107,17 @@ module.exports = {
         },
         items: [
           {
+            slug: "vue-tinybox",
+            href: "https://os.karamoff.dev/vue-tinybox",
+            name: "vue-tinybox",
+            description: {
+              ru: "Lightbox-галерея для Vue.js",
+              en: "A lightbox gallery for Vue.js",
+              de: "Lightbox-Galerie für Vue.js"
+            },
+            year: "2020"
+          },
+          {
             slug: "pretty-money",
             href: "https://s.karamoff.ru/pretty-money",
             name: "pretty-money",
