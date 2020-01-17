@@ -88,7 +88,7 @@ module.exports = {
       },
       {
         slug: "mail",
-        link: "mailto:nick@karamoff.ru",
+        link: "mailto:nick@karamoff.dev",
         name: {
           ru: "Почта",
           en: "E-Mail",

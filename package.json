@@ -1,5 +1,5 @@
 {
-  "name": "karamoff.ru",
+  "name": "karamoff.dev",
   "version": "4.2.5",
   "description": "Nikita Karamov's personal website",
   "license": "MIT",
@@ -10,8 +10,8 @@
   ],
   "author": {
     "name": "Nikita Karamov",
-    "url": "https://karamoff.ru",
-    "email": "nick@karamoff.ru"
+    "url": "https://karamoff.dev",
+    "email": "nick@karamoff.dev"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/NickKaramoff/personal-website/issues"
   },
-  "homepage": "https://karamoff.ru",
+  "homepage": "https://karamoff.dev",
   "scripts": {
     "build:parcel": "parcel build ./src/index.pug --out-dir=public --no-source-maps --no-cache",
     "build:vavilon": "node ./build/vavilon.js",

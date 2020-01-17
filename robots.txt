@@ -3,4 +3,4 @@ Allow: /$
 Disallow: /
 Allow: /conspects
 Allow: /sitemap.xml$
-Sitemap: https://karamoff.ru/sitemap.xml
+Sitemap: https://karamoff.dev/sitemap.xml
