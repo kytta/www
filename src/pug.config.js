@@ -119,7 +119,7 @@ module.exports = {
           },
           {
             slug: "pretty-money",
-            href: "https://s.karamoff.ru/pretty-money",
+            href: "https://os.karamoff.dev/pretty-money",
             name: "pretty-money",
             description: {
               ru: "JS-библиотека для форматирования валютных значений",
@@ -130,7 +130,7 @@ module.exports = {
           },
           {
             slug: "vavilon",
-            href: "https://s.karamoff.ru/vavilon-js-github",
+            href: "https://vavilon.js.org",
             name: "vavilon.js",
             description: {
               ru: "i18n-движок для статических сайтов",
@@ -141,7 +141,7 @@ module.exports = {
           },
           {
             slug: "conspects",
-            href: "https://s.karamoff.ru/topconspects",
+            href: "https://conspects.karamoff.dev/",
             name: {
               ru: "Топовые конспекты",
               en: "Top Abstracts",
@@ -156,7 +156,7 @@ module.exports = {
           },
           {
             slug: "arithmaster",
-            href: "https://s.karamoff.ru/arithmaster",
+            href: "https://play.google.com/store/apps/details?id=ru.karamoff.kawan_kawan.arithmaster",
             name: "Arithmaster",
             description: {
               ru: "Арифметическая игра для Android",
@@ -167,7 +167,7 @@ module.exports = {
           },
           {
             slug: "bussow",
-            href: "https://s.karamoff.ru/bussow",
+            href: "https://bussow.ru",
             name: {
               ru: "Художник Василий Бусов",
               en: "Vasiliy Busov",
