@@ -33,12 +33,21 @@ module.exports = {
 
     socials: [
       {
-        slug: "vk",
-        link: "https://vk.com/nickkaramoff",
+        slug: "telegram",
+        link: "https://t.me/nickkaramoff",
         name: {
-          ru: "ВКонтакте",
-          en: "VK",
-          de: "VK"
+          ru: "Телеграм",
+          en: "Telegram",
+          de: "Telegram"
+        }
+      },
+      {
+        slug: "mail",
+        link: "mailto:nick@karamoff.dev",
+        name: {
+          ru: "Почта",
+          en: "E-Mail",
+          de: "E-Mail"
         }
       },
       {
@@ -51,21 +60,12 @@ module.exports = {
         }
       },
       {
-        slug: "telegram",
-        link: "https://t.me/nickkaramoff",
+        slug: "linkedin",
+        link: "https://linkedin.com/in/karamoff",
         name: {
-          ru: "Телеграм",
-          en: "Telegram",
-          de: "Telegram"
-        }
-      },
-      {
-        slug: "patreon",
-        link: "https://patreon.com/NickKaramoff",
-        name: {
-          ru: "Патреон",
-          en: "Patreon",
-          de: "Patreon"
+          ru: "Линкедин",
+          en: "LinkedIn",
+          de: "LinkedIn"
         }
       },
       {
@@ -78,21 +78,12 @@ module.exports = {
         }
       },
       {
-        slug: "linkedin",
-        link: "https://linkedin.com/in/karamoff",
+        slug: "patreon",
+        link: "https://patreon.com/NickKaramoff",
         name: {
-          ru: "Линкедин",
-          en: "LinkedIn",
-          de: "LinkedIn"
-        }
-      },
-      {
-        slug: "mail",
-        link: "mailto:nick@karamoff.dev",
-        name: {
-          ru: "Почта",
-          en: "E-Mail",
-          de: "E-Mail"
+          ru: "Патреон",
+          en: "Patreon",
+          de: "Patreon"
         }
       }
     ],
