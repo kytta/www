@@ -27,7 +27,7 @@
     "build:seo": "node ./build/seo.js",
     "build:after-parcel": "run-p build:vavilon build:seo",
     "build": "run-s build:parcel build:after-parcel",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"No tests\" && exit 0",
     "dev": "parcel ./src/index.pug --out-dir=public"
   },
   "devDependencies": {
@@ -42,5 +42,10 @@
     "pug": "^2.0.4",
     "sanitize.css": "^11.0.0",
     "sass": "^1.24.5"
+  },
+  "np": {
+    "publish": false,
+    "releaseDraft": false,
+    "tests": false
   }
 }
