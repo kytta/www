@@ -107,6 +107,17 @@ module.exports = {
         },
         items: [
           {
+            slug: "shareon",
+            href: "https://shareon.js.org",
+            name: "shareon",
+            description: {
+              ru: "Легковесные социальные кнопки без слежки",
+              en: "Lightweight and ethical share buttons",
+              de: "Leichte und ethische Freigabe-Schaltflächen"
+            },
+            year: "2020"
+          },
+          {
             slug: "vue-tinybox",
             href: "https://os.karamoff.dev/vue-tinybox",
             name: "vue-tinybox",
