@@ -48,5 +48,8 @@
     "publish": false,
     "releaseDraft": false,
     "tests": false
+  },
+  "engines": {
+    "node": "12.x"
   }
 }
