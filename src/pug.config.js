@@ -33,7 +33,7 @@ module.exports = {
 
     socials: [
       {
-        slug: "telegram",
+        slug: "soc-tg",
         link: "https://t.me/nickkaramoff",
         name: {
           ru: "Телеграм",
@@ -42,7 +42,7 @@ module.exports = {
         }
       },
       {
-        slug: "mail",
+        slug: "soc-em",
         link: "mailto:nick@karamoff.dev",
         name: {
           ru: "Почта",
@@ -51,7 +51,7 @@ module.exports = {
         }
       },
       {
-        slug: "twitter",
+        slug: "soc-tw",
         link: "https://twitter.com/nickkaramoff",
         name: {
           ru: "Твиттер",
@@ -60,7 +60,7 @@ module.exports = {
         }
       },
       {
-        slug: "linkedin",
+        slug: "soc-li",
         link: "https://linkedin.com/in/karamoff",
         name: {
           ru: "Линкедин",
@@ -69,7 +69,7 @@ module.exports = {
         }
       },
       {
-        slug: "github",
+        slug: "soc-gh",
         link: "https://github.com/nickkaramoff",
         name: {
           ru: "Гитхаб",
@@ -78,7 +78,7 @@ module.exports = {
         }
       },
       {
-        slug: "patreon",
+        slug: "soc-pa",
         link: "https://patreon.com/NickKaramoff",
         name: {
           ru: "Патреон",
