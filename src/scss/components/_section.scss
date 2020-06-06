@@ -10,7 +10,7 @@ section {
             margin: 0;
             border: 1px solid #ddd;
             border-radius: 0
-                                        $radius-photo 
+                                        $radius-photo
                                         $radius-photo
                            $radius-photo;
             padding: 16px;
@@ -29,6 +29,7 @@ section {
                                         $radius-photo
                            $radius-photo;
             flex: 0 0;
+            flex-basis: 70px;
             margin-right: 10px;
         }
     }
@@ -39,6 +40,7 @@ section {
         &.bio {
             img {
                 width: 48px;
+                flex-basis: 48px;
             }
         }
     }
@@ -51,7 +53,7 @@ section {
 
             img {
                 border-radius: $radius-photo
-                                            $radius-photo 
+                                            $radius-photo
                                             $radius-photo
                                0;
                 margin-bottom: 10px;
