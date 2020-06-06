@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const pugConfig = require("../src/pug.config").locals;
+const pugConfig = require("../src/pugData");
 
 console.log("Building vavilon.js dictionaries...");
 
@@ -16,7 +16,7 @@ for (let lang of languages) {
 }
 
 function writeMultilangString(inputKey, outputKey, root = pugConfig) {
-    if (outputKey == undefined) {
+    if (outputKey === undefined) {
         outputKey = inputKey;
     }
 
@@ -51,7 +51,7 @@ pugConfig.listModules.forEach(mod => {
 
 languages.forEach(lang => {
     fs.writeFileSync(
-        path.join(outputFolder, `${lang}.json`), 
+        path.join(outputFolder, `${lang}.json`),
         JSON.stringify(dictionaries[lang])
     )
 });
