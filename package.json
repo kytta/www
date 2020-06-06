@@ -4,23 +4,12 @@
   "description": "Nikita Karamov's personal website",
   "license": "MIT",
   "private": true,
-  "browserslist": [
-    ">=.5% and not last 2 versions, last 2 versions",
-    "not dead"
-  ],
-  "author": {
-    "name": "Nikita Karamov",
-    "url": "https://karamoff.dev",
-    "email": "nick@karamoff.dev"
-  },
+  "author": "Nikita Karamov <nick@karamoff.dev>",
+  "homepage": "https://karamoff.dev",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NickKaramoff/personal-website.git"
+    "url": "git+https://github.com/NickKaramoff/website.git"
   },
-  "bugs": {
-    "url": "https://github.com/NickKaramoff/personal-website/issues"
-  },
-  "homepage": "https://karamoff.dev",
   "scripts": {
     "build:pug": "pug ./src/index.pug --obj ./src/pugData.js --out ./public",
     "build:sass": "sass --load-path=node_modules/sanitize.css/ ./src/scss/main.scss | postcss -o public/index.css",
@@ -44,12 +33,16 @@
     "sanitize.css": "^11.0.1",
     "sass": "^1.26.8"
   },
+  "engines": {
+    "node": "12.x"
+  },
+  "browserslist": [
+    ">=.5% and not last 2 versions, last 2 versions",
+    "not dead"
+  ],
   "np": {
     "publish": false,
     "releaseDraft": false,
     "tests": false
-  },
-  "engines": {
-    "node": "12.x"
   }
 }
