@@ -1,10 +1,12 @@
 const fs = require("fs");
+const mkdirp = require("mkdirp");
 const path = require("path");
 const pugConfig = require("../src/pugData");
 
 console.log("Building vavilon.js dictionaries...");
 
 let outputFolder = path.join(process.cwd(), "public");
+mkdirp.sync(outputFolder);
 
 let languages = pugConfig.languages.filter(
     l => l !== pugConfig.defaultLanguage
