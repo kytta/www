@@ -27,51 +27,41 @@ html(lang=defaultLanguage)
         meta(name="yandex-verification" content="2fdc38f5d667ea71")
 
     body
-        main.container
+        main
             section.bio#bio
-                img(src="/images/me.png" alt="Фото")
-                .bubble
+                .bio__head
+                    .bio__head__info
+                        img.bio__head__info__image(src="/images/me.png" alt="Фото")
+                        h1.bio__head__info__name.vavilon(data-vavilon="name")= name[defaultLanguage]
+                    .bio__head__flags
+                        each lang in languages
+                            button.flag(onclick=`setLang('${lang}')`)
+                                img(src=`/images/${lang}@2x.png` height=24 alt=lang)
+                .bio__bubble
                     each descriptionItem, idx in description[defaultLanguage]
                         p.vavilon(data-vavilon="description-"+idx)= descriptionItem
 
-            section#info
-                div
-                    h1
-                        span.name.vavilon(data-vavilon="name")= name[defaultLanguage]
-                        span.flags
-                            each lang in languages
-                                span.flag(onclick=`setLang('${lang}')`)
-                                    img(src=`/images/${lang}@2x.png` height=24 alt=lang)
             section#social
-                ul.soc
+                ul.social
                     each social in socials
-                        li
-                            a.vavilon(class=social.slug
+                        li.social__item
+                            a.social__item__link.vavilon(class=social.slug
                                       data-vavilon=social.slug
                                       href=social.link)= social.name[defaultLanguage]
-                        | 
-
-                //- .skills
-                //-     .skill-row
-                //-         .skill-name.vavilon(data-vavilon="db") БД:
-                //-         .skill-desc PostgreSQL, SQLite, MySQL
-                //-     .skill-row
-                //-         .skill-name.vavilon(data-vavilon="build") Сборка:
-                //-         .skill-desc Rollup, Webpack, Parcel, Gulp
-                //-     .skill-row
-                //-         .skill-name.vavilon(data-vavilon="deploy") Деплой:
-                //-         .skill-desc Docker, Travis CI, GitLab CI
 
             each module in listModules
                 section(id=module.slug)
                     h2.vavilon(data-vavilon="m-"+module.slug)= module.title[defaultLanguage]
-                    each item in module.items
-                        a.project(href=item.href)
-                            .project-info
-                                h3.vavilon(data-vavilon="m-"+module.slug+"-"+item.slug+"-name")= item.name[defaultLanguage] || item.name
-                                p.vavilon(data-vavilon="m-"+module.slug+"-"+item.slug+"-desc")= item.description[defaultLanguage]
-                            .project-year= item.year
+                    .section-list
+                        each item in module.items
+                            li.section-list__item
+                                a.section-list__item__link(href=item.href)
+                                    .section-list__item__link__info
+                                        h3.section-list__item__link__info__title.vavilon(data-vavilon="m-"+module.slug+"-"+item.slug+"-name")= item.name[defaultLanguage] || item.name
+                                        p.section-list__item__link__info__description.vavilon(data-vavilon="m-"+module.slug+"-"+item.slug+"-desc")= item.description[defaultLanguage]
+                                    .section-list__item__link__year= item.year
 
         footer.footer
-            | &copy;&nbsp;2020 
+            | &copy;&nbsp;2020
+            |
             span.vavilon(data-vavilon="name")= name[defaultLanguage]

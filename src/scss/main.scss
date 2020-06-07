@@ -1,15 +1,56 @@
 @charset "utf-8";
 
-@import 'sanitize.css';
+@import "normalize";
 
 @import "fonts";
+@import "variables"; // should be imported before every other component!
 
-@import 'variables'; // should be imported before every other component!
-@import 'typography';
+html {
+  background: $clr-background;
+  color: $clr-text;
+  font-family: $font-mono;
+  font-size: $dim-size-text;
+  font-weight: 400;
+}
 
-@import "components/i18n";
-@import "components/container";
-@import "components/section";
+h1,
+h2,
+h3 {
+  color: $clr-headline;
+  font-family: $font-sans;
+  font-weight: 500;
+  margin: 0;
+}
+
+h2 {
+  margin-bottom: 14px;
+  font: {
+    size: 24px;
+  }
+}
+
+h3 {
+  font: {
+    size: 20px;
+  };
+}
+
+main {
+  max-width: 800px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+section {
+  padding: $dim-padding-section 0;
+}
+
+#social {
+  padding-top: 0;
+}
+
+@import "components/bio";
+@import "components/flag";
 @import "components/social";
 @import "components/portfolio";
 @import "components/footer";

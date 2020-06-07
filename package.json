@@ -12,7 +12,7 @@
   },
   "scripts": {
     "build:pug": "pug ./src/index.pug --obj ./src/pugData.js --out ./public",
-    "build:sass": "sass --load-path=node_modules/sanitize.css/ ./src/scss/main.scss | postcss -o public/index.css",
+    "build:sass": "sass --load-path=node_modules/normalize.css/ ./src/scss/main.scss | postcss -o public/index.css",
     "build:static": "cpy '**/*' '../../public' --cwd=./src/static --parents",
     "build:vavilon": "node ./build/vavilon.js",
     "build": "run-p build:*",
@@ -24,13 +24,11 @@
     "cpy-cli": "^3.1.1",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
+    "normalize.css": "^8.0.1",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.1",
-    "postcss-normalize": "^9.0.0",
-    "postcss-preset-env": "^6.7.0",
     "pug": "^3.0.0",
     "pug-cli": "^1.0.0-alpha6",
-    "sanitize.css": "^11.0.1",
     "sass": "^1.26.8"
   },
   "devDependencies": {

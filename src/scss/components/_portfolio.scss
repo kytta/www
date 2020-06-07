@@ -1,60 +1,54 @@
-.project {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
+@import "../variables";
 
-    padding: $padding-project/2 $padding-project*2;
-    position: relative;
-    
-    color: $color-primary;
-    text-decoration: none;
-    border-bottom: 1px solid $color-invisible;
-
-    background-image: linear-gradient($color-invisible, $color-invisible);
-    background-position: 0 0;
-    background-size: 0 100%;
-    background-repeat: no-repeat;
-
-    transition-property: background-size;
-    transition-duration: 100ms;
-
-    &:hover {
-        background-size: $padding-project 100%;
-    }
-
-    &:last-child {
-        border: none;
-    }
-
-    &-info {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-
-        h3 {
-            margin: $padding-project/2 15px $padding-project/2 0;
+.section-list {
+    &__item {
+        list-style: none;
+        border-bottom: 1px solid $clr-white;
+        &:last-child {
+            border: none;
         }
 
-        p {
-            margin: 0;
-        }
-    }
+        &__link {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
 
-    &-year {
-        flex-shrink: 0;
-        color: $color-ternary;
-        padding: 0 $padding-project;
-    }
-}
+            padding: $dim-padding-section-list-item-link $dim-padding-section-list-item-link*2;
+            position: relative;
 
-@media (max-width: $media-phones) {
-    .project {
-        &-year {
-            position: absolute;
-            top: $padding-project;
-            right: $padding-project * 2;
+            color: $clr-text;
+            text-decoration: none;
+
+            transition: background-color 200ms ease;
+
+            &:hover {
+                background-color: $clr-white;
+            }
+
+            &__info {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                flex-basis: 300px;
+                flex-grow: 1;
+                flex-shrink: 0;
+                align-items: center;
+
+                &__title {
+                    margin: $dim-padding-section-list-item-link/2 15px $dim-padding-section-list-item-link/2 0;
+                }
+
+                &__description {
+                    margin: 0;
+                }
+            }
+
+            &__year {
+                flex-shrink: 0;
+                padding: $dim-padding-section-list-item-link 0;
+            }
         }
     }
 }
