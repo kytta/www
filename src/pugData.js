@@ -9,24 +9,24 @@ module.exports = {
     },
     descriptionMeta: {
         ru:
-            'Фронтенд-разработчик и опенсурс-энтузиаст, любящий TypeScript, Python и Go.',
+            'Фронтенд-разработчик и опенсурс-энтузиаст, любящий TypeScript и Vue.',
         en:
-            'Front End Developer and Open Source enthusiast fond of TypeScript, Python and Go.',
+            'Front End Developer and Open Source enthusiast fond of TypeScript and Vue.',
         de:
-            'Front-End-Entwickler und Open-Source-Enthusiast, der TypeScript, Python und Go lieb hat.',
+            'Front-End-Entwickler und Open-Source-Enthusiast, der TypeScript und Vue lieb hat.',
     },
     description: {
         ru: [
-            'Привет! Я — фронтенд-разработчик и опенсурс-энтузиаст. Сейчас живу в Германии.',
-            'Я пишу веб-приложения на Vue, библиотеки на TypeScript и скрипты на Python и Go. Имею опыт работы с бэкендом, в частности с Django, Flask и Express. Умею обращаться с РСУБД. Знаю, как собрать и задеплоить приложение в Docker.',
+            'Привет! Я — фронтенд-разработчик и опенсурс-энтузиаст.',
+            'Я пишу веб-приложения на Vue и Svelte, библиотеки на TypeScript и скрипты на Python и Go. Имею опыт работы с бэкендом, в частности с Django, Flask и Express. Умею обращаться с РСУБД. Знаю, как собрать и задеплоить приложение в Docker.',
         ],
         en: [
-            'Hi! I am a Front End Developer and an Open Source enthusiast based in Germany.',
-            'I create web apps with Vue, libraries with TypeScript and scripts with Python and Go. I have experience with Back End, in particular, Django, Flask, and Express. I can handle RDBMS and I know how to package and deploy apps with Docker.',
+            'Hi! I am a Front End Developer and an Open Source enthusiast.',
+            'I create web apps with Vue and Svelte, libraries with TypeScript and scripts with Python and Go. I have experience with Back End, in particular, Django, Flask, and Express. I can handle RDBMS and I know how to package and deploy apps with Docker.',
         ],
         de: [
-            'Hi! Ich bin ein Front-End-Entwickler und ein Open-Source-Enthusiast. Derzeit in Braunschweig.',
-            'Ich entwickle Vue-Web-Apps, TypeScript-Bibliotheken und Python- und Go-Skripte. Ich habe Erfahrung mit Back-End, insbesondere mit Django, Flask und Express. Ich kann gut mit RDBMS umgehen und weiß, wie man Software mit Docker packt und verteilt.',
+            'Hi! Ich bin ein Front-End-Entwickler und ein Open-Source-Enthusiast.',
+            'Ich entwickle Vue- und Svelte-Web-Apps, TypeScript-Bibliotheken und Python- und Go-Skripte. Ich habe Erfahrung mit Back-End, insbesondere mit Django, Flask und Express. Ich kann gut mit RDBMS umgehen und weiß, wie man Software mit Docker packt und verteilt.',
         ],
     },
 
