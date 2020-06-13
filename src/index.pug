@@ -7,8 +7,8 @@ html(lang=defaultLanguage)
 
         title.vavilon(data-vavilon="name")= name[defaultLanguage]
         meta.vavilon(name="description"
-                     content=descriptionMeta[defaultLanguage]
-                     data-vavilon="descriptionMeta")
+            content=descriptionMeta[defaultLanguage]
+            data-vavilon="descriptionMeta")
 
         link(rel="stylesheet" type="text/css" media="screen" href="/index.css")
 
@@ -39,7 +39,7 @@ html(lang=defaultLanguage)
                                 img(src=`/images/${lang}@2x.png` height=24 alt=lang)
                 .bio__bubble
                     each descriptionItem, idx in description[defaultLanguage]
-                        p.vavilon(data-vavilon="description-"+idx)= descriptionItem
+                        p.vavilon(data-vavilon="description-" + idx)= descriptionItem
 
             section#social
                 ul.social
@@ -51,14 +51,14 @@ html(lang=defaultLanguage)
 
             each module in listModules
                 section(id=module.slug)
-                    h2.vavilon(data-vavilon="m-"+module.slug)= module.title[defaultLanguage]
+                    h2.vavilon(data-vavilon="m-" + module.slug)= module.title[defaultLanguage]
                     .section-list
                         each item in module.items
                             li.section-list__item
                                 a.section-list__item__link(href=item.href)
                                     .section-list__item__link__info
-                                        h3.section-list__item__link__info__title.vavilon(data-vavilon="m-"+module.slug+"-"+item.slug+"-name")= item.name[defaultLanguage] || item.name
-                                        p.section-list__item__link__info__description.vavilon(data-vavilon="m-"+module.slug+"-"+item.slug+"-desc")= item.description[defaultLanguage]
+                                        h3.section-list__item__link__info__title.vavilon(data-vavilon="m-" + module.slug + "-" + item.slug + "-name")= item.name[defaultLanguage] || item.name
+                                        p.section-list__item__link__info__description.vavilon(data-vavilon="m-" + module.slug + "-" + item.slug + "-desc")= item.description[defaultLanguage]
                                     .section-list__item__link__year= item.year
 
         footer.footer
