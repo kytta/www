@@ -39,6 +39,7 @@ module.exports = {
                 en: 'Telegram',
                 de: 'Telegram',
             },
+            color: '#179CDE'
         },
         {
             slug: 'soc-em',
@@ -48,6 +49,7 @@ module.exports = {
                 en: 'E-Mail',
                 de: 'E-Mail',
             },
+            color: '#669999'
         },
         {
             slug: 'soc-tw',
@@ -57,6 +59,7 @@ module.exports = {
                 en: 'Twitter',
                 de: 'Twitter',
             },
+            color: '#1DA1F2'
         },
         {
             slug: 'soc-li',
@@ -66,6 +69,7 @@ module.exports = {
                 en: 'LinkedIn',
                 de: 'LinkedIn',
             },
+            color: '#0077B5'
         },
         {
             slug: 'soc-gh',
@@ -75,6 +79,7 @@ module.exports = {
                 en: 'GitHub',
                 de: 'GitHub',
             },
+            color: '#171515'
         },
         {
             slug: 'soc-pa',
@@ -84,6 +89,7 @@ module.exports = {
                 en: 'Patreon',
                 de: 'Patreon',
             },
+            color: '#f96854'
         },
     ],
 

@@ -45,9 +45,9 @@ html(lang=defaultLanguage)
                 ul.social
                     each social in socials
                         li.social__item
-                            a.social__item__link.vavilon(class=social.slug
-                                      data-vavilon=social.slug
-                                      href=social.link)= social.name[defaultLanguage]
+                            a.social__item__link.vavilon(style=`background-image: linear-gradient(${social.color}, ${social.color});`
+                                data-vavilon=social.slug
+                                href=social.link)= social.name[defaultLanguage]
 
             each module in listModules
                 section(id=module.slug)

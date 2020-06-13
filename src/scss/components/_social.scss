@@ -20,12 +20,6 @@
 
         list-style-type: none;
 
-        @each $social, $color in $color-social {
-            .#{$social} {
-                background-image: linear-gradient($color, $color);
-            }
-        }
-
         &__link {
             color: $clr-headline;
             text-decoration: none;
