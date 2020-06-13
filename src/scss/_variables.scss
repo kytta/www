@@ -1,43 +1,16 @@
-$color-primary:             #000;
-$color-secondary:           #999;
-$color-ternary:             #ccc;
-$color-invisible:           #eee;
+$clr-background:  #fffffe;
+$clr-headline:    #0d0d0d;
+$clr-text:        #2a2a2a;
+$clr-accent:      #eff0f3;
 
-$color-social-text:         #01426d;
-$color-social-text-hover:   #fff;
+$font-sans: "Fira Sans", "Roboto", sans-serif;
+$font-mono: "Roboto Mono", "Fira Mono", monospace;
 
-$color-social: (
-    "soc-tw":  #1DA1F2,
-    "soc-tg": #179CDE,
-    "soc-pa":  #f96854,
-    "soc-gh":   #171515,
-    "soc-li": #0077B5,
-    "soc-em":     #669999
-);
+$dim-radius-bio:                  1rem;
+$dim-size-social-height:          7%;
+$dim-size-social-height-expanded: 100%;
+$dim-size-social-width:           97%;
+$dim-size-text:                   14px;
 
-$font-sans: "Fira Sans",
-            "Roboto",
-            "PT Sans", 
-            sans-serif;
-
-$font-mono: "Roboto Mono", 
-            "Fira Mono",
-            Menlo,
-            "Liberation Mono", 
-            monospace;
-
-$font-size-text:        16px;
-$font-size-text-small:  14px;
-
-$padding-section:   18px;
-$padding-container: $padding-section 20px;
-$padding-project:   $font-size-text/2;
-
-$radius-photo: 16px;
-
-$size-social-width:             97%;
-$size-social-height-collapsed:  7%;
-$size-social-height-expanded:   100%;
-
-$media-phones:  424.99px;
-$media-tablets: 767.99px;
+$dim-padding-section:                 1rem;
+$dim-padding-section-list-item-link:  $dim-size-text/2;

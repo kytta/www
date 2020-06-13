@@ -4,52 +4,48 @@
   "description": "Nikita Karamov's personal website",
   "license": "MIT",
   "private": true,
+  "author": "Nikita Karamov <nick@karamoff.dev>",
+  "homepage": "https://karamoff.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickKaramoff/website.git"
+  },
+  "scripts": {
+    "build:pug": "pug ./src/index.pug --obj ./src/pugData.js --out ./public",
+    "build:sass": "sass --load-path=node_modules/normalize.css/ ./src/scss/main.scss | postcss -o public/index.css",
+    "build:static": "cpy '**/*' '../../public' --cwd=./src/static --parents",
+    "build:vavilon": "node ./build/vavilon.js",
+    "build": "run-p build:*",
+    "start": "sirv ./public --dev"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.8.0",
+    "browserslist": "^4.12.0",
+    "cpy-cli": "^3.1.1",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "mkdirp": "^1.0.4",
+    "normalize.css": "^8.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.1",
+    "pug": "^3.0.0",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.26.8"
+  },
+  "devDependencies": {
+    "np": "^6.2.3",
+    "sirv-cli": "^0.4.6"
+  },
+  "engines": {
+    "node": "12.x"
+  },
   "browserslist": [
     ">=.5% and not last 2 versions, last 2 versions",
     "not dead"
   ],
-  "author": {
-    "name": "Nikita Karamov",
-    "url": "https://karamoff.dev",
-    "email": "nick@karamoff.dev"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NickKaramoff/personal-website.git"
-  },
-  "bugs": {
-    "url": "https://github.com/NickKaramoff/personal-website/issues"
-  },
-  "homepage": "https://karamoff.dev",
-  "scripts": {
-    "build:parcel": "parcel build ./src/index.pug --out-dir=public --no-source-maps --no-cache",
-    "build:vavilon": "node ./build/vavilon.js",
-    "build:seo": "node ./build/seo.js",
-    "build:after-parcel": "run-p build:vavilon build:seo",
-    "build": "run-s build:parcel build:after-parcel",
-    "test": "echo \"No tests\" && exit 0",
-    "dev": "parcel ./src/index.pug --out-dir=public"
-  },
-  "devDependencies": {
-    "autoprefixer": "^9.7.5",
-    "css-mqpacker": "^7.0.0",
-    "np": "^6.2.0",
-    "npm-run-all": "^4.1.5",
-    "parcel-bundler": "^1.12.4",
-    "parcel-plugin-clean-dist": "0.0.6",
-    "parcel-plugin-html-root-syntax": "github:NickKaramoff/parcel-plugin-html-root-syntax#feature/unicode-output",
-    "parcel-plugin-purgecss": "^2.1.3",
-    "postcss-normalize": "^8.0.1",
-    "pug": "^2.0.4",
-    "sanitize.css": "^11.0.0",
-    "sass": "^1.26.3"
-  },
   "np": {
     "publish": false,
     "releaseDraft": false,
     "tests": false
-  },
-  "engines": {
-    "node": "12.x"
   }
 }

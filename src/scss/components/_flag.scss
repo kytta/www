@@ -1,0 +1,19 @@
+@import "../variables";
+
+.flag {
+  background: none;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0 .2rem;
+  transition: opacity 200ms ease;
+  line-height: 0;
+
+  &:hover {
+    opacity: (2/3)
+  }
+
+  &--active {
+    border: $clr-headline solid .2em;
+  }
+}

@@ -7,72 +7,63 @@ html(lang=defaultLanguage)
 
         title.vavilon(data-vavilon="name")= name[defaultLanguage]
         meta.vavilon(name="description"
-                     content=descriptionMeta[defaultLanguage]
-                     data-vavilon="descriptionMeta")
+            content=descriptionMeta[defaultLanguage]
+            data-vavilon="descriptionMeta")
 
-        link(rel="stylesheet" type="text/css" media="screen" href="./scss/main.scss")
+        link(rel="stylesheet" type="text/css" media="screen" href="/index.css")
 
-        script(type="application/json" data-vavilon-dict="ru" src="#/ru.json")
-        script(type="application/json" data-vavilon-dict="de" src="#/de.json")
+        script(type="application/json" data-vavilon-dict="ru" src="/ru.json")
+        script(type="application/json" data-vavilon-dict="de" src="/de.json")
+
         script(src="https://cdn.jsdelivr.net/npm/vavilon@1.1/dist/vavilon.min.js")
 
-        link(rel="apple-touch-icon", sizes="180x180", href="./favicons/apple-touch-icon.png?v=4.2.5")
-        link(rel="icon", type="image/png", sizes="32x32", href="./favicons/favicon-32x32.png?v=4.2.5")
-        link(rel="icon", type="image/png", sizes="16x16", href="./favicons/favicon-16x16.png?v=4.2.5")
-        link(rel="mask-icon", href="./favicons/safari-pinned-tab.svg?v=4.2.5", color="#6e2d39")
-        link(rel="shortcut icon", href="./favicons/favicon.ico?v=4.2.5")
-
-        link(href="https://fonts.googleapis.com/css?family=Fira+Sans:500|Roboto+Mono:400,500&display=swap&subset=cyrillic" rel="stylesheet")
+        link(rel="apple-touch-icon", sizes="180x180", href="/icons/apple-touch-icon.png?v=4.2.5")
+        link(rel="icon", type="image/png", sizes="32x32", href="/icons/favicon-32x32.png?v=4.2.5")
+        link(rel="icon", type="image/png", sizes="16x16", href="/icons/favicon-16x16.png?v=4.2.5")
+        link(rel="mask-icon", href="/icons/safari-pinned-tab.svg?v=4.2.5", color="#6e2d39")
+        link(rel="shortcut icon", href="/icons/favicon.ico?v=4.2.5")
 
         meta(name="yandex-verification" content="f60ae91d99ed2fa4")
         meta(name="yandex-verification" content="2fdc38f5d667ea71")
-        
-    body
-        main.container
-            section.bio#bio
-                img(src="./me.png" alt="Фото")
-                .bubble
-                    each descriptionItem, idx in description[defaultLanguage]
-                        p.vavilon(data-vavilon="description-"+idx)= descriptionItem
-            
-            section#info
-                div
-                    h1
-                        span.name.vavilon(data-vavilon="name")= name[defaultLanguage]
-                        span.flags
-                            each lang in languages
-                                span.flag(onclick=`setLang('${lang}')`)
-                                    img(src=`./flags/${lang}@2x.png` height=24 alt=lang)
-            section#social
-                ul.soc
-                    each social in socials
-                        li
-                            a.vavilon(class=social.slug
-                                      data-vavilon=social.slug
-                                      href=social.link)= social.name[defaultLanguage]
-                        | 
 
-                //- .skills
-                //-     .skill-row
-                //-         .skill-name.vavilon(data-vavilon="db") БД:
-                //-         .skill-desc PostgreSQL, SQLite, MySQL
-                //-     .skill-row
-                //-         .skill-name.vavilon(data-vavilon="build") Сборка:
-                //-         .skill-desc Rollup, Webpack, Parcel, Gulp
-                //-     .skill-row
-                //-         .skill-name.vavilon(data-vavilon="deploy") Деплой:
-                //-         .skill-desc Docker, Travis CI, GitLab CI
-            
+    body
+        main
+            section.bio#bio
+                .bio__head
+                    .bio__head__info
+                        picture
+                            source(srcset="/images/me@2x.webp" type="image/webp")
+                            img.bio__head__info__image(src="/images/me@2x.jpg" alt="Фото")
+                        h1.bio__head__info__name.vavilon(data-vavilon="name")= name[defaultLanguage]
+                    .bio__head__flags
+                        each lang in languages
+                            button.flag(onclick=`setLang('${lang}')`)
+                                img(src=`/images/${lang}@2x.png` height=24 alt=lang)
+                .bio__bubble
+                    each descriptionItem, idx in description[defaultLanguage]
+                        p.vavilon(data-vavilon="description-" + idx)= descriptionItem
+
+            section#social
+                ul.social
+                    each social in socials
+                        li.social__item
+                            a.social__item__link.vavilon(style=`background-image: linear-gradient(${social.color}, ${social.color});`
+                                data-vavilon=social.slug
+                                href=social.link)= social.name[defaultLanguage]
+
             each module in listModules
                 section(id=module.slug)
-                    h2.vavilon(data-vavilon="m-"+module.slug)= module.title[defaultLanguage]
-                    each item in module.items
-                        a.project(href=item.href)
-                            .project-info
-                                h3.vavilon(data-vavilon="m-"+module.slug+"-"+item.slug+"-name")= item.name[defaultLanguage] || item.name
-                                p.vavilon(data-vavilon="m-"+module.slug+"-"+item.slug+"-desc")= item.description[defaultLanguage]
-                            .project-year= item.year
-        
+                    h2.vavilon(data-vavilon="m-" + module.slug)= module.title[defaultLanguage]
+                    .section-list
+                        each item in module.items
+                            li.section-list__item
+                                a.section-list__item__link(href=item.href)
+                                    .section-list__item__link__info
+                                        h3.section-list__item__link__info__title.vavilon(data-vavilon="m-" + module.slug + "-" + item.slug + "-name")= item.name[defaultLanguage] || item.name
+                                        p.section-list__item__link__info__description.vavilon(data-vavilon="m-" + module.slug + "-" + item.slug + "-desc")= item.description[defaultLanguage]
+                                    .section-list__item__link__year= item.year
+
         footer.footer
-            | &copy;&nbsp;2020 
+            | &copy;&nbsp;2020
+            |
             span.vavilon(data-vavilon="name")= name[defaultLanguage]

@@ -1,6 +1,8 @@
+@import "../variables";
+
 .footer {
     text-align: center;
-    color: $color-ternary;
-    padding: $padding-section 0 $padding-section*2;
+    color: $clr-text;
+    padding: $dim-padding-section*2 0;
     font-family: $font-sans;
 }

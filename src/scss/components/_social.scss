@@ -1,58 +1,45 @@
-.soc {
+@import "../variables";
+
+.social {
     margin: 0;
     padding: 0;
-    text-align: center;
 
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 
-    li {
+    &__item {
         display: inline-block;
         margin: 0;
-        padding: 5px;
+        padding: .7rem .3rem;
 
-        font-size: 14px;
+        font-size: .95rem;
         font-weight: 500;
-        letter-spacing: 1.5px;
+        letter-spacing: 0.11rem;
         text-transform: uppercase;
-        
+
         list-style-type: none;
 
-        a {
-            color: $color-social-text;
+        &__link {
+            color: $clr-headline;
             text-decoration: none;
-            padding: 5px 10px;
+            padding: .35rem .7rem;
 
             background-position: 50% 100%;
             background-repeat: no-repeat;
-            background-size: $size-social-width
-                             $size-social-height-collapsed;
+            background-size: $dim-size-social-width
+            $dim-size-social-height;
 
-            transition-property: color background-size;
-            transition-duration: 150ms;
-            transition-timing-function: ease;
+            transition: color 150ms ease, background-size 150ms ease;
 
             &:hover {
-                color: $color-social-text-hover;
-                background-size: $size-social-width
-                                 $size-social-height-expanded;
-            }
-        }
-
-        @each $social, $color in $color-social {
-            .#{$social} {
-                background-image: linear-gradient($color, $color);
+                color: white;
+                background-size: $dim-size-social-width
+                $dim-size-social-height-expanded;
             }
         }
     }
 }
 
-@media (max-width: $media-tablets) {
-    .soc {
-        li {
-            padding: 10px 5px;
-        }
-    }
-}
+
