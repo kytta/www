@@ -3,7 +3,7 @@
 .section-list {
     &__item {
         list-style: none;
-        border-bottom: 1px solid $clr-white;
+        border-bottom: 1px solid $clr-accent;
         &:last-child {
             border: none;
         }
@@ -24,7 +24,7 @@
             transition: background-color 200ms ease;
 
             &:hover {
-                background-color: $clr-white;
+                background-color: $clr-accent;
             }
 
             &__info {
