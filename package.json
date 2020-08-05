@@ -1,7 +1,6 @@
 {
   "name": "karamoff.dev",
   "version": "4.7.0",
-  "description": "Nikita Karamov's personal website",
   "license": "MIT",
   "private": true,
   "author": "Nikita Karamov <nick@karamoff.dev>",
