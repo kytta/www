@@ -110,21 +110,6 @@ module.exports = {
       },
       items: [
         {
-          slug: 'website',
-          href: 'https://github.com/NickKaramoff/website',
-          name: {
-            ru: 'Этот вебсайт',
-            en: 'This website',
-            de: 'Diese Webseite',
-          },
-          description: {
-            ru: 'Новинка! Теперь с открытым кодом!',
-            en: 'very meta, much open-source',
-            de: 'Jetzt mit öffentlichem Quellcode!',
-          },
-          year: '2020',
-        },
-        {
           slug: 'shareon',
           href: 'https://shareon.js.org',
           name: 'shareon',
@@ -145,6 +130,21 @@ module.exports = {
             de: 'Lightbox-Galerie für Vue.js',
           },
           year: '2020',
+        },
+        {
+          slug: 'website',
+          href: 'https://github.com/NickKaramoff/website',
+          name: {
+            ru: 'Этот вебсайт',
+            en: 'This website',
+            de: 'Diese Webseite',
+          },
+          description: {
+            ru: 'Новинка! Теперь с открытым кодом!',
+            en: 'very meta, much open-source',
+            de: 'Jetzt mit öffentlichem Quellcode!',
+          },
+          year: '2019',
         },
         {
           slug: 'pretty-money',
