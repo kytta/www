@@ -4,4 +4,5 @@ dist
 node_modules
 public
 .vercel
+.vscode
 yarn-error.log
