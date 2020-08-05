@@ -1,6 +1,23 @@
-# personal-website
+# karamoff.dev  [![website status](https://badgen.net/uptime-robot/status/m782289871-06cf6e2f25dfd0855c64c874?label=&cache=300)](https://karamoff.dev)
 
-A repo for my personal website, located at [karamoff.dev](https://karamoff.dev).
+The source code of my website (located at [karamoff.dev](https://karamoff.dev))
 
-Version 4.0 features a way simpler and minimalistic design and a different
-approach to l18n.
+## Build
+
+To build the static version of the website in `public` directory:
+
+```sh
+yarn build
+```
+
+## Preview
+
+To host the `public` directory:
+
+```sh
+yarn start
+```
+
+----
+
+[![powered by Vercel](https://badgen.net/badge/host/powered%20by%20vercel/black?icon=now&label=)](https://vercel.com)
