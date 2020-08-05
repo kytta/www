@@ -13,28 +13,28 @@
   "scripts": {
     "build:pug": "pug ./src/index.pug --obj ./src/pugData.js --out ./public",
     "build:sass": "sass --load-path=node_modules/normalize.css/ ./src/scss/main.scss | postcss -o public/index.css",
-    "build:static": "cpy '**/*' '../../public' --cwd=./src/static --parents",
+    "build:static": "ncp 'src/static' 'public'",
     "build:vavilon": "node ./build/vavilon.js",
     "build": "run-p build:*",
-    "start": "sirv ./public --dev"
+    "start": "sirv public --dev"
   },
   "dependencies": {
-    "autoprefixer": "^9.8.0",
-    "browserslist": "^4.12.0",
-    "cpy-cli": "^3.1.1",
+    "autoprefixer": "^9.8.6",
+    "browserslist": "^4.13.0",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
     "mkdirp": "^1.0.4",
+    "ncp": "^2.0.0",
     "normalize.css": "^8.0.1",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.1",
     "pug": "^3.0.0",
     "pug-cli": "^1.0.0-alpha6",
-    "sass": "^1.26.8"
+    "sass": "^1.26.10"
   },
   "devDependencies": {
-    "np": "^6.2.3",
-    "sirv-cli": "^0.4.6"
+    "np": "^6.3.2",
+    "sirv-cli": "^1.0.5"
   },
   "engines": {
     "node": "12.x"
