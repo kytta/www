@@ -39,8 +39,7 @@
     "node": "12.x"
   },
   "browserslist": [
-    ">=.5% and not last 2 versions, last 2 versions",
-    "not dead"
+    "cover 95% and not dead"
   ],
   "np": {
     "publish": false,
