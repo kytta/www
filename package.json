@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "autoprefixer": "^9.8.6",
-    "browserslist": "^4.13.0",
+    "browserslist": "^4.14.0",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
     "mkdirp": "^1.0.4",
@@ -32,8 +32,8 @@
     "sass": "^1.26.10"
   },
   "devDependencies": {
-    "np": "^6.3.2",
-    "sirv-cli": "^1.0.5"
+    "np": "^6.4.0",
+    "sirv-cli": "^1.0.6"
   },
   "engines": {
     "node": "12.x"
