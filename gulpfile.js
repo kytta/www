@@ -6,12 +6,21 @@ const gulp = require('gulp');
 const postcss = require('gulp-postcss');
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
+const Vinyl = require('vinyl');
 
 const pugData = require('./src/pugData');
 
 sass.compiler = require('sass');
 
 const OUTPUT_DIR = './public';
+
+async function makedir() {
+    try {
+        await fsP.access(OUTPUT_DIR);
+    } catch (e) {
+        await fsP.mkdir(OUTPUT_DIR);
+    }
+}
 
 function css() {
     return gulp.src('./src/scss/main.scss')
@@ -77,7 +86,7 @@ async function vavilon() {
                     } else if (strOrArr instanceof Array) {
                         for (let i = 0; i < strOrArr.length; i++) {
                             writeString(lang, `${key}-${i}`, strOrArr[i]);
-                            
+
                         }
                     }
                 });
@@ -102,10 +111,13 @@ async function vavilon() {
 
     return await Promise.all(
         Object.entries(dictionaries)
-            .map(([lang, dict]) => fsP.writeFile(
-                path.join(OUTPUT_DIR, `${lang}.json`),
-                JSON.stringify(dict)
-            ))
+            .map(([lang, dict]) => {
+
+                return fsP.writeFile(
+                    path.join(OUTPUT_DIR, `${lang}.json`),
+                    JSON.stringify(dict)
+                )
+            })
     )
 }
 
@@ -114,7 +126,10 @@ function static() {
         .pipe(gulp.dest(OUTPUT_DIR));
 }
 
-exports.default = gulp.parallel(html, css, static, vavilon);
+exports.default = gulp.series(
+    makedir,
+    gulp.parallel(html, css, static, vavilon)
+);
 
 exports.watch = function () {
     gulp.watch('./src/pugData.js', gulp.parallel(html, vavilon));
