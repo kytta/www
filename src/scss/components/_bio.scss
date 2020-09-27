@@ -21,15 +21,19 @@
       flex-direction: row;
       align-items: center;
 
+      picture {
+        line-height: 0;
+      }
+
       &__image {
-        border-radius: $dim-radius-bio $dim-radius-bio $dim-radius-bio 0;
+        border-radius: $dim-radius-bio;
         flex: 0 0 3.4rem;
-        width: 3.4rem;
+        width: 48px;
+        margin-right: 1rem;
       }
 
       &__name {
-        font-size: 1.3rem;
-        padding: 0 1rem;
+        font-size: 1.5rem;
       }
     }
 

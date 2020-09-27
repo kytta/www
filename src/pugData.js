@@ -177,8 +177,8 @@ module.exports = {
             de: 'Top Skripte',
           },
           description: {
-            ru: 'Статический сайт на Bootstrap 4',
-            en: 'A static website built with Bootstrap 4 (in Russian)',
+            ru: 'Статический сайт на Bootstrap 4',
+            en: 'A static website built with Bootstrap 4 (in Russian)',
             de: 'Statische Webseite erstellt mit Bootstrap 4 (Russisch)',
           },
           year: '2018',
@@ -203,8 +203,8 @@ module.exports = {
             de: 'Wassili Bussow',
           },
           description: {
-            ru: 'Статический сайт на Bootstrap 3',
-            en: 'A static website built with Bootstrap 3 (in Russian)',
+            ru: 'Статический сайт на Bootstrap 3',
+            en: 'A static website built with Bootstrap 3 (in Russian)',
             de: 'Statische Webseite erstellt mit Bootstrap 3 (Russisch)',
           },
           year: '2014',

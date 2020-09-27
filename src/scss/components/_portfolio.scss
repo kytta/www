@@ -1,21 +1,26 @@
 @import "../variables";
+@import "../mixins";
 
 .section-list {
     &__item {
         list-style: none;
-        border-bottom: 1px solid $clr-accent;
-        &:last-child {
-            border: none;
-        }
+        //border-bottom: 1px solid $clr-accent;
+        //&:last-child {
+        //    border: none;
+        //}
 
         &__link {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
+            @include for-tablet-portrait-up {
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: row;
+            }
 
-            padding: $dim-padding-section-list-item-link $dim-padding-section-list-item-link*2;
+            padding: $dim-padding-section-list-item-link 0;
+
             position: relative;
 
             color: $clr-text;
@@ -23,15 +28,14 @@
 
             transition: background-color 200ms ease;
 
-            &:hover {
-                background-color: $clr-accent;
+            &:hover &__info__title {
+                text-decoration: underline solid $clr-text;
             }
 
             &__info {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                flex-basis: 300px;
                 flex-grow: 1;
                 flex-shrink: 0;
                 align-items: center;
@@ -40,15 +44,18 @@
                     margin: $dim-padding-section-list-item-link/2 15px $dim-padding-section-list-item-link/2 0;
                 }
 
-                &__description {
-                    margin: 0;
+                &__year {
+                    margin: 0 1em 0 0;
+                    padding: $dim-padding-section-list-item-link 0;
+                    font-size: .8em;
                 }
             }
 
-            &__year {
+            &__description {
                 flex-shrink: 0;
-                padding: $dim-padding-section-list-item-link 0;
+                margin: 0;
             }
+
         }
     }
 }

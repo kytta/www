@@ -1,16 +1,22 @@
+@import "mixins";
+
 $clr-background:  #fffffe;
 $clr-headline:    #0d0d0d;
 $clr-text:        #2a2a2a;
 $clr-accent:      #eff0f3;
 
-$font-sans: "Fira Sans", "Roboto", sans-serif;
-$font-mono: "Roboto Mono", "Fira Mono", monospace;
+$font-sans: "IBM Plex Sans", "Roboto", sans-serif;
+$font-mono: "IBM Plex Mono", "Fira Mono", monospace;
 
-$dim-radius-bio:                  1rem;
+$dim-radius-bio:                  5px;
 $dim-size-social-height:          7%;
 $dim-size-social-height-expanded: 100%;
 $dim-size-social-width:           97%;
 $dim-size-text:                   14px;
 
 $dim-padding-section:                 1rem;
-$dim-padding-section-list-item-link:  $dim-size-text/2;
+$dim-padding-section-list-item-link:  $dim-size-text/3;
+
+@include for-tablet-landscape-up {
+  $dim-padding-section-list-item-link:  $dim-size-text/2;
+}

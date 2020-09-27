@@ -3,11 +3,16 @@
 .flag {
   background: none;
   border: none;
-  border-radius: 50%;
   padding: 0;
   margin: 0 .2rem;
   transition: opacity 200ms ease;
   line-height: 0;
+
+  img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
 
   &:hover {
     opacity: (2/3)
