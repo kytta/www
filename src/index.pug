@@ -10,7 +10,7 @@ html(lang=defaultLanguage)
             content=descriptionMeta[defaultLanguage]
             data-vavilon="descriptionMeta")
 
-        link(rel="stylesheet" type="text/css" media="screen" href="/index.css")
+        link(rel="stylesheet" type="text/css" href="/main.css")
 
         each lang in languages
             script(type="application/json" data-vavilon-dict=lang src=`/${lang}.json`)

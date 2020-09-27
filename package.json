@@ -10,32 +10,24 @@
     "url": "git+https://github.com/NickKaramoff/website.git"
   },
   "scripts": {
-    "build:pug": "pug ./src/index.pug --obj ./src/pugData.js --out ./public",
-    "build:sass": "sass --load-path=node_modules/normalize.css/ ./src/scss/main.scss | postcss -o public/index.css",
-    "build:static": "ncp 'src/static' 'public'",
-    "build:vavilon": "node ./build/vavilon.js",
-    "build": "run-p build:*",
-    "dev": "watchlist src build -- yarn build",
+    "build": "gulp",
+    "dev": "gulp watch",
     "start": "sirv public --dev"
   },
-  "dependencies": {
+  "devDependencies": {
     "autoprefixer": "^9.8.6",
     "browserslist": "^4.14.5",
-    "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
-    "mkdirp": "^1.0.4",
-    "ncp": "^2.0.0",
+    "fibers": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.1.0",
     "normalize.css": "^8.0.1",
-    "npm-run-all": "^4.1.5",
-    "postcss-cli": "^7.1.2",
-    "pug": "^3.0.0",
-    "pug-cli": "^1.0.0-alpha6",
-    "sass": "^1.26.11"
-  },
-  "devDependencies": {
     "np": "^6.5.0",
-    "sirv-cli": "^1.0.6",
-    "watchlist": "^0.2.3"
+    "postcss": "^7.0.34",
+    "sass": "^1.26.11",
+    "sirv-cli": "^1.0.6"
   },
   "engines": {
     "node": "12.x"
