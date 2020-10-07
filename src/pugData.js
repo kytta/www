@@ -90,17 +90,6 @@ module.exports = {
       color: '#171515',
     },
     {
-      slug: 'soc-pa',
-      link: 'https://patreon.com/NickKaramoff',
-      name: {
-        ru: 'Патреон',
-        en: 'Patreon',
-        de: 'Patreon',
-        by: 'Патреон',
-      },
-      color: '#f96854',
-    },
-    {
       slug: 'soc-pg',
       link: 'https://keys.openpgp.org/vks/v1/by-fingerprint/3CC5EA53F4DFEFCA568C41A0E40DFE6E993540FF',
       name: {
