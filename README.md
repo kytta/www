@@ -1,4 +1,6 @@
-# Personal website
-## version 3.0
+# karamoff.ru (v3)
 
-A repo for my personal website, located on [karamoff.ru](http://karamoff.ru)
+Archive of the v3 of my personal website, located at at [v3.karamoff.dev](https://v3.karamoff.dev)
+(previously at [karamoff.ru](https://karamoff.ru)).
+
+This version was used from 19 Sep 2017 'til 9 Sep 2019
