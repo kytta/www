@@ -54,7 +54,7 @@ html(lang=defaultLanguage)
 			each module in listModules
 				section(id=module.slug)
 					h2.vavilon(data-vavilon="m-" + module.slug)= module.title[defaultLanguage]
-					.section-list
+					ul.section-list
 						each item in module.items
 							li.section-list__item
 								a.section-list__item__link(href=item.href)
