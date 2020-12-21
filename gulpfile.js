@@ -40,28 +40,6 @@ function html() {
 		.pipe(gulp.dest(OUTPUT_DIR));
 }
 
-function writeMultilangString(inputKey, outputKey, root = pugData) {
-	if (outputKey === undefined) {
-		outputKey = inputKey;
-	}
-
-	languages.forEach(lang => {
-		if (typeof root[inputKey] === 'string' || root[inputKey] instanceof String) {
-			dictionaries[lang][outputKey] = root[inputKey];
-		} else {
-			if (root[inputKey].hasOwnProperty(lang)) {
-				if (typeof root[inputKey][lang] === 'string' || root[inputKey][lang] instanceof String) {
-					dictionaries[lang][outputKey] = root[inputKey][lang];
-				} else if (root[inputKey][lang] instanceof Array) {
-					for (let idx in root[inputKey][lang]) {
-						dictionaries[lang][`${outputKey}-${idx}`] = root[inputKey][lang][idx];
-					}
-				}
-			}
-		}
-	})
-}
-
 async function vavilon() {
 	const pugData = require('./src/pugData');
 	const dictionaries = {};
