@@ -23,6 +23,13 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
+"@nickkaramoff/taskr-sass@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/@nickkaramoff/taskr-sass/-/taskr-sass-2.0.0.tgz#f666446e11a40364a73ea309a73c1ea6dbd82586"
+  integrity sha512-jcRK8fNdHiO5RWEhk48wgeo9fYBDoBogNO07zeXtqjvnp2pcSmN3GO3MUhyZeb+MBo3plOEgKx8t72DrYV4OvA==
+  dependencies:
+    sass "^1.30.0"
+
 "@nodelib/fs.scandir@2.1.3":
   version "2.1.3"
   resolved "https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.3.tgz#3a582bdb53804c6ba6d146579c46e52130cf4a3b"
