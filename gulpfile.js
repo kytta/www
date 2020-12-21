@@ -134,6 +134,6 @@ exports.default = gulp.series(
 exports.watch = function () {
 	gulp.watch('./src/pugData.js', gulp.parallel(html, vavilon));
 	gulp.watch('./src/index.pug', html);
-	gulp.watch('./src/style/**/*.scss', css);
+	gulp.watch('./src/scss/**/*.scss', css);
 	gulp.watch('./src/static/**/*', static);
 }
