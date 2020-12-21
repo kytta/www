@@ -13,5 +13,12 @@ exports.styles = function * (task) {
 			fiber: Fiber,
 			includePaths: ["node_modules/normalize.css"]
 		})
+		.postcss({
+			from: undefined,
+			plugins: [
+				require('autoprefixer'),
+				require('cssnano'),
+			]
+		})
 		.target(OUTPUT_DIR);
 }

@@ -23,6 +23,13 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
+"@nickkaramoff/taskr-postcss@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/@nickkaramoff/taskr-postcss/-/taskr-postcss-2.0.0.tgz#cfb5ac3585ea15a1314e5c558cb906257077895d"
+  integrity sha512-6uf4fbk4nk0ccK5pSiO3upd+g/scnxqpZx2P0yUq0LoaU9wKZqCrlkyxgN/KShmLsjDFkgPV2WSV/k8PtX6JrA==
+  dependencies:
+    postcss "^8.2.1"
+
 "@nickkaramoff/taskr-sass@^2.0.0":
   version "2.0.0"
   resolved "https://registry.npmjs.org/@nickkaramoff/taskr-sass/-/taskr-sass-2.0.0.tgz#f666446e11a40364a73ea309a73c1ea6dbd82586"
