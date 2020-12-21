@@ -1,24 +1,24 @@
 @import "../variables";
 
 .flag {
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0 .2rem;
-  transition: opacity 200ms ease;
-  line-height: 0;
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0 .2rem;
+	transition: opacity 200ms ease;
+	line-height: 0;
 
-  img {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-  }
+	img {
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+	}
 
-  &:hover {
-    opacity: (2/3)
-  }
+	&:hover {
+		opacity: (2/3)
+	}
 
-  &--active {
-    border: $clr-headline solid .2em;
-  }
+	&--active {
+		border: $clr-headline solid .2em;
+	}
 }

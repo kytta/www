@@ -18,5 +18,5 @@ $dim-padding-section:                 1rem;
 $dim-padding-section-list-item-link:  $dim-size-text/3;
 
 @include for-tablet-landscape-up {
-  $dim-padding-section-list-item-link:  $dim-size-text/2;
+	$dim-padding-section-list-item-link:  $dim-size-text/2;
 }

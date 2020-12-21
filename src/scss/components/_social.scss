@@ -1,45 +1,45 @@
 @import "../variables";
 
 .social {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
 
-    &__item {
-        display: inline-block;
-        margin: 0;
-        padding: .7rem .3rem;
+	&__item {
+		display: inline-block;
+		margin: 0;
+		padding: .7rem .3rem;
 
-        font-size: .95rem;
-        font-weight: 500;
-        letter-spacing: 0.11rem;
-        text-transform: uppercase;
+		font-size: .95rem;
+		font-weight: 500;
+		letter-spacing: 0.11rem;
+		text-transform: uppercase;
 
-        list-style-type: none;
+		list-style-type: none;
 
-        &__link {
-            color: $clr-headline;
-            text-decoration: none;
-            padding: .35rem .7rem;
+		&__link {
+			color: $clr-headline;
+			text-decoration: none;
+			padding: .35rem .7rem;
 
-            background-position: 50% 100%;
-            background-repeat: no-repeat;
-            background-size: $dim-size-social-width
-            $dim-size-social-height;
+			background-position: 50% 100%;
+			background-repeat: no-repeat;
+			background-size: $dim-size-social-width
+			$dim-size-social-height;
 
-            transition: color 150ms ease, background-size 150ms ease;
+			transition: color 150ms ease, background-size 150ms ease;
 
-            &:hover {
-                color: white;
-                background-size: $dim-size-social-width
-                $dim-size-social-height-expanded;
-            }
-        }
-    }
+			&:hover {
+				color: white;
+				background-size: $dim-size-social-width
+				$dim-size-social-height-expanded;
+			}
+		}
+	}
 }
 
 

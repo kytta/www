@@ -2,60 +2,60 @@
 @import "../mixins";
 
 .section-list {
-    &__item {
-        list-style: none;
-        //border-bottom: 1px solid $clr-accent;
-        //&:last-child {
-        //    border: none;
-        //}
+	&__item {
+		list-style: none;
+		//border-bottom: 1px solid $clr-accent;
+		//&:last-child {
+		//    border: none;
+		//}
 
-        &__link {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            @include for-tablet-portrait-up {
-                align-items: center;
-                justify-content: space-between;
-                flex-direction: row;
-            }
+		&__link {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			@include for-tablet-portrait-up {
+				align-items: center;
+				justify-content: space-between;
+				flex-direction: row;
+			}
 
-            padding: $dim-padding-section-list-item-link 0;
+			padding: $dim-padding-section-list-item-link 0;
 
-            position: relative;
+			position: relative;
 
-            color: $clr-text;
-            text-decoration: none;
+			color: $clr-text;
+			text-decoration: none;
 
-            transition: background-color 200ms ease;
+			transition: background-color 200ms ease;
 
-            &:hover &__info__title {
-                text-decoration: underline solid $clr-text;
-            }
+			&:hover &__info__title {
+				text-decoration: underline solid $clr-text;
+			}
 
-            &__info {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                flex-grow: 1;
-                flex-shrink: 0;
-                align-items: center;
+			&__info {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				flex-grow: 1;
+				flex-shrink: 0;
+				align-items: center;
 
-                &__title {
-                    margin: $dim-padding-section-list-item-link/2 15px $dim-padding-section-list-item-link/2 0;
-                }
+				&__title {
+					margin: $dim-padding-section-list-item-link/2 15px $dim-padding-section-list-item-link/2 0;
+				}
 
-                &__year {
-                    margin: 0 1em 0 0;
-                    padding: $dim-padding-section-list-item-link 0;
-                    font-size: .8em;
-                }
-            }
+				&__year {
+					margin: 0 1em 0 0;
+					padding: $dim-padding-section-list-item-link 0;
+					font-size: .8em;
+				}
+			}
 
-            &__description {
-                flex-shrink: 0;
-                margin: 0;
-            }
+			&__description {
+				flex-shrink: 0;
+				margin: 0;
+			}
 
-        }
-    }
+		}
+	}
 }

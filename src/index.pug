@@ -1,69 +1,69 @@
 doctype html
 html(lang=defaultLanguage)
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible" content="ie=edge")
-        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		head
+				meta(charset="UTF-8")
+				meta(http-equiv="X-UA-Compatible" content="ie=edge")
+				meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
-        title.vavilon(data-vavilon="name")= name[defaultLanguage]
-        meta.vavilon(name="description"
-            content=descriptionMeta[defaultLanguage]
-            data-vavilon="descriptionMeta")
+				title.vavilon(data-vavilon="name")= name[defaultLanguage]
+				meta.vavilon(name="description"
+						content=descriptionMeta[defaultLanguage]
+						data-vavilon="descriptionMeta")
 
-        link(rel="stylesheet" type="text/css" href="/main.css")
+				link(rel="stylesheet" type="text/css" href="/main.css")
 
-        each lang in languages
-            script(type="application/json" data-vavilon-dict=lang src=`/${lang}.json`)
+				each lang in languages
+						script(type="application/json" data-vavilon-dict=lang src=`/${lang}.json`)
 
-        script(src="https://cdn.jsdelivr.net/npm/vavilon@1.1/dist/vavilon.min.js")
+				script(src="https://cdn.jsdelivr.net/npm/vavilon@1.1/dist/vavilon.min.js")
 
-        link(rel="apple-touch-icon", sizes="180x180", href="/icons/apple-touch-icon.png?v=4.2.5")
-        link(rel="icon", type="image/png", sizes="32x32", href="/icons/favicon-32x32.png?v=4.2.5")
-        link(rel="icon", type="image/png", sizes="16x16", href="/icons/favicon-16x16.png?v=4.2.5")
-        link(rel="mask-icon", href="/icons/safari-pinned-tab.svg?v=4.2.5", color="#6e2d39")
-        link(rel="shortcut icon", href="/icons/favicon.ico?v=4.2.5")
+				link(rel="apple-touch-icon", sizes="180x180", href="/icons/apple-touch-icon.png?v=4.2.5")
+				link(rel="icon", type="image/png", sizes="32x32", href="/icons/favicon-32x32.png?v=4.2.5")
+				link(rel="icon", type="image/png", sizes="16x16", href="/icons/favicon-16x16.png?v=4.2.5")
+				link(rel="mask-icon", href="/icons/safari-pinned-tab.svg?v=4.2.5", color="#6e2d39")
+				link(rel="shortcut icon", href="/icons/favicon.ico?v=4.2.5")
 
-        meta(name="yandex-verification" content="f60ae91d99ed2fa4")
-        meta(name="yandex-verification" content="2fdc38f5d667ea71")
+				meta(name="yandex-verification" content="f60ae91d99ed2fa4")
+				meta(name="yandex-verification" content="2fdc38f5d667ea71")
 
-    body
-        main
-            section.bio#bio
-                .bio__head
-                    .bio__head__info
-                        picture
-                            source(srcset="/images/newme@2x.webp" type="image/webp")
-                            img.bio__head__info__image(src="/images/newme@2x.jpg" alt="Фото")
-                        h1.bio__head__info__name.vavilon(data-vavilon="name")= name[defaultLanguage]
-                    .bio__head__flags
-                        each lang in languages
-                            button.flag(onclick=`setLang('${lang}')`)
-                                img(src=`/images/${lang}.svg` alt=lang)
-                .bio__bubble
-                    each descriptionItem, idx in description[defaultLanguage]
-                        p.vavilon(data-vavilon="description-" + idx)= descriptionItem
+		body
+				main
+						section.bio#bio
+								.bio__head
+										.bio__head__info
+												picture
+														source(srcset="/images/newme@2x.webp" type="image/webp")
+														img.bio__head__info__image(src="/images/newme@2x.jpg" alt="Фото")
+												h1.bio__head__info__name.vavilon(data-vavilon="name")= name[defaultLanguage]
+										.bio__head__flags
+												each lang in languages
+														button.flag(onclick=`setLang('${lang}')`)
+																img(src=`/images/${lang}.svg` alt=lang)
+								.bio__bubble
+										each descriptionItem, idx in description[defaultLanguage]
+												p.vavilon(data-vavilon="description-" + idx)= descriptionItem
 
-            section#social
-                ul.social
-                    each social in socials
-                        li.social__item
-                            a.social__item__link.vavilon(style=`background-image: linear-gradient(${social.color}, ${social.color});`
-                                data-vavilon=social.slug
-                                href=social.link)= social.name[defaultLanguage]
+						section#social
+								ul.social
+										each social in socials
+												li.social__item
+														a.social__item__link.vavilon(style=`background-image: linear-gradient(${social.color}, ${social.color});`
+																data-vavilon=social.slug
+																href=social.link)= social.name[defaultLanguage]
 
-            each module in listModules
-                section(id=module.slug)
-                    h2.vavilon(data-vavilon="m-" + module.slug)= module.title[defaultLanguage]
-                    .section-list
-                        each item in module.items
-                            li.section-list__item
-                                a.section-list__item__link(href=item.href)
-                                    .section-list__item__link__info
-                                        .section-list__item__link__info__year= item.year
-                                        h3.section-list__item__link__info__title.vavilon(data-vavilon="m-" + module.slug + "-" + item.slug + "-name")= item.name[defaultLanguage] || item.name
-                                    p.section-list__item__link__description.vavilon(data-vavilon="m-" + module.slug + "-" + item.slug + "-desc")= item.description[defaultLanguage]
+						each module in listModules
+								section(id=module.slug)
+										h2.vavilon(data-vavilon="m-" + module.slug)= module.title[defaultLanguage]
+										.section-list
+												each item in module.items
+														li.section-list__item
+																a.section-list__item__link(href=item.href)
+																		.section-list__item__link__info
+																				.section-list__item__link__info__year= item.year
+																				h3.section-list__item__link__info__title.vavilon(data-vavilon="m-" + module.slug + "-" + item.slug + "-name")= item.name[defaultLanguage] || item.name
+																		p.section-list__item__link__description.vavilon(data-vavilon="m-" + module.slug + "-" + item.slug + "-desc")= item.description[defaultLanguage]
 
-        footer.footer
-            | &copy;&nbsp;2020
-            |
-            span.vavilon(data-vavilon="name")= name[defaultLanguage]
+				footer.footer
+						| &copy;&nbsp;2020
+						|
+						span.vavilon(data-vavilon="name")= name[defaultLanguage]
