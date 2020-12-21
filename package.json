@@ -15,19 +15,19 @@
 		"start": "sirv public --dev"
 	},
 	"devDependencies": {
-		"autoprefixer": "^9.8.6",
-		"browserslist": "^4.14.5",
+		"autoprefixer": "^10.1.0",
+		"browserslist": "^4.16.0",
 		"cssnano": "^4.1.10",
 		"fibers": "^5.0.0",
 		"gulp": "^4.0.2",
-		"gulp-postcss": "^8.0.0",
+		"gulp-postcss": "^9.0.0",
 		"gulp-pug": "^4.0.1",
 		"gulp-sass": "^4.1.0",
 		"normalize.css": "^8.0.1",
-		"np": "^6.5.0",
-		"postcss": "^7.0.34",
-		"sass": "^1.26.11",
-		"sirv-cli": "^1.0.6"
+		"np": "^7.0.0",
+		"postcss": "^8.2.1",
+		"sass": "^1.30.0",
+		"sirv-cli": "^1.0.10"
 	},
 	"engines": {
 		"node": "12.x"
