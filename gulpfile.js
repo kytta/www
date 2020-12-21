@@ -8,8 +8,6 @@ const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const Vinyl = require('vinyl');
 
-const pugData = require('./src/pugData');
-
 sass.compiler = require('sass');
 
 const OUTPUT_DIR = './public';
@@ -36,6 +34,7 @@ function css() {
 }
 
 function html() {
+	const pugData = require('./src/pugData');
 	return gulp.src('./src/index.pug')
 		.pipe(pug({ locals: pugData }))
 		.pipe(gulp.dest(OUTPUT_DIR));
@@ -64,6 +63,7 @@ function writeMultilangString(inputKey, outputKey, root = pugData) {
 }
 
 async function vavilon() {
+	const pugData = require('./src/pugData');
 	const dictionaries = {};
 	pugData.languages
 		.forEach(l => { dictionaries[l] = {} });
