@@ -91,7 +91,7 @@ module.exports = {
 		},
 		{
 			slug: 'soc-pg',
-			link: 'https://keys.openpgp.org/vks/v1/by-fingerprint/3CC5EA53F4DFEFCA568C41A0E40DFE6E993540FF',
+			link: 'https://keybase.io/nickkaramoff/pgp_keys.asc',
 			name: {
 				ru: 'ПГП',
 				en: 'PGP',
