@@ -6,7 +6,7 @@ const pug = require('pug');
 const OUTPUT_DIR = './public';
 
 exports.default = function * (task) {
-	yield task.parallel(['pug', 'styles']);
+	yield task.parallel(['pug', 'static', 'styles']);
 }
 
 exports.styles = function * (task) {
@@ -49,4 +49,8 @@ exports.pug = function * (task) {
 			}
 		})
 		.target(OUTPUT_DIR)
+}
+
+exports.static = function * (task) {
+	yield task.source('./src/static/**/*').target(OUTPUT_DIR);
 }
