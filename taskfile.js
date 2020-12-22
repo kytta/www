@@ -111,3 +111,10 @@ exports.vavilon = function * (task) {
 
 	task.target(OUTPUT_DIR);
 }
+
+exports.watch = function * (task) {
+	yield task.watch('./src/pugData.js', ['pug', 'vavilon']);
+	yield task.watch('./src/index.pug', 'pug');
+	yield task.watch('./src/scss/**/*.scss', 'styles');
+	yield task.watch('./src/static/**/*', 'static');
+}
