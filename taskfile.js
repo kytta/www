@@ -1,48 +1,64 @@
-const { promises: fsP } = require('fs');
 const path = require('path');
 
 const Fiber = require('fibers');
-const gulp = require('gulp');
-const postcss = require('gulp-postcss');
-const pug = require('gulp-pug');
-const sass = require('gulp-sass');
-const Vinyl = require('vinyl');
-
-sass.compiler = require('sass');
+const pug = require('pug');
 
 const OUTPUT_DIR = './public';
 
-async function makedir() {
-	try {
-		await fsP.access(OUTPUT_DIR);
-	} catch (e) {
-		await fsP.mkdir(OUTPUT_DIR);
-	}
+exports.default = function * (task) {
+	yield task.parallel(['pug', 'static', 'styles', 'vavilon']);
 }
 
-function css() {
-	return gulp.src('./src/scss/main.scss')
-		.pipe(sass({
+exports.styles = function * (task) {
+	yield task
+		.source('./src/scss/main.scss')
+		.sass({
 			fiber: Fiber,
 			includePaths: ["node_modules/normalize.css"]
-		}).on('error', sass.logError))
-		.pipe(postcss([
-			require('autoprefixer'),
-			require('cssnano')
-		]))
-		.pipe(gulp.dest(OUTPUT_DIR));
+		})
+		.postcss({
+			from: undefined,
+			plugins: [
+				require('autoprefixer'),
+				require('cssnano'),
+			]
+		})
+		.target(OUTPUT_DIR);
 }
 
-function html() {
+// See: https://github.com/lukeed/taskr/issues/316#issuecomment-605296296
+// See: https://github.com/lukeed/taskr/issues/316#issuecomment-605410415
+exports.pug = function * (task) {
 	const pugData = require('./src/pugData');
-	return gulp.src('./src/index.pug')
-		.pipe(pug({ locals: pugData }))
-		.pipe(gulp.dest(OUTPUT_DIR));
+
+	yield task
+		.source('./src/index.pug')
+		.run({
+			every: true,
+			*func(file) {
+				const html = pug.render(
+					file.data.toString(),
+					{
+            filename: path.join(file.dir, file.base),
+						...pugData,
+					}
+				);
+
+				file.data = Buffer.from(html);
+				file.base = file.base.replace(/\.pug$/i, '.html');
+			}
+		})
+		.target(OUTPUT_DIR)
 }
 
-async function vavilon() {
+exports.static = function * (task) {
+	yield task.source('./src/static/**/*').target(OUTPUT_DIR);
+}
+
+exports.vavilon = function * (task) {
 	const pugData = require('./src/pugData');
 	const dictionaries = {};
+
 	pugData.languages
 		.forEach(l => { dictionaries[l] = {} });
 
@@ -86,32 +102,19 @@ async function vavilon() {
 		});
 	});
 
+	task._.files = Object.entries(dictionaries)
+		.map(([lang, dict]) => ({
+				dir: OUTPUT_DIR,
+				base:`${lang}.json`,
+				data: Buffer.from(JSON.stringify(dict))
+		}));
 
-	return await Promise.all(
-		Object.entries(dictionaries)
-			.map(([lang, dict]) => {
-
-				return fsP.writeFile(
-					path.join(OUTPUT_DIR, `${lang}.json`),
-					JSON.stringify(dict)
-				)
-			})
-	)
+	task.target(OUTPUT_DIR);
 }
 
-function static() {
-	return gulp.src('./src/static/**/*')
-		.pipe(gulp.dest(OUTPUT_DIR));
-}
-
-exports.default = gulp.series(
-	makedir,
-	gulp.parallel(html, css, static, vavilon)
-);
-
-exports.watch = function () {
-	gulp.watch('./src/pugData.js', gulp.parallel(html, vavilon));
-	gulp.watch('./src/index.pug', html);
-	gulp.watch('./src/scss/**/*.scss', css);
-	gulp.watch('./src/static/**/*', static);
+exports.watch = function * (task) {
+	yield task.watch('./src/pugData.js', ['pug', 'vavilon']);
+	yield task.watch('./src/index.pug', 'pug');
+	yield task.watch('./src/scss/**/*.scss', 'styles');
+	yield task.watch('./src/static/**/*', 'static');
 }
