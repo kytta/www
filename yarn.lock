@@ -37,12 +37,13 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@nickkaramoff/taskr-postcss@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/@nickkaramoff/taskr-postcss/-/taskr-postcss-2.0.0.tgz#cfb5ac3585ea15a1314e5c558cb906257077895d"
-  integrity sha512-6uf4fbk4nk0ccK5pSiO3upd+g/scnxqpZx2P0yUq0LoaU9wKZqCrlkyxgN/KShmLsjDFkgPV2WSV/k8PtX6JrA==
+"@nickkaramoff/taskr-postcss@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.npmjs.org/@nickkaramoff/taskr-postcss/-/taskr-postcss-2.0.2.tgz#afd340e2d52058344fb608d85f45568ecf725d2d"
+  integrity sha512-I0qtq6X/C6zn39hQVzieSz8Viy4AgieoGGvLk0UJB5j5uW9US9XYODsEt18SaKLkHno0QEXKlA9GZXhBlcagBA==
   dependencies:
     postcss "^8.2.1"
+    postcss-load-config "^3.0.0"
 
 "@nickkaramoff/taskr-sass@^2.0.0":
   version "2.0.0"
@@ -1176,9 +1177,9 @@ duplexer3@^0.1.4:
   integrity sha1-7gHdHKwO08vH/b6jfcCo8c4ALOI=
 
 electron-to-chromium@^1.3.621:
-  version "1.3.629"
-  resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.629.tgz#a08d13b64d90e3c77ec5b9bffa3efbc5b4a00969"
-  integrity sha512-iSPPJtPvHrMAvYOt+9cdbDmTasPqwnwz4lkP8Dn200gDNUBQOLQ96xUsWXBwXslAo5XxdoXAoQQ3RAy4uao9IQ==
+  version "1.3.630"
+  resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.630.tgz#102e930466e53ab7fde6009c2d50b8a4574b543e"
+  integrity sha512-HSTsvqOrR3kWsoekKu0EOQXR/YOncKs3HAys9lysvIS2ec/mlfV1ZoLHSx00semK+PscVJwqcvBN4ayGPs++fA==
 
 elegant-spinner@^1.0.1:
   version "1.0.1"
@@ -1789,6 +1790,13 @@ ignore@^5.1.4:
   resolved "https://registry.npmjs.org/ignore/-/ignore-5.1.8.tgz#f150a8b50a34289b33e22f5889abd4d8016f0e57"
   integrity sha512-BMpfD7PpiETpBl/A6S498BaIJ6Y/ABT93ETbby2fP00v4EbvPBXWEoaR1UBPKs3iR53pJY7EtZk5KACI57i1Uw==
 
+import-cwd@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/import-cwd/-/import-cwd-3.0.0.tgz#20845547718015126ea9b3676b7592fb8bd4cf92"
+  integrity sha512-4pnzH16plW+hgvRECbDWpQl3cqtvSofHWh44met7ESfZ8UZOWWddm8hEyDTqREJ9RbYHY8gi8DqmaelApoOGMg==
+  dependencies:
+    import-from "^3.0.0"
+
 import-fresh@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/import-fresh/-/import-fresh-2.0.0.tgz#d81355c15612d386c61f9ddd3922d4304822a546"
@@ -1804,6 +1812,13 @@ import-fresh@^3.2.1:
   dependencies:
     parent-module "^1.0.0"
     resolve-from "^4.0.0"
+
+import-from@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/import-from/-/import-from-3.0.0.tgz#055cfec38cd5a27d8057ca51376d7d3bf0891966"
+  integrity sha512-CiuXOFFSzkU5x/CR0+z7T91Iht4CXgfCxVOFRhh2Zyhg5wOpWvvDLQUsWl+gcN+QscYBjez8hDCt85O7RLDttQ==
+  dependencies:
+    resolve-from "^5.0.0"
 
 import-lazy@^2.1.0:
   version "2.1.0"
@@ -3295,6 +3310,14 @@ postcss-discard-overridden@^4.0.1:
   integrity sha512-IYY2bEDD7g1XM1IDEsUT4//iEYCxAmP5oDSFMVU/JVvT7gh+l4fmjciLqGgwjdWpQIdb0Che2VX00QObS5+cTg==
   dependencies:
     postcss "^7.0.0"
+
+postcss-load-config@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/postcss-load-config/-/postcss-load-config-3.0.0.tgz#850bb066edd65b734329eacf83af0c0764226c87"
+  integrity sha512-lErrN8imuEF1cSiHBV8MiR7HeuzlDpCGNtaMyYHlOBuJHHOGw6S4xOMZp8BbXPr7AGQp14L6PZDlIOpfFJ6f7w==
+  dependencies:
+    cosmiconfig "^7.0.0"
+    import-cwd "^3.0.0"
 
 postcss-merge-longhand@^4.0.11:
   version "4.0.11"
