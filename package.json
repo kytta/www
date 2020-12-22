@@ -10,8 +10,8 @@
 		"url": "git+https://github.com/NickKaramoff/website.git"
 	},
 	"scripts": {
-		"build": "gulp",
-		"dev": "gulp watch",
+		"build": "taskr",
+		"dev": "taskr watch",
 		"start": "sirv public --dev"
 	},
 	"devDependencies": {
@@ -19,17 +19,11 @@
 		"@nickkaramoff/taskr-sass": "^2.0.0",
 		"@taskr/watch": "^1.1.0",
 		"autoprefixer": "^10.1.0",
-		"browserslist": "^4.16.0",
 		"cssnano": "^4.1.10",
 		"fibers": "^5.0.0",
-		"gulp": "^4.0.2",
-		"gulp-postcss": "^9.0.0",
-		"gulp-pug": "^4.0.1",
-		"gulp-sass": "^4.1.0",
 		"normalize.css": "^8.0.1",
 		"np": "^7.0.0",
 		"postcss": "^8.2.1",
-		"sass": "^1.30.0",
 		"sirv-cli": "^1.0.10",
 		"taskr": "^1.1.0"
 	},
