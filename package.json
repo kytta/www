@@ -16,15 +16,15 @@
 		"start": "sirv public --dev"
 	},
 	"devDependencies": {
-		"@nickkaramoff/taskr-postcss": "^2.0.2",
+		"@nickkaramoff/taskr-postcss": "^2.0.3",
 		"@nickkaramoff/taskr-sass": "^2.0.0",
 		"@taskr/watch": "^1.1.0",
 		"autoprefixer": "^10.1.0",
 		"cssnano": "^4.1.10",
 		"fibers": "^5.0.0",
 		"normalize.css": "^8.0.1",
-		"np": "^7.0.0",
-		"postcss": "^8.2.1",
+		"np": "^7.2.0",
+		"postcss": "^8.2.2",
 		"pug": "^3.0.0",
 		"sirv-cli": "^1.0.10",
 		"taskr": "^1.1.0"
