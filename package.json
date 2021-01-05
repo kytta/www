@@ -12,6 +12,7 @@
 	"scripts": {
 		"build": "taskr",
 		"dev": "taskr watch",
+		"release": "np --no-publish --no-tests --no-release-draft",
 		"start": "sirv public --dev"
 	},
 	"devDependencies": {
@@ -33,10 +34,5 @@
 	},
 	"browserslist": [
 		"cover 95% and not dead"
-	],
-	"np": {
-		"publish": false,
-		"releaseDraft": false,
-		"tests": false
-	}
+	]
 }
