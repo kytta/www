@@ -7,41 +7,43 @@
 html, body {
 	background: $clr-background;
 	color: $clr-text;
-	font-size: $dim-size-text;
 	font-family: $font-sans;
+	font-size: $font-size-body;
 	font-weight: 400;
 }
 
-h1,
-h2,
-h3 {
-	color: $clr-headline;
-	font-family: $font-sans;
-	font-weight: 500;
-	margin: 0;
-}
-
-h2 {
-	margin-bottom: 14px;
-	font: {
-		size: 24px;
-	}
-}
-
-h3 {
-	font: {
-		size: 20px;
-	};
-}
-
 main {
-	max-width: 800px;
+	max-width: 640px;
 	padding: 1rem;
 	margin: 0 auto;
 }
 
+h1, h2, h3 {
+	color: $clr-headline;
+	font-family: $font-sans;
+	font-weight: 600;
+	margin: 0;
+}
+
+a {
+	color: $color-link;
+
+	&:visited {
+		color: $color-link-visited;
+
+		&:hover {
+			color: $color-link-visited-hover;
+		}
+	}
+
+	&:hover {
+		color: $color-link-hover;
+	}
+}
+
+
 section {
-	padding: $dim-padding-section 0;
+	padding: 0 0 ($dim-padding-section*2);
 }
 
 #social {

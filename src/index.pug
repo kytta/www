@@ -36,21 +36,34 @@ html(lang=defaultLanguage)
 
 	body
 		main
+			section#about
+				h1.vavilon(data-vavilon="name")= name[defaultLanguage]
+
+				each descriptionItem, idx in description[defaultLanguage]
+					p.vavilon(data-vavilon="description-" + idx)= descriptionItem
+
+				table.about-table
+					tbody
+						tr
+							th Expertise
+							td 5 years
+						tr
+							th Location
+							td Kazan, Russia (GMT+3)
+						tr
+							th Contact me
+							td
+								a(href="mailto:nick@karamoff.dev") nick[at]karamoff.dev
+								= " "
+								a(href="https://t.me/nickkaramoff") Telegram
+
 			section.bio#bio
 				.bio__head
-					.bio__head__info
-						picture
-							source(srcset="/images/me@2x.webp" type="image/webp")
-							img.bio__head__info__image(src="/images/me@2x.jpg" alt="Фото", width=48, height=48)
-						h1.bio__head__info__name.vavilon(data-vavilon="name")= name[defaultLanguage]
 					.bio__head__flags
 						each lang in languages
 							button.flag(onclick=`setLang('${lang}')`, title=languageNames[languages.indexOf(lang)], type="button")
 								img(src=`/images/${lang}.svg` width=0, height=0 aria-hidden="true")
 								= languageNames[languages.indexOf(lang)]
-				.bio__bubble
-					each descriptionItem, idx in description[defaultLanguage]
-						p.vavilon(data-vavilon="description-" + idx)= descriptionItem
 
 			section#social
 				ul.social
