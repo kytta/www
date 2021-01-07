@@ -39,7 +39,7 @@ html(lang=defaultLanguage)
 					.bio__head__flags
 						each lang in languages
 							button.flag(onclick=`setLang('${lang}')`, title=languageNames[languages.indexOf(lang)])
-								img(src=`/images/${lang}.svg` alt=languageNames[languages.indexOf(lang)] width=0, height=0)
+								img(src=`/images/${lang}.svg` width=0, height=0 aria-hidden="true")
 								= languageNames[languages.indexOf(lang)]
 				.bio__bubble
 					each descriptionItem, idx in description[defaultLanguage]
