@@ -2,8 +2,7 @@ doctype html
 html(lang=defaultLanguage)
 	head
 		meta(charset="UTF-8")
-		meta(http-equiv="X-UA-Compatible" content="ie=edge")
-		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
 		title.vavilon(data-vavilon="name")= name[defaultLanguage]
 		meta.vavilon(name="description"
@@ -12,12 +11,13 @@ html(lang=defaultLanguage)
 
 		link(rel="preconnect", href="https://cdn.jsdelivr.net" crossorigin)
 		link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin)
+
 		link(href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="preload" as="style")
 		link(href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'")
 		noscript
 			link(href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet")
 
-		link(rel="stylesheet" type="text/css" href="/main.css")
+		link(href="/main.css" rel="stylesheet" type="text/css")
 
 		each lang in languages
 			script(type="application/json" data-vavilon-dict=lang src=`/${lang}.json`)
