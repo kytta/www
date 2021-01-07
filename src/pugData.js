@@ -13,10 +13,10 @@ module.exports = {
 		by: 'Мікіта Карамаў'
 	},
 	descriptionMeta: {
-		ru: 'Фронтенд-разработчик и опенсурс-энтузиаст, любящий TypeScript и Vue.',
-		en: 'Front End Developer and Open Source enthusiast fond of TypeScript and Vue.',
-		de: 'Front-End-Entwickler und Open-Source-Enthusiast, der TypeScript und Vue lieb hat.',
-		by: 'Фронтэнд-распрацоўшчык і опэнсурс-энтузіяст, які любіць TypeScript і Vue.'
+		ru: 'Фронтенд-разработчик и опенсурс-энтузиаст.',
+		en: 'Front-End Developer and Open Source enthusiast.',
+		de: 'Front-End-Entwickler und Open-Source-Enthusiast.',
+		by: 'Фронтэнд-распрацоўшчык і опэнсурс-энтузіяст.'
 	},
 	description: {
 		ru: [
