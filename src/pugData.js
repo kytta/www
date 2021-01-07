@@ -1,6 +1,7 @@
 module.exports = {
 	defaultLanguage: 'en',
 	languages: ['by', 'en', 'de', 'ru'],
+	languageNames: ['беларускаю', 'in English', 'auf Deutsch', 'по-русски'],
 
 	name: {
 		ru: 'Никита Карамов',

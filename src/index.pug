@@ -38,8 +38,9 @@ html(lang=defaultLanguage)
 						h1.bio__head__info__name.vavilon(data-vavilon="name")= name[defaultLanguage]
 					.bio__head__flags
 						each lang in languages
-							button.flag(onclick=`setLang('${lang}')`)
-								img(src=`/images/${lang}.svg` alt=lang)
+							button.flag(onclick=`setLang('${lang}')`, title=languageNames[languages.indexOf(lang)])
+								img(src=`/images/${lang}.svg` alt=languageNames[languages.indexOf(lang)] width=0, height=0)
+								= languageNames[languages.indexOf(lang)]
 				.bio__bubble
 					each descriptionItem, idx in description[defaultLanguage]
 						p.vavilon(data-vavilon="description-" + idx)= descriptionItem
