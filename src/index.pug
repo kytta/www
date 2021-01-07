@@ -22,7 +22,7 @@ html(lang=defaultLanguage)
 		each lang in languages
 			script(type="application/json" data-vavilon-dict=lang src=`/${lang}.json`)
 
-		script(src="https://cdn.jsdelivr.net/npm/vavilon@1.1/dist/vavilon.min.js" defer)
+		script(src="https://cdn.jsdelivr.net/npm/vavilon@1.1.1/dist/vavilon.min.js" integrity="sha256-P9g9o8xg/QU+w/aJeJ0zu8Yhb73FOlzpP5zkK3csvhU=" crossorigin="anonymous")
 
 		link(rel="manifest", href=`/site.webmanifest?v=${version}`)
 		link(rel="icon", href=`/favicon.ico?v=${version}`)
