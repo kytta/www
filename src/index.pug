@@ -67,7 +67,7 @@ html(lang=defaultLanguage)
 								= " "
 								a(href="https://t.me/nickkaramoff") Telegram
 
-			section.bio#bio
+			//section.bio#bio
 				.bio__head
 					.bio__head__flags
 						each lang in languages
@@ -75,7 +75,7 @@ html(lang=defaultLanguage)
 								img(src=`/images/${lang}.svg` width=0, height=0 aria-hidden="true")
 								= languageNames[languages.indexOf(lang)]
 
-			section#social
+			//section#social
 				ul.social
 					each social in socials
 						li.social__item
@@ -83,7 +83,7 @@ html(lang=defaultLanguage)
 								data-vavilon=social.slug
 								href=social.link)= social.name[defaultLanguage]
 
-			each module in listModules
+			// each module in listModules
 				section(id=module.slug)
 					h2.vavilon(data-vavilon="m-" + module.slug)= module.title[defaultLanguage]
 					ul.section-list
@@ -97,5 +97,5 @@ html(lang=defaultLanguage)
 
 		footer.footer
 			| &copy;&nbsp;2020
-			|
+			= " "
 			span.vavilon(data-vavilon="name")= name[defaultLanguage]
