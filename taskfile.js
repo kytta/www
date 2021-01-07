@@ -19,8 +19,13 @@ exports.styles = function * (task) {
 		.postcss({
 			from: undefined,
 			plugins: [
-				require('autoprefixer'),
-				require('cssnano'),
+				require('autoprefixer')(),
+				require('@fullhuman/postcss-purgecss')({
+					content: ['./src/index.pug']
+				}),
+				require('cssnano')({
+					preset: 'default',
+				}),
 			]
 		})
 		.target(OUTPUT_DIR);
