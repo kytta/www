@@ -5,7 +5,7 @@
 @import "fonts";
 @import "variables"; // should be imported before every other component!
 
-html {
+html, body {
 	background: $clr-background;
 	color: $clr-text;
 	font-family: $font-mono;
