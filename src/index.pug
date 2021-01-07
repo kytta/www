@@ -10,6 +10,13 @@ html(lang=defaultLanguage)
 			content=descriptionMeta[defaultLanguage]
 			data-vavilon="descriptionMeta")
 
+		link(rel="preconnect", href="https://cdn.jsdelivr.net" crossorigin)
+		link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin)
+		link(href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="preload" as="style")
+		link(href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'")
+		noscript
+			link(href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet")
+
 		link(rel="stylesheet" type="text/css" href="/main.css")
 
 		each lang in languages
