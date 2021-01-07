@@ -5,9 +5,9 @@
 @import "variables"; // should be imported before every other component!
 
 html, body {
-	background: $clr-background;
-	color: $clr-text;
-	font-family: $font-sans;
+	background: #fff;
+	color: $color-text;
+	font-family: "IBM Plex Sans", "Roboto", sans-serif;
 	font-size: $font-size-body;
 	font-weight: 400;
 }
@@ -19,8 +19,7 @@ main {
 }
 
 h1, h2, h3 {
-	color: $clr-headline;
-	font-family: $font-sans;
+	color: $color-headline;
 	font-weight: 600;
 	margin: 0;
 }

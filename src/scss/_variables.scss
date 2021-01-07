@@ -1,15 +1,11 @@
 @import "mixins";
 
-$clr-background:           #fffffe;
-$clr-headline:             #111;
-$clr-text:                 #222;
+$color-headline:           #111;
+$color-text:               #222;
 $color-link:               #26a;
 $color-link-hover:         #39d;
 $color-link-visited:       #53b;
 $color-link-visited-hover: #66d;
-$clr-accent:               #eff0f3;
-
-$font-sans: "IBM Plex Sans", "Roboto", sans-serif;
 
 $dim-radius-bio:                  5px;
 $dim-size-social-height:          7%;

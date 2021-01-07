@@ -25,13 +25,13 @@
 
 			position: relative;
 
-			color: $clr-text;
+			color: $color-text;
 			text-decoration: none;
 
 			transition: background-color 200ms ease;
 
 			&:hover &__info__title {
-				text-decoration: underline solid $clr-text;
+				text-decoration: underline solid $color-text;
 			}
 
 			&__info {
