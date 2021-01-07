@@ -1,4 +1,7 @@
+const pkg = require('../package.json');
+
 module.exports = {
+	version: pkg.version,
 	defaultLanguage: 'en',
 	languages: ['by', 'en', 'de', 'ru'],
 	languageNames: ['беларускаю', 'in English', 'auf Deutsch', 'по-русски'],
