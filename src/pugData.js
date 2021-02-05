@@ -39,6 +39,18 @@ module.exports = {
 
 	socials: [
 		{
+			slug: 'soc-em',
+			link: 'mailto:nick@karamoff.dev',
+			rel: 'author',
+			name: {
+				ru: 'Почта',
+				en: 'E-Mail',
+				de: 'E-Mail',
+				by: 'Пошта',
+			},
+			color: '#0A84FF',
+		},
+		{
 			slug: 'soc-tg',
 			link: 'https://t.me/nickkaramoff',
 			name: {
@@ -50,26 +62,16 @@ module.exports = {
 			color: '#179CDE',
 		},
 		{
-			slug: 'soc-em',
-			link: 'mailto:nick@karamoff.dev',
+			slug: 'soc-md',
+			link: 'https://fosstodon.org/@nickkaramoff',
+			rel: 'me',
 			name: {
-				ru: 'Почта',
-				en: 'E-Mail',
-				de: 'E-Mail',
-				by: 'Пошта',
+				ru: 'Мастодон',
+				en: 'Mastodon',
+				de: 'Mastodon',
+				by: 'Мастадон',
 			},
-			color: '#669999',
-		},
-		{
-			slug: 'soc-tw',
-			link: 'https://twitter.com/nickkaramoff',
-			name: {
-				ru: 'Твиттер',
-				en: 'Twitter',
-				de: 'Twitter',
-				by: 'Твітэр',
-			},
-			color: '#1DA1F2',
+			color: '#3088D4',
 		},
 		{
 			slug: 'soc-li',
