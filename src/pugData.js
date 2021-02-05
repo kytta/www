@@ -63,7 +63,7 @@ module.exports = {
 		},
 		{
 			slug: 'soc-md',
-			link: 'https://fosstodon.org/@nickkaramoff',
+			link: 'https://fosstodon.org/@NickKaramoff',
 			rel: 'me',
 			name: {
 				ru: 'Мастодон',
