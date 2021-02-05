@@ -119,6 +119,18 @@ module.exports = {
 			},
 			items: [
 				{
+					slug: 'toot',
+					href: 'https://toot.karamoff.dev',
+					name: 'toot',
+					description: {
+						ru: 'Инстанс-независимая страница для постинга в Mastodon',
+						en: 'Cross-instance share page for Mastodon',
+						de: 'Instanzübergreifende Freigabeseite für Mastodon',
+						by: 'Инстанс-незалежная старонка для постынга ў Mastodon',
+					},
+					year: '2020',
+				},
+				{
 					slug: 'shareon',
 					href: 'https://shareon.js.org',
 					name: 'shareon',
