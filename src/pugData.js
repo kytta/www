@@ -119,6 +119,18 @@ module.exports = {
 			},
 			items: [
 				{
+					slug: 'ip',
+					href: 'https://github.com/NickKaramoff/ip',
+					name: 'ip',
+					description: {
+						ru: 'Эндпоинт для получения глобального IP-адреса',
+						en: 'A simple endpoint to get your global IP address',
+						de: 'Ein einfacher Endpunkt, um Ihre globale IP-Adresse zu erhalten',
+						by: 'Эндпоінт для атрымання глабальнага IP-адрасы',
+					},
+					year: '2020',
+				},
+				{
 					slug: 'toot',
 					href: 'https://toot.karamoff.dev',
 					name: 'toot',
