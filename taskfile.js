@@ -35,6 +35,7 @@ exports.styles = function* (task) {
 // See: https://github.com/lukeed/taskr/issues/316#issuecomment-605296296
 // See: https://github.com/lukeed/taskr/issues/316#issuecomment-605410415
 exports.pug = function* (task) {
+	delete require.cache[require.resolve('./src/pugData')];
 	const pugData = require('./src/pugData');
 
 	yield task
@@ -86,6 +87,7 @@ exports.static = function* (task) {
 };
 
 exports.vavilon = function* (task) {
+	delete require.cache[require.resolve('./src/pugData')];
 	const pugData = require('./src/pugData');
 	const dictionaries = {};
 
