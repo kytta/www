@@ -54,17 +54,17 @@ html(lang=defaultLanguage)
 								href=social.link
 								rel=social.rel || null)= social.name[defaultLanguage]
 
-			each module in listModules
-				section(id=module.slug)
-					h2.vavilon(data-vavilon="m-" + module.slug)= module.title[defaultLanguage]
+			each mod in listModules
+				section(id=mod.slug)
+					h2.vavilon(data-vavilon="m-" + mod.slug)= mod.title[defaultLanguage]
 					ul.section-list
-						each item in module.items
+						each item in mod.items
 							li.section-list__item
 								a.section-list__item__link(href=item.href)
 									.section-list__item__link__info
 										.section-list__item__link__info__year= item.year
-										h3.section-list__item__link__info__title.vavilon(data-vavilon="m-" + module.slug + "-" + item.slug + "-name")= item.name[defaultLanguage] || item.name
-									p.section-list__item__link__description.vavilon(data-vavilon="m-" + module.slug + "-" + item.slug + "-desc")= item.description[defaultLanguage]
+										h3.section-list__item__link__info__title.vavilon(data-vavilon="m-" + mod.slug + "-" + item.slug + "-name")= item.name[defaultLanguage] || item.name
+									p.section-list__item__link__description.vavilon(data-vavilon="m-" + mod.slug + "-" + item.slug + "-desc")= item.description[defaultLanguage]
 
 		footer.footer
 			| &copy;&nbsp;2020
