@@ -1,9 +1,10 @@
-const path = require('path');
+const { join, normalize, resolve } = require('path');
 
 const Fiber = require('fibers');
 const pug = require('pug');
 
-const OUTPUT_DIR = './public';
+const IN_DIR = resolve(__dirname, 'src');
+const OUT_DIR = resolve(__dirname, 'public');
 
 exports.default = function* (task) {
 	yield task.parallel(['pug', 'sitemap', 'static', 'styles', 'vavilon']);
@@ -11,7 +12,7 @@ exports.default = function* (task) {
 
 exports.styles = function* (task) {
 	yield task
-		.source('./src/scss/main.scss')
+		.source(join(IN_DIR, 'scss', 'main.scss'))
 		.sass({
 			fiber: Fiber,
 			includePaths: ['node_modules/normalize.css'],
@@ -21,14 +22,14 @@ exports.styles = function* (task) {
 			plugins: [
 				require('autoprefixer')(),
 				require('@fullhuman/postcss-purgecss')({
-					content: ['./src/index.pug'],
+					content: [join(IN_DIR, 'index.pug')],
 				}),
 				require('cssnano')({
 					preset: 'default',
 				}),
 			],
 		})
-		.target(OUTPUT_DIR);
+		.target(OUT_DIR);
 };
 
 // See: https://github.com/lukeed/taskr/issues/316#issuecomment-605296296
@@ -37,14 +38,14 @@ exports.pug = function* (task) {
 	const pugData = require('./src/pugData');
 
 	yield task
-		.source('./src/index.pug')
+		.source(join(IN_DIR, 'index.pug'))
 		.run({
 			every: true,
 			* func(file) {
 				const html = pug.render(
 					file.data.toString(),
 					{
-						filename: path.join(file.dir, file.base),
+						filename: join(file.dir, file.base),
 						...pugData,
 					},
 				);
@@ -53,7 +54,7 @@ exports.pug = function* (task) {
 				file.base = file.base.replace(/\.pug$/i, '.html');
 			},
 		})
-		.target(OUTPUT_DIR);
+		.target(OUT_DIR);
 };
 
 exports.sitemap = function* (task) {
@@ -75,13 +76,13 @@ exports.sitemap = function* (task) {
 	`;
 
 	yield task.$.write(
-		`${OUTPUT_DIR}/sitemap.xml`,
+		join(OUT_DIR, 'sitemap.xml'),
 		xml.replace(/\t/g, '').replace(/[\n\r]/g, ' '),
 	);
 };
 
 exports.static = function* (task) {
-	yield task.source('./src/static/**/*').target(OUTPUT_DIR);
+	yield task.source(join(IN_DIR, 'static', '**', '*')).target(OUT_DIR);
 };
 
 exports.vavilon = function* (task) {
@@ -133,19 +134,21 @@ exports.vavilon = function* (task) {
 		});
 	});
 
+	task._.globs = [join(IN_DIR, 'pugData.js')];
+
 	task._.files = Object.entries(dictionaries)
 		.map(([lang, dict]) => ({
-			dir: OUTPUT_DIR,
+			dir: normalize(IN_DIR),
 			base: `${lang}.json`,
 			data: Buffer.from(JSON.stringify(dict)),
 		}));
 
-	task.target(OUTPUT_DIR);
+	task.target(OUT_DIR);
 };
 
 exports.watch = function* (task) {
-	yield task.watch('./src/pugData.js', ['pug', 'vavilon']);
-	yield task.watch('./src/index.pug', 'pug');
-	yield task.watch('./src/scss/**/*.scss', 'styles');
-	yield task.watch('./src/static/**/*', 'static');
+	yield task.watch(join(IN_DIR, 'pugData.js'), ['pug', 'vavilon']);
+	yield task.watch(join(IN_DIR, 'index.pug'), 'pug');
+	yield task.watch(join(IN_DIR, 'scss', '**', '*.scss'), 'styles');
+	yield task.watch(join(IN_DIR, 'static', '**', '*'), 'static');
 };
