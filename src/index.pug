@@ -51,7 +51,8 @@ html(lang=defaultLanguage)
 						li.social__item
 							a.social__item__link.vavilon(style=`background-image: linear-gradient(${social.color}, ${social.color});`
 								data-vavilon=social.slug
-								href=social.link)= social.name[defaultLanguage]
+								href=social.link
+								rel=social.rel || null)= social.name[defaultLanguage]
 
 			each module in listModules
 				section(id=module.slug)
