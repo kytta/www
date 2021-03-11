@@ -1,4 +1,27 @@
 {
+	"headers": [
+		{
+			"source": "/(.*)",
+			"headers": [
+				{
+					"key": "X-Content-Type-Options",
+					"value": "nosniff"
+				},
+				{
+					"key": "X-Frame-Options",
+					"value": "DENY"
+				},
+				{
+					"key": "X-XSS-Protection",
+					"value": "1; mode=block"
+				},
+				{
+					"key": "Content-Security-Policy-Report-Only",
+					"value": "frame-ancestors 'none'; block-all-mixed-content; default-src 'none'; script-src 'self' 'report-sample'; style-src 'self' 'report-sample'; object-src 'none'; frame-src 'none'; child-src 'none'; img-src 'self'; font-src 'self'; connect-src 'none'; manifest-src 'none'; base-uri 'self'; form-action 'none'; media-src 'none'; prefetch-src 'none'; worker-src 'none'; report-uri https://gate.rapidsec.net/g/r/csp/f0608fbb-835b-4e31-9304-a39d38a48b58/0/0/3?sct=c0ad2d40-2207-4241-84ea-337569263c91&dpos=report"
+				}
+			]
+		}
+	],
 	"redirects": [
 		{
 			"source": "/en",
