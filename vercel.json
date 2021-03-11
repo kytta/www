@@ -1,11 +1,12 @@
 {
-	"routes": [
+	"redirects": [
 		{
-			"src": "/conspects",
-			"status": 301,
-			"headers": {
-				"Location": "https://conspects.karamoff.dev"
-			}
+			"source": "/en",
+			"destination": "/"
+		},
+		{
+			"source": "/conspects",
+			"destination": "https://conspects.karamoff.dev"
 		}
 	]
 }
