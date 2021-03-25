@@ -1,4 +1,4 @@
-# karamoff.dev  [![website status](https://badgen.net/uptime-robot/status/m782289871-06cf6e2f25dfd0855c64c874?label=&cache=300)](https://karamoff.dev)
+# NickKaramoff/website  [![website status](https://badgen.net/uptime-robot/status/m782289871-06cf6e2f25dfd0855c64c874?label=&cache=300)](https://karamoff.dev)
 
 > Source code for [karamoff.dev](https://karamoff.dev)
 
