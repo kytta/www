@@ -54,8 +54,8 @@ html(lang=defaultLanguage dir="ltr")
 						h1.bio__head__info__name.vavilon(data-vavilon="name")= name[defaultLanguage]
 					.bio__head__flags
 						each lang in languages
-							button.flag(onclick=`setLang('${lang}')`, title=languageNames[languages.indexOf(lang)], type="button")
-								img(src=`/images/${lang}.svg` width=0, height=0 aria-hidden="true")
+							button.flag(onclick=`setLang('${lang}')` title=languageNames[languages.indexOf(lang)] type="button")
+								img(src=`/images/${lang}.svg` alt="" width=0 height=0 aria-hidden="true")
 								= languageNames[languages.indexOf(lang)]
 				.bio__bubble
 					each descriptionItem, idx in description[defaultLanguage]
