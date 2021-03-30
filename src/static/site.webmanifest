@@ -1,5 +1,6 @@
 {
   "name": "Nikita Karamov",
+	"short_name": "Nikita Karamov",
   "theme_color": "#cc2233",
   "icons": [
     { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
