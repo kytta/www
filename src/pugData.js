@@ -75,7 +75,7 @@ module.exports = {
 		},
 		{
 			slug: 'soc-li',
-			link: 'https://linkedin.com/in/karamoff',
+			link: 'https://www.linkedin.com/in/karamoff/',
 			name: {
 				ru: 'Линкедин',
 				en: 'LinkedIn',
@@ -156,7 +156,7 @@ module.exports = {
 				},
 				{
 					slug: 'vue-tinybox',
-					href: 'https://os.karamoff.dev/vue-tinybox',
+					href: 'https://os.karamoff.dev/vue-tinybox/',
 					name: 'vue-tinybox',
 					description: {
 						ru: 'Lightbox-галерея для Vue.js',
@@ -185,7 +185,7 @@ module.exports = {
 				},
 				{
 					slug: 'pretty-money',
-					href: 'https://os.karamoff.dev/pretty-money',
+					href: 'https://os.karamoff.dev/pretty-money/',
 					name: 'pretty-money',
 					description: {
 						ru: 'JS-библиотека для форматирования валютных значений',
