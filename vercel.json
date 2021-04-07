@@ -16,8 +16,12 @@
 					"value": "1; mode=block"
 				},
 				{
+					"key": "Content-Security-Policy-Report-Only",
+					"value": "frame-ancestors https://*.vercel.app/; block-all-mixed-content; default-src 'none'; script-src 'self' 'report-sample' 'unsafe-inline' https://cdn.jsdelivr.net/npm/; style-src 'self' 'report-sample' 'unsafe-inline' https://fonts.googleapis.com/; object-src 'none'; frame-src 'none'; child-src 'none'; img-src 'self'; font-src 'self' https://fonts.gstatic.com/; connect-src 'self' https://*.vercel.app/ https://karamoff.dev/; manifest-src 'self' https://karamoff.dev/site.webmanifest https://*.vercel.app/; base-uri 'self' https://karamoff.dev; form-action 'none'; media-src 'none'; prefetch-src 'none'; worker-src 'none'; report-uri https://gate.rapidsec.net/g/r/csp/f0608fbb-835b-4e31-9304-a39d38a48b58/0/7/3?sct=c0ad2d40-2207-4241-84ea-337569263c91&dpos=report"
+				},
+				{
 					"key": "Content-Security-Policy",
-					"value": "frame-ancestors 'none'; block-all-mixed-content; default-src 'none'; script-src 'self' 'unsafe-inline' 'report-sample' https://cdn.jsdelivr.net/npm/; style-src 'self' 'unsafe-inline' 'report-sample'; object-src 'none'; frame-src 'none'; child-src 'none'; img-src 'self'; font-src 'self' https://fonts.gstatic.com/s/; connect-src 'self' https://karamoff.dev/; manifest-src https://karamoff.dev/site.webmanifest; base-uri 'self'; form-action 'none'; media-src 'none'; prefetch-src 'none'; worker-src 'none'; report-uri https://gate.rapidsec.net/g/r/csp/f0608fbb-835b-4e31-9304-a39d38a48b58/0/4/3?sct=c0ad2d40-2207-4241-84ea-337569263c91&dpos=report"
+					"value": "frame-ancestors https://*.vercel.app/; block-all-mixed-content; script-src 'self' 'report-sample' 'unsafe-inline' https://cdn.jsdelivr.net/npm/; style-src 'self' 'report-sample' 'unsafe-inline' https://fonts.googleapis.com/; object-src 'none'; frame-src 'none'; child-src 'none'; base-uri 'self' https://karamoff.dev; form-action 'none'; media-src 'none'; worker-src 'none'; report-uri https://gate.rapidsec.net/g/r/csp/f0608fbb-835b-4e31-9304-a39d38a48b58/0/7/3?sct=c0ad2d40-2207-4241-84ea-337569263c91&dpos=enforce"
 				}
 			]
 		}
