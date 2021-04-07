@@ -1,6 +1,6 @@
 @import "../variables";
 
-.social {
+.links {
 	margin: 0;
 	padding: 0;
 
@@ -28,15 +28,15 @@
 
 			background-position: 50% 100%;
 			background-repeat: no-repeat;
-			background-size: $dim-size-social-width
-			$dim-size-social-height;
+			background-size: $dim-size-links-width
+			$dim-size-links-height;
 
 			transition: color 150ms ease, background-size 150ms ease;
 
 			&:hover {
 				color: white;
-				background-size: $dim-size-social-width
-				$dim-size-social-height-expanded;
+				background-size: $dim-size-links-width
+				$dim-size-links-height-expanded;
 			}
 		}
 	}

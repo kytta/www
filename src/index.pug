@@ -60,11 +60,11 @@ html(lang=defaultLanguage dir="ltr")
 					each descriptionItem, idx in description[defaultLanguage]
 						p.vavilon(data-vavilon="description-" + idx)= descriptionItem
 
-			section#social
-				ul.social
+			section#links
+				ul.links
 					each social in socials
-						li.social__item
-							a.social__item__link.vavilon(style=`background-image: linear-gradient(${social.color}, ${social.color});`
+						li.links__item
+							a.links__item__link.vavilon(style=`background-image: linear-gradient(${social.color}, ${social.color});`
 								data-vavilon=social.slug
 								href=social.link
 								rel=social.rel || null)= social.name[defaultLanguage]
