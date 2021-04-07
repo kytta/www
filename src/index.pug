@@ -11,6 +11,11 @@ html(lang=defaultLanguage dir="ltr")
 		meta(name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover")
 		meta(http-equiv="x-ua-compatible" content="ie=edge")
 
+		//- preconnect to CDNs
+		link(rel="preconnect", href="https://cdn.jsdelivr.net" crossorigin)
+		link(rel="preconnect", href="https://fonts.googleapis.com" crossorigin)
+		link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin)
+
 		//- meta about me
 		title.vavilon(data-vavilon="name")= name[defaultLanguage]
 		meta(name="description" content=descriptionMeta[defaultLanguage])
@@ -37,6 +42,15 @@ html(lang=defaultLanguage dir="ltr")
 		each lang in languages
 			script(type="application/json" data-vavilon-dict=lang src=`/${lang}.json`)
 		script(src="https://cdn.jsdelivr.net/npm/vavilon@1.1/dist/vavilon.min.js" defer)
+
+		//- Google Fonts
+		link(href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@500&display=swap"
+		     rel="preload" as="style")
+		link(href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@500&display=swap"
+		     rel="stylesheet" media="print" onload="this.media='all'")
+		noscript
+			link(href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@500&display=swap"
+			     rel="stylesheet")
 
 		//- stop phone detection
 		meta(name="format-detection" content="telephone=no")
