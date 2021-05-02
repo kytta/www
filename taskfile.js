@@ -7,7 +7,7 @@ const IN_DIR = resolve(__dirname, 'src');
 const OUT_DIR = resolve(__dirname, 'public');
 
 exports.default = function* (task) {
-	yield task.parallel(['pug', 'sitemap', 'static', 'styles', 'vavilon', 'wellknown']);
+	yield task.parallel(['pug', 'sitemap', 'static', 'styles', 'vavilon', 'wellKnown']);
 };
 
 exports.styles = function* (task) {
