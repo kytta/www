@@ -7,7 +7,7 @@ const IN_DIR = resolve(__dirname, 'src');
 const OUT_DIR = resolve(__dirname, 'public');
 
 exports.default = function* (task) {
-	yield task.parallel(['pug', 'sitemap', 'static', 'styles', 'vavilon']);
+	yield task.parallel(['pug', 'sitemap', 'static', 'styles', 'vavilon', 'wellknown']);
 };
 
 exports.styles = function* (task) {
@@ -147,6 +147,10 @@ exports.vavilon = function* (task) {
 
 	task.target(OUT_DIR);
 };
+
+exports.wellKnown = function* (task) {
+	yield task.source(join(IN_DIR, 'static', '.well-known', '**', '*')).target(join(OUT_DIR, '.well-known'));
+}
 
 exports.watch = function* (task) {
 	yield task.watch(join(IN_DIR, 'pugData.js'), ['pug', 'vavilon']);
