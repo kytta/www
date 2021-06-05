@@ -1,10 +1,10 @@
 {
 	"name": "karamoff.dev",
-	"version": "5.0.0-2",
+	"version": "5.0.0-3",
 	"license": "AGPL-3.0-only",
 	"private": true,
 	"author": "Nikita Karamov <nick@karamoff.dev>",
-	"homepage": "https://karamoff.dev",
+	"homepage": "https://karamoff.dev/",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/NickKaramoff/website.git"
