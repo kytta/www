@@ -16,6 +16,10 @@ $dim-logo-size: 48px;
 
 $font-sans: "IBM Plex Sans", Roboto, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 
+* {
+	transition: all .15s ease;
+}
+
 html,
 body {
 	background: $color-body;
@@ -66,8 +70,6 @@ a {
 
 	font-weight: 700;
 	text-decoration: none;
-
-	transition: all .15s ease;
 
 	&:hover {
 		color: white;
