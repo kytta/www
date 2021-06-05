@@ -12,7 +12,7 @@ exports.default = function* (task) {
 
 exports.styles = function* (task) {
 	yield task
-		.source(join(IN_DIR, 'scss', 'main.scss'))
+		.source(join(IN_DIR, 'main.scss'))
 		.sass({
 			fiber: Fiber,
 			includePaths: ['node_modules/normalize.css'],
@@ -93,6 +93,6 @@ exports.wellKnown = function* (task) {
 exports.watch = function* (task) {
 	yield task.watch(join(IN_DIR, 'pugData.js'), 'pug');
 	yield task.watch(join(IN_DIR, 'index.pug'), 'pug');
-	yield task.watch(join(IN_DIR, 'scss', '**', '*.scss'), 'styles');
+	yield task.watch(join(IN_DIR, 'main.scss'), 'styles');
 	yield task.watch(join(IN_DIR, 'static', '**', '*'), 'static');
 };
