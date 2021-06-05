@@ -33,7 +33,7 @@
 		},
 		{
 			"source": "/conspects",
-			"destination": "https://conspects.karamoff.dev"
+			"destination": "https://conspects.karamoff.dev/"
 		}
 	]
 }
