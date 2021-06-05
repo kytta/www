@@ -1,6 +1,6 @@
 {
 	"name": "karamoff.dev",
-	"version": "5.0.0-4",
+	"version": "5.0.0",
 	"license": "AGPL-3.0-only",
 	"private": true,
 	"author": "Nikita Karamov <nick@karamoff.dev>",
