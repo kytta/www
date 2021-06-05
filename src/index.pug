@@ -4,7 +4,7 @@
 	https://github.com/NickKaramoff/website
 
 doctype html
-html(lang=defaultLanguage dir="ltr")
+html(lang="en-GB" dir="ltr")
 	head
 		//- critical meta
 		meta(charset="utf-8")
@@ -12,13 +12,12 @@ html(lang=defaultLanguage dir="ltr")
 		meta(http-equiv="x-ua-compatible" content="ie=edge")
 
 		//- preconnect to CDNs
-		link(rel="preconnect", href="https://cdn.jsdelivr.net" crossorigin)
 		link(rel="preconnect", href="https://fonts.googleapis.com" crossorigin)
 		link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin)
 
 		//- meta about me
-		title.vavilon(data-vavilon="name")= name[defaultLanguage]
-		meta(name="description" content=descriptionMeta[defaultLanguage])
+		title Nikita Karamov
+		meta(name="description" content="A web developer.")
 		meta(name="theme-color" content="#cc2233")
 		link(rel="license" href="https://github.com/NickKaramoff/website/blob/main/LICENSE")
 
@@ -38,18 +37,13 @@ html(lang=defaultLanguage dir="ltr")
 		//- stylesheets
 		link(rel="stylesheet" type="text/css" href="/main.css")
 
-		//- vavilon
-		each lang in languages
-			script(type="application/json" data-vavilon-dict=lang src=`/${lang}.json`)
-		script(src="https://cdn.jsdelivr.net/npm/vavilon@1.1/dist/vavilon.min.js" defer)
-
 		//- Google Fonts
-		link(href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@500&display=swap"
+		link(href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap"
 		     rel="preload" as="style")
-		link(href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@500&display=swap"
+		link(href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap"
 		     rel="stylesheet" media="print" onload="this.media='all'")
 		noscript
-			link(href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@500&display=swap"
+			link(href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap"
 			     rel="stylesheet")
 
 		//- stop phone detection
@@ -57,45 +51,59 @@ html(lang=defaultLanguage dir="ltr")
 		meta(name="skype_toolbar" content="skype_toolbar_parser_compatible")
 
 	body
+		header(aria-hidden="true")
+			svg#l(width="48" height="48" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg")
+				g(fill="#c23")
+					circle#left(cx="200" cy="200" r="150")
+					circle#right(cx="200" cy="800" r="150")
+					path(d="M393.934 393.934l300-300c58.539-58.539 153.593-58.539 212.132 0s58.539 153.593 0 212.132L712.132 500l193.934 193.934c58.539 58.539 58.539 153.593 0 212.132s-153.593 58.539-212.132 0l-300-300c-58.539-58.539-58.539-153.593 0-212.132z")
 		main
-			section.bio#bio
-				.bio__head
-					.bio__head__info
-						picture
-							source(srcset="/images/me@2x.webp" type="image/webp")
-							img.bio__head__info__image(src="/images/me@2x.jpg" alt="Nikita Karamov.", width=48, height=48)
-						h1.bio__head__info__name.vavilon(data-vavilon="name")= name[defaultLanguage]
-					.bio__head__flags
-						each lang in languages
-							button.flag(onclick=`setLang('${lang}')` title=languageNames[languages.indexOf(lang)] type="button")
-								img(src=`/images/${lang}.svg` alt="" width=0 height=0 aria-hidden="true")
-								= languageNames[languages.indexOf(lang)]
-				.bio__bubble
-					each descriptionItem, idx in description[defaultLanguage]
-						p.vavilon(data-vavilon="description-" + idx)= descriptionItem
+			section#intro
+				div
+					h1 Nikita Karamov
+					| is a web developer.
+			section#bio
+				p#dev
+					| He develops open-source libraries and applications; you can find it
+					| all on
+					|
+					a(href="https://github.com/NickKaramoff") GitHub
+					|.
+				p#social
+					| To follow him you can visit his pages on
+					|
+					a(href="https://fosstodon.org/@NickKaramoff") Fosstodon
+					| , a Mastodon instance on technology and FOSS, and
+					|
+					a(href="https://www.instagram.com/nickkaramoff/") Instagram
+					| , which needs no introduction.
+				p#contact
+					| He can be contacted via
+					|
+					a() e-mail
+					|
+					| (optionally with
+					|
+					a() PGP
+					| ) or
+					|
+					a() Telegram
+					|.
 
-			section#links
-				ul.links
-					each social in socials
-						li.links__item
-							a.links__item__link.vavilon(style=`background-image: linear-gradient(${social.color}, ${social.color});`
-								data-vavilon=social.slug
-								href=social.link
-								rel=social.rel || null)= social.name[defaultLanguage]
+		footer
+			p
+				| This
+				|
+				a() open-source
+				|
+				| website was made by him in 2021.
 
-			each mod in listModules
-				section(id=mod.slug)
-					h2.vavilon(data-vavilon="m-" + mod.slug)= mod.title[defaultLanguage]
-					ul.section-list
-						each item in mod.items
-							li.section-list__item
-								a.section-list__item__link(href=item.href)
-									.section-list__item__link__info
-										.section-list__item__link__info__year= item.year
-										h3.section-list__item__link__info__title.vavilon(data-vavilon="m-" + mod.slug + "-" + item.slug + "-name")= item.name[defaultLanguage] || item.name
-									p.section-list__item__link__description.vavilon(data-vavilon="m-" + mod.slug + "-" + item.slug + "-desc")= item.description[defaultLanguage]
+		script.
+			const l = document.getElementById("l");
 
-		footer.footer
-			| &copy;&nbsp;2021
-			|
-			span.vavilon(data-vavilon="name")= name[defaultLanguage]
+			l.addEventListener("dblclick", function (e) {
+				l.classList.add("w");
+				setTimeout(function () {
+					l.classList.remove("w");
+				}, 5000)
+			})
