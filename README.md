@@ -20,4 +20,4 @@ yarn start
 
 ## Licence
 
-MIT © 2015-2021 Nikita Karamov
+[AGPL-3.0-only](https://spdx.org/licenses/AGPL-3.0-only.html) © 2015-2021, Nikita Karamov

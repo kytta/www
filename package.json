@@ -1,7 +1,7 @@
 {
 	"name": "karamoff.dev",
 	"version": "5.0.0-2",
-	"license": "MIT",
+	"license": "AGPL-3.0-only",
 	"private": true,
 	"author": "Nikita Karamov <nick@karamoff.dev>",
 	"homepage": "https://karamoff.dev",
