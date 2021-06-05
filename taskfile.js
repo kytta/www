@@ -1,4 +1,4 @@
-const { join, normalize, resolve } = require('path');
+const { join, resolve } = require('path');
 
 const Fiber = require('fibers');
 const pug = require('pug');
@@ -7,7 +7,7 @@ const IN_DIR = resolve(__dirname, 'src');
 const OUT_DIR = resolve(__dirname, 'public');
 
 exports.default = function* (task) {
-	yield task.parallel(['pug', 'sitemap', 'static', 'styles', 'vavilon', 'wellKnown']);
+	yield task.parallel(['pug', 'sitemap', 'static', 'styles', 'wellKnown']);
 };
 
 exports.styles = function* (task) {
@@ -86,74 +86,12 @@ exports.static = function* (task) {
 	yield task.source(join(IN_DIR, 'static', '**', '*')).target(OUT_DIR);
 };
 
-exports.vavilon = function* (task) {
-	delete require.cache[require.resolve('./src/pugData')];
-	const pugData = require('./src/pugData');
-	const dictionaries = {};
-
-	pugData.languages
-		.forEach(l => {
-			dictionaries[l] = {};
-		});
-
-	function translateSimpleString(key, langStringMap) {
-		function writeString(lang, key, val) {
-			dictionaries[lang][key] = val;
-		}
-
-		if (typeof langStringMap === 'string' || langStringMap instanceof String) {
-			Object.keys(dictionaries)
-				.forEach(lang => {
-					writeString(lang, key, langStringMap);
-				});
-		} else {
-			Object.entries(langStringMap)
-				.forEach(([lang, strOrArr]) => {
-					if (typeof strOrArr === 'string' || strOrArr instanceof String) {
-						writeString(lang, key, strOrArr);
-					} else if (strOrArr instanceof Array) {
-						for (let i = 0; i < strOrArr.length; i++) {
-							writeString(lang, `${key}-${i}`, strOrArr[i]);
-
-						}
-					}
-				});
-		}
-	}
-
-	['name', 'descriptionMeta', 'description']
-		.forEach(k => translateSimpleString(k, pugData[k]));
-
-	pugData.socials.forEach(soc => {
-		translateSimpleString(soc.slug, soc.name);
-	});
-
-	pugData.listModules.forEach(mod => {
-		translateSimpleString(`m-${mod.slug}`, mod.title);
-		mod.items.forEach(item => {
-			translateSimpleString(`m-${mod.slug}-${item.slug}-name`, item.name);
-			translateSimpleString(`m-${mod.slug}-${item.slug}-desc`, item.description);
-		});
-	});
-
-	task._.globs = [join(IN_DIR, 'pugData.js')];
-
-	task._.files = Object.entries(dictionaries)
-		.map(([lang, dict]) => ({
-			dir: normalize(IN_DIR),
-			base: `${lang}.json`,
-			data: Buffer.from(JSON.stringify(dict)),
-		}));
-
-	task.target(OUT_DIR);
-};
-
 exports.wellKnown = function* (task) {
 	yield task.source(join(IN_DIR, 'static', '.well-known', '**', '*')).target(join(OUT_DIR, '.well-known'));
 }
 
 exports.watch = function* (task) {
-	yield task.watch(join(IN_DIR, 'pugData.js'), ['pug', 'vavilon']);
+	yield task.watch(join(IN_DIR, 'pugData.js'), 'pug');
 	yield task.watch(join(IN_DIR, 'index.pug'), 'pug');
 	yield task.watch(join(IN_DIR, 'scss', '**', '*.scss'), 'styles');
 	yield task.watch(join(IN_DIR, 'static', '**', '*'), 'static');
