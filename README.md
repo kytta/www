@@ -1,3 +1,5 @@
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FNickKaramoff%2Fwebsite.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FNickKaramoff%2Fwebsite?ref=badge_shield)
+
 NickKaramoff/website
 ====================
 
@@ -38,3 +40,7 @@ The source code is made available
 on [GitHub](https://github.com/NickKaramoff/website),
 on [GitLab](https://gitlab.com/NickKaramoff/website),
 and on [Codeberg](https://codeberg.org/NickKaramoff/website).
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FNickKaramoff%2Fwebsite.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FNickKaramoff%2Fwebsite?ref=badge_large)
