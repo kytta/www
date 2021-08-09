@@ -24,9 +24,7 @@ exports.styles = function* (task) {
 				require('@fullhuman/postcss-purgecss')({
 					content: [join(IN_DIR, 'index.pug')],
 				}),
-				require('cssnano')({
-					preset: 'default',
-				}),
+				require('postcss-csso')(),
 			],
 		})
 		.target(OUT_DIR);
