@@ -1,7 +1,7 @@
 NickKaramoff/website
 ====================
 
-> Source code for [karamoff.dev](https://karamoff.dev/)
+> Source code for [www.kytta.dev](https://www.kytta.dev/)
 
 Build
 -----

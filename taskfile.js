@@ -66,7 +66,7 @@ exports.sitemap = function* (task) {
 					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 					xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 		<url>
-			<loc>https://karamoff.dev/</loc>
+			<loc>https://www.kytta.dev/</loc>
 			<lastmod>${today}</lastmod>
 			<changefreq>monthly</changefreq>
 			<priority>1.0</priority>
