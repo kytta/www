@@ -1,0 +1,22 @@
+baseURL = "https://www.kytta.dev"
+languageCode = "en-GB"
+title = "@kytta"
+timeZone = "Europe/Berlin"
+
+disableKinds = ["taxonomy", "term"]
+enableGitInfo = true
+uglyURLs = false
+
+copyright = "Copyright © 2022 Nikita Karamov"
+
+[author]
+    name = "Nikita Karamov"
+
+[params]
+    description = "A web developer, who likes Svelte, Vue.js, Django, and Flask."
+
+[frontmatter]
+    lastmod = ['lastmod', ':git', 'date', 'publishDate']
+
+[markup.goldmark.renderer]
+	unsafe = true
