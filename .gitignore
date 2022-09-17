@@ -1,5 +1,3 @@
-node_modules
-package.json
-pnpm-lock.yaml
-.vercel
-*.css
+.hugo_build.lock
+public/
+.vercel/

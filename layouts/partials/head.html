@@ -1,0 +1,20 @@
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	
+	<title>{{ .Title }}{{ if ne .RelPermalink "/" }} - @kytta{{ end }}</title>
+	{{ $description := .Site.Params.Description -}}
+	{{- if .Params.description -}}
+		{{- $description = .Params.Description -}}
+	{{- end -}}
+	<meta name="description" content="{{ $description }}" />
+	<meta name="author" content="{{ .Site.Author.name }}" />
+	<link href="{{ .Site.BaseURL }}{{ .RelPermalink }}" rel="canonical" />
+
+	{{ $css := resources.Get "css/main.css" | resources.Minify -}}
+	<style>{{ $css.Content | safeCSS }}</style>
+	
+	<link rel="icon" href="/favicon.ico" sizes="any">
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+</head>
