@@ -21,12 +21,14 @@ If you want to take a look at my projects, you can find all of them [on GitHub](
 Ways of reaching out to me, sorted by the probability of me responding promptly (the fastest response on top)
 
 - [@NikitaKaramov](https://t.me/NikitaKaramov) on Telegram
+- email <me@kytta.dev>
+  - PGP key: `0xD397E9BE9E6898FA` ([armoured](https://keys.openpgp.org/vks/v1/by-fingerprint/af6c280c2a34d3f39bed9366d397e9be9e6898fa), [Keyoxide](https://keyoxide.org/af6c280c2a34d3f39bed9366d397e9be9e6898fa))
+  - to force SSL/TLS encryption: <nikita@secure.mailbox.org>
 - [`DMZKXPNM`](https://threema.id/DMZKXPNM) on Threema
 - [kytta@404.city](xmpp:kytta@404.city) on XMPP; OMEMO fingerprints:
   - `e5111425 bc365b43 3e6bf9f0 76a4031f 8ded0c29 3dbf50de 83cef216 239a1f44`
   - `a7ad08d6 69cdabc6 81a033e3 471dca05 4544d515 7710fe4b c2d5489d 7514e758`
-- email <me@kytta.dev>
-  - PGP key: `0xF0A49E6D84E6EEBE` ([armoured](https://keys.openpgp.org/vks/v1/by-fingerprint/D83649109830AF99BD41C9D2F0A49E6D84E6EEBE))
+- `kytta` on [Libera.Chat](ircs://irc.libera.chat:6697)
 
 ## /uses
 Here's a loose list of stuff that I use.

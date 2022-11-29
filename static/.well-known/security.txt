@@ -1,29 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA512
 
+Contact: mailto:nikita@secure.mailbox.org
 Contact: mailto:me@kytta.dev
 
-Expires: 2023-01-07T00:00:00.000Z
+Expires: 2023-02-01T23:00:00.000Z
 
-Encryption: openpgp4fpr:d83649109830af99bd41c9d2f0a49e6d84e6eebe
-Encryption: https://keys.openpgp.org/vks/v1/by-fingerprint/D83649109830AF99BD41C9D2F0A49E6D84E6EEBE
+Encryption: openpgp4fpr:af6c280c2a34d3f39bed9366d397e9be9e6898fa
+Encryption: https://keys.openpgp.org/vks/v1/by-fingerprint/af6c280c2a34d3f39bed9366d397e9be9e6898fa
 
-Preferred-Languages: en, de, ru
+Preferred-Languages: de, en, ru
 
 Canonical: https://www.kytta.dev/.well-known/security.txt
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEWNlIxstHJeIgUTZgPI5ojJbuuckFAmLpewUACgkQPI5ojJbu
-ucm5mw/+Mzr21Umw5PzDrjnNCyMutY/1C0xwRNJl1SM1o+jIpK40jkGX/HBxKzsO
-lNcwZQ0tAQfnHHTtDvSLJbTmeqbbGZGDPg+1BkyIlsugoivX/rW3u7cU9qlYRqEi
-ljzlOkfExoxpGaXecR2XdqqsRks/fdvwQLkdH+5DOguy9BrmnQ7leLK+HzdcmXJL
-eMK4K7IrqKOTAcAZnyBP8MFcmT9i4UmzpD6EpQkxsbu90V81SL4WzhT/S208TiLf
-+kvL6MSp3HBWxSUXOXS5KaIkufWNG7xWny2dCPAAbSZHxnUFdQ0zlXlClR4c9urh
-xk3oI73kCyeby0CeBUtPb3Tf7pSH1r3WKIrr1IgsPeEsp1tphFsbpJ1cxYeDyM80
-FXX0Ok6FI8SFf5GkeuqUmS2fylz8JecTsA86qkQUNtBJ+hYjKVMUt06EXP9eKjRQ
-F9G6iAJl1uFksgUGJzulQkdPELMYXQHvP/ywX212wOqt8NJSb5pSx5YREy3WcTLM
-L56i4DqIpyNF3vGfudf0dTCQYJiDM5bY+m9TlP7X4Ug66LYJCD+uT+LjKLSR9Pce
-FZsqX5OXZ4vgiMg4R/kPDRyabutq1TEha/GEwjyqBLxZXYvDydbJGOPXU9lX84jg
-+OvgG22Osv63G23/WvIElAPTxWT2n1ZbgooBASfbR4L5UEU5qbw=
-=udJM
+iHUEARYKAB0WIQSQVD0NZ+iFgsvWSvlB1vce5453zQUCY4VlegAKCRBB1vce5453
+zdeQAP4tSxUFDjmF6rCEd2engpnQNxx+bCCK4Ce3eNKXrcjCPQEAuxIknXMJhXmj
+8F2iuavgH26OhlrZ07kRMiyl6DG1cw4=
+=Tx2l
 -----END PGP SIGNATURE-----
