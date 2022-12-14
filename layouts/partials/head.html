@@ -10,7 +10,7 @@
 	{{- end -}}
 	<meta name="description" content="{{ $description }}" />
 	<meta name="author" content="{{ .Site.Author.name }}" />
-	<link href="{{ .Site.BaseURL }}{{ .RelPermalink }}" rel="canonical" />
+	<link href="{{ .Permalink }}" rel="canonical" />
 
 	{{ $css := resources.Get "css/main.css" | resources.Minify -}}
 	<style>{{ $css.Content | safeCSS }}</style>
