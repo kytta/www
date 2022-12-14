@@ -72,7 +72,7 @@ header > * {
 }
 
 header > a:hover,
-header > a.active
+header > a.active,
 header > a:focus {
     opacity: initial;
     border-bottom: 2px solid #c23;
