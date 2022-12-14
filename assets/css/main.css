@@ -57,6 +57,10 @@ code {
     font: .9em Menlo, Consolas, monospace
 }
 
+hr {
+    color: rgba(127, 127, 127, 0.25);
+}
+
 
 header {
     display: grid;
