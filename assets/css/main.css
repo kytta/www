@@ -10,7 +10,10 @@ body {
     max-width: 66ch;
     margin: 0 auto;
     padding: 1rem;
-    font: 18px/1.5 Helvetica Neue, Helvetica, FreeSans, Arial, sans-serif
+    font: 18px/1.5 -apple-system, system-ui, BlinkMacSystemFont, Inter,
+        "Helvetica Neue", Helvetica, "Segoe UI", FreeSans,
+        "Liberation Sans", Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 h1,
