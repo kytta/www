@@ -6,7 +6,6 @@ sitemap:
   priority: 1.0
 ---
 
-# @kytta
 Hi, my name is Nikita, and I am a developer.
 
 I mostly develop stuff for web; my areas of expertise are front-end shenanigans with tons of JavaScript/TypeScript, Svelte or Vue.js, or back-end adventures with Python-based Django or Flask.

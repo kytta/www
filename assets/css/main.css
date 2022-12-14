@@ -9,7 +9,7 @@
 body {
     max-width: 66ch;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0 1rem 1rem;
     font: 18px/1.5 -apple-system, system-ui, BlinkMacSystemFont, Inter,
         "Helvetica Neue", Helvetica, "Segoe UI", FreeSans,
         "Liberation Sans", Arial, sans-serif,
@@ -34,7 +34,7 @@ a {
     -webkit-text-decoration-color: #c23;
     text-decoration-color: #c23;
     text-decoration-thickness: .1em;
-    transition: all .2s
+    transition: opacity .2s
 }
 
 a:hover {
@@ -50,4 +50,54 @@ code {
     -moz-user-select: all;
     user-select: all;
     font: .9em Menlo, Consolas, monospace
+}
+
+
+header {
+    display: grid;
+    grid-template-columns: auto 1fr repeat(5,auto);
+    grid-template-rows: auto;
+    grid-auto-columns: auto;
+    align-items: baseline;
+    margin-bottom: 2rem;
+}
+
+header > * {
+    border-bottom: 2px solid rgba(127, 127, 127, 0.25);
+    display: inline-block;
+    padding: 0 0.75rem;
+    line-height: 1.5;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+header > a:hover,
+header > a.active
+header > a:focus {
+    opacity: initial;
+    border-bottom: 2px solid #c23;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.title h1 {
+    margin: 0;
+    font-size: inherit;
+}
+
+header > a.active {
+    color: #cc2233;
+}
+
+.title.active,
+header > a:active {
+    background-color: #cc2233;
+    color: white;
+}
+
+header .border {
+    height: 100%;
+    width: auto;
 }
