@@ -15,8 +15,6 @@
 clone:
   git:
     image: woodpeckerci/plugin-git
-    settings:
-      recursive: true
 
 pipeline:
   # Build hugo static files
