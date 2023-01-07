@@ -25,29 +25,30 @@ pipeline:
     when:
       event: [ pull_request, push ]
 
-  publish:
-    image: bitnami/git
-    # Must be set in Woodpecker configuration
-    secrets: [ mail, codeberg_token ]
-    environment:
-      - HUGO_OUTPUT=public
-    commands:
-      # Git configuration
-      - git config --global user.email $MAIL
-      - git config --global user.name "Codeberg CI"
-      - git clone -b pages https://$CODEBERG_TOKEN@codeberg.org/kytta/pages.git $CI_REPO_NAME
-      # Copy build step output to repository folder
-      - cp -ar $HUGO_OUTPUT/. $CI_REPO_NAME/
-      # Needed for custom domains
-      - cp .domains $CI_REPO_NAME || true # Ignore if it doesn't exist
-      # Commit and push all static files with pipeline started timestamp
-      - cd $CI_REPO_NAME
-      - git add .
-      - git commit -m "Codeberg CI ${CI_BUILD_CREATED}"
-      - git push
-    when:
-      event: push
-      branch: main
+  # TODO: reconfigure publish for Cloudflare Pages
+  # publish:
+    # image: bitnami/git
+    # # Must be set in Woodpecker configuration
+    # secrets: [ mail, codeberg_token ]
+    # environment:
+      # - HUGO_OUTPUT=public
+    # commands:
+      # # Git configuration
+      # - git config --global user.email $MAIL
+      # - git config --global user.name "Codeberg CI"
+      # - git clone -b pages https://$CODEBERG_TOKEN@codeberg.org/kytta/pages.git $CI_REPO_NAME
+      # # Copy build step output to repository folder
+      # - cp -ar $HUGO_OUTPUT/. $CI_REPO_NAME/
+      # # Needed for custom domains
+      # - cp .domains $CI_REPO_NAME || true # Ignore if it doesn't exist
+      # # Commit and push all static files with pipeline started timestamp
+      # - cd $CI_REPO_NAME
+      # - git add .
+      # - git commit -m "Codeberg CI ${CI_BUILD_CREATED}"
+      # - git push
+    # when:
+      # event: push
+      # branch: main
 
 branches:
   exclude: [ pages ]
