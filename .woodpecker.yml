@@ -47,6 +47,7 @@ pipeline:
       - git push
     when:
       event: push
+      branch: main
 
 branches:
   exclude: [ pages ]
