@@ -1,0 +1,23 @@
+// A style made for the index page
+
+main {
+	margin-top: 6rem;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.content {
+	margin-bottom: 3rem;
+}
+
+h2,
+h3 {
+	margin: 0;
+	font-weight: inherit;
+	font-size: 2rem;
+	text-transform: uppercase;
+}

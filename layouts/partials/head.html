@@ -15,6 +15,11 @@
 	{{ $sassOptions := (dict "outputStyle" "compressed") }}
 	{{ $mainScss := resources.Get "sass/main.scss" | resources.ToCSS $sassOptions | resources.Minify -}}
 	<link rel="stylesheet" href="{{ $mainScss.Permalink }}">
+
+	{{ if eq .RelPermalink "/" }}
+	{{ $indexScss := resources.Get "sass/index.scss" | resources.ToCSS $sassOptions | resources.Minify -}}
+	<link rel="stylesheet" href="{{ $indexScss.Permalink }}">
+	{{ end }}
 	
 	<link rel="icon" href="/favicon.ico" sizes="any">
 	<link rel="icon" href="/favicon.svg" type="image/svg+xml">

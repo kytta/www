@@ -1,5 +1,21 @@
+{{ define "header" -}}
+<!-- NOTHING -->
+{{ end }}
+
+
 {{ define "main" -}}
-<main>
-	{{- .Content | safeHTML -}}
+<main class="container mt-5">
+	<div class="grid">
+		<h1 class="title fill-6">@kytta</h1>
+		<div class="content fill-6">
+			{{- .Content | safeHTML -}}
+		</div>
+		<div class="fill-2">
+			<h2>Contact</h2>
+		</div>
+		<div class="fill-4">
+			{{ with .GetPage "contact" }}{{ .Content | safeHTML }}{{ end }}
+		</div>
+	</div>
 </main>
 {{ end }}

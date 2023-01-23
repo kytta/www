@@ -104,16 +104,6 @@ header > a:focus {
   border-bottom: 2px solid var(--accent);
 }
 
-.title {
-  font-weight: 700;
-  font-size: 4rem;
-}
-
-.title h1 {
-  margin: 0;
-  font-size: inherit;
-}
-
 header > a.active {
   color: var(--accent);
 }
