@@ -1,0 +1,66 @@
+// A very minimal implementation of a Bootstrap Grid
+
+$columns: 6;
+$gutter: 1.5rem;
+
+// Source: https://www.freecodecamp.org/news/88d6a5ba1862/
+@mixin for-small {
+	@media (max-width: 599px) { @content; }
+}
+@mixin for-bigger {
+	@media (min-width: 600px) { @content; }
+}
+
+.container {
+	width: 100%;
+	padding-right: (0.5 * $gutter);
+	padding-left: (0.5 * $gutter);
+	margin-right: auto;
+	margin-left: auto;
+
+	@include for-bigger {
+		max-width:800px;
+	}
+}
+
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: top;
+	margin-top: 0;
+	margin-right: (- 0.5 * $gutter);
+	margin-left: (- 0.5 * $gutter);
+
+	> * {
+		flex: 1 0;
+
+		width: 100%;
+		max-width: 100%;
+
+		padding-right: (0.5 * $gutter);
+		padding-left: (0.5 * $gutter);
+
+		margin-top: 0
+	}
+
+	@if $columns > 0 {
+		@include for-bigger {
+			@for $i from 1 through $columns {
+				> .fill-#{$i} {
+					flex: 0 0 auto;
+					width: percentage($i / $columns);
+				}
+			}
+			@for $i from 0 through ($columns - 1) {
+				> .offset-#{$i} {
+					$offset: $i / $columns;
+					@if $offset == 0 {
+						margin-left: 0;
+					} @else {
+						margin-left: percentage($offset);
+					}
+				}
+			}
+		}
+	}	
+}
