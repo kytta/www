@@ -2,6 +2,7 @@
 # You should do the same.
 User-Agent: Adsbot
 Disallow: /
+Allow: /ads.txt
 
 # > This robot collects content from the Internet for the sole purpose of # helping educational institutions prevent plagiarism. [...] we compare student papers against the content we find on the Internet to see if we # can find similarities. (http://www.turnitin.com/robot/crawlerinfo.html)
 #  --> fuck off.
