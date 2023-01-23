@@ -1,0 +1,82 @@
+// A minimal CSS reset
+// Includes code from:
+//  * Bootstrap Reboot
+//    https://github.com/twbs/bootstrap/blob/main/scss/_reboot.scss
+//  * Modern Normalize
+//    https://github.com/sindresorhus/modern-normalize
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:root {
+	@media (prefers-reduced-motion: no-preference) {
+		scroll-behavior: smooth;
+	}
+}
+
+html {
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;  // iOS only
+	tab-size: 4;
+}
+
+body {
+	margin: 0;
+
+	// This list may look weird to some of you; I prioritize fonts that I like
+	// over others
+	font-family:
+		Inter,
+		"Helvetica Neue",
+    system-ui,
+    Helvetica,
+    Bierstadt,
+    FreeSans,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji";
+}
+
+// For MS Edge and Safari
+b,
+strong {
+	font-weight: bolder;
+}
+
+code,
+kbd,
+samp,
+pre {
+	font-family:
+		"Martian Mono",
+		ui-monospace,
+		SFMono-Regular,
+		"Cascadia Code",
+		"Liberation Mono",
+		monospace;
+	font-size: 1em;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
