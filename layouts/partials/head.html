@@ -13,11 +13,11 @@
 	<link href="{{ .Permalink }}" rel="canonical" />
 
 	{{ $sassOptions := (dict "outputStyle" "compressed") }}
-	{{ $mainScss := resources.Get "sass/main.scss" | resources.ToCSS $sassOptions | resources.Minify -}}
+	{{ $mainScss := resources.Get "sass/main.scss" | toCSS $sassOptions | minify | fingerprint -}}
 	<link rel="stylesheet" href="{{ $mainScss.Permalink }}">
 
 	{{ if eq .RelPermalink "/" }}
-	{{ $indexScss := resources.Get "sass/index.scss" | resources.ToCSS $sassOptions | resources.Minify -}}
+	{{ $indexScss := resources.Get "sass/index.scss" | toCSS $sassOptions | minify | fingerprint -}}
 	<link rel="stylesheet" href="{{ $indexScss.Permalink }}">
 	{{ end }}
 	
