@@ -12,8 +12,9 @@
 	<meta name="author" content="{{ .Site.Author.name }}" />
 	<link href="{{ .Permalink }}" rel="canonical" />
 
-	{{ $scss := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify -}}
-	<style>{{ $scss.Content | safeCSS }}</style>
+	{{ $sassOptions := (dict "outputStyle" "compressed") }}
+	{{ $mainScss := resources.Get "sass/main.scss" | resources.ToCSS $sassOptions | resources.Minify -}}
+	<link rel="stylesheet" href="{{ $mainScss.Permalink }}">
 	
 	<link rel="icon" href="/favicon.ico" sizes="any">
 	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
