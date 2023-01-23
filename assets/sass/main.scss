@@ -24,9 +24,11 @@ body {
   max-width: 66ch;
   margin: 0 auto;
   padding: 0;
-  font: 18px/1.5 -apple-system, system-ui, BlinkMacSystemFont, Inter,
-    "Helvetica Neue", Helvetica, "Segoe UI", FreeSans, "Liberation Sans", Arial,
+  font-family: -apple-system, BlinkMacSystemFont, Inter, "Helvetica Neue",
+    Helvetica, Bierstadt, FreeSans, "Liberation Sans", Arial, "Segoe UI", system-ui,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 main,
@@ -106,7 +108,8 @@ header > a:focus {
 }
 
 .title {
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 4rem;
 }
 
 .title h1 {
