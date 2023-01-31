@@ -25,20 +25,6 @@ html {
 
 body {
 	margin: 0;
-
-	// This list may look weird to some of you; I prioritize fonts that I like
-	// over others
-	font-family:
-		Inter,
-		"Helvetica Neue",
-    system-ui,
-    Helvetica,
-    Bierstadt,
-    FreeSans,
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji";
 }
 
 p {
@@ -50,20 +36,6 @@ p {
 b,
 strong {
 	font-weight: bolder;
-}
-
-code,
-kbd,
-samp,
-pre {
-	font-family:
-		"Martian Mono",
-		ui-monospace,
-		SFMono-Regular,
-		"Cascadia Code",
-		"Liberation Mono",
-		monospace;
-	font-size: .9em;
 }
 
 small {

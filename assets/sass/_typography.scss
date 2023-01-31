@@ -1,0 +1,39 @@
+/*
+    ┌────────────────────────┐
+    │ Swiss-style typography │
+    ├────────────────────────┴─────────────────────────────────────────────┐
+    │ I have hand-picked default OS fonts that look the most 'Swiss'       │
+    │ to me. As it turns out, Microsoft actually has very beautiful        │
+    │ Swiss-style fonts! This will fallback for most Linux users, though.  │
+    └──────────────────────────────────────────────────────────────────────┘
+*/
+
+$font-family-sans:
+    "Helvetica Neue",
+    "Neue Haas Grotesk Text Pro",
+    Helvetica,
+    "FreeSans",
+    Arial,
+    system-ui,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji';
+
+$font-family-mono:
+    "SF Mono",
+    "Cascadia Code",
+    "Liberation Mono",
+    ui-monospace,
+    monospace;
+
+html {
+    font-family: $font-family-sans;
+}
+
+code,
+kbd,
+samp,
+pre {
+	font-family: $font-family-mono;
+	font-size: 1em;
+}
