@@ -1,54 +1,17 @@
+@import "mixins";
+
+@import "colours";
 @import "typography";
 @import "reset";
 @import "grid";
 
-$color-white: #f1f2f0;
-$color-black: #151515;
-$color-accent-lite: #f45844;
-$color-accent-dark: #c72921;
-
-@mixin when-dark {
-  @media (prefers-color-scheme: dark) { @content; }
-}
-
-// Creates four accent colours needed for the link styling
-@mixin make-accent-colors($accent-color, $dark: false) {
-  --accent: #{$accent-color};
-
-
-  $accent-color-light: mix($accent-color, $color-white, 50%);
-  @if $dark {
-    $accent-color-light: mix($accent-color, $color-black, 50%);
-  }
-
-  $accent-color-desaturated: grayscale($accent-color);
-  $accent-color-light-desaturated: change-color($accent-color-light, $saturation: 0%);
-
-  --accent-light: #{$accent-color-light};
-  --accent-gray: #{$accent-color-desaturated};
-  --accent-gray-light: #{$accent-color-light-desaturated};
-}
-
-:root {
-  color-scheme: light dark;
-
-  --foreground: #{$color-black};
-  --background: #{$color-white};
-  @include make-accent-colors($color-accent-dark);
-
-  @include when-dark {
-    --foreground: #{$color-white};
-    --background: #{$color-black};
-    @include make-accent-colors($color-accent-lite, true);
-  }
-}
-
 body {
+  color: var(--fg);
+  background-color: var(--bg);
+
+
   font-size: 18px;
   line-height: 1.5;
-
-  background-color: var(--background);
-  color: var(--foreground);
 }
 
 main,
@@ -70,15 +33,15 @@ strong {
 }
 
 a {
-  color: var(--accent);
+  color: var(--link);
   text-decoration: none;
-  border-bottom: 1px solid var(--accent-light);
+  border-bottom: 1px solid var(--link);
 }
 
 a:hover,
 a:active {
-  color: var(--accent-gray);
-  border-bottom: 1px solid var(--accent-gray-light);
+  color: var(--sad);
+  border-bottom: 1px solid var(--sad);
 }
 
 .monero {

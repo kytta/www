@@ -1,0 +1,58 @@
+/*
+    ┌─────────┐
+    │ Colours │
+    ├─────────┴────────────────────────────────────────────────────────────┐
+    │ To be frank, one doesn't have to set the colours if one's just going │
+    │ to use a traditional black-on-white combination. I do find the idea  │
+    │ of default browser styles good! But, sadly, the default dark         │
+    │ background colour on Firefox is a not pretty shade of grey. With the │
+    │ styles here, I'm making sure that the pages are the same everywhere. │
+    │                                                                      │
+    │ While composing the colour palette, I have taken inspiration from:   │
+    │                                                                      │
+    │     — 'The 12-bit rainbow palette' by Kate Rose Morley               │
+    │        https://iamkate.com/data/12-bit-rainbow/                      │
+    │                                                                      │
+    │     —  Ilya Birman's website and blog...                             │
+    │        https://ilyabirman.net/                                       │
+    │                                                                      │
+    │     —  ...as well as his blog engine, Ægea                           │
+    │        https://blogengine.me/                                        │
+    │                                                                      │
+    └──────────────────────────────────────────────────────────────────────┘
+*/
+
+@import "mixins";
+
+$black: #080808;  // An "almost black" looks better on AMOLED screens than
+                    // pitch black.
+$white: #fff;     // White should stay white.
+
+$blue: #059;      // Blue is used for links in light mode.
+$yellow: #fd6;    // Yellow is used for links in dark mode. You may not have
+                    // realised this, but blue looks terrible on the dark
+                    // backgrounds.
+
+// The 'sad' colour variants are used on hover. They were generated
+// by converting the blue and yellow colour to OKLCH and then reducing
+// the Chroma component to 0 (zero). The resulting colors were converted to the
+// 12-bit format.
+$sad-blue: #555;
+$sad-yellow: #ddd;
+
+// This defines the basic colours.
+:root {
+  color-scheme: light dark;
+
+  --fg: #{$black};
+  --bg: #{$white};
+  --link: #{$blue};
+  --sad: #{$sad-blue};
+
+  @include when-dark {
+    --fg: #{$white};
+    --bg: #{$black};
+    --link: #{$yellow};
+    --sad: #{$sad-yellow};
+  }
+}

@@ -1,0 +1,14 @@
+/*
+    ┌────────┐
+    │ Mixins │
+    ├────────┴─────────────────────────────────────────────────────────────┐
+    │ Just some Sass mixins that make the life a tiny bit easier :)        │
+    └──────────────────────────────────────────────────────────────────────┘
+*/
+
+// Use this to make dark mode styles without writing too much code.
+@mixin when-dark {
+	@media (prefers-color-scheme: dark) {
+		@content;
+	}
+}
