@@ -15,8 +15,8 @@ build_search_index = true
 highlight_code = true
 highlight_theme = "css"
 highlight_themes_css = [
-  { theme = "OneHalfDark", filename = "syntax-theme-dark.css" },
-  { theme = "OneHalfLight", filename = "syntax-theme-light.css" },
+    { theme = "OneHalfDark", filename = "syntax-theme-dark.css" },
+    { theme = "OneHalfLight", filename = "syntax-theme-light.css" },
 ]
 
 external_links_no_follow = true
@@ -30,4 +30,3 @@ include_description = true
 include_content = true
 
 [extra]
-# Put all your custom variables here
