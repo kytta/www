@@ -8,6 +8,10 @@
 		<meta name="description" content="{{ config.description }}" />
 
         <link rel="stylesheet" href="style.css">
+
+        {% block rss %}
+            <link rel="alternate" type="application/atom+xml" title="Atom feed" href="{{ get_url(path="atom.xml", trailing_slash=false) }}">
+        {% endblock %}
 	</head>
 	<body>
 		<header>
