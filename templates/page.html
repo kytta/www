@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{{ config.title }}</title>
+		<meta name="description" content="{{ config.description }}" />
+
+        <link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header>
+			<h1>Nikita Karamov</h1>
+			<nav>
+                <ul>
+                    <li><a href="{{ get_url(path="@/blog/_index.md") }}">Blog</a></li>
+                    <li><a href="https://github.com/kytta">GitHub</a></li>
+                    <li><a href="https://fosstodon.org/@kytta">Mastodon</a></li>
+                </ul>
+			</nav>
+		</header>
+        <hr>
+		<main>
+            <small>
+                <time datetime="{{ page.date | date(format="%+")}}">
+                    {{ page.date | date(format="%d %h %Y")}} at {{ page.date | date(format="%R")}}
+                </time>
+                {% if page.updated %}
+                    updated
+                    {{ page.updated | date(format="%d %h %Y")}} at {{ page.updated | date(format="%R")}}
+                {% endif %}
+            </small>
+            <h2 style="margin-top:0">{{ page.title }}</h2>
+
+            {{ page.content | safe }}
+        </main>
+		<hr />
+		<footer>
+            <p>
+                <small>
+                    {% set the_date = page.date | default(value=now()) %}
+                    &copy; {{ the_date | date(format="%Y") }} Nikita Karamov
+                    <br>
+                    Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+                    <img height="16" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg">
+                    <img height="16" src="https://mirrors.creativecommons.org/presskit/icons/by.svg">
+                    <img height="16" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg">
+                </small>
+            </p>
+        </footer>
+	</body>
+</html>
