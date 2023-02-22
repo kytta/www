@@ -1,0 +1,28 @@
+name: Run checks
+
+on:
+  push:
+    branches:
+      - v[0-9]+
+  schedule:
+    - cron: "16 13 21 * *"
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  zola:
+    name: Run Zola checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v3
+        with:
+          lfs: true
+      - name: Build & check
+        uses: shalzz/zola-deploy-action@v0.17.0
+        env:
+          BUILD_ONLY: true
+          CHECK_LINKS: true
