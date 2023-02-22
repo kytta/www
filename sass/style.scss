@@ -1,9 +1,19 @@
+.title {
+	font-size: 2em;
+	font-weight: 700;
+}
+
+.title a,
+.title a:visited {
+	color: RoyalBlue;
+}
+
 footer img {
-    vertical-align: text-bottom;
+	vertical-align: text-bottom;
 }
 
 .zola-anchor {
-    margin-left: 0.5em;
-    font-size: 0.8em;
-    text-decoration: none;
+	margin-left: 0.5em;
+	font-size: 0.8em;
+	text-decoration: none;
 }

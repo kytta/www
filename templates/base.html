@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>{% block title %}{% endblock title %}</title>
+	<meta name="description" content="{{ config.description }}" />
+
+	<link rel="stylesheet" href="/style.css">
+
+	{% block rss %}
+	<link rel="alternate" type="application/atom+xml" title="Atom feed" href="{{ get_url(path="atom.xml", trailing_slash=false) }}">
+	{% endblock rss %}
+
+	<meta name=generator content="Zola">
+</head>
+<body>
+	<header>
+		<div class="title">
+			{% block header_home_link %}
+			<a href="{{ get_url(path="/") }}">Nikita Karamov</a>
+			{% endblock header_home_link %}
+		</div>
+		<nav>
+			<ul>
+				<li><a href="{{ get_url(path="@/blog/_index.md") }}">Blog</a></li>
+				<li><a href="https://github.com/kytta">GitHub</a></li>
+				<li><a href="https://fosstodon.org/@kytta">Mastodon</a></li>
+			</ul>
+		</nav>
+	</header>
+	<hr>
+	<main>{% block content %}{% endblock content %}</main>
+	<hr>
+	<footer>
+		<p>
+			<small>
+				&copy; {{ now() | date(format="%Y") }} Nikita Karamov
+				<br>
+				Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+				<img height="16" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg">
+				<img height="16" src="https://mirrors.creativecommons.org/presskit/icons/by.svg">
+				<img height="16" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg">
+			</small>
+		</p>
+	</footer>
+</body>
+</html>
