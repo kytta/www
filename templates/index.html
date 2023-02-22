@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
 {% block title %}{{ config.title }}{% endblock title %}
+{% block description %}{{ config.description }}{% endblock description %}
 {% block header_home_link %}{{ config.title }}{% endblock header_home_link %}
 {% block content %}{{ section.content | safe }}{% endblock content %}
