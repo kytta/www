@@ -14,7 +14,7 @@ env:
 
 jobs:
   deploy-v8:
-    if: github.ref == 'v8'
+    if: github.ref == 'refs/heads/v8'
     runs-on: ubuntu-latest
     steps:
       - name: Check out
