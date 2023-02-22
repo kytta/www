@@ -5,6 +5,10 @@ on:
     branches:
       - v[0-9]+
 
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
 env:
   CI_REPO_NAME: codeberg-pages-repo
 
