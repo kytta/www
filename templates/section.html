@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{{section.title}} - {{ config.title }}</title>
+		<meta name="description" content="{{ config.description }}" />
+
+        <link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header>
+			<h1>Nikita Karamov</h1>
+			<nav>
+                <ul>
+                    <li><a href="{{ get_url(path="@/blog/_index.md") }}">Blog</a></li>
+                    <li><a href="https://github.com/kytta">GitHub</a></li>
+                    <li><a href="https://fosstodon.org/@kytta">Mastodon</a></li>
+                </ul>
+			</nav>
+		</header>
+        <hr>
+		<main>
+            <h2>{{ section.title }}</h2>
+            {% for year, posts in section.pages | group_by(attribute="year") %}
+                <h3>{{ year }}</h3>
+                <ul>
+                {% for post in posts %}
+                    <li>
+                        <a href="{{ post.permalink }}">{{ post.title }}</a>
+                        <br>
+                        <small>{{ post.date | date(format="%d %h %Y") }}</small>
+                    </li>
+                {% endfor %}
+                </ul>
+            {% endfor %}
+        </main>
+		<hr />
+		<footer>
+            <p>
+                <small>
+                    &copy; {{ now() | date(format="%Y") }} Nikita Karamov
+                    <br>
+                    Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+                    <img height="16" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg">
+                    <img height="16" src="https://mirrors.creativecommons.org/presskit/icons/by.svg">
+                    <img height="16" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg">
+                </small>
+            </p>
+        </footer>
+	</body>
+</html>
