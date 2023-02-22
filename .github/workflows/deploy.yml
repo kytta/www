@@ -25,6 +25,10 @@ jobs:
         uses: shalzz/zola-deploy-action@v0.17.0
         env:
           BUILD_ONLY: true
+      - name: Configure Git
+        run: |
+          git config --global user.email "me+github_actions@kytta.dev"
+          git config --global user.name "GitHub Actions"
       - name: Clone pages repo
         run: git clone -b v8 https://$CODEBERG_TOKEN@codeberg.org/kytta/pages.git $CI_REPO_NAME
         env:
