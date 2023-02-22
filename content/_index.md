@@ -12,7 +12,7 @@ Fastest response on top.
 
 - [@NikitaKaramov](https://t.me/NikitaKaramov) on Telegram
 - email <me@kytta.dev>
-  - PGP key: `0xD397E9BE9E6898FA` ([armoured](https://keys.openpgp.org/vks/v1/by-fingerprint/af6c280c2a34d3f39bed9366d397e9be9e6898fa), [Keyoxide](https://keyoxide.org/af6c280c2a34d3f39bed9366d397e9be9e6898fa))
+  - PGP key: `0xD397E9BE9E6898FA` ([armoured](https://keys.openpgp.org/vks/v1/by-fingerprint/AF6C280C2A34D3F39BED9366D397E9BE9E6898FA), [Keyoxide](https://keyoxide.org/af6c280c2a34d3f39bed9366d397e9be9e6898fa))
   - to force SSL/TLS encryption: <nikita@secure.mailbox.org>
 - [`DMZKXPNM`](https://threema.id/DMZKXPNM) on Threema
 - [kytta@404.city](xmpp:kytta@404.city) on XMPP; OMEMO fingerprints:
@@ -57,4 +57,3 @@ Links to other social networks and points of presence.
 
 - <a href="https://fosstodon.org/@kytta" rel="me">@kytta</a> on Fosstodon
 - [@nikita.karamov](https://www.instagram.com/nikita.karamov/) on Instagram
-- [@NikitaKaramov](https://www.linkedin.com/in/NikitaKaramov) on LinkedIn
