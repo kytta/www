@@ -1,0 +1,38 @@
+name: Deploy to Codeberg Pages
+
+on:
+  push:
+    branches:
+      - v[0-9]+
+
+env:
+  CI_REPO_NAME: codeberg-pages-repo
+
+jobs:
+  deploy-v8:
+    if: github.ref == 'v8'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v3
+        with:
+          lfs: true
+      - name: Build
+        uses: shalzz/zola-deploy-action@v0.17.0
+        env:
+          BUILD_ONLY: true
+      - name: Configure Git
+        run: |
+          git config --global user.email "me+github_actions@kytta.dev"
+          git config --global user.name "GitHub Actions"
+      - name: Clone pages repo
+        run: git clone -b v8 https://$CODEBERG_TOKEN@codeberg.org/kytta/pages.git $CI_REPO_NAME
+        env:
+          CODEBERG_TOKEN: ${{ secrets.CodebergToken }}
+      - name: Copy and deploy
+        run: |
+          cp -ar ./public/. $CI_REPO_NAME/
+          cd $CI_REPO_NAME
+          git add .
+          git commit -m "Deployment $GITHUB_SHA $CI_BUILD_CREATED"
+          git push
