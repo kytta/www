@@ -2,5 +2,12 @@
 
 {% block title %}{{ config.title }}{% endblock title %}
 {% block description %}{{ config.description }}{% endblock description %}
+
+
+{% block rss %}
+<link rel="alternate" type="application/atom+xml" title="Everything feed" href="{{ get_url(path="atom.xml", trailing_slash=false) }}">
+<link rel="alternate" type="application/atom+xml" title="Blog feed" href="{{ get_url(path="/blog/atom.xml", trailing_slash=false) }}">
+{% endblock rss %}
+
 {% block header_home_link %}Nikita<br>Karamov{% endblock header_home_link %}
 {% block content %}{{ section.content | safe }}{% endblock content %}

@@ -3,6 +3,11 @@
 {% block title %}{{ section.title }} - {{ config.title }}{% endblock title %}
 {% block description %}{{ section.description | default(value=config.description) }}{% endblock description %}
 
+{% block rss %}
+{% set rss_path = section.permalink ~ "/atom.xml" %}
+<link rel="alternate" type="application/atom+xml" title="{{ section.title }} feed" href="{{ get_url(path=rss_path, trailing_slash=false) }}">
+{% endblock rss %}
+
 {% block content %}
 <h1>{{ section.title }}</h1>
 {% for year, posts in section.pages | group_by(attribute="year") %}
