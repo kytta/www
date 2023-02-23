@@ -7,7 +7,7 @@
 	<title>{% block title %}{% endblock title %}</title>
 	<meta name="description" content="{% block description %}{% endblock description %}" />
 
-	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="{{ get_url(path="/style.css") }}?h={{ get_hash(path="/style.css", sha_type=256) }}">
 
 	{% block rss %}
 	<link rel="alternate" type="application/atom+xml" title="Atom feed" href="{{ get_url(path="atom.xml", trailing_slash=false) }}">
