@@ -188,7 +188,12 @@ pre {
 	samp {
 	}
 }
+
 blockquote {
+  border-left: 4px solid currentColor;
+  margin: 1.5em 0em;
+  padding: 0 1em;
+  font-style: italic;
 }
 
 figure {
