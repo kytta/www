@@ -1,3 +1,5 @@
+@import "mixins";
+
 //
 // Universal
 //
@@ -72,34 +74,51 @@ h6 {
 }
 
 header {
-	display: flex;
-	align-items: flex-end;
-	flex-direction: row;
-	flex-wrap: wrap;
+	padding: 1rem;
 
-	> * {
-		flex: content;
-		display: inline-block;
+	@include on-bigger-devices {
+		padding: 2rem 0 2rem;
 	}
+
+	display: flex;
+	flex-wrap: wrap;
+	align-items: end;
 
 	.title {
 		font-weight: 700;
 		line-height: 1;
+		padding-left: .5rem;
+		margin-bottom: 1rem;
 
-		a {
-			color: RoyalBlue;
+		flex-shrink: 0;
+		width: 100%;
+		@include on-bigger-devices {
+			padding: 0;
+			margin: 0;
+			flex: 0 0 auto;
+			width: (100% / 3);
 		}
 	}
 }
 
 nav {
-	width: 50%;
+	flex-shrink: 0;
+	width: 100%;
+	@include on-bigger-devices {
+		text-align: right;
+		flex: 0 0 auto;
+		width: (100% / 1.5);
+	}
 
 	ul {
-		list-style-type: "\002192\002002";
+		list-style: none;
+		margin: 0;
+		padding: 0;
 	}
 
 	li {
+		display: inline-block;
+		padding: .5rem;
 	}
 
 	a {
