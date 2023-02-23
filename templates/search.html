@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} - {{ config.title }}{% endblock title %}
+
+{% set description = null %}
+{% if page.summary %}
+{% set description = page.summary %}
+{% elif page.description %}
+{% set description = page.description %}
+{% else %}
+{% set description = config.description %}
+{% endif %}
+
+{% block description %}
+{% if description %}{{ description | safe | striptags }}{% endif %}
+{% endblock description %}
+
+{% block content %}
+<h2 style="margin-top:0">Search</h2>
+<input type="text" id="search">
+<div class="search-results">
+	<div class="search-results__items"></div>
+</div>
+
+<script type="text/javascript" src="{{ get_url(path="elasticlunr.min.js") }}"></script>
+<script type="text/javascript" src="{{ get_url(path="search_index.en.js") }}"></script>
+<script type="text/javascript" src="{{ get_url(path="search.js") }}"></script>
+{{ page.content | safe }}
+{% endblock content %}
