@@ -21,6 +21,7 @@
 	<meta name=generator content="Zola">
 </head>
 <body>
+	{% block header %}
 	<header>
 		<div class="title">
 			{% block header_home_link %}
@@ -35,7 +36,10 @@
 			</ul>
 		</nav>
 	</header>
+	{% endblock header %}
 	<main>{% block content %}{% endblock content %}</main>
+
+	{% block footer %}
 	<hr>
 	<footer>
 		<p>
@@ -46,5 +50,6 @@
 			</small>
 		</p>
 	</footer>
+	{% endblock footer %}
 </body>
 </html>

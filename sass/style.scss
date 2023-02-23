@@ -192,8 +192,12 @@ blockquote {
 }
 
 figure {
+	margin: 0;
 }
 figcaption {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
 }
 
 hr {
@@ -290,6 +294,9 @@ ins {
 //
 
 img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
 }
 svg {
 }

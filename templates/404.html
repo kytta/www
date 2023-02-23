@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Page Not Found</title>
+
+	<style>
+		:root {
+			color-scheme: light dark;
+		}
+		html {
+			font-family: system-ui, sans-serif;
+		}
+		body {
+			padding: 0 14px;
+			margin: 0 auto;
+			max-width: 40em;
+		}
+		h1 {
+			margin-bottom: 1rem;
+		}
+
+		figure {
+			margin: 0;
+		}
+
+		figcaption {
+			font-size: 0.9rem;
+			color: var(--text-light);
+			margin-bottom: 1rem;
+		}
+
+		img {
+			display: block;
+			max-width: 100%;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<figure>
+		<picture>
+			<source srcset="{{ get_url(path="/404.avif") }}" type="image/avif" />
+			<source srcset="{{ get_url(path="/404.webp") }}" type="image/webp" />
+			<img src="{{ get_url(path="/404.jpg") }}" alt="">
+		</picture>
+		<figcaption>&copy;&nbsp;<cite><a href="https://www.davidrevoy.com/">David Revoy</a></cite></figcaption>
+	</figure>
+
+	<h1>Page Not Found</h1>
+	<a href="{{ get_url(path="/") }}">go back to the main page</a>
+</body>
+</html>
