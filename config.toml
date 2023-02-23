@@ -34,4 +34,5 @@ include_content = true
 menu = [
     { path = "blog/_index.md", type = "section" },
     { title = "Uses", path = "uses.md", type = "page" },
+    { title = "Contact", path = "contact.md", type = "page" },
 ]

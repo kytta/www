@@ -1,7 +1,7 @@
 ---
 title: Things I use
 description: A 'uses' page is a page detailing developer setups, gear, software and configs.
-template: uses.html
+template: lone_page.html
 ---
 
 - **Laptop:** MacBook Pro (14″, 2021)
