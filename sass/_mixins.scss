@@ -3,3 +3,9 @@
 		@content;
 	}
 }
+
+@mixin on-even-bigger-devices {
+	@media (min-width: 900px) {
+		@content;
+	}
+}

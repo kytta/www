@@ -35,7 +35,15 @@ body {
 	max-width: 1024px;
 	min-height: 100vh;
 	margin: 0 auto;
-	padding: 4rem;
+	padding: 1rem;
+
+	@include on-bigger-devices {
+		padding: 2rem;
+	}
+
+	@include on-even-bigger-devices {
+		padding: 4rem;
+	}
 }
 
 //
@@ -76,42 +84,18 @@ h6 {
 }
 
 header {
-	padding: 1rem;
+	padding: 3rem 0;
 
 	@include on-bigger-devices {
-		padding: 2rem 0 2rem;
-	}
-
-	display: flex;
-	flex-wrap: wrap;
-	align-items: end;
-
-	.title {
-		font-size: 2rem;
-		font-weight: 600;
-		line-height: 1;
-		padding-left: 0.5rem;
-		margin-bottom: 1rem;
-
-		flex-shrink: 0;
-		width: 100%;
-		@include on-bigger-devices {
-			padding: 0;
-			margin: 0;
-			flex: 0 0 auto;
-			width: (100% / 3);
-		}
+		padding: 4rem 0;
 	}
 }
 
 nav {
-	flex-shrink: 0;
-	width: 100%;
-	@include on-bigger-devices {
-		text-align: right;
-		flex: 0 0 auto;
-		width: (100% / 1.5);
-	}
+	font-family: $font-family-headings;
+	font-size: 1.5rem;
+	font-weight: 500;
+	line-height: 2rem;
 
 	ul {
 		list-style: none;
@@ -120,16 +104,28 @@ nav {
 	}
 
 	li {
-		display: inline-block;
-		padding: 0.5rem;
+		&.title {
+			font-weight: 600;
+
+			svg {
+				margin: -(32px / 8);
+				fill: currentColor;
+			}
+		}
 	}
 
 	a {
-		&:visited {
-		}
-		&:hover {
-		}
-		&:active {
+		text-decoration: none;
+		color: currentColor;
+		opacity: 0.6;
+
+		&:hover,
+		&:active,
+		&.active {
+			opacity: 1;
+			&.to-main {
+				color: #c23;
+			}
 		}
 	}
 }

@@ -9,5 +9,4 @@
 <link rel="alternate" type="application/atom+xml" title="Blog feed" href="{{ get_url(path="/blog/atom.xml", trailing_slash=false) }}">
 {% endblock rss %}
 
-{% block header_home_link %}Nikita<br>Karamov{% endblock header_home_link %}
 {% block content %}{{ section.content | safe }}{% endblock content %}
