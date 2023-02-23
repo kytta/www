@@ -20,25 +20,6 @@ Fastest response on top.
   - `a7ad08d6 69cdabc6 81a033e3 471dca05 4544d515 7710fe4b c2d5489d 7514e758`
 - `kytta` on [Libera.Chat](ircs://irc.libera.chat:6697)
 
-## /uses
-
-- **Laptop:** MacBook Pro (14″, 2021)
-- **Smartphone:** OnePlus 7T
-- **Desktop browser:** LibreWolf
-- **Mobile browser:** Mull
-- **Desktop email client:** Thunderbird
-- **Mobile email client:** K-9 Mail
-- **Email provider:** Mailbox.org
-- **To-do list:** TickTick
-- **Terminal emulator:** iTerm2
-- **Shell:** Zsh
-- **Code editor:** Sublime Text & VSCodium
-- **Git client:** lazygit
-- **Raster image editor:** Affinity Photo
-- **Vector image editor:** Affinity Designer
-- **Torrent client:** Transmission
-- **Minecraft:** Java Edition
-
 ## /donate
 
 If, for some reason, you want to give me money, here are the means to do so:
