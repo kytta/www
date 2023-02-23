@@ -1,0 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Contact: mailto:nikita@secure.mailbox.org
+Contact: mailto:me@kytta.dev
+
+Expires: 2023-02-01T23:00:00.000Z
+
+Encryption: openpgp4fpr:af6c280c2a34d3f39bed9366d397e9be9e6898fa
+Encryption: https://keys.openpgp.org/vks/v1/by-fingerprint/af6c280c2a34d3f39bed9366d397e9be9e6898fa
+
+Preferred-Languages: de, en, ru
+
+Canonical: https://www.kytta.dev/.well-known/security.txt
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYKAB0WIQSQVD0NZ+iFgsvWSvlB1vce5453zQUCY4VlegAKCRBB1vce5453
+zdeQAP4tSxUFDjmF6rCEd2engpnQNxx+bCCK4Ce3eNKXrcjCPQEAuxIknXMJhXmj
+8F2iuavgH26OhlrZ07kRMiyl6DG1cw4=
+=Tx2l
+-----END PGP SIGNATURE-----
