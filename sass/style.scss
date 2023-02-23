@@ -1,23 +1,527 @@
+//
+// Universal
+//
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+//
+// Root
+//
 :root {
 	color-scheme: light dark;
 }
 
-.title {
-	font-size: 2em;
-	font-weight: 700;
+html {
+	font-size: 100%;
+	line-height: 1.5;
+	font-family: "Helvetica Neue", "Neue Haas Grotesk Text Pro", Helvetica,
+		"Nimbus Sans L", "FreeSans", Arial, system-ui, sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji";
+
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+	tab-size: 4;
 }
 
-.title a,
-.title a:visited {
-	color: RoyalBlue;
+body {
+	font-size: 109.375%;
+
+	padding: 0 14px;
+	margin: 0 auto;
+	max-width: 40em;
 }
 
-footer img {
-	vertical-align: text-bottom;
+//
+// Content sectioning
+//
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	&:hover,
+	&:focus {
+		> .zola-anchor {
+			opacity: 0.5;
+		}
+	}
 }
+
+.title,
+h1 {
+	font-size: 3rem;
+}
+h2 {
+	font-size: 2.6rem;
+}
+h3 {
+	font-size: 2rem;
+}
+h4 {
+	font-size: 1.44rem;
+}
+h5 {
+	font-size: 1.15rem;
+}
+h6 {
+	font-size: 0.96rem;
+}
+
+header {
+	display: flex;
+	align-items: flex-end;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	> * {
+		flex: content;
+		display: inline-block;
+	}
+
+	.title {
+		font-weight: 700;
+		line-height: 1;
+
+		a {
+			color: RoyalBlue;
+		}
+	}
+}
+
+nav {
+	width: 50%;
+
+	ul {
+		list-style-type: "\002192\002002";
+	}
+
+	li {
+	}
+
+	a {
+		&:visited {
+		}
+		&:hover {
+		}
+		&:active {
+		}
+	}
+}
+
+main {
+}
+
+article {
+}
+
+section {
+}
+
+aside {
+}
+
+footer {
+}
+
+address {
+}
+
+//
+// Text block content
+//
+
+/* Overall styling, e.g. vertical spacing */
+p,
+ol,
+ul,
+pre,
+blockquote,
+figure,
+hr,
+dl {
+}
+
+p {
+}
+
+ol,
+ul {
+	ol,
+	ul {
+	}
+}
+ol {
+}
+ul {
+}
+li {
+	li {
+	}
+}
+
+pre {
+	code {
+	}
+	samp {
+	}
+}
+blockquote {
+}
+
+figure {
+}
+figcaption {
+}
+
+hr {
+}
+
+dl {
+}
+dt {
+}
+dd {
+}
+
+//
+// Inline text semantics
+//
+
+a {
+	&:visited {
+	}
+	&:hover {
+	}
+	&:active {
+	}
+}
+
+strong {
+}
+b {
+}
+
+em {
+}
+i {
+}
+
+q {
+}
+cite {
+}
+
+s {
+}
+
+mark {
+}
+
+/* If you specify a font size, consider using the `em` unit so that it works
+universally, e.g. for both `h1 small` and `p small` */
+small {
+}
+sub {
+}
+sup {
+}
+
+code {
+}
+
+dfn {
+}
+abbr {
+	&[title] {
+	}
+}
+
+var {
+}
+kbd {
+	kbd {
+	}
+}
+samp {
+}
+
+u {
+}
+
+data {
+}
+time {
+}
+
+//
+// Demarcating edits
+//
+
+del {
+}
+ins {
+}
+
+//
+// Embedded content
+//
+
+img {
+}
+svg {
+}
+video {
+}
+canvas {
+}
+audio {
+}
+object {
+}
+
+noscript {
+}
+
+//
+//Table content
+//
+
+table {
+}
+caption {
+}
+col:first-child {
+}
+thead {
+}
+tbody {
+}
+tfoot {
+}
+tr {
+}
+th {
+}
+td {
+}
+
+//
+// Forms
+//
+
+fieldset {
+	&:disabled {
+	}
+}
+legend {
+}
+
+form {
+}
+
+label {
+}
+
+::placeholder {
+}
+:focus::placeholder {
+}
+
+/* Overall styling, e.g. vertical spacing */
+input,
+textarea,
+select,
+button {
+}
+
+/* `textarea` and `input` elements that share a similar look and similar styling
+capabilities */
+/* - common styling */
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+input[type="url"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="time"] {
+}
+/* - individual styling */
+textarea {
+}
+input[type="text"] {
+}
+input[type="password"] {
+}
+input[type="email"] {
+}
+input[type="tel"] {
+}
+input[type="number"] {
+}
+input[type="search"] {
+}
+input[type="url"] {
+}
+input[type="date"] {
+}
+input[type="datetime-local"] {
+}
+input[type="month"] {
+}
+input[type="week"] {
+}
+input[type="time"] {
+}
+/* Tick boxes */
+input[type="checkbox"],
+input[type="radio"] {
+	&:checked {
+	}
+}
+input[type="checkbox"] {
+	&:checked {
+	}
+}
+input[type="radio"] {
+	&:checked {
+	}
+}
+/* Other input fields, some with limited styling capabilities */
+input[type="file"] {
+}
+input[type="color"] {
+}
+input[type="range"] {
+}
+
+select {
+}
+optgroup {
+}
+option {
+	&:checked {
+	}
+}
+datalist {
+}
+
+button,
+input[type="submit"] {
+	&:disabled {
+	}
+}
+button.secondary {
+	&:disabled {
+	}
+}
+
+/* This matches forms or form elements that are invalid *and* have been
+interacted with. Note that:
+1) You may need to add the `interacted` class to forms yourself
+2) You may need to add the `touched` class to form fields yourself
+3) `:user-invalid` is a working draft and not yet supported by most browsers
+4) `:-moz-ui-invalid` is non-standard and only works in Firefox
+Form validation error messages will appear (in capable browsers) regardless of
+this styling. You can omit 1) and 2) and still have working forms. Perfect
+example of progressive enhancement. */
+/* Applies to invalid forms */
+form.interacted:invalid {
+}
+/* Applies to invalid form fields. You would need to repeat your declarations
+for the following three groups of selectors individually. Browsers completely
+ignore any rule that contains a selector they do not know. */
+form.interacted :invalid,
+form .touched:invalid {
+}
+:user-invalid {
+}
+:-moz-ui-invalid {
+}
+
+output {
+}
+
+progress {
+}
+meter {
+}
+
+//
+// Interactive elements
+//
+
+details {
+	&[open] {
+		summary {
+		}
+	}
+}
+summary {
+}
+
+dialog {
+	::backdrop {
+	}
+}
+
+/* Some form fields, `details`, elements with `tabindex`, and possibly other
+elements can be focussed. You should use `:focus-visible` instead of `:focus`
+whenever possible. As the former is not yet widely supported, you need to do it
+as follows:
+1) Set styling on focus
+2) If browser supports `:focus-visible`, revert/unset the styling from 1)
+3) If the element matches `:focus-visible`, apply the styling again */
+:focus {
+}
+:focus:not(:focus-visible) {
+}
+:focus-visible {
+}
+
+[inert],
+[inert] * {
+}
+
+//
+// Media queries
+//
+
+@media (prefers-reduced-motion: reduce) {
+}
+
+@media (prefers-color-scheme: dark) {
+}
+
+@media (orientation: portrait) {
+}
+
+@media (orientation: landscape) {
+}
+
+@media print {
+}
+
+//
 
 .zola-anchor {
-	margin-left: 0.5em;
-	font-size: 0.8em;
+	opacity: 0;
 	text-decoration: none;
+	font-size: 0.75em;
+	margin-left: 0.5em;
+
+	&:target,
+	&:hover,
+	&:focus {
+		opacity: 1 !important;
+	}
 }
