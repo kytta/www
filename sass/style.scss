@@ -1,4 +1,9 @@
 @import "mixins";
+@import "inter";
+
+$font-family-text: "Inter", "Helvetica Neue", "Neue Haas Grotesk Text Pro",
+	Helvetica, "Nimbus Sans L", "FreeSans", system-ui, sans-serif;
+$font-family-headings: "InterDisplay", $font-family-text;
 
 //
 // Universal
@@ -14,37 +19,38 @@
 //
 :root {
 	color-scheme: light dark;
-}
 
-html {
-	font-size: 100%;
+	font-family: $font-family-text;
+	font-size: 16px;
 	line-height: 1.5;
-	font-family: "Helvetica Neue", "Neue Haas Grotesk Text Pro", Helvetica,
-		"Nimbus Sans L", "FreeSans", Arial, system-ui, sans-serif,
-		"Apple Color Emoji", "Segoe UI Emoji";
+	letter-spacing: -0.16px;
 
-	-webkit-text-size-adjust: none;
-	text-size-adjust: none;
 	tab-size: 4;
 }
 
-body {
-	font-size: 109.375%;
+html {
+}
 
-	padding: 0 14px;
+body {
+	max-width: 1024px;
+	min-height: 100vh;
 	margin: 0 auto;
-	max-width: 40em;
+	padding: 4rem;
 }
 
 //
 // Content sectioning
 //
+.title,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+	font-family: $font-family-headings;
+	font-weight: 500;
+
 	&:hover,
 	&:focus {
 		> .zola-anchor {
@@ -54,22 +60,19 @@ h6 {
 }
 
 h1 {
-
+	font-size: 2rem;
 }
 h2 {
-
+	font-size: 1.5rem;
+	letter-spacing: 0.24px;
 }
 h3 {
-
 }
 h4 {
-
 }
 h5 {
-
 }
 h6 {
-
 }
 
 header {
@@ -85,9 +88,9 @@ header {
 
 	.title {
 		font-size: 2rem;
-		font-weight: 700;
+		font-weight: 600;
 		line-height: 1;
-		padding-left: .5rem;
+		padding-left: 0.5rem;
 		margin-bottom: 1rem;
 
 		flex-shrink: 0;
@@ -118,7 +121,7 @@ nav {
 
 	li {
 		display: inline-block;
-		padding: .5rem;
+		padding: 0.5rem;
 	}
 
 	a {
@@ -190,19 +193,19 @@ pre {
 }
 
 blockquote {
-  border-left: 4px solid currentColor;
-  margin: 1.5em 0em;
-  padding: 0 1em;
-  font-style: italic;
+	border-left: 4px solid currentColor;
+	margin: 1.5em 0em;
+	padding: 0 1em;
+	font-style: italic;
 }
 
 figure {
 	margin: 0;
 }
 figcaption {
-  font-size: 0.9rem;
-  color: var(--text-light);
-  margin-bottom: 1rem;
+	font-size: 0.9rem;
+	color: var(--text-light);
+	margin-bottom: 1rem;
 }
 
 hr {
@@ -226,6 +229,11 @@ a {
 	}
 	&:active {
 	}
+}
+
+strong,
+b {
+	font-weight: 600;
 }
 
 strong {
@@ -299,9 +307,9 @@ ins {
 //
 
 img {
-  display: block;
-  max-width: 100%;
-  margin: 0 auto;
+	display: block;
+	max-width: 100%;
+	margin: 0 auto;
 }
 svg {
 }

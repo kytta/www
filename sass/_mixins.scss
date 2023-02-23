@@ -1,3 +1,5 @@
 @mixin on-bigger-devices {
-  @media (min-width: 600px) { @content; }
+	@media (min-width: 600px) {
+		@content;
+	}
 }
