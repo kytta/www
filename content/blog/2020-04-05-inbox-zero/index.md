@@ -4,9 +4,6 @@ description: There are many ways to bring order into your life, and today I will
 
 date: 2020-04-05
 updated: 2023-02-23T03:41:00+02:00
-
-authors:
-  - Nikita Karamov
 ---
 
 {% image_figure(path="@/blog/2020-04-05-inbox-zero/header.jpg", width=1400, height=600, op="fill") %}
