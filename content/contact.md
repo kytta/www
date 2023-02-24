@@ -1,6 +1,6 @@
 ---
 title: Contact me
-template: lone_page.html
+template: orphan.html
 ---
 
 Ways of reaching out to me, sorted by the probability of me responding promptly (the fastest response on top):
