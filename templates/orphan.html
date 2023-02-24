@@ -15,8 +15,4 @@
 {% if description %}{{ description | safe | striptags }}{% endif %}
 {% endblock description %}
 
-{% block content %}
-<h2 style="margin-top:0">{{ page.title }}</h2>
-
-{{ page.content | safe }}
-{% endblock content %}
+{% block content %}{{ page.content | safe }}{% endblock content %}
