@@ -49,16 +49,26 @@ body {
 //
 // Content sectioning
 //
-.title,
+
+h1,
+h2 {
+	font-family: $font-family-headings;
+	font-weight: 500;
+}
+
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 600;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	font-family: $font-family-headings;
-	font-weight: 500;
-
 	&:hover,
 	&:focus {
 		> .zola-anchor {
@@ -84,10 +94,16 @@ h6 {
 }
 
 header {
-	padding: 3rem 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: end;
+}
+
+header {
+	margin: 3rem 0;
 
 	@include on-bigger-devices {
-		padding: 4rem 0;
+		margin: 4rem 0;
 	}
 }
 
@@ -130,7 +146,42 @@ nav {
 	}
 }
 
+nav {
+	@include on-bigger-devices {
+		width: (100%/2);
+		margin-right: auto;
+	}
+}
+
 main {
+	&.index {
+		display: flex;
+		flex-wrap: wrap;
+
+		section {
+			width: 100%;
+			flex: 0 0 auto;
+
+			h2 {
+				margin: 0 0 1em;
+			}
+			h3 {
+				margin: 0;
+				font-size: 1rem;
+			}
+			time {
+				opacity: 0.8;
+				white-space: nowrap;
+			}
+
+			@include on-even-bigger-devices {
+				padding-right: 1rem;
+
+				width: (100%/2);
+				margin-right: auto;
+			}
+		}
+	}
 }
 
 article {
@@ -164,6 +215,7 @@ dl {
 }
 
 p {
+	margin: 0 0 1rem;
 }
 
 ol,
@@ -546,7 +598,7 @@ as follows:
 @media print {
 }
 
-//
+// Custom components
 
 .zola-anchor {
 	opacity: 0;
