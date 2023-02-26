@@ -50,7 +50,7 @@
 
 				{% if menu_object != false %}
 					<li>
-						<a href="{{ menu_object.path }}" class="{% if current_path == menu_object.path %}active{% endif %}">
+						<a href="{{ menu_object.path }}" class="{% if current_path is starting_with(menu_object.path) %}active{% endif %}">
 							{{ entry.title | default(value=menu_object.title) }}
 						</a>
 					</li>
