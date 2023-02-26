@@ -75,7 +75,7 @@ def chksum(packet: bytes) -> int:
 
 This method makes use of Python’s built-in `array` module, that creates an array with fixed element types. This lets us calculate the sum of 16-bit words more easily than using a loop. Then the function simply applies some bit arithmetic magic to the sum and returns it.
 
-Before we can apply this method to our packet, we need to prepend it with a pseudo-header, that contains extra information, such as IP Addresses and TCP Length. Let’s head back to the `build ()` method and compose the pseudo-header:
+Before we can apply this method to our packet, we need to prepend it with a pseudo-header, that contains extra information, such as IP Addresses and TCP Length. Let’s head back to the `build()` method and compose the pseudo-header:
 
 ```py
 pseudo_hdr = struct.pack(
@@ -97,7 +97,7 @@ checksum = chksum(pseudo_hdr + packet)
 packet = packet[:16] + struct.pack('H', checksum) + packet[18:]
 ```
 
-Make sure that the checksum is inserted using the native byte order and not big-endian; this is why there is no exclamation point in the first argument of `struct.pack ()`.
+Make sure that the checksum is inserted using the native byte order and not big-endian; this is why there is no exclamation point in the first argument of `struct.pack()`.
 
 In my example, I simply cut the packet in between and insert the checksum. You can also build the packet from scratch using three consecutive `struct.pack` calls.
 
