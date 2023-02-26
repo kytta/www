@@ -6,10 +6,6 @@ date: 2020-04-05
 updated: 2023-02-23T03:41:00+02:00
 ---
 
-{% image_figure(path="@/blog/2020-04-05-inbox-zero/header.jpg", width=1400, height=600, op="fill") %}
-Photo by [Efe Kurnaz](https://unsplash.com/es/@efekurnaz) on [Unsplash](https://unsplash.com/photos/hvQMx4RnzYE).
-{% end %}
-
 > Note: this article was initally written in Russian for my Telegram blog. You can read the original [here](https://telegra.ph/Inbox-Zero-03-27).
 
 Ways to effectively declutter my life become bigger of interest to me as I get older. I started to get more convinced that organization and minimalism do lead to greater efficiency and contribute to a more pleasant life.
