@@ -1,0 +1,25 @@
+@import "variables";
+
+@media screen and (min-width: 992px) {
+	body {
+		padding: 4rem;
+	}
+
+	nav {
+		position: sticky;
+		top: 4rem;
+
+		flex: 0 0 auto;
+		width: 25%;
+	}
+
+	#lift-go-up {
+		margin-left: -1.25em;
+		cursor: pointer;
+	}
+
+	main {
+		flex: 0 0 auto;
+		width: 50%;
+	}
+}
