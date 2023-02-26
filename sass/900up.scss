@@ -1,0 +1,16 @@
+@media (min-width: 900px) {
+	body {
+		padding: 4rem;
+	}
+
+	main {
+		&.index {
+			section {
+				padding-right: 1rem;
+
+				width: (100%/2);
+				margin-right: auto;
+			}
+		}
+	}
+}

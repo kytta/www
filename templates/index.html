@@ -7,7 +7,9 @@
 	<title>{% block title %}{{ config.title }}{% endblock title %}</title>
 	<meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}" />
 
-	<link rel="stylesheet" href="{{ get_url(path="/style.css") }}?h={{ get_hash(path="/style.css", sha_type=256) }}">
+	<link rel="stylesheet" href="{{ get_url(path="/0up.css") }}?h={{ get_hash(path="/0up.css", sha_type=256) }}" media="all">
+	<link rel="stylesheet" href="{{ get_url(path="/600up.css") }}?h={{ get_hash(path="/600up.css", sha_type=256) }}" media="screen and (min-width: 600px)">
+	<link rel="stylesheet" href="{{ get_url(path="/900up.css") }}?h={{ get_hash(path="/900up.css", sha_type=256) }}" media="screen and (min-width: 900px)">
 
 	{% block rss %}
 	<link rel="alternate" type="application/atom+xml" title="Blog feed" href="{{ get_url(path="/blog/atom.xml", trailing_slash=false) }}">
