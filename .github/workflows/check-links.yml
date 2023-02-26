@@ -27,7 +27,7 @@ jobs:
         uses: lycheeverse/lychee-action@v1
         with:
           args: --verbose --no-progress './**/*.md' './public/**/*.html'
-          output: ./lychee/out.md
+          output: ./lycheeresult.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Create issue
@@ -35,5 +35,5 @@ jobs:
         uses: peter-evans/create-issue-from-file@v4
         with:
           title: "[lychee] Broken links"
-          content-filepath: ./lychee/out.md
+          content-filepath: ./lycheeresult.md
           labels: bug, automated issue
