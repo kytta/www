@@ -28,9 +28,6 @@ main {
 
 @media screen and (min-width: 992px) {
 	main {
-		width: 75%;
-		max-width: 100%;
-
 		> * {
 			flex: 0 0 auto;
 			width: 50%;
