@@ -1,5 +1,5 @@
 ---
-title: Beginner's Guide to Inbox Zero
+title: Beginner’s Guide to Inbox Zero
 description: There are many ways to bring order into your life, and today I will tell you about one of them, that will end the mess in your mailbox.
 
 date: 2020-04-05
