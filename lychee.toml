@@ -1,0 +1,24 @@
+# Enable link caching.
+cache = true
+
+# Discard all cached requests older than one day.
+max_cache_age = "1d"
+
+# Maximum number of allowed retries before a link is declared dead.
+max_retries = 3
+
+# User agent to send with each request.
+# https://www.whatismybrowser.com/guides/the-latest-user-agent/chrome
+user_agent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36"
+
+# Minimum wait time in seconds between retries of failed requests.
+retry_wait_time = 3
+
+# Comma-separated list of accepted status codes for valid links.
+accept = [200, 429]
+
+# Exclude all private IPs from checking.
+exclude_all_private = true
+
+# Exclude all mail addresses from checking.
+exclude_mail = true

@@ -3,8 +3,5 @@
 set -eu
 
 lychee \
-	--cache \
-	--max-cache-age 1d \
-	--exclude-mail \
   './**/*.md' \
 	'./public/**/*.html'
