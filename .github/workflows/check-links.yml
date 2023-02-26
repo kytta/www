@@ -16,13 +16,17 @@ jobs:
         uses: actions/cache@v3
         with:
           path: .lycheecache
-          key: cache-lychee-${{ hashFiles('content/**/*.md', '**/*.html') }}
+          key: cache-lychee-${{ hashFiles('**/*.md') }}
           restore-keys: cache-lychee-
+      - name: Build
+        uses: shalzz/zola-deploy-action@v0.17.0
+        env:
+          BUILD_ONLY: true
       - name: Check links
         id: lychee
         uses: lycheeverse/lychee-action@v1
         with:
-          args: "--cache --max-cache-age 1d"
+          args: --verbose --no-progress --cache --max-cache-age 1d --exclude-mail './**/*.md' './public/**/*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Create issue

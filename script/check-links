@@ -3,8 +3,8 @@
 set -eu
 
 lychee \
-  $(git ls-files --others -- 'public/*.html') \
-	$(git ls-files -- 'content/*.md') \
 	--cache \
 	--max-cache-age 1d \
-	--exclude-mail
+	--exclude-mail \
+  './**/*.md' \
+	'./public/**/*.html'
