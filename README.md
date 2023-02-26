@@ -31,6 +31,8 @@ of running `skyr`, you can run:
 
 ```sh
 script/build
+script/serve
+# etc.
 ```
 
 </details>
