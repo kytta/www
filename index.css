@@ -1,0 +1,1 @@
+main{display:flex;flex-flow:row wrap;align-items:start}main>*{width:100%;max-width:100%;flex-shrink:0}main>* h2{margin:0 0 1em}main>* h3{margin:0;font-size:1rem}main>* time{opacity:.8;white-space:nowrap}@media screen and (min-width: 992px){main>*{flex:0 0 auto;width:50%;padding-right:1rem}}

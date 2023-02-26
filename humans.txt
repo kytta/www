@@ -1,0 +1,35 @@
+Me,
+
+	— Nikita Karamov <me@kytta.dev>
+
+authored the content of this website, wrote the code, and did most of the stuff,
+which is logical, I guess.
+
+
+These people helped me improve it by writing issues and authoring PRs:
+
+	— Linus Kämmerer <linuskmr.dev@gmail.com>
+
+
+These people inspired me to start a blog and to design it the way I designed it:
+
+	— Rasmus Andersson (rsms.me)
+	— Nikita Prokopov (tonsky.me)
+	— Kev Quirk (kevquirk.com)
+	— Mikhail Podivilov (podivilov.ru)
+	— Maxim Ilyahov (maximilyahov.ru)
+
+
+These people created the software that powers the blog:
+
+	— Vincent Prouillet (Zola)
+
+
+
+                   ┌──────────────────────────────────────────┐
+                   │ ‘Gratitude is a currency that we can     │
+                   │  mint for ourselves, and spend without   │
+                   │  fear of bankruptcy.’                    │
+                   │                                          │
+                   │               — Fred De Witt Van Amburgh │
+                   └──────────────────────────────────────────┘
