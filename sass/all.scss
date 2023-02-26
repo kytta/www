@@ -122,6 +122,7 @@ nav {
 		color: currentColor;
 		opacity: 0.6;
 
+		&.active,
 		&:hover,
 		&:active {
 			opacity: 1 !important;
