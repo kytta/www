@@ -9,14 +9,16 @@
 
 	<link
 		rel="stylesheet"
-		href="{{ get_url(path="/all.css") }}?h={{ get_hash(path="/all.css", sha_type=256) }}"
+		href="/all.css?h={{ get_hash(path="/all.css", sha_type=256) }}"
 		media="all">
 	<link
-		rel="stylesheet" href="{{ get_url(path="/big.css") }}?h={{ get_hash(path="/big.css", sha_type=256) }}"
+		rel="stylesheet"
+		href="/big.css?h={{ get_hash(path="/big.css", sha_type=256) }}"
 		media="screen and (min-width: 992px)">
-		<link
-			rel="stylesheet" href="{{ get_url(path="/motion.css") }}?h={{ get_hash(path="/motion.css", sha_type=256) }}"
-			media="screen and not (prefers-reduced-motion)">
+	<link
+		rel="stylesheet"
+		href="/motion.css?h={{ get_hash(path="/motion.css", sha_type=256) }}"
+		media="screen and not (prefers-reduced-motion)">
 
 	{% block extra_head %}{% endblock extra_head %}
 
@@ -34,7 +36,7 @@
 		<ul>
 			<li class="title">
 				{% set icon_data = load_data(path="static/icon.svg") %}
-				<a href="{{ get_url(path="/") }}" class="to-main {% if current_path == "/" %}active{% endif %}">{{- icon_data | safe -}}</a>
+				<a href="/" class="to-main {% if current_path == "/" %}active{% endif %}">{{- icon_data | safe -}}</a>
 			</li>
 
 			{% set menu_object = false %}
@@ -48,7 +50,7 @@
 
 				{% if menu_object != false %}
 					<li>
-						<a href="{{ get_url(path=menu_object.path) }}" class="{% if current_path == menu_object.path %}active{% endif %}">
+						<a href="{{ menu_object.path }}" class="{% if current_path == menu_object.path %}active{% endif %}">
 							{{ entry.title | default(value=menu_object.title) }}
 						</a>
 					</li>
@@ -71,7 +73,7 @@
 			{% for post in blog.pages | slice(end=5) %}
 			<article>
 				<h3>
-					<a href="{{ get_url(path=post.path) }}">
+					<a href="{{ post.path }}">
 						{{ post.title }}
 					</a>
 				</h3>

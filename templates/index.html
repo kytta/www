@@ -2,5 +2,5 @@
 
 {% block extra_head %}
 <link
-	rel="stylesheet" href="{{ get_url(path="/index.css") }}?h={{ get_hash(path="/index.css", sha_type=256) }}">
+	rel="stylesheet" href="/index.css?h={{ get_hash(path="/index.css", sha_type=256) }}">
 {% endblock extra_head %}
