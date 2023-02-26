@@ -17,9 +17,7 @@
 :root {
 	color-scheme: light dark;
 
-	font-family: $font-family-text;
-	font-size: 16px;
-	line-height: 1.5;
+	font: 16px/1.5 $font-family-text;
 	letter-spacing: -0.16px;
 
 	tab-size: 4;
@@ -42,18 +40,6 @@ body {
 // Content sectioning
 //
 
-h1,
-h2 {
-	font-family: $font-family-headings;
-	font-weight: 500;
-}
-
-h3,
-h4,
-h5,
-h6 {
-	font-weight: 600;
-}
 
 h1,
 h2,
@@ -61,6 +47,8 @@ h3,
 h4,
 h5,
 h6 {
+	margin: 0;
+
 	&:hover,
 	&:focus {
 		> .zola-anchor {
@@ -69,12 +57,25 @@ h6 {
 	}
 }
 
+h1,
+h2 {
+	font-family: $font-family-headings;
+	font-weight: 500;
+}
+
 h1 {
 	font-size: 2rem;
 }
 h2 {
-	font-size: 1.5rem;
+	font-size: 2rem;
 	letter-spacing: 0.24px;
+}
+
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 600;
 }
 h3 {
 }
@@ -85,27 +86,16 @@ h5 {
 h6 {
 }
 
-header {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: end;
-}
-
-header {
-	margin: 3rem 0;
-}
-
 nav {
 	width: 100%;
 	max-width: 100%;
-	padding-top: 2rem;
 
 	flex-shrink: 0;
 
 	font-family: $font-family-headings;
 	font-size: 1.5rem;
 	font-weight: 500;
-	line-height: 2rem;
+	line-height: 2.5rem;
 
 	ul {
 		list-style: none;
@@ -130,9 +120,8 @@ nav {
 		opacity: 0.6;
 
 		&:hover,
-		&:active,
-		&.active {
-			opacity: 1;
+		&:active {
+			opacity: 1 !important;
 			&.to-main {
 				color: #c23;
 			}
@@ -146,32 +135,6 @@ main {
 	padding-top: 2rem;
 
 	flex-shrink: 0;
-
-	&.index {
-		display: flex;
-
-		flex-flow: row wrap;
-		align-items: start;
-
-		section {
-			width: 100%;
-			max-width: 100%;
-
-			flex-shrink: 0;
-
-			h2 {
-				margin: 0 0 1em;
-			}
-			h3 {
-				margin: 0;
-				font-size: 1rem;
-			}
-			time {
-				opacity: 0.8;
-				white-space: nowrap;
-			}
-		}
-	}
 }
 
 article {

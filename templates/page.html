@@ -1,4 +1,4 @@
-{% extends "index.html" %}
+{% extends "base.html" %}
 
 {% block title %}{{ page.title }} - {{ config.title }}{% endblock title %}
 
@@ -16,16 +16,17 @@
 {% endblock description %}
 
 {% block content %}
+<h1>{{ page.title }}</h1>
 <small>
 	<time datetime="{{ page.date | date(format="%+")}}">
 		{{ page.date | date(format="%d %h %Y")}} at {{ page.date | date(format="%R")}}
 	</time>
 	{% if page.updated %}
+		&bullet;
 		updated
-		{{ page.updated | date(format="%d %h %Y")}} at {{ page.updated | date(format="%R")}}
+		{{ page.updated | date(format="%d %h %Y")}} at {{ page.updated | date(format="%R")}})
 	{% endif %}
 </small>
-<h2 style="margin-top:0">{{ page.title }}</h2>
 
 {{ page.content | safe }}
 {% endblock content %}
