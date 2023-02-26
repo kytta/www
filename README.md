@@ -1,6 +1,6 @@
 # [www.kytta.dev][site]
 
-This is the source code for [www.kytta.dev][site] as well as all of the published content.
+This is the source code for [www.kytta.dev][site] as well as all its content.
 
 ## Build
 
@@ -26,7 +26,8 @@ skyr serve
 <details>
 <summary>How to run scripts without Skyr</summary>
 
-[Skyr] is just a runner for the scripts inside the `script` directory. Instead of running `skyr`, you can run:
+[Skyr] is just a runner for the scripts inside the `script` directory. Instead
+of running `skyr`, you can run:
 
 ```sh
 script/build
@@ -38,7 +39,7 @@ script/build
 
 © 2023 [Nikita Karamov][site]\
 Code licensed under the [ISC License].\
-Content licensed under the [CC-BY-SA 4.0]
+Content licensed under the [CC-BY-SA 4.0].
 
 ---
 
