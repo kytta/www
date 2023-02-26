@@ -1,8 +1,4 @@
-document.addEventListener("DOMContentLoaded", (_) => {
-	if (!matchMedia("screen and (min-width: 992px)").matches) {
-		return;
-	}
-
+if (matchMedia("screen and (min-width: 992px)").matches) {
 	const MIN_SCROLL_Y = 100;
 	const MAX_SCROLL_Y = 500;
 	const MAX_OPACITY = 0.6;
@@ -32,4 +28,4 @@ document.addEventListener("DOMContentLoaded", (_) => {
 
 	document.addEventListener("scroll", updateScroll);
 	updateScroll();
-});
+}
