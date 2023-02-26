@@ -4,7 +4,8 @@ if (matchMedia("screen and (min-width: 992px)").matches) {
 	const MAX_OPACITY = 0.6;
 	const $goUp = document.getElementById("lift-go-up");
 
-	$goUp.addEventListener("click", (_) => {
+	$goUp.addEventListener("click", (e) => {
+		e.preventDefault();
 		window.scrollTo(0, 0);
 	});
 

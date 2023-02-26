@@ -36,7 +36,7 @@
 		<ul>
 			<li class="title">
 				{% set icon_data = load_data(path="static/icon.svg") %}
-				<a href="/" class="to-main {% if current_path == "/" %}active{% endif %}">{{- icon_data | safe -}}</a>
+				<a href="/" class="to-main {% if current_path == "/" %}active{% endif %}" aria-label="Go to the main page">{{- icon_data | safe -}}</a>
 			</li>
 
 			{% set menu_object = false %}
@@ -57,7 +57,7 @@
 				{% endif %}
 			{% endfor %}
 			<li>
-				<a id="lift-go-up">
+				<a id="lift-go-up" href="#">
 					&UpArrow;&emsp14;Scroll to top
 				</a>
 			</li>
