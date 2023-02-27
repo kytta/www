@@ -25,8 +25,6 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      ZOLA_VERSION: 0.17.1
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -39,7 +37,7 @@ jobs:
       - name: Build with Zola
         uses: kytta/zola-build-pages@v1
         with:
-          zola-version: ${ZOLA_VERSION}
+          zola-version: "0.17.1"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
