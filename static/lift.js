@@ -1,7 +1,13 @@
-if (matchMedia("screen and (min-width: 992px)").matches) {
-	const MIN_SCROLL_Y = 100;
-	const MAX_SCROLL_Y = 500;
-	const MAX_OPACITY = 0.6;
+const MIN_SCROLL_Y = 100;
+const MAX_SCROLL_Y = 500;
+const MAX_OPACITY = 0.6;
+
+if (
+	matchMedia("screen and (min-width: 992px)").matches &&
+	document.documentElement.scrollHeight -
+		document.documentElement.clientHeight >=
+		MAX_SCROLL_Y
+) {
 	const $goUp = document.getElementById("lift-go-up");
 
 	$goUp.addEventListener("click", (e) => {
