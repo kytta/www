@@ -1,6 +1,9 @@
 ---
 title: Yes, my email exists
 description: There are still websites that don't believe that my email address is real. Let's find a way to fix this.
+
+extra:
+  mastodon_id: 109936507315701902
 ---
 
 Ah yes, another day, another outdated website that still doesn't know about .dev domains. At least it doesn't deny me signing up for their services, but it still nags me with ‘Hey, did you mean **me[at]kytta.de**?’
