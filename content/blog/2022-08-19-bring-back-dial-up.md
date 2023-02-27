@@ -2,6 +2,7 @@
 title: I want the dial-up back
 description: TFW you run out of your mobile data for the month.
 date: 2022-08-19T18:30:52Z
+updated: 2023-02-27T13:04:00+02:00
 ---
 
 An idea just struck me. What would the world be like, if the computing power kept increasing, but not the Internet speed? Imagine computers that are as quick as ours today, but without dumb usage of resources.
