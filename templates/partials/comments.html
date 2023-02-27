@@ -3,14 +3,15 @@
 {% set_global display_name = reply.account.display_name %}
 {% for emoji in reply.account.emojis %}
 {% set emoji_code = ":" ~ emoji.shortcode ~ ":" %}
-{% set emoji_img = '<img src="' ~ emoji.static_url ~ '" alt="Emoji ' ~ emoji.shortcode ~ '" height="16px" width="16px" />' %}
+{% set emoji_url = emoji.static_url | urlencode %}
+{% set emoji_img = '<img src="//wsrv.nl/?url=' ~ emoji_url ~ '&w=36&h=36" alt="Emoji ' ~ emoji.shortcode ~ '" height="18" width="18" loading="lazy" />' %}
 {% set_global display_name = display_name | replace(from=emoji_code, to=emoji_img) %}
 {% endfor %}
 
 <article>
 	<div class="comment-header">
 		<a href="{{ reply.account.url }}" class="user">
-			<img src="{{ reply.account.avatar_static }}" alt="" class="avatar">
+			<img src="//wsrv.nl/?url={{ reply.account.avatar_static | urlencode }}&w=96&h=96&maxage=1M" alt="" loading="lazy" class="avatar">
 			<h3>
 				{{ display_name | safe }}
 				<br>
