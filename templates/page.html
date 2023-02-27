@@ -48,7 +48,7 @@
 {{ comments::comment(reply=reply) }}
 
 {% endfor %}
-<p><small>Comments last fetched <time datetime="{{ now() }}">{{ now() | date(format="on %d %b %Y at %R") }}</time>. Updates at least every six hours.</small></p>
+<p><small>Comments last fetched <time datetime="{{ now() }}">{{ now() | date(format="on %d %b %Y at %R %Z") }}</time>. Updates at least every six hours.</small></p>
 </section>
 
 {% endif %}
