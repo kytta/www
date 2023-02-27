@@ -65,26 +65,7 @@
 	</nav>
 
 	<main>
-		{% block content %}
-		<section>
-			<h2>Recent posts</h2>
-
-			{% set blog = get_section(path="blog/_index.md") %}
-			{% for post in blog.pages | slice(end=5) %}
-			<article>
-				<h3>
-					<a href="{{ post.path }}">
-						{{ post.title }}
-					</a>
-				</h3>
-				<p>
-					{{ post.summary | default(value="") | safe | striptags }}
-					<time datetime="{{ post.date | date(format="%+")}}">{{ post.date | date(format="%d %h %Y")}}</time>
-				</p>
-			</article>
-			{% endfor %}
-		</section>
-		{% endblock content %}
+		{% block content %}{% endblock content %}
 	</main>
 	<script src="/lift.js" async defer></script>
 	<script src="//gc.zgo.at/count.v3.js"
