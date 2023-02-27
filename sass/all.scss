@@ -155,6 +155,81 @@ article {
 section {
 }
 
+#comments {
+	margin-top: 4rem;
+
+	> h2 {
+		margin-bottom: 1rem;
+	}
+
+	article {
+		border-bottom: 0.5px solid currentColor;
+		// border-radius: 1rem;
+		padding: 1rem 0;
+
+		.comment-header {
+			margin-bottom: 1rem;
+
+			.user {
+				display: flex;
+				flex-flow: row nowrap;
+				align-items: start;
+				justify-content: start;
+
+				text-decoration: none;
+				color: inherit;
+
+				&:hover {
+					text-decoration: underline solid currentColor 1px;
+				}
+
+				gap: 1rem;
+
+				line-height: 1.25;
+
+				small	{
+					font-weight: 400;
+				}
+
+
+				> img {
+					width: 3rem;
+					height: 3rem;
+					margin: 0;
+				}
+			}
+		}
+
+		.comment-body {
+			p:last-of-type {
+				margin-bottom: 0;
+			}
+
+			.time {
+				margin-top: 1rem;
+				display: block;
+				opacity: 0.6;
+				text-decoration: none;
+				color: inherit;
+				font-size: smaller;
+
+				&:hover {
+					text-decoration: underline solid currentColor 1px;
+				}
+
+			}
+		}
+	}
+
+	img {
+		display: inline;
+
+		&.avatar {
+			border-radius: 5px;
+		}
+	}
+}
+
 aside {
 }
 
