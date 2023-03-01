@@ -1,6 +1,8 @@
 ---
 title: What happened to Gmail's spam filter?
 description: It happened! For the first time in my life, I am annoyed of spammers!
+extra:
+  mastodon_id: 109948171776573299
 ---
 
 It's sad, but it's true: I still have a Google account. There are many reasons for this: YouTube, old websites, a bunch of data, and Android, among others. Gmail is one of the products I use the least, I'd say; Ever since I started using email on my own domain, I never looked back.
