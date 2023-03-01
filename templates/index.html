@@ -18,11 +18,10 @@
 				</a>
 			</h3>
 			<p>
-				<time datetime="{{ post.date | date(format="%+")}}">{{ post.date | date(format="%d %h %Y")}}</time>
 				{% if post.description %}
-				&middot;
 				{{ post.description }}
 				{% endif %}
+				<time datetime="{{ post.date | date(format="%+")}}">{{ post.date | date(format="%d %h %Y")}}</time>
 			</p>
 		</article>
 		{% endfor %}
