@@ -26,5 +26,9 @@
 			</p>
 		</article>
 		{% endfor %}
+		{% set post_count = blog.pages | length %}
+		{% if post_count > 5 %}
+		<a class="view-all" href="{{ blog.path }}"><b>view all {{ post_count }} posts &RightArrow;</b></a>
+		{% endif %}
 	</section>
 {% endblock content %}

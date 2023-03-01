@@ -328,6 +328,17 @@ dd {
 //
 
 a {
+	&.view-all {
+		opacity: .7;
+		text-decoration-line: none;
+		color: inherit;
+
+		&:hover {
+			text-decoration-line: underline;
+			opacity: 1;
+		}
+	}
+
 	&:visited {
 	}
 	&:hover {
