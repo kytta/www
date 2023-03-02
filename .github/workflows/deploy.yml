@@ -1,8 +1,8 @@
 name: Deploy Zola site to Pages
 
 on:
-  schedule:
-    - cron: "47 */6 * * *"
+  # schedule:
+  #   - cron: "47 */6 * * *"
   push:
     branches:
       - v8
