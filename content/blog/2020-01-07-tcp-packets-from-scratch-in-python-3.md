@@ -5,12 +5,11 @@ description: After not being able to find a simple solution to calculate the che
 updated: 2023-02-26T23:04:00+02:00
 ---
 
-One of the assignments I got at my university’s IT Security classes was to write a small Python script that would create and send an empty TCP packet with specified flags to the desired host and port combo. This could be easily achieved with *scapy*, but here’s the catch — we weren’t allowed to use external dependencies for this assignment.
+One of the assignments I got at my university’s IT Security classes was to write a small Python script that would create and send an empty TCP packet with specified flags to the desired host and port combo. This could be easily achieved with _scapy_, but here’s the catch — we weren’t allowed to use external dependencies for this assignment.
 
-Building the packet itself didn’t cause problems, but checksum did. I searched the entire WWW to find answers, but the only thing I found was some spaghetti code that didn’t work (at least in Python 3). So I decided to tear down *scapy* and create a lightweight solution to this exact issue.
+Building the packet itself didn’t cause problems, but checksum did. I searched the entire WWW to find answers, but the only thing I found was some spaghetti code that didn’t work (at least in Python 3). So I decided to tear down _scapy_ and create a lightweight solution to this exact issue.
 
 Let’s get down to business!
-
 
 ## Building the packet
 
@@ -59,7 +58,7 @@ We start by composing a function that will calculate our checksum. The spec t
 
 > The checksum field is the 16 bit one’s complement of the one’s complement sum of all 16 bit words in the header and text.
 
-I don’t know about you, but I didn’t understand it even after I’ve read it for the twentieth time. So instead I referred to _scapy_’s source code and this is what I’ve composed:
+I don’t know about you, but I didn’t understand it even after I’ve read it for the twentieth time. So instead I referred to *scapy*’s source code and this is what I’ve composed:
 
 ```py
 def chksum(packet: bytes) -> int:

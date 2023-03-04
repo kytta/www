@@ -187,10 +187,9 @@ section {
 
 				line-height: 1.25;
 
-				small	{
+				small {
 					font-weight: 400;
 				}
-
 
 				> img {
 					width: 3rem;
@@ -208,7 +207,7 @@ section {
 			.time {
 				margin-top: 1rem;
 				display: block;
-				opacity: .7;
+				opacity: 0.7;
 				text-decoration: none;
 				color: inherit;
 				font-size: smaller;
@@ -216,7 +215,6 @@ section {
 				&:hover {
 					text-decoration: underline solid currentColor 1px;
 				}
-
 			}
 		}
 	}
@@ -300,7 +298,12 @@ blockquote {
 
 figure {
 	margin: 0;
+
+	blockquote {
+		margin-bottom: 0;
+	}
 }
+
 figcaption {
 	font-size: 0.9rem;
 	color: var(--text-light);
@@ -313,7 +316,6 @@ hr {
 	height: 2px;
 	color: inherit;
 	background-color: currentColor;
-
 }
 
 dl {
@@ -329,7 +331,7 @@ dd {
 
 a {
 	&.view-all {
-		opacity: .7;
+		opacity: 0.7;
 		text-decoration-line: none;
 		color: inherit;
 
