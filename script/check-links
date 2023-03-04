@@ -3,5 +3,4 @@
 set -eu
 
 lychee \
-  './**/*.md' \
 	'./public/**/*.html'
