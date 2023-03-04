@@ -1,7 +1,6 @@
 ---
 title: I spent one week with Zola
 description: I have chosen Zola as my static site generator of choice for this blog, and here, I talk about my experience with it.
-draft: true
 ---
 
 You already know this story: I have been tired of not having a proper blog, so [I started one](2023-02-22-enough.md). I absolutely didn't want to try out anything with a CMS (sorry, WordPress folks!), but rather stick to a minimalistic statically generated site. When it came to choosing a generator, I had a few options I could consider:
