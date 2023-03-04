@@ -1,0 +1,11 @@
+{
+  "hidden": true,
+  "hiddenList": [
+    "node_modules",
+    "sass",
+    "script",
+    "static",
+    "templates",
+    "README.md"
+  ]
+}

@@ -1,5 +1,11 @@
 /public/
 /.lycheecache
 
-/content/.obsidian/
+# Obsidian
+/.obsidian/plugins/*/*
+!/.obsidian/plugins/*/data.json
+/.obsidian/themes/
+/.obsidian/workspace*.json
+
+# Syncthing
 /content/.stfolder/
