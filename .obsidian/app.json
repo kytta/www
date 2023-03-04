@@ -39,5 +39,14 @@
     "static/",
     "templates/"
   ],
-  "showInlineTitle": false
+  "showInlineTitle": false,
+  "spellcheckDictionary": [
+    "Tera",
+    "Zola",
+    "FOSStodon",
+    "Autoprefixer",
+    "Vercel",
+    "deSEC",
+    "CSSO"
+  ]
 }

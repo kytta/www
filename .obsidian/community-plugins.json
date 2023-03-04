@@ -1,6 +1,8 @@
 [
   "obsidian-minimal-settings",
+  "obsidian-fullscreen-plugin",
+  "OA-file-hider",
   "obsidian-hider",
   "obsidian-git",
-  "OA-file-hider"
+  "obsidian-languagetool-plugin"
 ]
