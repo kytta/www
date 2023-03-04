@@ -1,0 +1,9 @@
+{
+  "pinned": [
+    "obsidian-git:stage-current-file",
+    "obsidian-git:commit-staged-specified-message",
+    "obsidian-git:push2",
+    "obsidian-git:create-branch",
+    "obsidian-git:switch-branch"
+  ]
+}
