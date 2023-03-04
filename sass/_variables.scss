@@ -1,6 +1,6 @@
-$font-family-text: "Inter", "Helvetica Neue", "Neue Haas Grotesk Text Pro",
-	Helvetica, "Nimbus Sans L", "FreeSans", system-ui, sans-serif;
-$font-family-headings: "InterDisplay", $font-family-text;
+$font-family-text: "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica,
+	"FreeSans", "Nimbus Sans L", "Inter", system-ui, sans-serif;
+$font-family-headings: "InterDisplay", "Inter", $font-family-text;
 
 // Width of the main block
 // Should fit about 2-3 lowercase English alphabets
