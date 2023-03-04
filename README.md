@@ -45,7 +45,7 @@ This blog wouldn't have been possible without the work of these people:
   contributors
 - [Rasmus Andersson](https://rsms.me/) for creating the [Inter](https://rsms.me/inter/)
   typeface that I use
-	- I also took a lot of design inspiration from hiw personal website
+  - I also took a lot of design inspiration from hiw personal website
 - [Kev Quirk](https://kevquirk.com/) for [inspiring me to start a blog](https://startafuckingblog.com/)
 - [FrontAid CMS](https://frontaid.io/) for their [Natural Selection](https://github.com/frontaid/natural-selection)
   CSS framework

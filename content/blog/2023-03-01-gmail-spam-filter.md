@@ -17,4 +17,4 @@ And you know what's the most annoying thing about this is? All these emails are 
 
 What a shame. (am I even surprised having to say this about a Google product?)
 
-*This is post 003 of [#100DaysToOffload](https://100daystooffload.com/).*
+_This is post 003 of [#100DaysToOffload](https://100daystooffload.com/)._
