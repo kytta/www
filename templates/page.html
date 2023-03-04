@@ -35,7 +35,7 @@
 
 {{ page.content | safe }}
 
-{% if false %}
+{% if page.extra.mastodon_id %}
 
 {% set post_replies = load_data(url="https://fosstodon.org/api/v1/statuses/" ~ page.extra.mastodon_id ~ "/context", format="json", required=false) %}
 {% if post_replies %}
