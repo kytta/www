@@ -8,4 +8,6 @@
 /.obsidian/workspace*.json
 
 # Syncthing
-/content/.stfolder/
+.stfolder/
+.stversions/
+.stignore
