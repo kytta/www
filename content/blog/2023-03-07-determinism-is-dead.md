@@ -1,6 +1,8 @@
 ---
 title: What happened to determinism?
 description: Determinism is one of the best things about computers and software. Sadly, it's dead :(
+extra:
+  mastodon_id: 109979081101240915
 ---
 
 Most things that happen in our day-to-day lives are far from deterministic. We can't predict a coin flip, a stranger's response to a 'Hello', heck, we can't even predict weather conditions.
