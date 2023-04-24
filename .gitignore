@@ -2,14 +2,12 @@
 /.lycheecache
 
 # Obsidian
-/.obsidian/plugins/*/*
-!/.obsidian/plugins/*/data.json
-/.obsidian/themes/
-/.obsidian/workspace*.json
+/.obsidian/
 
 # Syncthing
 .stfolder/
 .stversions/
 .stignore
+
 pnpm-lock.yaml
 node_modules
