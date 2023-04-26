@@ -1,12 +1,36 @@
 {% extends "base.html" %}
 
 {% block extra_head %}
-<link
-	rel="stylesheet" href="/index.css?h={{ get_hash(path="/index.css", sha_type=256) }}">
+{# <link
+	rel="stylesheet" href="/index.css?h={{ get_hash(path="/index.css", sha_type=256) }}"> #}
 {% endblock extra_head %}
+
+{% block sidebar %}
+
+{% endblock sidebar %}
+
 
 {% block content %}
 	<section>
+	<p>
+		Hi, I'm Nikita, and I&nbsp;write performant, stable, and good-looking code
+		whenever I&nbsp;feel like it.<a href="#fn:asterisk" id="fnref:asterisk" role="doc-noteref">*</a>
+		I&nbsp;go out of&nbsp;my way to&nbsp;write code that looks good and works good.
+		You can look at
+		<a href="https://github.com/kytta">my projects</a>,
+		read
+		<a href="/blog">my blog</a>,
+		or
+		<a href="/hire">hire me</a>
+		for development and/or consulting.
+		</p>
+	</section>
+
+	<section id="fn:asterisk">
+	<a href="#fnref:asterisk" aria-labelledby="backlink" role="doc-backlink"><span id="backlink" hidden="">Back to the asterisk reference</span>*</a>always
+	</section>
+
+	{# <section>
 		<h2>Recent posts</h2>
 
 		{% set blog = get_section(path="blog/_index.md") %}
@@ -29,5 +53,5 @@
 		{% if post_count > 5 %}
 		<a class="view-all" href="{{ blog.path }}"><b>view all {{ post_count }} posts &RightArrow;</b></a>
 		{% endif %}
-	</section>
+	</section> #}
 {% endblock content %}
