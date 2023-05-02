@@ -137,7 +137,7 @@ nav {
 main {
 	width: 100%;
 	max-width: 100%;
-	padding-top: 2.5rem;
+	// padding-top: 2.5rem;
 
 	flex-shrink: 0;
 
@@ -325,6 +325,28 @@ dd {
 //
 // Inline text semantics
 //
+
+
+a {
+	text-decoration: none;
+	border-bottom: calc(1em / 20) solid;
+
+	&:link {
+		color: RoyalBlue;
+		border-bottom-color: #859eec;
+	}
+
+	&:visited {
+		color: #7b51d3;
+		border-bottom-color: #ab90e3;
+	}
+
+	&[role="doc-noteref"],
+	&[role="doc-backlink"] {
+		border-bottom: none;
+		color: inherit;
+	}
+}
 
 a {
 	&.view-all {
