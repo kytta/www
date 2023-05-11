@@ -1,6 +1,5 @@
 @import "variables";
 
-
 *,
 *::before,
 *::after {
@@ -13,15 +12,12 @@ html {
 }
 
 body {
-	max-width: $content-width;
-	margin: auto;
-	padding: 0 2em;
-
-	font-size: 125%;
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
 }
 
 nav {
-
 	ul {
 		display: flex;
 		flex-flow: row wrap;
@@ -38,16 +34,16 @@ nav {
 				margin-inline-end: auto;
 			}
 
-			> a:not([rel=home]) {
+			> a:not([rel="home"]) {
 				&:link,
 				&:visited {
-					padding: .25em .75em;
+					padding: 0.25em 0.75em;
 					border-radius: 1em;
 
 					color: currentColor;
 					text-decoration: underline solid #00000080;
 
-					&.active{
+					&.active {
 						background-color: #c231;
 						text-decoration-color: $kytta-red;
 						text-decoration-style: wavy;
@@ -57,7 +53,7 @@ nav {
 				}
 			}
 
-			> a[rel=home] {
+			> a[rel="home"] {
 				display: flex;
 				flex-wrap: nowrap;
 				align-items: center;

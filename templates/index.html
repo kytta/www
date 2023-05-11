@@ -1,13 +1,31 @@
 {% extends "base.html" %}
 
 {% block extra_head %}
-{# <link
-	rel="stylesheet" href="/index.css?h={{ get_hash(path="/index.css", sha_type=256) }}"> #}
+<link rel="stylesheet" href="{{ get_url(path="/index.css", cachebust=true) }}">
 {% endblock extra_head %}
 
 {% block sidebar %}
 
 {% endblock sidebar %}
+
+{% block header %}
+<header>
+    <nav>
+        <a href="/" id="home">
+            <svg viewBox="0 0 8 8" fill="#fff" height="32px" width="32px" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="2" cy="2" r="1"></circle>
+                <circle cx="6" cy="2" r="1"></circle>
+                <circle cx="2" cy="6" r="1"></circle>
+                <circle cx="6" cy="6" r="1"></circle>
+                <circle cx="4" cy="4" r="1"></circle>
+                <path d="m3.293 3.293 1.414 1.414-2 2-1.414-1.414z"></path>
+                <path d="m3.293 4.707 1.414-1.414 2 2-1.414 1.414z"></path>
+            </svg>
+        </a>
+        <input type="search" placeholder="Search for blog posts, projects and things">
+    </nav>
+</header>
+{% endblock header %}
 
 
 {% block content %}
