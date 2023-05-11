@@ -18,12 +18,11 @@ header {
 	border-bottom-color: #8e001a;
 	border-bottom-color: oklch(40.75% 0.184 22.94);
 
-	nav {
+	.bar {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
 		align-items: center;
-		justify-content: flex-start;
 
 		max-width: 100%;
 		margin: 0 auto;
@@ -50,13 +49,152 @@ a#home {
 	line-height: 0;
 }
 
-input {
+input,
+textarea {
 	font-family: inherit;
 	font-size: 1em;
 }
 
+main {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	gap: 0.75em;
+
+	padding: 0.675rem 0.5rem;
+
+	> div {
+		flex-basis: 250px;
+		flex-grow: 0;
+		flex-shrink: 1;
+
+		font-size: 0.9em;
+	}
+
+	.profile {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		gap: 0.5em;
+
+		padding-bottom: 1em;
+
+		h1,
+		p {
+			margin: 0;
+			font-size: inherit;
+		}
+	}
+
+	nav {
+		ul {
+			margin: 0;
+			padding: 0;
+
+			list-style: none;
+
+			li {
+				padding-bottom: 0.5em;
+
+				a {
+					text-decoration: none;
+					color: inherit;
+
+					&.active {
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}
+
+	.feed {
+		border: 2px solid #e4dfde;
+		border-radius: 0.25rem;
+
+		.tabs {
+			padding: 0.5em 0;
+			border-top-left-radius: 0.25rem;
+			border-top-right-radius: 0.25rem;
+
+			a {
+				padding: 0 0.75rem;
+
+				text-decoration: none;
+				font-size: 0.8rem;
+				font-weight: bold;
+				color: inherit;
+
+				&:first-child {
+					border-right: 1px solid #e5e5e5;
+				}
+			}
+		}
+
+		.post-input {
+			padding: 1em 0.75em;
+			border-top: 2px solid #e5e5e5;
+
+			textarea {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				resize: none;
+			}
+		}
+
+		.buttons {
+			padding: 0.75em;
+			border-bottom-left-radius: 0.25rem;
+			border-bottom-right-radius: 0.25rem;
+		}
+
+		.tabs,
+		.post-input {
+			background-color: #fff;
+		}
+
+		.buttons {
+			display: flex;
+			justify-content: space-between;
+
+			border-top: 2px solid #ede9e9;
+			background-color: #f8f6f6;
+
+			.options > div {
+				display: flex;
+				align-items: center;
+				gap: 0.75rem;
+
+				color: #b6b6b6;
+
+				svg {
+					fill: currentColor;
+				}
+			}
+
+			button {
+				padding: 0.3rem 1rem;
+				border: 2px solid #834946;
+				border-radius: 0.25rem;
+
+				background-image: linear-gradient(to bottom, #c12934 0%, #b4001f 100%);
+				background-image: linear-gradient(
+					to bottom in oklab,
+					oklch(53.08% 0.187 22.94) 0%,
+					oklch(48.03% 0.202 22.94) 100%
+				);
+
+				color: white;
+				font-size: 0.8rem;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
 @media screen and (min-width: 400px) {
-	header nav input {
+	header .bar input {
 		background-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="20" height="20" viewBox="0 0 32 32"%3E%3Cpath fill="%2363504f" d="m29.772 26.433l-7.126-7.126a10.43 10.43 0 0 0 1.524-5.42c0-5.794-4.692-10.486-10.482-10.488c-5.79 0-10.484 4.693-10.484 10.485c0 5.79 4.693 10.48 10.484 10.48c1.987 0 3.84-.562 5.422-1.522l7.128 7.127l3.534-3.537zM7.202 13.885a6.496 6.496 0 0 1 6.485-6.486a6.493 6.493 0 0 1 6.484 6.485a6.494 6.494 0 0 1-6.483 6.484a6.496 6.496 0 0 1-6.484-6.485z"%2F%3E%3C%2Fsvg%3E');
 		background-repeat: no-repeat;
 		background-position: right 0.5rem top 50%;
@@ -64,7 +202,11 @@ input {
 }
 
 @media screen and (min-width: 600px) {
-	header nav {
+	header .bar {
 		padding: 0 2rem;
+	}
+
+	main {
+		padding: 0.675rem 2rem;
 	}
 }
