@@ -2,6 +2,8 @@
 title: The UX fail of PWAs in Safari 17
 description: I am excited to see PWAs coming to macOS, yet one UX peculiarity of it really bugs me as a macOS user.
 date: 2023-06-06T21:07:00+02:00
+extra:
+  mastodon_id: 110498867856011208
 ---
 
 After a hiatus caused by me writing my bachelor's thesis, I have finally got time to blog again. And, would you look at that, WWDC just kicked off! Naturally, I've got thoughts to share.
