@@ -17,7 +17,7 @@ If you ever want to talk to me, tell me something, get or stay in touch, then do
   - PGP key: `0xD397E9BE9E6898FA` ([armoured](https://keys.openpgp.org/vks/v1/by-fingerprint/AF6C280C2A34D3F39BED9366D397E9BE9E6898FA), [Keyoxide](https://keyoxide.org/af6c280c2a34d3f39bed9366d397e9be9e6898fa))
   - to force SSL/TLS encryption: <nikita@secure.mailbox.org>
 - [`DMZKXPNM`](https://threema.id/DMZKXPNM) on Threema
-- [@y0100973:matrix.tu-bs.de](https://matrix.to/#/@y0100973:matrix.tu-bs.de) on Matrix
+- [@kytta:matrix.org](https://matrix.to/#/@kytta:matrix.org) on Matrix
 - `Kytta#9980` on Discord
 - [kytta@404.city](xmpp:kytta@404.city) on XMPP; OMEMO fingerprints:
   - `e5111425 bc365b43 3e6bf9f0 76a4031f 8ded0c29 3dbf50de 83cef216 239a1f44`
