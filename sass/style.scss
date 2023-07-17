@@ -77,7 +77,16 @@ nav {
 	}
 }
 
-main {
+section {
+	&.blog-year {
+		display: flex;
+		align-items: baseline;
+
+		h2 {
+			font-size: 1rem;
+			font-weight: normal;
+		}
+	}
 }
 
 //
