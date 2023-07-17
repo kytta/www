@@ -77,21 +77,52 @@ nav {
 	}
 }
 
-section {
-	&.blog-year {
-		display: flex;
-		align-items: baseline;
+.blog-year {
+	display: flex;
+	align-items: baseline;
 
-		h2 {
-			font-size: 1rem;
-			font-weight: normal;
-		}
+	h2 {
+		font-size: 1rem;
+		font-weight: normal;
+	}
+
+	ul {
+		flex-grow: 1;
+	}
+
+	li {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 0.25rem;
 	}
 }
 
 //
 // Text block content
 //
+
+.text {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	ol,
+	ul,
+	pre,
+	blockquote,
+	figure,
+	hr,
+	dl {
+		margin: 0;
+	}
+
+	> * + * {
+		margin-block-start: 1em !important;
+	}
+}
 
 //
 // Inline text semantics

@@ -9,8 +9,7 @@
 	{% for post in posts %}
 		<li>
 			<a href="{{ post.permalink }}">{{ post.title }}</a>
-			<br>
-			<small>{{ post.date | date(format="%d %h %Y") }}</small>
+			<span>{{ post.date | date(format="%d %h %Y") }}</span>
 		</li>
 	{% endfor %}
 	</ul>
