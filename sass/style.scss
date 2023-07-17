@@ -5,6 +5,7 @@ $font-family-text: "Helvetica Neue", Helvetica, "FreeSans", "Nimbus Sans L",
 // Should fit about 2-3 lowercase English alphabets
 $content-width: 40rem;
 
+$body-padding: 14px;
 $nav-item-spacing: 1.5rem;
 
 //
@@ -33,18 +34,58 @@ html {
 }
 
 body {
-	max-width: 40em;
-	margin: auto;
-	padding: 0 14px;
+	// max-width: 40em;
+	// margin: auto;
+	margin: 0;
+	padding: 0 $body-padding;
 }
 
 //
 // Content sectioning
 //
 
+h1, h2, h3, h4, h5 ,h6 {
+	line-height: 1.1;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
 header {
-	margin: 1rem 0 3rem;
+	max-width: $content-width;
+	margin: 1rem auto 3rem;
 	padding: 0.5rem 0;
+}
+
+main {
+	> * {
+		max-width: $content-width;
+		margin-inline: auto;
+	}
+
+	> h1 {
+		max-width: none;
+	}
+
+	> h1,
+	> h2,
+	> h3,
+	> h4,
+	> h5,
+	> h6 {
+		margin-inline-start: calc((100vw - $content-width) / 2 - $body-padding);
+	}
+}
+
+#comments {
+	h2 {
+		margin-top: 1em;
+	}
 }
 
 nav {
@@ -105,27 +146,25 @@ nav {
 // Text block content
 //
 
-.text {
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	p,
-	ol,
-	ul,
-	pre,
-	blockquote,
-	figure,
-	hr,
-	dl {
-		margin: 0;
-	}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+pre,
+blockquote,
+figure,
+hr,
+dl {
+	margin-block: 0;
+}
 
-	> * + * {
-		margin-block-start: 1em !important;
-	}
+main > * + * {
+	margin-block-start: 1em !important;
 }
 
 //
@@ -171,5 +210,27 @@ h6 {
 			color: currentColor;
 			opacity: 1;
 		}
+	}
+}
+
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+
+	&:not(caption) {
+		position: absolute !important;
+	}
+}
+
+@media (max-width: calc($content-width + 2 * $body-padding)) {
+	main > h1 {
+		margin-inline-start: 0;
 	}
 }
