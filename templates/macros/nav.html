@@ -1,0 +1,7 @@
+{%- macro link(path, title) -%}
+{%- if current_path == path -%}
+<li class="here"><span>{{ title }}</span></li>
+{%- else -%}
+<li><a href="{{ path }}">{{ title }}</a></li>
+{%- endif -%}
+{%- endmacro -%}

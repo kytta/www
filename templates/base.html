@@ -1,3 +1,5 @@
+{% import "macros/nav.html" as nav %}
+
 <!DOCTYPE html>
 <html lang="{{ lang }}">
 <head>
@@ -10,16 +12,7 @@
 
 	<link
 		rel="stylesheet"
-		href="/all.css?h={{ get_hash(path="/all.css", sha_type=256) }}"
-		media="all">
-	<link
-		rel="stylesheet"
-		href="/big.css?h={{ get_hash(path="/big.css", sha_type=256) }}"
-		media="screen and (min-width: 992px)">
-	<link
-		rel="stylesheet"
-		href="/motion.css?h={{ get_hash(path="/motion.css", sha_type=256) }}"
-		media="screen and not (prefers-reduced-motion)">
+		href="/style.css?h={{ get_hash(path="/style.css", sha_type=256) }}">
 
 	{% block extra_head %}{% endblock extra_head %}
 
@@ -33,37 +26,7 @@
 	<meta name=generator content="Zola">
 </head>
 <body>
-	<nav>
-		<ul>
-			<li class="title">
-				{% set icon_data = load_data(path="static/icon.svg") %}
-				<a href="/" class="to-main {% if current_path == "/" %}active{% endif %}" aria-label="Go to the main page">{{- icon_data | safe -}}</a>
-			</li>
-
-			{% set menu_object = false %}
-
-			{% for entry in config.extra.menu %}
-				{% if entry.type == "page" %}
-					{% set menu_object = get_page(path=entry.path) %}
-				{% elif entry.type == "section" %}
-					{% set menu_object = get_section(path=entry.path) %}
-				{% endif %}
-
-				{% if menu_object != false %}
-					<li>
-						<a href="{{ menu_object.path }}" class="{% if current_path is starting_with(menu_object.path) %}active{% endif %}">
-							{{ entry.title | default(value=menu_object.title) }}
-						</a>
-					</li>
-				{% endif %}
-			{% endfor %}
-			<li>
-				<a id="lift-go-up" href="#">
-					&UpArrow;&emsp14;Scroll to top
-				</a>
-			</li>
-		</ul>
-	</nav>
+	{% include "partials/header.html" %}
 
 	<main>
 		{% block content %}{% endblock content %}
