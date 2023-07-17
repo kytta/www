@@ -1,10 +1,5 @@
 {% extends "base.html" %}
 
-{% block extra_head %}
-<link
-	rel="stylesheet" href="/index.css?h={{ get_hash(path="/index.css", sha_type=256) }}">
-{% endblock extra_head %}
-
 {% block content %}
 	<section>
 		<h2>Recent posts</h2>
