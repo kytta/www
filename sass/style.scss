@@ -141,3 +141,31 @@ a {
 	&:active {
 	}
 }
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	display: inline-block;
+}
+
+.zola-anchor {
+	display: inline-block;
+	margin-inline-start: 1rem;
+
+	a {
+		// position: relative;
+		// left: calc(-100% - 0.5rem);
+		// float: right;
+
+		color: currentColor;
+		border: none;
+		opacity: 0.42;
+
+		&:hover {
+			color: currentColor;
+			opacity: 1;
+		}
+	}
+}
