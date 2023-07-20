@@ -8,6 +8,12 @@ $content-width: 40rem;
 $body-padding: 14px;
 $nav-item-spacing: 1.5rem;
 
+@mixin mwm {
+	max-width: $content-width;
+	// margin-left: auto;
+	// margin-right: auto;
+}
+
 //
 // Universal
 //
@@ -62,28 +68,19 @@ h2 {
 }
 
 header {
-	max-width: $content-width;
-	margin: 1rem auto 3rem;
+	margin: 1rem 0 3rem;
 	padding: 0.5rem 0;
+	@include mwm;
 }
 
 main {
 	> * {
-		max-width: $content-width;
-		margin-inline: auto;
+		margin-inline: 0;
+		@include mwm;
 	}
 
 	> h1 {
 		max-width: none;
-	}
-
-	> h1,
-	> h2,
-	> h3,
-	> h4,
-	> h5,
-	> h6 {
-		margin-inline-start: calc((100vw - $content-width) / 2 - $body-padding);
 	}
 }
 
@@ -243,8 +240,8 @@ h6 {
 	}
 }
 
-@media (max-width: calc($content-width + 2 * $body-padding)) {
-	main > h1 {
-		margin-inline-start: 0;
+@media (min-width: 900px) {
+	body {
+		padding-inline-start: 15vw;
 	}
 }
