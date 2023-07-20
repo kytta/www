@@ -119,11 +119,20 @@ nav {
 		margin-left: -($nav-item-spacing / 2);
 	}
 
-	.here span {
+	.here > * {
 		color: #fff;
 		background-color: #c23;
 		padding: ($nav-item-spacing / 4) ($nav-item-spacing / 2);
 		border-radius: 4px;
+	}
+
+	.subhere {
+		> * {
+			color: #c23;
+			background-color: inherit;
+			outline: 1px solid currentColor;
+			border-bottom: initial;
+		}
 	}
 }
 
