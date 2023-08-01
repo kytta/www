@@ -7,7 +7,7 @@ author = "Nikita Karamov"
 default_language = "en"
 
 compile_sass = true
-minify_html = true
+minify_html = false
 generate_feed = true
 
 build_search_index = true
