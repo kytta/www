@@ -1,6 +1,9 @@
 $accent-color: #c23;
+
 $link-color-light: #2358a1;
+$link-color-hover-light: #775100;
 $link-color-dark: #7fb3fe;
+$link-color-hover-dark: #dca74f;
 
 $font-family-text: "Helvetica Neue", Helvetica, "FreeSans", "Nimbus Sans L",
 	"Inter", system-ui, sans-serif;
@@ -18,13 +21,13 @@ $nav-item-spacing: 1.5rem;
 	// margin-right: auto;
 }
 
-@mixin link-color($color) {
+@mixin link-color($color, $hover) {
 	color: $color;
 	border-bottom-color: adjust-color($color, $alpha: -0.5);
 
 	&:hover {
-		color: adjust-color($color, $hue: 180deg);
-		border-bottom-color: adjust-color($color, $hue: 180deg, $alpha: -0.5);
+		color: $hover;
+		border-bottom-color: adjust-color($hover, $alpha: -0.5);
 	}
 }
 
@@ -201,7 +204,7 @@ a {
 	border-bottom: 1px solid;
 	transition: all 200ms ease;
 
-	@include link-color($link-color-light);
+	@include link-color($link-color-light, $link-color-hover-light);
 
 	&:visited {
 	}
@@ -266,6 +269,6 @@ h6 {
 
 @media (prefers-color-scheme: dark) {
 	a {
-		@include link-color($link-color-dark);
+		@include link-color($link-color-dark, $link-color-hover-dark);
 	}
 }
