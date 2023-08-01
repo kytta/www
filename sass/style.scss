@@ -1,3 +1,7 @@
+$accent-color: #c23;
+$link-color-light: #2358a1;
+$link-color-dark: #7fb3fe;
+
 $font-family-text: "Helvetica Neue", Helvetica, "FreeSans", "Nimbus Sans L",
 	"Inter", system-ui, sans-serif;
 
@@ -12,6 +16,16 @@ $nav-item-spacing: 1.5rem;
 	max-width: $content-width;
 	// margin-left: auto;
 	// margin-right: auto;
+}
+
+@mixin link-color($color) {
+	color: $color;
+	border-bottom-color: adjust-color($color, $alpha: -0.5);
+
+	&:hover {
+		color: adjust-color($color, $hue: 180deg);
+		border-bottom-color: adjust-color($color, $hue: 180deg, $alpha: -0.5);
+	}
 }
 
 //
@@ -184,12 +198,16 @@ main > * + * {
 
 a {
 	text-decoration: none;
-	color: rgb(53, 89, 163);
-	border-bottom: 1px solid rgba(53, 89, 163, 0.5);
+	border-bottom: 1px solid;
+	transition: all 200ms ease;
+
+	@include link-color($link-color-light);
+
+	&:visited {
+	}
 
 	&:hover {
-		color: rgb(144, 69, 0);
-		border-color: rgba(144, 69, 0, 0.5);
+		transition: none;
 	}
 
 	&:active {
@@ -243,5 +261,11 @@ h6 {
 @media (min-width: 900px) {
 	body {
 		padding-inline-start: 15vw;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	a {
+		@include link-color($link-color-dark);
 	}
 }
