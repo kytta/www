@@ -7,19 +7,14 @@ $link-color-hover-dark: #dca74f;
 
 $font-family-text: "Helvetica Neue", Helvetica, "FreeSans", "Nimbus Sans L",
 	"Inter", system-ui, sans-serif;
+$font-family-code: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono",
+	Menlo, monospace;
 
 // Width of the main block
 // Should fit about 2-3 lowercase English alphabets
+$body-width: 60rem;
 $content-width: 40rem;
-
 $body-padding: 14px;
-$nav-item-spacing: 1.5rem;
-
-@mixin mwm {
-	max-width: $content-width;
-	// margin-left: auto;
-	// margin-right: auto;
-}
 
 @mixin link-color($color, $hover) {
 	color: $color;
@@ -34,38 +29,41 @@ $nav-item-spacing: 1.5rem;
 //
 // Universal
 //
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Universal
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* Apply styling to all elements (including their `::before` and `::after`
+pseudo-elements). One common use of this selector is to apply a custom
+`box-sizing`. */
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
 }
 
-//
-// Root
-//
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Root
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
 :root {
-	color-scheme: light dark;
+}
+html {
+	font: 100%/1.35 $font-family-text;
 
-	letter-spacing: -0.16px;
-
+	-webkit-text-size-adjust: 100%;
 	tab-size: 4;
 }
-
-html {
-	font: 100%/1.5 $font-family-text;
-	text-size-adjust: none;
-}
-
 body {
-	// max-width: 40em;
-	// margin: auto;
-	margin: 0;
+	margin: auto;
+	max-width: $body-width;
 	padding: 0 $body-padding;
 }
 
-//
-// Content sectioning
-//
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Content sectioning
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 h1,
 h2,
@@ -73,81 +71,85 @@ h3,
 h4,
 h5,
 h6 {
-	line-height: 1.1;
+	margin: 1em 0 0;
+	font-weight: bolder;
 }
-
 h1 {
 	font-size: 3rem;
 }
-
 h2 {
 	font-size: 2rem;
 }
+h3,
+h4,
+h5,
+h6 {
+	font-size: 1rem;
+}
+h4 {
+}
+h5 {
+}
+h6 {
+}
 
 header {
-	margin: 1rem 0 3rem;
-	padding: 0.5rem 0;
-	@include mwm;
-}
+	nav {
+		$block-padding: (1em / 3);
+		$inline-padding: (3em / 4);
 
-main {
-	> * {
-		margin-inline: 0;
-		@include mwm;
-	}
+		padding: (3 * $block-padding) 0;
 
-	> h1 {
-		max-width: none;
-	}
-}
+		li {
+			display: inline-block;
+			margin-right: (2 * $inline-padding);
+			font-weight: bolder;
 
-#comments {
-	h2 {
-		margin-top: 1em;
+			&.here {
+				position: relative;
+				left: (-$inline-padding);
+				margin-right: 0;
+
+				a {
+					background-color: $accent-color;
+					color: white;
+					text-decoration: none;
+					padding: $block-padding $inline-padding;
+					border-radius: 4px;
+					border-bottom: none;
+				}
+			}
+		}
 	}
 }
 
 nav {
-	ul {
-		list-style: none;
-
+	ul,
+	ol {
 		margin: 0;
 		padding: 0;
 	}
 
 	li {
-		display: inline-block;
-		font-weight: bolder;
 	}
 
-	li + li {
-		padding-left: $nav-item-spacing;
-	}
-
-	li.here + li,
-	li + li.here {
-		padding-left: ($nav-item-spacing / 2);
-	}
-
-	li:first-child.here {
-		margin-left: -($nav-item-spacing / 2);
-	}
-
-	.here > * {
-		color: #fff;
-		background-color: #c23;
-		padding: ($nav-item-spacing / 4) ($nav-item-spacing / 2);
-		border-radius: 4px;
-	}
-
-	.subhere {
-		> * {
-			color: #c23;
-			background-color: inherit;
-			border: 1px solid currentColor;
-			margin-inline: -1px;
+	a {
+		&:visited {
+		}
+		&:hover {
+		}
+		&:active {
 		}
 	}
+}
+
+main {
+}
+
+article {
+}
+
+section {
 }
 
 .blog-year {
@@ -173,22 +175,30 @@ nav {
 	a {
 		flex: 0 auto;
 	}
+
 	time {
 		flex: none;
 		display: block;
 	}
 }
 
-//
-// Text block content
-//
+aside {
+}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
+search {
+}
+
+footer {
+}
+
+address {
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Text block content
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* Overall styling, e.g. vertical spacing */
 p,
 ol,
 ul,
@@ -197,16 +207,60 @@ blockquote,
 figure,
 hr,
 dl {
-	margin-block: 0;
+	margin: 1em auto 0 0;
+	max-width: $content-width;
 }
 
-main > * + * {
-	margin-block-start: 1em !important;
+p {
 }
 
-//
-// Inline text semantics
-//
+ol,
+ul {
+	ol,
+	ul {
+	}
+}
+ol {
+}
+ul {
+}
+li {
+	break-inside: avoid;
+
+	li {
+	}
+}
+
+pre {
+	code {
+	}
+	samp {
+	}
+}
+
+blockquote {
+}
+
+figure {
+}
+figcaption {
+}
+
+hr {
+	color: inherit;
+	height: 0;
+}
+
+dl {
+}
+dt {
+}
+dd {
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Inline text semantics
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 a {
 	text-decoration: none;
@@ -226,48 +280,337 @@ a {
 	}
 }
 
-h2,
-h3,
-h4,
-h5,
-h6 {
-	display: inline-block;
+strong {
+}
+b {
 }
 
-.zola-anchor {
-	display: inline-block;
-	margin-inline-start: 1rem;
-
-	a {
-		// position: relative;
-		// left: calc(-100% - 0.5rem);
-		// float: right;
-
-		color: currentColor;
-		border: none;
-		opacity: 0.42;
-
-		&:hover {
-			color: currentColor;
-			opacity: 1;
-		}
-	}
+strong,
+b {
+	font-weight: bolder;
 }
 
-.visually-hidden,
-.visually-hidden-focusable:not(:focus):not(:focus-within) {
-	width: 1px !important;
-	height: 1px !important;
-	padding: 0 !important;
-	margin: -1px !important;
-	overflow: hidden !important;
-	clip: rect(0, 0, 0, 0) !important;
-	white-space: nowrap !important;
-	border: 0 !important;
+em {
+}
+i {
+}
 
-	&:not(caption) {
-		position: absolute !important;
+q {
+}
+cite {
+}
+
+s {
+}
+
+mark {
+}
+
+/* If you specify a font size, consider using the `em` unit so that it works
+universally, e.g. for both `h1 small` and `p small` */
+small {
+	font-style: 80%;
+}
+sub {
+}
+sup {
+}
+
+code {
+}
+
+dfn {
+}
+abbr {
+}
+abbr[title] {
+	text-decoration: underline dotted;
+}
+
+var {
+}
+kbd {
+	kbd {
 	}
+}
+samp {
+}
+
+code,
+kbd,
+samp,
+pre {
+	font-family: $font-family-code;
+	font-size: 1em;
+}
+
+u {
+}
+
+data {
+}
+time {
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Demarcating edits
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+del {
+}
+ins {
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Embedded content
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+img {
+}
+svg {
+}
+video {
+}
+canvas {
+}
+audio {
+}
+object {
+}
+
+noscript {
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Table content
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+table {
+}
+caption {
+}
+col:first-child {
+}
+thead {
+}
+tbody {
+}
+tfoot {
+}
+tr {
+}
+th {
+}
+td {
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Forms
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+fieldset {
+}
+fieldset:disabled {
+}
+legend {
+}
+
+form {
+}
+
+label {
+}
+
+::placeholder {
+}
+:focus::placeholder {
+}
+
+/* Overall styling, e.g. vertical spacing */
+input,
+textarea,
+select,
+button {
+}
+
+/* `textarea` and `input` elements that share a similar look and similar styling
+capabilities */
+/* - common styling */
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+input[type="url"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="time"] {
+}
+/* - individual styling */
+textarea {
+}
+input[type="text"] {
+}
+input[type="password"] {
+}
+input[type="email"] {
+}
+input[type="tel"] {
+}
+input[type="number"] {
+}
+input[type="search"] {
+	-webkit-appearance: textfield;
+	outline-offset: -2px;
+}
+::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+input[type="url"] {
+}
+input[type="date"] {
+}
+input[type="datetime-local"] {
+}
+input[type="month"] {
+}
+input[type="week"] {
+}
+input[type="time"] {
+}
+/* Tick boxes */
+input[type="checkbox"],
+input[type="radio"] {
+}
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+}
+input[type="checkbox"] {
+}
+input[type="checkbox"]:checked {
+}
+input[type="radio"] {
+}
+input[type="radio"]:checked {
+}
+/* Other input fields, some with limited styling capabilities */
+input[type="file"] {
+}
+input[type="color"] {
+}
+input[type="range"] {
+}
+
+select {
+}
+optgroup {
+}
+option {
+}
+option:checked {
+}
+datalist {
+}
+
+button,
+input[type="submit"] {
+}
+button:disabled,
+input[type="submit"]:disabled {
+}
+button.secondary {
+}
+button.secondary:disabled {
+}
+
+/* This matches forms or form elements that are invalid *and* have been
+interacted with. Note that:
+1) You may need to add the `interacted` class to forms yourself
+2) You may need to add the `touched` class to form fields yourself
+3) `:user-invalid` is a working draft and not yet supported by most browsers
+4) `:-moz-ui-invalid` is non-standard and only works in Firefox
+Form validation error messages will appear (in capable browsers) regardless of
+this styling. You can omit 1) and 2) and still have working forms. Perfect
+example of progressive enhancement. */
+/* Applies to invalid forms */
+form.interacted:invalid {
+}
+/* Applies to invalid form fields. You would need to repeat your declarations
+for the following three groups of selectors individually. Browsers completely
+ignore any rule that contains a selector they do not know. */
+form.interacted :invalid,
+form .touched:invalid {
+}
+:user-invalid {
+}
+:-moz-ui-invalid {
+	box-shadow: none;
+}
+
+output {
+}
+
+progress {
+}
+meter {
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Interactive elements
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+a[href="#content"] {
+	contain: content;
+	content-visibility: auto;
+	padding: 0 0.25em;
+	position: absolute;
+	top: -2em;
+}
+
+details {
+}
+details[open] {
+}
+summary {
+	display: list-item;
+}
+details[open] summary {
+}
+
+dialog {
+}
+dialog::backdrop {
+}
+
+/* Some form fields, `details`, elements with `tabindex`, and possibly other
+elements can be focussed. You should use `:focus-visible` instead of `:focus`
+whenever possible. As the former is not yet widely supported, you need to do it
+as follows:
+1) Set styling on focus
+2) If browser supports `:focus-visible`, revert/unset the styling from 1)
+3) If the element matches `:focus-visible`, apply the styling again */
+:focus {
+}
+:focus:not(:focus-visible) {
+}
+:focus-visible {
+}
+
+::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+[inert],
+[inert] * {
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -289,10 +632,7 @@ Media queries
 	}
 }
 
-@media (min-width: 900px) {
-	body {
-		padding-inline-start: 15vw;
-	}
+@media (prefers-reduced-motion: reduce) {
 }
 
 @media (prefers-color-scheme: dark) {
@@ -300,3 +640,17 @@ Media queries
 		@include link-color($link-color-dark, $link-color-hover-dark);
 	}
 }
+
+@media (orientation: portrait) {
+}
+
+@media (orientation: landscape) {
+}
+
+@media print {
+}
+
+/*
+This file evolved from Natural Selection:
+https://github.com/frontaid/natural-selection
+*/
