@@ -1,19 +1,20 @@
 <header>
+	<a href="#content">Skip to content</a>
 	<nav aria-label="Global">
-	<ul>
-		{{ nav::link(path="/", title=config.title) }}
+		<ul>
+			{{- nav::link(path="/", title=config.title) -}}
 
-		{% for entry in config.extra.menu %}
-			{% if entry.type == "page" %}
-				{% set menu_object = get_page(path=entry.path) %}
-			{% elif entry.type == "section" %}
-				{% set menu_object = get_section(path=entry.path) %}
-			{% endif %}
+			{%- for entry in config.extra.menu -%}
+			{%- if entry.type == "page" -%}
+			{%- set menu_object = get_page(path=entry.path) -%}
+			{%- elif entry.type == "section" -%}
+			{%- set menu_object = get_section(path=entry.path) -%}
+			{%- endif -%}
 
-			{% if menu_object %}
-				{{ nav::link(path=menu_object.path, title=entry.title | default(value=menu_object.title)) }}
-			{% endif %}
-		{% endfor %}
-	</ul>
+			{%- if menu_object %}
+			{{- nav::link(path=menu_object.path, title=entry.title | default(value=menu_object.title)) -}}
+			{%- endif %}
+			{%- endfor %}
+		</ul>
 	</nav>
 </header>

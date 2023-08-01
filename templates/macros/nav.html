@@ -1,9 +1,10 @@
 {%- macro link(path, title) -%}
 {%- if current_path == path -%}
-<li class="here"><span>{{ title }}</span></li>
+<li class="here">
 {%- elif path != "/" and current_path is starting_with(path) -%}
-<li class="here subhere"><a href="{{ path }}">{{ title }}</a></li>
+<li class="here subhere">
 {%- else -%}
-<li><a href="{{ path }}">{{ title }}</a></li>
+<li>
 {%- endif -%}
+<a href="{{ path|safe }}" {%- if current_path == path %} aria-current="page"{%- endif -%}>{{ title }}</a></li>
 {%- endmacro -%}

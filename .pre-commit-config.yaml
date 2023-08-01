@@ -33,5 +33,5 @@ repos:
     hooks:
       - id: curlylint
         files: "^templates/"
-        exclude: '^templates/anchor-link\.html'
+        exclude: "^templates/macros/"
         types: [html]
