@@ -4,20 +4,17 @@
 {% for emoji in reply.account.emojis %}
 {% set emoji_code = ":" ~ emoji.shortcode ~ ":" %}
 {% set emoji_url = emoji.static_url | urlencode %}
-{% set emoji_img = '<img src="//wsrv.nl/?url=' ~ emoji_url ~ '&w=36&h=36" alt="Emoji ' ~ emoji.shortcode ~ '" height="18" width="18" loading="lazy" />' %}
+{% set emoji_img = '<img src="//wsrv.nl/?url=' ~ emoji_url ~ '&w=32&h=32&af&l=9&maxage=1y" alt="Emoji ' ~ emoji.shortcode ~ '" height="16" width="16" loading="lazy" />' %}
 {% set_global display_name = display_name | replace(from=emoji_code, to=emoji_img) %}
 {% endfor %}
 
 <article>
-	<div class="comment-header">
-		<a href="{{ reply.account.url }}" class="user">
-			<img src="//wsrv.nl/?url={{ reply.account.avatar_static | urlencode }}&w=96&h=96&maxage=1M" alt="" loading="lazy" class="avatar">
-			<h3>
-				{{ display_name | safe }}
-				<br>
-				<small>@{{ reply.account.username }}</small>
-			</h3>
-		</a>
+	<div class="comment-user">
+		<img src="//wsrv.nl/?url={{ reply.account.avatar_static | urlencode }}&w=92&h=92&maxage=1M" alt="" loading="lazy" class="comment-avatar">
+		<div>
+			<h3>{{ display_name | safe }}</h3>
+			<a href="{{ reply.account.url }}" class="comment-acct">@{{ reply.account.acct }}</a>
+		</div>
 	</div>
 	<div class="comment-body">
 		{{ reply.content | safe }}
