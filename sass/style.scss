@@ -345,11 +345,12 @@ figcaption {
 }
 
 hr {
-	border: none;
 	margin: 1.5rem 0;
-	height: 2px;
+	height: 0;
+	border: 0;
+	border-top: 1px solid currentColor;
 	color: inherit;
-	background-color: currentColor;
+	opacity: 0.25;
 }
 
 dl {
@@ -385,7 +386,7 @@ a {
 
 strong,
 b {
-	font-weight: 600;
+	font-weight: bolder;
 }
 strong {
 }
@@ -411,10 +412,19 @@ mark {
 /* If you specify a font size, consider using the `em` unit so that it works
 universally, e.g. for both `h1 small` and `p small` */
 small {
+	font-size: 80%;
 }
 sub {
 }
 sup {
+}
+
+code,
+kbd,
+samp,
+pre {
+	font-family: $font-family-mono;
+	font-size: 1em;
 }
 
 code {
@@ -424,6 +434,7 @@ dfn {
 }
 abbr {
 	&[title] {
+		text-decoration: underline dotted;
 	}
 }
 
@@ -660,6 +671,7 @@ details {
 	}
 }
 summary {
+	display: list-item;
 }
 
 dialog {
