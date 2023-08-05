@@ -48,13 +48,6 @@ h4,
 h5,
 h6 {
 	margin: 0;
-
-	&:hover,
-	&:focus {
-		> .zola-anchor {
-			opacity: 0.5;
-		}
-	}
 }
 
 h1,
@@ -88,19 +81,6 @@ h4 {
 h5 {
 }
 h6 {
-}
-
-.zola-anchor {
-	opacity: 0;
-	text-decoration: none;
-	font-size: 0.75em;
-	margin-left: 0.5em;
-
-	&:target,
-	&:hover,
-	&:focus {
-		opacity: 1 !important;
-	}
 }
 
 header {
