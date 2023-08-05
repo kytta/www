@@ -20,7 +20,7 @@
 		<p>
 			{%- if post.description -%}
 			{{- post.description -}}
-			{%- endif -%}
+			{%- endif %}
 			<time datetime="{{ post.date | date(format="%+")}}">{{ post.date | date(format="%d %h %Y")}}</time>
 		</p>
 	</article>
