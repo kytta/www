@@ -1,5 +1,6 @@
 @import "inter";
 @import "variables";
+@import "mixins";
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Universal
@@ -30,6 +31,10 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: start;
+
+	@include for-tablet-landscape-up {
+		padding: 4rem;
+	}
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -110,6 +115,14 @@ nav {
 	font: 1.5rem/2.5rem $font-family-headings;
 	font-weight: 500;
 
+	@include for-tablet-landscape-up {
+		position: sticky;
+		top: 4rem;
+
+		flex: 0 0 auto;
+		width: 25%;
+	}
+
 	ol,
 	ul {
 		list-style: none;
@@ -145,6 +158,10 @@ nav {
 
 	#lift-go-up {
 		display: none;
+
+		@include for-tablet-landscape-up {
+			margin-left: -1.25em;
+		}
 	}
 }
 
@@ -154,6 +171,11 @@ main {
 	padding-top: 2.5rem;
 
 	flex-shrink: 0;
+
+	@include for-tablet-landscape-up {
+		flex: 0 0 auto;
+		width: 75%;
+	}
 
 	> * {
 		max-width: $content-width;
