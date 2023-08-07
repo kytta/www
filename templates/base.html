@@ -1,3 +1,5 @@
+{%- import "macros.html" as macros -%}
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="{{ lang }}" xml:lang="{{ lang }}">
 <head>
@@ -23,16 +25,15 @@
 <body>
 <header>
   <a href="/" class="home" aria-label="Go to the main page">{{ load_data(path="static/icon.svg") | trim | safe }}</a>
-
-
-
 </header>
 <main>
 {% block content %}{%- endblock content %}
 </main>
+{% include "partials/footer.html" %}
 <script type="module">
   import { count } from "https://cdn.jsdelivr.net/npm/diet-goat@3/+esm";
   count("https://kytta.goatcounter.com/count");
 </script>
+
 </body>
 </html>

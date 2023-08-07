@@ -1,0 +1,16 @@
+{% macro copyright() %}
+	{% if page %}
+  	{% set copy_page = page %}
+	{% elif section and section.pages | first %}
+		{% set copy_page = section.pages | first %}
+	{% else %}
+	  {% set copy_page = null %}
+	{% endif %}
+
+	{% if copy_page and copy_page.date %}
+	  {% set copy_date = copy_page.date %}
+	{% else %}
+	  {% set copy_date = now() %}
+	{% endif %}
+	&copy; {{ copy_date | date(format="%Y") }} {{ config.author }}
+{% endmacro %}

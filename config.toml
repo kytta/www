@@ -38,4 +38,8 @@ menu = [
     { title = "Contact", path = "contact.md", type = "page" },
 ]
 
+license = { name = "CC BY-SA 4.0", href = "https://creativecommons.org/licenses/by-sa/4.0/" }
+
+# fediring_host = "kytta.dev"
+
 [languages.de]

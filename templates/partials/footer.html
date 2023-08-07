@@ -1,0 +1,18 @@
+<footer>
+<p>
+	{{ macros::copyright() }}
+	<small class="license">
+		{% if page.extra.license %}
+		Content on this page is licensed under <a rel="license" href="{{- page.extra.license.href|safe -}}">{{- page.extra.license.name -}}</a>.
+		{% elif config.extra.license %}
+		Content of this website is licensed under <a rel="license" href="{{- config.extra.license.href|safe -}}">{{- config.extra.license.name -}}</a> unless otherwise stated.
+		{% endif %}
+	</small>
+</p>
+
+{%- if config.extra.fediring_host %}
+<p class="fediring">
+	<a href="https://fediring.net/previous?host={{- config.extra.fediring_host -}}">←</a>&nbsp;<a href="https://fediring.net/">Fediring</a>&nbsp;<a href="https://fediring.net/next?host={{- config.extra.fediring_host -}}">→</a>
+</p>
+{%- endif %}
+</footer>

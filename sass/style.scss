@@ -26,7 +26,7 @@ html {
 
 body {
 	max-width: $body-width;
-	margin: 2em auto 0;
+	margin: 2em auto;
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -63,9 +63,12 @@ h5 {
 h6 {
 }
 
-header {
-	margin-bottom: 2em;
+header,
+footer {
+	margin: 3em 0;
+}
 
+header {
 	.home {
 		text-decoration: none;
 		border: none;
@@ -82,6 +85,17 @@ header {
 		width: 24px;
 		height: 24px;
 		margin-right: 0.5em;
+	}
+}
+
+footer {
+	.license {
+		display: block;
+	}
+
+	.fediring {
+		margin-top: 1em;
+		text-align: center;
 	}
 }
 
@@ -215,9 +229,6 @@ aside {
 }
 
 search {
-}
-
-footer {
 }
 
 address {
