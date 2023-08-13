@@ -18,7 +18,6 @@ If you ever want to talk to me, tell me something, get or stay in touch, then do
   - to force SSL/TLS encryption: <nikita@secure.mailbox.org>
 - [`DMZKXPNM`](https://threema.id/DMZKXPNM) on Threema
 - [@kytta:matrix.org](https://matrix.to/#/@kytta:matrix.org) on Matrix
-- `Kytta#9980` on Discord
 - [kytta@404.city](xmpp:kytta@404.city) on XMPP; OMEMO fingerprints:
   - `e5111425 bc365b43 3e6bf9f0 76a4031f 8ded0c29 3dbf50de 83cef216 239a1f44`
   - `a7ad08d6 69cdabc6 81a033e3 471dca05 4544d515 7710fe4b c2d5489d 7514e758`
