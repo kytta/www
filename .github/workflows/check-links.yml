@@ -21,10 +21,12 @@ jobs:
           path: .lycheecache
           key: cache-lychee-${{ hashFiles('**/*.md') }}
           restore-keys: cache-lychee-
-      - name: Build
-        uses: shalzz/zola-deploy-action@v0.17.0
-        env:
-          BUILD_ONLY: true
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: zola@0.17.2
+
+      - run: zola build
+
       - name: Check links
         id: lychee
         uses: lycheeverse/lychee-action@v1
