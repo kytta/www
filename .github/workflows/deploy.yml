@@ -36,10 +36,12 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
-      - name: Build with Zola
-        uses: kytta/zola-build-pages@v1
+      - uses: taiki-e/install-action@v2
         with:
-          zola-version: "0.17.1"
+          tool: zola@0.17.2
+
+      - run: zola build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
