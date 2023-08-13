@@ -16,8 +16,9 @@ These people inspired me to start a blog and to design it the way I designed it:
 	— Rasmus Andersson (rsms.me)
 	— Nikita Prokopov (tonsky.me)
 	— Kev Quirk (kevquirk.com)
-	— Mikhail Podivilov (podivilov.ru)
+	— René Coignard, as he was known as Mikhail Podivilov (podivilov.ru)
 	— Maxim Ilyahov (maximilyahov.ru)
+	— Seirdy (seirdy.one)
 
 
 These people created the software that powers the blog:
@@ -26,10 +27,10 @@ These people created the software that powers the blog:
 
 
 
-                   ┌──────────────────────────────────────────┐
-                   │ ‘Gratitude is a currency that we can     │
-                   │  mint for ourselves, and spend without   │
-                   │  fear of bankruptcy.’                    │
-                   │                                          │
-                   │               — Fred De Witt Van Amburgh │
-                   └──────────────────────────────────────────┘
+                  ┌──────────────────────────────────────────┐
+                  │ ‘Gratitude is a currency that we can     │
+                  │  mint for ourselves, and spend without   │
+                  │  fear of bankruptcy.’                    │
+                  │                                          │
+                  │               - Fred De Witt Van Amburgh │
+                  └──────────────────────────────────────────┘
