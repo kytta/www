@@ -36,7 +36,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Create issue
-        if: env.lychee_exit_code != 0
+        if: ${{ github.event_name != 'pull_request' && env.lychee_exit_code != 0 }}
         uses: peter-evans/create-issue-from-file@v4
         with:
           title: "[lychee] Broken links"
