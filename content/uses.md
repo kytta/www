@@ -75,9 +75,8 @@ I like the feature set of iTerm the most. As my shell, I use Zsh with
 
 ## Phone
 
-My daily driver is **OnePlus 7T**. Starting November 2022, I hate this phone.
-The OS update made it unusable, cutting out useful features and adding weird
-ones instead. But it works, so I won't replace it until it breaks.
+My daily driver is a sexy red **Asus Zenfone 10**. It replaced my
+OnePlus 7T that I started to hate after its horrible OS updates.
 
 I also try to run open-source software on my phone as much as possible, and
 I think I have more apps from F-Droid, than from the Play Store. Not that easy
