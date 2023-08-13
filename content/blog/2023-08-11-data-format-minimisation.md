@@ -2,6 +2,8 @@
 title: Data (Format) Minimisation
 description: GDPR Article 5 defines the principle of ‘minimisation’ for data processing. I think it can be applied to other areas as well.
 date: 2023-08-11T10:50:33+02:00
+extra:
+  mastodon_id: 110884534056596632
 ---
 
 The article 5 of the EU General Data Protection Regulation defines the principles of personal data processing that processors should follow. In particular, there's the principle 5(1)(c):
