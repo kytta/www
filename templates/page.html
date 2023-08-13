@@ -15,42 +15,40 @@
 {%- if description -%}{{- description | safe | striptags -}}{%- endif -%}
 {%- endblock description -%}
 
-{% block extra_head %}
+{%- block extra_head %}
 <link rel="stylesheet" type="text/css" href="/syntax-theme-dark.css" media="(prefers-color-scheme: dark)" />
 <link rel="stylesheet" type="text/css" href="/syntax-theme-light.css" media="(prefers-color-scheme: light)" />
-{% endblock extra_head %}
+{%- endblock extra_head -%}
 
-{% block content %}
+{% block content -%}
 <h1>{{ page.title }}</h1>
 <p class="date">
-	<time datetime="{{ page.date | date(format="%+")}}">
+	<time datetime="{{ page.date | date(format="%+") }}">
 		{{- page.date | date(format="%d %h %Y") -}}
 	</time>
 	{%- if page.updated %}
-		&bullet;
-		updated
-		{{ page.updated | date(format="%d %h %Y") }}
+	•
+	updated <time datetime="{{ page.updated | date(format="%+") }}">
+		{{- page.updated | date(format="%d %h %Y") -}}
+	</time>
 	{%- endif %}
 </p>
 
-{{ page.content | safe }}
+{{ page.content | safe -}}
 
-{% if page.extra.mastodon_id %}
+{%- if page.extra.mastodon_id -%}
 
 {%- set post_replies = load_data(url="https://fosstodon.org/api/v1/statuses/" ~ page.extra.mastodon_id ~ "/context", format="json", required=false) -%}
-{%- if post_replies -%}
-
+{%- if post_replies %}
 <section id="comments">
 <h2>Comments <small>(via <a href="https://fosstodon.org/@kytta/{{- page.extra.mastodon_id -}}">Mastodon</a>)</small></h2>
-
-{%- for reply in post_replies.descendants %}
-{{ comments::comment(reply=reply) }}
+{% for reply in post_replies.descendants %}
+{{- comments::comment(reply=reply) }}
 {%- else %}
 <p>No comments yet ;)</p>
 {%- endfor %}
-<p><small>Comments last fetched <time datetime="{{ now() }}">{{ now() | date(format="on %d %b %Y at %R %Z") }}</time>. Updates at least every six hours.</small></p>
+<p><small>Comments last fetched <time datetime="{{ now() | date(format="%Y-%m-%dT%H:%M:%S%:z") }}">{{ now() | date(format="on %d %b %Y at %R %Z") }}</time>. Updates at least every six hours.</small></p>
 </section>
-
 {%- endif %}
 {%- endif %}
-{% endblock content %}
+{%- endblock content %}
