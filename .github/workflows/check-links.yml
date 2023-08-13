@@ -5,6 +5,9 @@ on:
     - cron: "16 13 * * 0"
   repository_dispatch:
   workflow_dispatch:
+  pull_request:
+    branches:
+      - v8
 
 jobs:
   lychee:

@@ -1,0 +1,39 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - v8
+  pull_request:
+    branches:
+      - v8
+
+# Default to bash
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          lfs: true
+
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: zola@0.17.2
+      - name: Set up Java JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: zulu
+          java-version: 20
+
+      - run: zola build
+      - run: wget https://github.com/validator/validator/releases/download/latest/vnu.jar
+
+      - name: Lint files
+        run: |
+          java -jar ./vnu.jar --stdout --xml --also-check-svg $(find public -type f -name '*.html' -o -name '*.svg')
