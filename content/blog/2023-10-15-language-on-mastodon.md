@@ -2,6 +2,8 @@
 title: Language on Mastodon
 description: They way Mastodon foreign language posts work on Mastodon is far from perfect, and here's why.
 date: 2023-10-15T21:30:16+02:00
+extra:
+  mastodon_id: 111240745143580761
 ---
 
 About two months ago, Fosstodon (a Mastodon server I use and help moderate) was hit with a major controversy when the foreign-language posts of a user were deleted, which they've found racist to say the least. I do not want to comment on this situation (given that it happened, like, an eternity ago), but I want to touch on the experience I get on Mastodon as a multilingual person.
