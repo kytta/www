@@ -109,23 +109,6 @@ header {
 		padding: 0;
 		font-weight: bolder;
 
-		-webkit-mask-image: linear-gradient(
-			90deg,
-			#0000 0,
-			#00000040 0.5rem,
-			#000 1rem calc(100% - 1rem),
-			#00000040 calc(100% - 0.5rem),
-			#0000
-		);
-		mask-image: linear-gradient(
-			90deg,
-			#0000 0,
-			#00000040 0.5rem,
-			#000 1rem calc(100% - 1rem),
-			#00000040 calc(100% - 0.5rem),
-			#0000
-		);
-
 		ul {
 			display: flex;
 			align-items: baseline;
@@ -673,6 +656,23 @@ Media queries
 		nav {
 			overflow: hidden;
 			margin: 0 (-$content-padding);
+
+			-webkit-mask-image: linear-gradient(
+				90deg,
+				#0000 0,
+				#00000040 0.5rem,
+				#000 1rem calc(100% - 1rem),
+				#00000040 calc(100% - 0.5rem),
+				#0000
+			);
+			mask-image: linear-gradient(
+				90deg,
+				#0000 0,
+				#00000040 0.5rem,
+				#000 1rem calc(100% - 1rem),
+				#00000040 calc(100% - 0.5rem),
+				#0000
+			);
 
 			ul {
 				padding: 0 $content-padding;
