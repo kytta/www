@@ -1,6 +1,6 @@
 ---
 title: Donate
-template: orphan.html
+template: andersson/templates/orphan.html
 ---
 
 If, for some reason, you want to give me money, here are the means to do so:

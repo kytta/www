@@ -12,6 +12,8 @@ generate_feed = true
 
 build_search_index = true
 
+theme = "andersson"
+
 [markdown]
 highlight_code = true
 highlight_theme = "css"

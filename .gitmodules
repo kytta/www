@@ -1,0 +1,3 @@
+[submodule "themes/andersson"]
+	path = themes/andersson
+	url = https://github.com/kytta/andersson
