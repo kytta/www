@@ -20,7 +20,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          submodules: recursive
           lfs: true
 
       - uses: taiki-e/install-action@v2

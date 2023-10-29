@@ -1,0 +1,10 @@
+{% set image_webp = resize_image(path=path, width=width, height=height, op=op, format="webp") %}
+{% set image_orig = resize_image(path=path, width=width, height=height, op=op, format="auto") %}
+
+<figure>
+	<picture>
+		<source srcset="{{ image_webp.url }}" type="image/webp" />
+		<img src="{{ image_orig.url }}" alt="{{ alt | default(value="") }}">
+	</picture>
+	<figcaption>{{ body | markdown | safe }}</figcaption>
+</figure>

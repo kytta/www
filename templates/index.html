@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{%- block extra_head %}
+<link rel="stylesheet" href="/index.css?h={{ get_hash(path="/index.css", sha_type=256) }}" />
+{%- endblock extra_head %}
+
+{%- block content -%}
+<section>
+	<h2>Recent posts</h2>
+
+	{%- set blog = get_section(path="blog/_index.md") -%}
+	{%- for post in blog.pages | slice(end=5) %}
+	<article>
+		<h3><a href="{{- post.path|safe -}}">
+				{{- post.title -}}
+		</a></h3>
+		<p>
+			{% if post.description -%}
+			{{- post.description -}}
+			{%- endif %}
+			<time datetime="{{ post.date | date(format="%+")}}">{{ post.date | date(format="%d %h %Y")}}</time>
+		</p>
+	</article>
+	{%- endfor %}
+	{%- set post_count = blog.pages | length -%}
+	{%- if post_count > 5 %}
+	<a class="view-all" href="{{- blog.path|safe -}}"><b>view all {{ post_count }} posts →</b></a>
+	{%- endif %}
+</section>
+{%- endblock content -%}

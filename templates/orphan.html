@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} - {{ config.title }}{% endblock title %}
+
+{% set description = null %}
+{% if page.summary %}
+{% set description = page.summary %}
+{% elif page.description %}
+{% set description = page.description %}
+{% else %}
+{% set description = config.description %}
+{% endif %}
+
+{%- block description -%}
+{%- if description -%}{{- description | trim | safe | striptags -}}{%- endif -%}
+{%- endblock description -%}
+
+{% block content -%}
+<h1>{{- page.title -}}</h1>
+{{ page.content | safe -}}
+{%- endblock content -%}

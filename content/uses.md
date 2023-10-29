@@ -1,7 +1,7 @@
 ---
 title: Things I use
 description: A 'uses' page is a page detailing developer setups, gear, software and configs.
-template: andersson/templates/orphan.html
+template: orphan.html
 ---
 
 For some reason, I do get asked quite often about the

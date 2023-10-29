@@ -1,0 +1,9 @@
+/* static fonts "InterDisplay" */
+@font-face {
+	font-family: "InterDisplay";
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url("/fonts/Inter-DisplayMedium-subset.woff2?v=4.0-beta8")
+		format("woff2");
+}

@@ -1,6 +1,6 @@
 ---
 title: Contact me
-template: andersson/templates/orphan.html
+template: orphan.html
 ---
 
 <figure>

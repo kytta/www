@@ -1,0 +1,29 @@
+{% macro comment(reply) %}
+
+{%- set_global display_name = reply.account.display_name -%}
+{%- for emoji in reply.account.emojis -%}
+{%- set emoji_code = ":" ~ emoji.shortcode ~ ":" -%}
+{%- set emoji_url = emoji.static_url | urlencode -%}
+{%- set emoji_img = '<img src="//wsrv.nl/?url=' ~ emoji_url ~ '&#38;w=36&#38;h=36" alt="Emoji ' ~ emoji.shortcode ~ '" height="18" width="18" loading="lazy" />' -%}
+{%- set_global display_name = display_name | replace(from=emoji_code, to=emoji_img) -%}
+{%- endfor -%}
+
+<article>
+	<div class="comment-header">
+		<a href="{{ reply.account.url | safe }}" class="user">
+			<img src="//wsrv.nl/?url={{ reply.account.avatar_static | urlencode }}&#38;w=96&#38;h=96&#38;maxage=1M" alt="" loading="lazy" class="avatar" />
+			<h3>
+				{{ display_name | safe }}
+				<br />
+				<small>@{{ reply.account.username }}</small>
+			</h3>
+		</a>
+	</div>
+	<div class="comment-body">
+		{{ reply.content | replace(from="<br>", to="<br />") | safe }}
+		<a href="{{ reply.url }}" class="time">
+			<time datetime="{{ reply.created_at }}">{{ reply.created_at | date(format="%d %b %Y at %R") }}</time>
+		</a>
+	</div>
+</article>
+{% endmacro comment %}
