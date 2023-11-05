@@ -2,6 +2,8 @@
 title: One month of full-time job
 description: On 1 October 2023, I have started my first full-time job. In this post, I share my experiences.
 date: 2023-11-02T08:00:00+01:00
+extra:
+  mastodon_id: 111358396015161862
 ---
 
 <del>Today</del> <ins>two days ago</ins> marks one month since I started working full-time. Since it was such a pivotal point for me, I've decided to share my experience so far.
