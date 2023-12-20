@@ -37,3 +37,5 @@ menu = [
     { path = "donate.md", type = "page" },
     { title = "Contact", path = "contact.md", type = "page" },
 ]
+
+[languages.de]
