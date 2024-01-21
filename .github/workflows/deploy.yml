@@ -5,7 +5,7 @@ on:
     - cron: "47 */6 * * *"
   push:
     branches:
-      - v8
+      - main
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages

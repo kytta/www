@@ -3,10 +3,10 @@ name: Test
 on:
   push:
     branches:
-      - v8
+      - main
   pull_request:
     branches:
-      - v8
+      - main
 
 # Default to bash
 defaults:
