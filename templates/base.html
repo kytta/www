@@ -45,13 +45,11 @@
 		</a></li>
 		{%- endif -%}
 		{%- endfor %}
-		<li><a id="lift-go-up" href="#">↑ Scroll to top</a></li>
 	</ul>
 </nav>
 <main>
 {% block content %}{%- endblock content %}
 </main>
-<script src="/lift.js" async="async" defer="defer"></script>
 <script type="module">
   import { count } from "https://cdn.jsdelivr.net/npm/diet-goat@3/+esm";
   count("https://kytta.goatcounter.com/count");

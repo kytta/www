@@ -135,14 +135,6 @@ nav {
 			}
 		}
 	}
-
-	#lift-go-up {
-		display: none;
-
-		@include for-tablet-landscape-up {
-			margin-left: -1.25em;
-		}
-	}
 }
 
 main {
