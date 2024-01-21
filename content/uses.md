@@ -4,11 +4,8 @@ description: A 'uses' page is a page detailing developer setups, gear, software 
 template: orphan.html
 ---
 
-For some reason, I do get asked quite often about the
-[stuff I use](https://uses.tech/) in my day-to-day life. Well, now I have a page to
-link them to.
-
-No links are affiliate; I am not endorsed by any of the mentioned companies.
+This is the [stuff I use](https://uses.tech/) in my day-to-day life. No links
+are affiliate; I am not endorsed by any of the mentioned companies.
 
 ## Computer
 
@@ -29,7 +26,7 @@ switches. It's my first ever mechanical keyboard, and I can really recommend
 the brand to anyone who wants to try out mechanical keyboards for not too much
 money.
 
-My mouse is the **Logitech MX Master 3**. I still use the mouse quite a lot,
+My mouse is the **Logitech MX Master 3S**. I still use the mouse quite a lot,
 mostly for web browsing, image and video editing, or occasional gaming. For
 these tasks, it does its job very good. You don't have to charge it too often,
 and the Bluetooth connection is surprisingly stable.
@@ -51,7 +48,7 @@ I try to only use private and/or open-source software, but it's not always
 possible. I try to compromise between usability, openness, and evilness of the
 software I use.
 
-I use **[Librewolf]** as my browser. Any Firefox flavour works, but LibreWolf
+I use **[LibreWolf]** as my browser. Any Firefox flavour works, but LibreWolf
 has good defaults, no telemetry, and no Pocket. Chromium browsers lack some
 features I absolutely need (and are also evil).
 
@@ -82,9 +79,8 @@ I also try to run open-source software on my phone as much as possible, and
 I think I have more apps from F-Droid, than from the Play Store. Not that easy
 to achieve while living in Germany, if you ask me!
 
-On it, I use **[Mull]** as my web browser. It's basically Firefox without
-proprietary blobs and with settings from Tor and arkenfox. I don't see much
-difference from Firefox or Fennec, so I guess it's a good thing.
+On it, I use **[Fennec]** as my web browser. It's basically Firefox built
+freshly from source, with some proprietary bits and tracking removed.
 
 The email client I use is **[K-9 Mail]**. I am thrilled about it being acquired
 by Thunderbird and I can't wait for the two apps to get a better integration
@@ -97,7 +93,7 @@ services that cost privacy, especially because I earn less money than I spend.
 Nevertheless, I still choose to pay for some stuff I use.
 
 I pay for my email, and you should too. My emails live at **[Mailbox.org]**.
-It's Germany-based, not too expensive and offers everyhting I need for my
+It's Germany-based, not too expensive and offers everything I need for my
 workflow. It's also where I host my calendars and contacts.
 
 I also pay for **[Bitwarden]**. I could have easily self-hosted it, but I do not
@@ -123,7 +119,7 @@ the development of Forgejo.
 [lazygit]: https://github.com/jesseduffield/lazygit/
 [librewolf]: https://librewolf.net/
 [mailbox.org]: https://mailbox.org/
-[mull]: https://gitlab.com/divested-mobile/mull-fenix
+[fennec]: https://f-droid.org/en/packages/org.mozilla.fennec_fdroid/
 [rodulf table legs]: https://www.ikea.com/de/de/p/rodulf-gest-f-tischpl-sitz-steh-weiss-60464290/
 [samsung smart monitor m7]: https://www.amazon.de/gp/product/B09RBB1WV4/
 [sublime text]: https://www.sublimetext.com/
