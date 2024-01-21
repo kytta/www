@@ -26,9 +26,9 @@
 <header>
   <a href="/" class="home" aria-label="Go to the main page">{{ load_data(path="static/icon.svg") | trim | safe }}</a>
 </header>
-<main>
-{% block content %}{%- endblock content %}
-</main>
+{% block content %}
+<main></main>
+{%- endblock content %}
 {% include "partials/footer.html" %}
 <script type="module">
   import { count } from "https://cdn.jsdelivr.net/npm/diet-goat@3/+esm";
