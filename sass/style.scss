@@ -18,23 +18,16 @@ Root
 
 :root {
 }
+
 html {
 	font: 16px/1.5 $font-family-text;
-	letter-spacing: -0.16px;
 	-webkit-text-size-adjust: 100%;
 	tab-size: 4;
 }
+
 body {
-	margin: 0;
-	padding: 1rem;
-
-	display: flex;
-	flex-wrap: wrap;
-	align-items: start;
-
-	@include for-tablet-landscape-up {
-		padding: 4rem;
-	}
+	max-width: $body-width;
+	margin: 2em auto 0;
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -47,39 +40,27 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0;
-}
-
-h1,
-h2 {
-	font-family: $font-family-headings;
-	font-weight: 500;
-	line-height: 1.25;
-}
-h3,
-h4,
-h5,
-h6 {
-	font-weight: 600;
 }
 
 h1 {
-	font-size: 2rem;
+}
 
-	& + .date {
-		margin-bottom: 1rem;
-	}
-}
 h2 {
-	font-size: 1.5rem;
-	letter-spacing: 0.24px;
+	font-size: 100%;
+	font-weight: bold;
 }
+
 h3 {
+	font-size: 100%;
+	font-weight: normal;
 }
+
 h4 {
 }
+
 h5 {
 }
+
 h6 {
 }
 
@@ -101,33 +82,62 @@ header {
 		fill: currentColor;
 		width: 24px;
 		height: 24px;
-		margin-right: .5em;
+		margin-right: 0.5em;
 	}
 }
 
-nav {}
+nav {
+}
 
 main {
-	width: 100%;
-	max-width: 100%;
-	padding-top: 2.5rem;
-
-	flex-shrink: 0;
-
-	@include for-tablet-landscape-up {
-		flex: 0 0 auto;
-		width: 75%;
-	}
-
-	> * {
-		max-width: $content-width;
-	}
 }
 
 article {
 }
 
 section {
+	& + & {
+		margin-top: 1em;
+	}
+
+	h2 {
+		margin-bottom: 1em;
+	}
+
+	h3 {
+		margin: 0;
+	}
+
+	ol,
+	ul {
+		margin: 0 0 1em;
+
+		@media (min-width: ($body-width + (2 * $list-padding))) {
+			padding-left: 0;
+		}
+	}
+
+	li {
+		margin-bottom: 0.25em;
+	}
+
+	&.times {
+		h3 {
+			@include for-tablet-portrait-up {
+				display: inline;
+			}
+		}
+
+		time {
+			font-family: $font-family-mono;
+			font-size: 80%;
+			opacity: 0.75;
+
+			@include for-tablet-portrait-up {
+				float: right;
+			}
+		}
+	}
 }
 
 #comments {
@@ -307,22 +317,31 @@ Inline text semantics
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 a {
-	&.view-all {
-		opacity: 0.7;
-		text-decoration-line: none;
-		color: inherit;
+	text-decoration: none;
+	border-bottom: 1px solid currentColor;
+	transition: 0.2s ease;
 
-		&:hover {
-			text-decoration-line: underline;
-			opacity: 1;
-		}
-	}
-
+	&:link,
 	&:visited {
+		@include link-color($color-link, $color-link-dark);
 	}
-	&:hover {
-	}
+
+	&:hover,
 	&:active {
+		@include link-color($color-hover, $color-hover-dark);
+		transition: 0s ease;
+	}
+
+	&.view-all {
+		&::after {
+			margin-left: 0.5em;
+			content: "→";
+			text-decoration: none !important;
+		}
+
+		@include for-phone-only {
+			margin-left: $list-padding;
+		}
 	}
 }
 
