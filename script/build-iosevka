@@ -1,0 +1,22 @@
+#!/bin/sh
+
+set -eux
+
+_project_root="$(dirname "$0")/.."
+cd "$_project_root"
+
+mkdir -p fonts
+
+if [ ! -d tmp/Iosevka ]; then
+	git clone --depth=1 --single-branch https://github.com/be5invis/Iosevka.git tmp/Iosevka
+else
+	git -C tmp/Iosevka pull --depth=1
+fi
+
+ln -f build/iosevka-build-plans.toml tmp/Iosevka/private-build-plans.toml
+
+cd tmp/Iosevka
+npm install
+npm run build -- woff2-unhinted::IosevkaKytta
+
+mv -f ./dist/IosevkaKytta/WOFF2-Unhinted/*.woff2 "$_project_root"/fonts/

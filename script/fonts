@@ -1,0 +1,27 @@
+#!/bin/sh
+
+set -eux
+
+_project_root="$(realpath "$(dirname "$0")/..")"
+cd "$_project_root"
+
+if [ ! -f fonts/IosevkaKytta-Regular.woff2 ] || [ ! -f fonts/IosevkaKytta-Italic.woff2 ]; then
+	"$_project_root/script/build-iosevka"
+fi
+
+pnpm install
+pnpm exec glyphhanger $(git ls-files --others -- 'public/*.html') \
+	--US_ASCII \
+	--family="Iosevka Kytta" \
+	--subset="fonts/IosevkaKytta-*.woff2" \
+	--formats=woff2 \
+	--output="$_project_root/static/fonts" \
+	--jsdom
+
+pnpm exec glyphhanger $(git ls-files --others -- 'public/*.html') \
+	--LATIN \
+	--family="Charter" \
+	--subset="fonts/Charter-*.woff2" \
+	--formats=woff2 \
+	--output="$_project_root/static/fonts" \
+	--jsdom

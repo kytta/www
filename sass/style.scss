@@ -40,6 +40,7 @@ h4,
 h5,
 h6 {
 	margin-bottom: 0.5em;
+	font-family: $font-family-headings;
 }
 
 h1 {
@@ -334,10 +335,10 @@ kbd,
 samp,
 pre {
 	font-family: $font-family-mono;
+	font-variant-ligatures: none;
 }
 
 code {
-	font-size: 80%;
 }
 
 dfn {
