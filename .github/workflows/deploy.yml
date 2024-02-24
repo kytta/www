@@ -40,7 +40,7 @@ jobs:
         with:
           tool: zola@0.17.2
 
-      - run: zola build
+      - run: ./script/build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
