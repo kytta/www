@@ -1,11 +1,12 @@
 ---
 title: I spent one week with Zola
 description: I have chosen Zola as my static site generator of choice for this blog, and here, I talk about my experience with it.
+date: 2023-03-04T19:59:59+01:00
 extra:
   mastodon_id: 109966570964820172
 ---
 
-You already know this story: I have been tired of not having a proper blog, so [I started one](@/blog/2023-02-22-enough.md). I absolutely didn't want to try out anything with a CMS (sorry, WordPress folks!), but rather stick to a minimalistic statically generated site. When it came to choosing a generator, I had a few options I could consider:
+You already know this story: I have been tired of not having a proper blog, so [I started one](@/blog/enough.md). I absolutely didn't want to try out anything with a CMS (sorry, WordPress folks!), but rather stick to a minimalistic statically generated site. When it came to choosing a generator, I had a few options I could consider:
 
 - **Jekyll**. I like that it's native to GitHub Pages while also being easy to deploy virtually everywhere. Its Jinja2-like Liquid templates are a very good thing, and there are a bazillion of plugins for it, too. Yet, I dislike Ruby a lot because of the slow speed and my inability to make it run properly on my computer.
 - **11ty**, **Gatsby**, **Hexo**, **Next.js**, and other JavaScript-based frameworks are off the table for me. I've never worked in an environment as fragile as Node.js. If one comes back to a project a year later, one discovers that nothing works any more. The build speeds aren't the fastest, the template engines are not to my liking, and I really don't want to ship any JavaScript to my readers. 11ty ticks the most boxes for me, but I couldn't really get a hang of it.
@@ -31,7 +32,7 @@ Zola is very minimalistic SSG. Unlike Hugo, it has only a few options and a lot 
 
 Zola's template engine, [Tera](https://tera.netlify.app/), is basically Jinja2, which I wholeheartedly love. It includes all important Jinja2 features: filters, functions, includes, extends, and macros. Unlike Hugo, Zola doesn't enforce any specific folder structure or naming for basic templates other than `index.html`, `section.html`, and `page.html`, which means I can organize my templates in a very clean manner.
 
-Some Zola's own filters for Tera are also incredibly cool. It took me under 15 minutes to add comments to my blog that are based on the replies I get to the post on Mastodon. Zola makes a request to the FOSStodon API, grabs the replies, and passes each of them to a macro that returns the DOM element. All of this is happening inside templates, which is very cool and somewhat frightening at the same time :D
+Some Zola's own filters for Tera are also incredibly cool. It took me under 15 minutes to add comments to my blog that are based on the replies I get to the post on Mastodon. Zola makes a request to the Fosstodon API, grabs the replies, and passes each of them to a macro that returns the DOM element. All of this is happening inside templates, which is very cool and somewhat frightening at the same time :D
 
 I like Zola's documentation, but it has its quirks. For example, some concepts that I'd put inside their own documentation pages are hidden away, like [template filters being hidden inside 'Templates/Overview'](https://www.getzola.org/documentation/templates/overview/#built-in-filters). Zola's docs are supposed to have a search function, but [it doesn't work at the moment](https://github.com/getzola/zola/issues/2123). Other than that, it is very clearly written, and I had a better time reading it than I had when reading Hugo documentation.
 

@@ -18,7 +18,7 @@ At the end, I've found a job that I thought suited me. Young team, good product,
 
 ## Anticipation
 
-The two-plus months that took place between the signing of my contract and my first work day felt like an eternity. My mind was alternating between two polar opposite states. On one hand, I was bored and empty and I couldn't wait until I would finally start working. On the other hand, I was afraid of quickly losing interest, burning out, and of the eternal commute.
+The two-plus months that took place between the signing of my contract and my first work day felt like an eternity. My mind was alternating between two polar opposite states. On one hand, I was bored and empty, and I couldn't wait until I would finally start working. On the other hand, I was afraid of quickly losing interest, burning out, and of the eternal commute.
 
 Before I even finished writing my bachelor's thesis, I imagined doing a lot of work on myself in the free period until I would start working. Alas, I didn't achieve even a tiny bit of it. Most days I was just relaxing — I guess, almost 6 years of university education left their weight on me. And I am very happy to have spent these days so 'unproductively'.
 

@@ -1,7 +1,7 @@
 ---
 title: Yes, my email exists
 description: There are still websites that don't believe that my email address is real. Let's find a way to fix this.
-
+date: 2023-02-27T12:36:34+01:00
 extra:
   mastodon_id: 109936507315701902
 ---
