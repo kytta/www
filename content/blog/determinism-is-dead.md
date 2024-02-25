@@ -1,6 +1,7 @@
 ---
 title: What happened to determinism?
 description: Determinism is one of the best things about computers and software. Sadly, it's dead :(
+date: 2023-03-07T01:03:35+01:00
 extra:
   mastodon_id: 109979081101240915
 ---

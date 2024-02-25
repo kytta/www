@@ -14,7 +14,7 @@ Yup, that's how boring I am.
 
 ## 'Web apps suck!'
 
-Contrary to what many of the people I know say, I really like the idea. Don't get me wrong: I hate browser-based apps. I want my applications to be native and quick, without tons of JavaScript, and I want them to interact with the system in the most native way possible. But if there is something I hate more than web apps, it's Electron-based web apps. I hate having to run a Chromium instance _and_ a Node.js runtime for _every_ app that uses it. It's a waste of resources and it doesn't make sense. Sandboxing is cool, but various versions of Chromium taking gigabytes on my disk aren't.
+Contrary to what many of the people I know say, I really like the idea. Don't get me wrong: I hate browser-based apps. I want my applications to be native and quick, without tons of JavaScript, and I want them to interact with the system in the most native way possible. But if there is something I hate more than web apps, it's Electron-based web apps. I hate having to run a Chromium instance _and_ a Node.js runtime for _every_ app that uses it. It's a waste of resources, and it doesn't make sense. Sandboxing is cool, but various versions of Chromium taking gigabytes on my disk aren't.
 
 Tauri makes the situation better, but it will take a while before major applications will adopt it instead of Electron. Meanwhile, large portions of these apps are available in-browser: Figma, Notion, Slack, etc. So, why not just use the browser versions of the apps? Let's be real: we've lost this war. There is no way web-based 'native' apps will ever die out. But, the introduction of PWAs and lots of new Browser APIs can make the installing and deleting of web apps easier and without requiring lots of space.
 

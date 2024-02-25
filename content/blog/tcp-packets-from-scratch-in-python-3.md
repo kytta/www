@@ -2,7 +2,7 @@
 title: How to build TCP packets from scratch in Python 3
 description: After not being able to find a simple solution to calculate the checksum for a TCP packet in Python, I decided to write one myself (not without some help)
 
-updated: 2023-02-26T23:04:00+02:00
+date: 2020-01-07T22:40:43Z
 ---
 
 One of the assignments I got at my university’s IT Security classes was to write a small Python script that would create and send an empty TCP packet with specified flags to the desired host and port combo. This could be easily achieved with _scapy_, but here’s the catch — we weren’t allowed to use external dependencies for this assignment.

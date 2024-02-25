@@ -2,11 +2,11 @@
 title: Beginner’s Guide to Inbox Zero
 description: There are many ways to bring order into your life, and today I will tell you about one of them, that will end the mess in your mailbox.
 
-date: 2020-04-05
+date: 2020-04-07T12:49:59Z
 updated: 2023-02-23T03:41:00+02:00
 ---
 
-> Note: this article was initally written in Russian for my Telegram blog. You can read the original [here](https://telegra.ph/Inbox-Zero-03-27).
+> Note: this article was initially written in Russian for my Telegram blog. You can read the original [here](https://telegra.ph/Inbox-Zero-03-27).
 
 Ways to effectively declutter my life become bigger of interest to me as I get older. I started to get more convinced that organization and minimalism do lead to greater efficiency and contribute to a more pleasant life.
 
