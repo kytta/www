@@ -31,7 +31,7 @@ jobs:
       #     distribution: zulu
       #     java-version: 20
 
-      - run: zola build
+      - run: ./script/build
       # - run: wget https://github.com/validator/validator/releases/download/latest/vnu.jar
 
       # - name: Lint files
