@@ -1,9 +1,56 @@
 @use "sass:color";
 
-$font-family-text: "Helvetica Neue", Helvetica, "FreeSans", "Nimbus Sans L",
-	system-ui, sans-serif;
-$font-family-headings: "InterDisplay", "Inter", $font-family-text;
-$font-family-mono: ui-monospace, SFMono-Regular, Monaco, monospace;
+@font-face {
+	font-family: Charter;
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+	src: url("fonts/Charter-Regular-subset.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: Charter;
+	font-style: italic;
+	font-weight: normal;
+	font-display: swap;
+	src: url("fonts/Charter-Italic-subset.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: Charter;
+	font-style: normal;
+	font-weight: bold;
+	font-display: swap;
+	src: url("fonts/Charter-Bold-subset.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: Charter;
+	font-style: italic;
+	font-weight: bold;
+	font-display: swap;
+	src: url("fonts/Charter-BoldItalic-subset.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Iosevka Kytta";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("fonts/IosevkaKytta-Regular-subset.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Iosevka Kytta";
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+	src: url("fonts/IosevkaKytta-Italic-subset.woff2") format("woff2");
+}
+
+$font-family-text: Charter, "Charis SIL", "Source Serif 4", serif;
+$font-family-headings: "Source Serif 4", $font-family-text;
+$font-family-mono: "Iosevka Kytta", "Iosevka", monospace;
 
 // Width of the main block
 // Should fit about 2-3 lowercase English alphabets
