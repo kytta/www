@@ -21,6 +21,9 @@ jobs:
         uses: actions/checkout@v3
         with:
           lfs: true
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
 
       - uses: taiki-e/install-action@v2
         with:
@@ -30,6 +33,10 @@ jobs:
       #   with:
       #     distribution: zulu
       #     java-version: 20
+
+      - run: |
+          pipx install fonttools
+          pipx inject fonttools brotli zopfli
 
       - run: ./script/build
       # - run: wget https://github.com/validator/validator/releases/download/latest/vnu.jar
