@@ -5,6 +5,8 @@ set -eux
 _project_root="$(realpath "$(dirname "$0")/..")"
 cd "$_project_root"
 
+mkdir -p "$_project_root/static/fonts"
+
 if [ ! -f fonts/IosevkaKytta-Regular.woff2 ] || [ ! -f fonts/IosevkaKytta-Italic.woff2 ]; then
 	"$_project_root/script/build-iosevka"
 fi
