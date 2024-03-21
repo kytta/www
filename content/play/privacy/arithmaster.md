@@ -1,7 +1,6 @@
 ---
 title: Arithmaster Privacy Policy
 template: orphan.html
-date: 2024-02-15
 updated: 2024-02-15
 ---
 
