@@ -23,9 +23,7 @@
 <meta name="generator" content="Zola" />
 </head>
 <body>
-<header>
-  <a href="/" class="home" aria-label="Go to the main page">{{ load_data(path="static/icon.svg") | trim | safe }}</a>
-</header>
+{% include "partials/header.html" %}
 {% block content %}
 <main></main>
 {%- endblock content %}
