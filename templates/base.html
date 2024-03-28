@@ -13,7 +13,7 @@
 <link rel="alternate" type="application/atom+xml" title="Blog posts" href="{{ get_url(path="/blog/atom.xml", trailing_slash=false) }}" />
 <link rel="manifest" href="/manifest.webmanifest" />
 
-<link rel="stylesheet" href="/style.css?h={{ get_hash(path="/style.css", sha_type=256) }}" />
+<link rel="stylesheet" href="/main.css?h={{ get_hash(path="/main.css", sha_type=256, base64=false) | truncate(length=8, end="") }}" />
 {%- block extra_head %}{% endblock extra_head %}
 
 <link rel="icon" href="/favicon.ico" sizes="any" />

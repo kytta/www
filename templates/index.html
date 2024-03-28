@@ -1,6 +1,13 @@
 {% extends "base.html" %}
 
 {%- block content -%}
+<main>
+{% if section.content %}
+<section id="about">
+	{{ section.content | safe }}
+</section>
+{% endif %}
+
 <section id="blog" class="times">
 	<h2>Blog posts</h2>
 
@@ -18,16 +25,10 @@
 	<a class="view-all" href="{{- blog.path|safe -}}">view all posts</a>
 	{%- endif %}
 </section>
-{% if section.content %}
-<section id="introduction">
-  <h2>{{ section.title }}</h2>
-	{{ section.content | safe }}
-</section>
-{% endif %}
 <section id="contact">
   <h2>Contact me</h2>
 	Just email <a href="mailto:me@kytta.dev">me@kytta.dev</a> or ping <a href="https://fosstodon.org/@kytta" rel="me">me on Mastodon</a>.
 	<small><a class="view-all" href="/contact">OpenPGP, Matrix, XMPP, …</a></small>
 </section>
-
+</main>
 {%- endblock content -%}
