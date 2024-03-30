@@ -40,6 +40,7 @@ h4,
 h5,
 h6 {
 	margin-bottom: 0.5em;
+	text-wrap: balance;
 }
 
 h1 {
@@ -110,6 +111,10 @@ main {
 .owl {
 	> * + * {
 		margin-top: 1.5em;
+	}
+
+	p {
+		text-wrap: pretty;
 	}
 
 	:not(p) + p {
