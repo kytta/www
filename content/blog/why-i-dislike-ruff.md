@@ -4,6 +4,7 @@ description: How Ruff and uv impact Python’s calm community with the hype cult
 date: 2024-03-14T17:28:00+01:00
 draft: true
 ---
+
 If you're a Python developer, you've probably heard about [Ruff](https://github.com/astral-sh/ruff). A linter for Python written from the ground up in Rust beats all competitors in benchmarks (even with all rules enabled) and amazes everyone with its release cadence. At least one release per month and over 300 releases since its inception in 2022; a new version every two days, on average. "Move fast and fix things", as Charlie Marsh, the lead developer, would say. Not a long time ago, another project by Astral (the owning company) was announced: [uv](https://github.com/astral-sh/uv) is a "cargo for Python", a tool that would replace pip, virtualenv, Hatch, and everything in-between. As with Ruff, uv got very popular very quickly, and now sits at over 8k GitHub stars.
 
 Ruff has its fans and Ruff has its critics. And in this post, I'm not talking about the commonly mentioned issues others have with Ruff, be it [the VC funding](https://mastodon.social/@hynek/111911185144425691), [the unconventional AST parser](https://github.com/astral-sh/ruff/issues/286#issuecomment-1410922635), or [Astral "not giving back to the community"](https://www.youtube.com/watch?v=XzW4-KEB664&pp=ygUMYW50aG9ueSBydWZm). My complaint is less practical and more emotional.
@@ -25,6 +26,5 @@ While collecting links for this article, I stumbled upon [this post](https://fos
 > Regarding Python tooling and Python itself, I can’t stop thinking about how Astral’s business model relies on keeping Python and tools slow, so that their tools stand out. And it’s really stuck in my head.
 
 Now it's stuck in my head, too
-
 
 <!-- [^why-rust]: Other programming languages were not allowed because Prettier folks think no one would contribute to a tool not written in Rust. -->
