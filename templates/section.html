@@ -5,7 +5,7 @@
 
 {% block content %}
 <h1>{{ section.title }}</h1>
-<ul>
+<ul style="view-transition-name:posts">
 {% for post in section.pages %}
 	<li>
 		<a href="{{ post.permalink }}">{{ post.title }}</a>

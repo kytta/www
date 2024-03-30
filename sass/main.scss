@@ -42,7 +42,7 @@ h6 {
 	font-size: 100%;
 }
 
-header {
+body > header {
 	margin-bottom: 1.6em;
 	font-size: 125%;
 	font-weight: 700;
@@ -67,16 +67,89 @@ header {
 }
 
 main {
+	max-width: 66ch;
 	margin-left: 30px;
+}
 
-	> * {
-		max-width: 60ch;
+section {
+	& + & {
+		margin-top: 2em;
+	}
+
+	&#about {
+		margin: 0 0 1.6em;
+	}
+
+	&#blog {
+		header {
+			h2 {
+				display: inline-block;
+				margin: 0 0.5em 0 0;
+			}
+
+			a {
+				border-bottom: none;
+
+				&:link,
+				&:visited {
+					color: #a25330;
+					color: oklch(0.53125 0.115625 43.3333);
+				}
+
+				&:hover {
+					color: #743a20;
+					color: oklch(0.417969 0.090625 43.3333);
+				}
+			}
+		}
 	}
 }
 
-#about {
+footer {
+	margin-left: 30px;
+	margin-top: 2em;
+
+	.copy {
+		.license {
+			display: block;
+		}
+	}
+
+	.fediring {
+		margin: 2em 0 0;
+		text-align: center;
+	}
+}
+
+.text-big {
 	font-size: 125%;
 	font-weight: normal;
+	text-wrap: balance;
+}
+
+ol,
+ul {
+	padding-left: 3em;
+
+	& + .more {
+		margin-left: 3em;
+	}
+}
+
+ul {
+	list-style-type: "— ";
+}
+
+li {
+	margin-bottom: 0.3em;
+
+	> time {
+		display: block;
+		font-family: monospace;
+		@media (min-width: 600px) {
+			float: right;
+		}
+	}
 }
 
 a {
@@ -102,6 +175,15 @@ a {
 		color: #011523;
 		color: oklch(0.1875 0.040625 240);
 	}
+
+	&[rel="pgpkey"] {
+		font-family: monospace;
+	}
+}
+
+s > a {
+	color: inherit !important;
+	pointer-events: none;
 }
 
 :focus-visible {
@@ -112,6 +194,25 @@ a {
 }
 
 @media (prefers-color-scheme: dark) {
+	section {
+		&#blog {
+			header {
+				a {
+					&:link,
+					&:visited {
+						color: #fec1a8;
+						color: oklch(0.859375 0.078125 43.3333);
+					}
+
+					&:hover {
+						color: #ffddcf;
+						color: oklch(0.921875 0.0421875 43.3333);
+					}
+				}
+			}
+		}
+	}
+
 	a {
 		&:link {
 			color: #9fd5fc;

@@ -2,33 +2,39 @@
 
 {%- block content -%}
 <main>
-{% if section.content %}
-<section id="about">
-	{{ section.content | safe }}
-</section>
-{% endif %}
+	{% if section.content %}
+	<section id="about" class="text-big">
+		{{ section.content | safe }}
+	</section>
+	{% endif %}
 
-<section id="blog" class="times">
-	<h2>Blog posts</h2>
+	<section id="blog">
+		<header class="blog-header">
+		<h2>Blog</h2>
+		<a href="/atom.xml" title="RSS Feed"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24zM3.291 17.415a3.3 3.3 0 0 1 3.293 3.295A3.303 3.303 0 0 1 3.283 24C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295M15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91"/></svg></a>
+		</header>
 
-	{%- set blog = get_section(path="blog/_index.md") -%}
-	{%- set post_count = blog.pages | length -%}
-	<ol reversed="reversed" start="{{post_count}}">
-	{%- for post in blog.pages | slice(end=10) %}
-	<li><article>
-		<h3><a href="{{- post.path|safe -}}">{{- post.title -}}</a></h3>
-		<time datetime="{{ post.date | date(format="%+")}}">{{ post.date | date(format="%d %h %Y")}}</time>
-	</article></li>
-	{%- endfor %}
-	</ol>
-	{%- if post_count > 10 %}
-	<a class="view-all" href="{{- blog.path|safe -}}">view all posts</a>
-	{%- endif %}
-</section>
-<section id="contact">
-  <h2>Contact me</h2>
-	Just email <a href="mailto:me@kytta.dev">me@kytta.dev</a> or ping <a href="https://fosstodon.org/@kytta" rel="me">me on Mastodon</a>.
-	<small><a class="view-all" href="/contact">OpenPGP, Matrix, XMPP, …</a></small>
-</section>
+		{%- set blog = get_section(path="blog/_index.md") -%}
+		{%- set post_count = blog.pages | length -%}
+		<ol reversed start="{{ post_count }}" role="list">
+		{%- for post in blog.pages | slice(end=10) %}
+		<li>
+			<a href="{{- post.path|safe -}}">{{- post.title -}}</a>
+			<time datetime="{{ post.date | date(format="%+")}}">{{ post.date | date(format="%d %h %Y")}}</time>
+		</li>
+		{%- endfor %}
+		</ol>
+		{%- if post_count > 10 %}
+		<a class="more" href="{{- blog.path|safe -}}">view all posts<span aria-hidden="true"> »</span></a>
+		{%- endif %}
+	</section>
+	<section id="uses">
+		<h2>I use</h2>
+		MacBook, ZenFone 10, Firefox, Sublime Text, zsh, and <a href="/uses">more</a>.
+	</section>
+	<section id="contact">
+		<h2>Contact</h2>
+		Email <a href="mailto:me@kytta.dev" rel="me">me@kytta.dev</a> (<a href="https://keys.openpgp.org/vks/v1/by-fingerprint/AF6C280C2A34D3F39BED9366D397E9BE9E6898FA" rel="pgpkey">0x9E6898FA</a>), ping <a href="https://fosstodon.org/@kytta" rel="me">@kytta@fosstodon.org</a>, or see <a href="/contact">other ways of contacting me</a>.
+	</section>
 </main>
 {%- endblock content -%}
