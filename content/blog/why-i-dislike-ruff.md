@@ -2,7 +2,6 @@
 title: The thing I don’t like about Ruff (and others)
 description: How Ruff and uv impact Python’s calm community with the hype culture à la Rust.
 date: 2024-03-14T17:28:00+01:00
-draft: true
 ---
 
 If you're a Python developer, you've probably heard about [Ruff](https://github.com/astral-sh/ruff). A linter for Python written from the ground up in Rust beats all competitors in benchmarks (even with all rules enabled) and amazes everyone with its release cadence. At least one release per month and over 300 releases since its inception in 2022; a new version every two days, on average. "Move fast and fix things", as Charlie Marsh, the lead developer, would say. Not a long time ago, another project by Astral (the owning company) was announced: [uv](https://github.com/astral-sh/uv) is a "cargo for Python", a tool that would replace pip, virtualenv, Hatch, and everything in-between. As with Ruff, uv got very popular very quickly, and now sits at over 8k GitHub stars.
