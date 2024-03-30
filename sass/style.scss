@@ -27,6 +27,9 @@ html {
 body {
 	max-width: $body-width;
 	margin: 2em auto;
+	@media (max-width: 900px) {
+		padding: 0 1em;
+	}
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -40,6 +43,7 @@ h4,
 h5,
 h6 {
 	margin-bottom: 0.5em;
+	text-wrap: balance;
 }
 
 h1 {
@@ -110,6 +114,10 @@ main {
 .owl {
 	> * + * {
 		margin-top: 1.5em;
+	}
+
+	p {
+		text-wrap: pretty;
 	}
 
 	:not(p) + p {
@@ -235,7 +243,7 @@ blockquote {
 figure {
 	margin: 0;
 
-	blockquote: {
+	blockquote {
 		margin-bottom: 0;
 	}
 }
