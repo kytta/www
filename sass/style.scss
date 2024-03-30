@@ -27,6 +27,9 @@ html {
 body {
 	max-width: $body-width;
 	margin: 2em auto;
+	@media (max-width: 900px) {
+		padding: 0 1em;
+	}
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
