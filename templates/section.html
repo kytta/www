@@ -4,14 +4,16 @@
 {% block description %}{{ section.description | default(value=config.description) }}{% endblock description %}
 
 {% block content %}
-<h1>{{ section.title }}</h1>
-<ul style="view-transition-name:posts">
-{% for post in section.pages %}
-	<li>
-		<a href="{{ post.permalink }}">{{ post.title }}</a>
-		<br>
-		<small>{{ post.date | date(format="%d %h %Y") }}</small>
-	</li>
-{% endfor %}
-</ul>
+<main>
+	<h1>{{ section.title }}</h1>
+	<ul style="view-transition-name:posts">
+	{% for post in section.pages %}
+		<li>
+			<a href="{{ post.permalink }}">{{ post.title }}</a>
+			<br>
+			<small>{{ post.date | date(format="%d %h %Y") }}</small>
+		</li>
+	{% endfor %}
+	</ul>
+</main>
 {% endblock content %}

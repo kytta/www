@@ -1,18 +1,25 @@
 {% extends "section.html" %}
 
 {%- block content -%}
+<main>
 <h1>{{ section.title }}</h1>
+
+{%- set start_from = section.pages | length -%}
 {%- for year, posts in section.pages | group_by(attribute="year") -%}
 <section class="times">
 <h2>{{ year }}</h2>
-<ul>
+<ol reversed start="{{ start_from }}" role="list">
 {%- for post in posts %}
 	<li>
-		<h3><a href="{{- post.path|safe -}}">{{- post.title -}}</a></h3>
-		<time datetime="{{ post.date | date(format="%+")}}">{{ post.date | date(format="%d %h %Y")}}</time>
+		<a href="{{- post.path|safe -}}">{{- post.title -}}</a>
+		<!-- Saturday 30 March 2024 at 16:03:20 CET -->
+		<time datetime="{{ post.date | date(format="%+")}}" title="{{- post.date | date(format="%A %d %B %Y at %H:%M UTC%Z") -}}">{{ post.date | date(format="%d %h")}}</time>
 	</li>
 {%- endfor %}
-</ul>
+</ol>
 </section>
+{%- set yearly_count = posts | length -%}
+{%- set_global start_from = start_from - yearly_count -%}
 {%- endfor %}
+</main>
 {%- endblock content -%}
