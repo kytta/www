@@ -17,18 +17,22 @@
 
 		{%- set blog = get_section(path="blog/_index.md") -%}
 		{%- set post_count = blog.pages | length -%}
-		<ol reversed start="{{ post_count }}" role="list">
-		{%- for post in blog.pages | slice(end=10) %}
-		<li>
-			<a href="{{- post.path|safe -}}">{{- post.title -}}</a>
-			<time datetime="{{ post.date | date(format="%+")}}">{{ post.date | date(format="%d %h %Y")}}</time>
-		</li>
-		{%- endfor %}
+		{% set post_limit = 5 -%}
+		<ol reversed start="{{- post_count -}}" role="list">
+		{%- for post in blog.pages | slice(end=post_limit) %}
+			<li>
+				<a href="{{- post.path|safe -}}">{{- post.title -}}</a>
+				<time datetime="{{- post.date | date(format="%+") -}}" title="{{- post.date | date(format="%A, %-d %B %Y at %H:%M GMT%:::z") -}}">
+					{{- post.date | date(format="%_d %b %Y") -}}
+				</time>
+			</li>
+		{% endfor %}
 		</ol>
-		{%- if post_count > 10 %}
-		<a class="more" href="{{- blog.path|safe -}}">view all posts<span aria-hidden="true"> »</span></a>
+		{%- if post_count > post_limit %}
+		<a class="more" href="{{- blog.path|safe -}}">view all<span aria-hidden="true"> »</span></a>
 		{%- endif %}
 	</section>
+
 	<section id="uses">
 		<h2>I use</h2>
 		MacBook, ZenFone 10, Firefox, Sublime Text, zsh, and <a href="/uses">more</a>.

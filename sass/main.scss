@@ -102,6 +102,11 @@ section {
 				}
 			}
 		}
+
+		ol {
+			--list-padding: 0;
+			list-style-type: none;
+		}
 	}
 }
 
@@ -129,10 +134,11 @@ footer {
 
 ol,
 ul {
-	padding-left: 3em;
+	--list-padding: 3em;
+	padding-left: var(--list-padding);
 
 	& + .more {
-		margin-left: 3em;
+		margin-left: var(--list-padding);
 	}
 }
 
@@ -144,10 +150,16 @@ li {
 	margin-bottom: 0.3em;
 
 	> time {
-		display: block;
-		font-family: monospace;
+		color: #4b4b4b;
+		color: oklch(0.412109 0 0);
+		font-size: smaller;
+
 		@media (min-width: 600px) {
-			float: right;
+			margin-left: 0.25em;
+		}
+
+		@media (max-width: 599px) {
+			display: block;
 		}
 	}
 }
