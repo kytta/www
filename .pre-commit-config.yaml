@@ -23,10 +23,12 @@ repos:
       - id: check-symlinks
       - id: destroyed-symlinks
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v3.0.3
+    rev: v4.0.0-alpha.8
     hooks:
       - id: prettier
         types_or: [css, scss, json, markdown, yaml]
+        additional_dependencies:
+          - "prettier@^3"
 
   - repo: https://github.com/thibaudcolas/curlylint
     rev: v0.13.1
