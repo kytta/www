@@ -1,10 +1,14 @@
 ---
-title: Redis Ltd. were right
+title: Redis Ltd. were right (April Fools)
 description: After some days, I have finally decided to comment on the Redis licensing situation.
 date: 2024-04-01T04:20:00.69Z
 extra:
   mastodon_id: 112196861132970965
 ---
+
+> **Heads up!**
+>
+> This is not a serious blog post, but rather my attempt at a funny April Fools joke.
 
 When the news about Redis®, a registered trademark of Redis Ltd, dropped, I have held my urge to comment on the situation. For one, because I didn't have time to collect my thoughts, but also because I knew I would not be understood by the other members of our community. I was afraid of mean comments coming my way. But now, I have finally got to writing about it.
 
