@@ -51,11 +51,13 @@ Every time you want to create or update an icon for your app, Android Studio is 
 2. **Use WebP.** WebP is supported in API 14 (lossy) and API 18 (lossless and/or transparent). Using lossless conversion reduced the size to 229 KiB
 3. **Use vector drawables.** Starting with API 21, you can completely rely on vector graphics, especially if your icon is relatively simple.
 
-<!-- 246.139 -> 155.387 -->
+In my case, using just a vector icon resulted in some bugs on older Android versions, so I opted into WebP icons. I have also removed the `round` icon version (which was only used in API 25) and made the default icon the round one.
 
-**Reduction:** 240 KiB → 152 KiB
+<!-- 246.139 -> 186.040 -->
 
-And just like that, our app is now just 7% of what it used to be, without having to change much of the code and without sacrificing any functionality.
+**Reduction:** 240 KiB → 182 KiB
+
+And just like that, our app is now just 8% of what it used to be, without having to change much of the code and without sacrificing any functionality.
 
 ## Bonus: Use LiteX
 
