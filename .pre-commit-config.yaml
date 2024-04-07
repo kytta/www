@@ -27,6 +27,8 @@ repos:
     hooks:
       - id: prettier
         types_or: [css, scss, json, markdown, yaml]
+        additional_dependencies:
+          - "prettier@^3"
 
   - repo: https://github.com/thibaudcolas/curlylint
     rev: v0.13.1
