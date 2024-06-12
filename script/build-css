@@ -1,0 +1,16 @@
+#!/bin/sh
+
+ROOT=$(dirname "$(dirname "$(realpath "$0")")")
+
+set -eu
+
+if ! [ -d "$ROOT"/node_modules ]; then
+	pnpm install
+fi
+"$ROOT"/node_modules/.bin/lightningcss \
+	"$ROOT"/style/main.css \
+	--browserslist \
+	--minify \
+	--output-file static/style.min.css \
+	--sourcemap \
+	"$@"
