@@ -24,7 +24,7 @@ jobs:
 
       - uses: taiki-e/install-action@v2
         with:
-          tool: zola@0.17.2
+          tool: zola@0.19.1
       # - name: Set up Java JDK
       #   uses: actions/setup-java@v3
       #   with:
