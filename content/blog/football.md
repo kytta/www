@@ -2,6 +2,8 @@
 title: How I've grown to like football
 description: Growing up, I used to hate football, but Euro 2024 has kind of changed me.
 date: 2024-07-06T20:42:01+02:00
+extra:
+  mastodon_id: 112741045310503839
 ---
 
 Here's a sentence I'd never thought I'd be saying at any point in my life:
