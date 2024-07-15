@@ -1,0 +1,8 @@
+{
+	"plugins": {
+		"postcss-nesting": {},
+		"@csstools/postcss-oklab-function": {},
+		"autoprefixer": {},
+		"cssnano": {}
+	}
+}
