@@ -1,0 +1,12 @@
+{
+  "names": {
+    "kytta": "9f7167e653d58b5c4063051112c7369aadc96e4dc60436bf6ce4e4a4e1535c28"
+  },
+  "relays": {
+    "9f7167e653d58b5c4063051112c7369aadc96e4dc60436bf6ce4e4a4e1535c28": [
+      "wss://nos.lol",
+      "wss://relay.damus.io",
+      "wss://relay.nostr.band"
+    ]
+  }
+}
