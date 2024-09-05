@@ -37,7 +37,9 @@ jobs:
       url: ${{ steps.upload.outputs.url }}
     needs: build
     steps:
-      - uses: hynek/setup-cached-uv@v2
+      - uses: astral-sh/setup-uv@v1
+        with:
+          enable-cache: true
       - uses: actions/download-artifact@v4
         with:
           name: preview-${{ github.run_id }}
