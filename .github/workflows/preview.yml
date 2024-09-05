@@ -50,7 +50,7 @@ jobs:
           stdout=$(mktemp)
           uvx smokeshow upload public | tee $stdout
           url=$(tail -n 1 $stdout | awk '{print $3}')
-          echo "output_url=$url" >> $GITHUB_OUTPUT
+          echo "url=${url}" >> $GITHUB_OUTPUT
         env:
           SMOKESHOW_AUTH_KEY: ${{ secrets.SMOKESHOW_AUTH_KEY }}
           SMOKESHOW_GITHUB_STATUS_DESCRIPTION: Preview
