@@ -19,6 +19,3 @@ accept = [200, 429]
 
 # Exclude all private IPs from checking.
 exclude_all_private = true
-
-# Exclude all mail addresses from checking.
-exclude_mail = true
