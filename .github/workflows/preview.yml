@@ -1,0 +1,62 @@
+name: Deploy preview
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          lfs: true
+      - name: Download Zola
+        uses: taiki-e/install-action@v2
+        with:
+          tool: zola@0.19.1
+
+      - name: Build
+        run: zola build --drafts
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: preview-${{ github.event.pull_request.number || 'manual' }}
+          path: ./public
+          if-no-files-found: error
+          overwrite: true
+          include-hidden-files: true
+
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: preview
+      url: ${{ steps.upload.outputs.url }}
+    needs: build
+    steps:
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v1
+        with:
+          enable-cache: true
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: preview-${{ github.event.pull_request.number || 'manual' }}
+          path: ./public
+
+      - id: upload
+        name: Upload to smokeshow
+        run: |
+          stdout=$(mktemp)
+          uvx smokeshow upload public | tee $stdout
+          url=$(sed -n 's/go to \(.*\)/\1/p' $stdout)
+          echo "url=${url}" >> $GITHUB_OUTPUT
+        env:
+          SMOKESHOW_AUTH_KEY: ${{ secrets.SMOKESHOW_AUTH_KEY }}
+          SMOKESHOW_GITHUB_STATUS_DESCRIPTION: Preview
+          SMOKESHOW_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
