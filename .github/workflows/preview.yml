@@ -45,8 +45,6 @@ jobs:
           name: preview-${{ github.run_id }}
           path: ./public
 
-      - run: tree
-
       - id: upload
         run: |
           stdout=$(mktemp)
