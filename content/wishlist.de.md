@@ -2,6 +2,7 @@
 title: Wunschliste
 template: orphan.html
 ---
+
 Dies ist eine Liste von Dingen, die ich gerne haben möchte. Ihr könnt sie als Inspiration für ein Geschenk verwenden, wenn ihr wollt, aber sie dient mir eher dazu, meine Wünsche und Ideen zu notieren.
 
 <!-- **Siehe auch:** [mein Amazon-Wunschzettel](https://www.amazon.de/hz/wishlist/ls/THKDXOZALSBS). Er beinhaltet u. a. Produkte aus dieser Liste. **Aber:** überlegt bitte, die Produkte direkt vom Hersteller oder bei kleineren, lokalen Läden zu holen. -->
@@ -26,12 +27,12 @@ Wenn ihr mir Bares spenden wollt, finden Sie Links auf der ['Spenden'-Seite mein
 
 - [ ] Kochthermometer für Fleisch usw. Kabellos wäre super!
 - [ ] manuelle Pfeffermühle
-	- am besten gefallen mir die ganz klassischen Mühlen aus Holz
-	- manuell ist schon wichtig, also bitte ohne Motor :)
+  - am besten gefallen mir die ganz klassischen Mühlen aus Holz
+  - manuell ist schon wichtig, also bitte ohne Motor :)
 - [ ] Silikon-Backmatte
 - [ ] Kuchenrost/Abkühlgitter
-- [ ] ein *guter* Pizzaschneider
-	- groß und scharf
+- [ ] ein _guter_ Pizzaschneider
+  - groß und scharf
 - [ ] eine Kochschürze
 - [ ] ein Pizzastein für den Ofen
 - [ ] Küchenschneider/-schaber aus Metall, z.B. [dieser von Amazon](https://amzn.eu/d/5ktkNyN) (oder jeder andere Brand)
@@ -41,23 +42,24 @@ Wenn ihr mir Bares spenden wollt, finden Sie Links auf der ['Spenden'-Seite mein
 **Gutscheine:** [Saturn](https://www.saturn.de/de/specials/gutscheincard#gutschein) oder [MediaMarkt](https://www.mediamarkt.de/de/specials/geschenkkarte)
 
 - [ ] [Philips LatteGo](https://www.philips.de/c-m-ho/kaffee/kaffeevollautomaten) - ein Kaffeevollautomat
-	- soweit ich verstehen kann, die Modelle unterscheiden sich nur in "Kaffee-Spezialitäten". Da möchte ich ein Modell, dass Latte Macchiato kann, also mindestens die 3300 Serie
-	- Muss auch nicht von Philips sein. Hauptsache: *Milchfach ist entnehmbar*, kann im Kühlschrank verstaut werden und darf in die Spülmaschine
+  - soweit ich verstehen kann, die Modelle unterscheiden sich nur in "Kaffee-Spezialitäten". Da möchte ich ein Modell, dass Latte Macchiato kann, also mindestens die 3300 Serie
+  - Muss auch nicht von Philips sein. Hauptsache: _Milchfach ist entnehmbar_, kann im Kühlschrank verstaut werden und darf in die Spülmaschine
 - [ ] Aktenvernichter (elektrisch)
 - [ ] eine Uhr von Braun
-	- [ ] eine Wand-Uhr, z.B. [diese Funk-Uhr](https://amzn.eu/d/65DFHSa)
-	- [ ] eine Tisch-Uhr, z. B. [diese mit einer kabellosen Ladestation](https://amzn.eu/d/9SbmZcB) oder [diese ohne](https://amzn.eu/d/d9rZKlQ)
+  - [ ] eine Wand-Uhr, z.B. [diese Funk-Uhr](https://amzn.eu/d/65DFHSa)
+  - [ ] eine Tisch-Uhr, z. B. [diese mit einer kabellosen Ladestation](https://amzn.eu/d/9SbmZcB) oder [diese ohne](https://amzn.eu/d/d9rZKlQ)
 
 ### Handwerk
 
 - [ ] ein Akku-Bohrschrauber, z.B. ein von Bosch
-	- 18V wäre mir lieber als 12V
-	- **wichtig:** Ich habe von der Firma aus 35% Rabatt auf Bosch-Produkte. Wenn ihr mehr zahlt, dann lieber als Bargeld
-	- Makita geht auch ;D
+  - 18V wäre mir lieber als 12V
+  - **wichtig:** Ich habe von der Firma aus 35% Rabatt auf Bosch-Produkte. Wenn ihr mehr zahlt, dann lieber als Bargeld
+  - Makita geht auch ;D
 
 ### Smart Home
 
 Mit Smart Home muss ich erst anfangen, und das wichtigste dafür ist ein Hub:
+
 - [ ] [ConBee III](https://phoscon.de/de/conbee3) ist ein USB-Stick, welches jedes Computer zum Hub macht
 
 ### Gaming
@@ -65,7 +67,7 @@ Mit Smart Home muss ich erst anfangen, und das wichtigste dafür ist ein Hub:
 **Gutscheine:** [Steam](https://store.steampowered.com/digitalgiftcards/?l=german)
 
 - [ ] [Steam Deck](https://store.steampowered.com/steamdeck), eine Spielkonsole
-	- ich wünsche mir hier das 512 GB OLED (nicht LCD) Modell
+  - ich wünsche mir hier das 512 GB OLED (nicht LCD) Modell
 
 ## Bücher
 
@@ -74,10 +76,12 @@ Mit Smart Home muss ich erst anfangen, und das wichtigste dafür ist ein Hub:
 - [ ] beliebiges (oder alle) [Buch(-̈er) von Adam Johnson](https://adamj.eu/books/)
 
 ### Brettspiele
+
 - [ ] Codenames, z.B. [bei Graff](https://www.graff.de/shop/item/4015566033481/codenames)
 - [ ] zwei Kartendecks von [Bicycle](https://de.bicyclecards.com/)
-	- einfach die klassischen: in [blau](https://de.bicyclecards.com/produkt/bicycle-rider-back-standard-index-807-classic-tuck-blau/) oder [rot](https://de.bicyclecards.com/produkt/bicycle-rider-back-standard-index-807-classic-tuck-rot/)
+  - einfach die klassischen: in [blau](https://de.bicyclecards.com/produkt/bicycle-rider-back-standard-index-807-classic-tuck-blau/) oder [rot](https://de.bicyclecards.com/produkt/bicycle-rider-back-standard-index-807-classic-tuck-rot/)
 
 ## Software
+
 - [ ] [Yoink](https://eternalstorms.at/yoink/mac) für macOS (9 €)
 - [ ] [Affinity Photo & Affinity Designer v2](https://affinity.serif.com/affinity-pricing/), entweder als Universallizenz (180 €) oder einzeln (je 75 €)
