@@ -19,7 +19,7 @@ Ich denke, dass **Geld das beste Geschenk ist**. Vor allem jetzt, wenn ich meine
 
 Ein anderes Wunsch auf meiner Liste ist ein [Steam Deck](https://store.steampowered.com/steamdeck), also über [Steam-Geschenkkarten](https://store.steampowered.com/digitalgiftcards/?l=german) würde ich mich ebenfalls freuen :) -->
 
-Wenn ihr mir Bares spenden wollt, finden Sie Links auf der ['Spenden'-Seite meiner Website](@/donate).
+Wenn ihr mir Bares spenden wollt, finden Sie Links auf der ['Spenden'-Seite meiner Website](@/donate.md).
 
 ## Haushalt bzw. Kochen
 
