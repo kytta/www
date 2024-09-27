@@ -69,7 +69,7 @@ Mit Smart Home muss ich erst anfangen, und das wichtigste dafür ist
     - pin headers: No, thanks
     - Extension cable: No, thanks
     - Tip: dürft ihr entscheiden :)
-	  </details>
+    </details>
 
 ### Gaming
 
