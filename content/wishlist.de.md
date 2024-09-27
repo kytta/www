@@ -58,9 +58,18 @@ Wenn ihr mir Bares spenden wollt, finden Sie Links auf der ['Spenden'-Seite mein
 
 ### Smart Home
 
-Mit Smart Home muss ich erst anfangen, und das wichtigste dafür ist ein Hub:
+Mit Smart Home muss ich erst anfangen, und das wichtigste dafür ist
 
-- [ ] [ConBee III](https://phoscon.de/de/conbee3) ist ein USB-Stick, welches jedes Computer zum Hub macht
+- [ ] ein Gateway/Hub/Coordinator; in diesem Fall eine USB-Stick, die jedes Computer zu einem machen kann
+  - [ConBee III](https://phoscon.de/de/conbee3) ist ein USB-Stick, welches jedes Computer zum Hub macht, ODER
+  - [slae.sh CC2652R](https://slae.sh/products/cc2652/#), ähnliches Konzept\
+    <details><summary>Bestellparameter</summary>
+    - Antenna: Type 4
+    - Firmware: ZigBee coordinator
+    - pin headers: No, thanks
+    - Extension cable: No, thanks
+    - Tip: dürft ihr entscheiden :)
+	  </details>
 
 ### Gaming
 
