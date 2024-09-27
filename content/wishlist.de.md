@@ -60,8 +60,9 @@ Wenn ihr mir Bares spenden wollt, finden Sie Links auf der ['Spenden'-Seite mein
 
 Mit Smart Home muss ich erst anfangen, und das wichtigste dafür ist
 
-- [ ] ein Gateway/Hub/Coordinator; in diesem Fall eine USB-Stick, die jedes Computer zu einem machen kann
-  - [ConBee III](https://phoscon.de/de/conbee3) ist ein USB-Stick, welches jedes Computer zum Hub macht, ODER
+- [ ] ein Gateway/Hub/Coordinator; in diesem Fall eine USB-Stick, die jedes Computer zu einem machen kann. Nur eine aus der Liste! :D
+  - [Home Assistant Connect ZBT-1](https://mediarath.de/products/home-assistant-skyconnect-zigbee-thread-matter-usb-stick-fur-home-assistant), ODER
+  - [Phoscon ConBee III](https://phoscon.de/de/conbee3), ODER
   - [slae.sh CC2652R](https://slae.sh/products/cc2652/#), ähnliches Konzept\
     <details><summary>Bestellparameter</summary>
     - Antenna: Type 4
