@@ -48,6 +48,9 @@ Wenn ihr mir Bares spenden wollt, finden Sie Links auf der ['Spenden'-Seite mein
 - [ ] eine Uhr von Braun
   - [ ] eine Wand-Uhr, z.B. [diese Funk-Uhr](https://amzn.eu/d/65DFHSa)
   - [ ] eine Tisch-Uhr, z. B. [diese mit einer kabellosen Ladestation](https://amzn.eu/d/9SbmZcB) oder [diese ohne](https://amzn.eu/d/d9rZKlQ)
+- [ ] [Chipolo Point Tags](https://chipolo.net/de/products/category/chipolo-point) zum Tracken von Sachen
+  - **wichtig:** das müssen explizit Chipolo _Point_ sein (_kein Spot_), also mit "Google Mein Gerät finden" kompatibel
+  - ich hätte gerne ein [Chipolo CARD Point](https://chipolo.net/de/products/chipolo-card-point) und mindestens zwei [Chipolo ONE Point](https://chipolo.net/de/products/chipolo-one-point)s
 
 ### Handwerk
 
