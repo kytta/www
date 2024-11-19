@@ -13,7 +13,7 @@ Dies ist eine Liste von Dingen, die ich gerne haben möchte. Ihr könnt sie als 
 
 ## Geld
 
-Ich finde, *Geld ist das beste Geschenk*. Vor allem jetzt, wo ich vor kurzem umgezogen bin :D Aber nicht jeder mag Geld schenken, also habe ich unter den Kategorien unten auch Links zu Gutscheinen hinterlegt. [Amazon](https://www.amazon.de/dp/B07Q1JNC7R/) und [IKEA](https://www.ikea.com/de/de/customer-service/geschenkkarten-gutscheine-pub4423c690) gehen immer :)
+Ich finde, _Geld ist das beste Geschenk_. Vor allem jetzt, wo ich vor kurzem umgezogen bin :D Aber nicht jeder mag Geld schenken, also habe ich unter den Kategorien unten auch Links zu Gutscheinen hinterlegt. [Amazon](https://www.amazon.de/dp/B07Q1JNC7R/) und [IKEA](https://www.ikea.com/de/de/customer-service/geschenkkarten-gutscheine-pub4423c690) gehen immer :)
 
 <!-- Da würde ich mich auch über Geschenkkarten von [Saturn](https://www.saturn.de/de/specials/gutscheincard#gutschein), [Amazon](https://www.amazon.de/dp/B07Q1JNC7R/) oder [IKEA](https://www.ikea.com/de/de/customer-service/geschenkkarten-gutscheine-pub4423c690) sehr freuen.
 
