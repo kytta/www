@@ -17,9 +17,16 @@ Ich finde, _Geld ist das beste Geschenk_. Vor allem jetzt, wo ich vor kurzem umg
 
 <!-- Da würde ich mich auch über Geschenkkarten von [Saturn](https://www.saturn.de/de/specials/gutscheincard#gutschein), [Amazon](https://www.amazon.de/dp/B07Q1JNC7R/) oder [IKEA](https://www.ikea.com/de/de/customer-service/geschenkkarten-gutscheine-pub4423c690) sehr freuen.
 
-Ein anderes Wunsch auf meiner Liste ist ein [Steam Deck](https://store.steampowered.com/steamdeck), also über [Steam-Geschenkkarten](https://store.steampowered.com/digitalgiftcards/?l=german) würde ich mich ebenfalls freuen :) -->
+Ein anderer Wunsch auf meiner Liste ist ein [Steam Deck](https://store.steampowered.com/steamdeck), also über [Steam-Geschenkkarten](https://store.steampowered.com/digitalgiftcards/?l=german) würde ich mich ebenfalls freuen :) -->
 
 Wenn ihr mir Bares spenden wollt, folgt die Links auf der [„Spenden“-Seite](@/donate.md) oder fragt mir nach meiner IBAN.
+
+## Haushalt
+
+- [ ] ein hitzefester Messbecher, wie etwa [der von Pyrex](https://www.pyrex.eu/de-eu/products/klassisches-broc-glas-messgerat?variant=49597409296709)
+  - _nicht_ der VARDAGEN von IKEA; der sieht gut aus, aber damit hatte ich schon mal schlechte Erfahrung :(
+- [ ] ein Isolierbecher. Ich bin begeistert von meinem Halbliterbecher von _emsa_, und ich hätte gerne noch einen in der kleineren Größe. Zum Beispiel, Classic 0,36L (in [schwarz](https://www.amazon.de/dp/B0BW8SR17S), [rot](https://www.amazon.de/dp/B0BW8Q7VZM), oder [grau](https://www.amazon.de/dp/B0BW8Q8N17)), [Waves 0,36L](https://www.amazon.de/dp/B0BW8NHDFX), oder [Compact 0,3L](https://www.amazon.de/dp/B08GM7GK8J)
+- [ ] [BRITA Tischwasserfilter Glas](https://www.brita.de/produkte/tischwasserfilter-glas/1051157)
 
 ## Technik
 
@@ -31,7 +38,9 @@ Wenn ihr mir Bares spenden wollt, folgt die Links auf der [„Spenden“-Seite](
 
 ### Smart Home
 
-- [ ] [Aqara Smartes Heizkörperthermostat E1](https://amzn.eu/d/8PKiiBB). Je mehr, desto besser (aber höchstens fünf xD)
+- [ ] [Aqara Smartes Heizkörperthermostat E1](https://amzn.eu/d/8PKiiBB). Je mehr, desto besser (aber höchstens fünf :D)
+<!-- - [ ] [Raspberry Pi 5](https://www.raspberrypi.com/products/raspberry-pi-5/), mit entweder 4 GB oder 8 GB RAM, oder die Accesoires dafür:
+  - [ ]  -->
 
 ### Gaming
 
@@ -40,9 +49,17 @@ Wenn ihr mir Bares spenden wollt, folgt die Links auf der [„Spenden“-Seite](
 - [ ] [Steam Deck](https://store.steampowered.com/steamdeck), eine Spielkonsole
   - ich wünsche mir hier das 512 GB OLED (nicht LCD) Modell
 
+## Werkzeug
+
+**Gutscheine:** [BAUHAUS](https://www.bauhaus.info/gutscheinkarte)
+
+- [ ] ein Reparatur-Set von iFixit: entweder [Mako](https://www.ifixit.com/de-de/products/mako-driver-kit-64-precision-bits), oder [Pro Tech Toolkit](https://www.ifixit.com/de-de/products/pro-tech-toolkit) (Mako + extra Tools)
+- [ ] eine (metrische!) Ratsche/Knarre mit verschiedenen Einsätzen. Wichtig: ein 1/4″-Quadrat auf 1/4″-Sechskant-Adapter, damit die herkömmlichen Bits auch benutzt werden können
+  - Beispiel: [Wera 8100 SA 8 Zyklop](https://products.wera.de/de/knarren_und_zubehoer_die_zyklop-knarren_die_zyklop_knarren_1_4_die_zyklop_metal_knarre_switch_1_4_8100_sa_8.html)
+
 ## Bücher
 
-**Gutscheine:** lieber keine, weil ich Bücher lieber online vom Author kaufe statt in Läden
+**Gutscheine:** lieber keine, weil ich Bücher lieber als eBooks und direkt vom Autor kaufe statt in Läden
 
 ### Brettspiele
 
@@ -51,5 +68,6 @@ Wenn ihr mir Bares spenden wollt, folgt die Links auf der [„Spenden“-Seite](
 
 ## Software
 
-- [ ] [Yoink](https://eternalstorms.at/yoink/mac) für macOS (9 €)
+<!-- - [ ] [Yoink](https://eternalstorms.at/yoink/mac) für macOS (9 €) -->
+
 - [ ] [Affinity Photo & Affinity Designer v2](https://affinity.serif.com/affinity-pricing/), entweder als Universallizenz (180 €) oder einzeln (je 75 €)
