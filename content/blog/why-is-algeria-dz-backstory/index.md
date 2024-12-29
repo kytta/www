@@ -8,7 +8,13 @@ extra:
   index: false
 ---
 
-**Note:** I had to exclude this page from search indexing and LLM crawling. TLDR: [Bing used it as a source for wrong statements](https://fosstodon.org/@kytta/112688524313193665). Read on to learn more.
+This article is hidden from robots, crawlers, and indexers, because the last time it was published, this happened:
+
+![Screenshot of Bing search results for "why is algeria dz". First result says "French name" and credits my website as a source](./bing.png)
+
+Yes, this was the top result for "why is algeria dz" for many weeks and months. Spreading misinfo in my name :P
+
+Below is the original text of that blog post. Under the old URL is the shortened version that only includes the correct answer.
 
 ---
 
