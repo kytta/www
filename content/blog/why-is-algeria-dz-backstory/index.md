@@ -1,6 +1,6 @@
 ---
-title: How I helped Bing and Copilot spread lies
-description: You may not expect this, but this post is about LLMs and about how stupid they are.
+title: I hope Bing will realise why Algeria is DZ
+description: I found out why DZ is the ISO code for Algeria, and then I inadvertently made Bing tell lies about it.
 date: 2024-05-28T22:31:00+02:00
 updated: 2024-12-29T14:41:00+01:00
 extra:
@@ -8,7 +8,13 @@ extra:
   index: false
 ---
 
-**Note:** I had to exclude this page from search indexing and LLM crawling. TLDR: [Bing used it as a source for wrong statements](https://fosstodon.org/@kytta/112688524313193665). Read on to learn more.
+This article is hidden from robots, crawlers, and indexers, because the last time it was published, this happened:
+
+![Screenshot of Bing search results for "why is algeria dz". First result says "French name" and credits my website as a source](./bing.png)
+
+Yes, this was the top result for "why is algeria dz" for many weeks and months. Spreading misinfo in my name :P
+
+After some months of trying to figure out how to control my SSG, I have finally replaced the old blog post with a shortened version containing just the correct answer. Below is the original text of that blog post.
 
 ---
 
