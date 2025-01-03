@@ -5,7 +5,7 @@ template: orphan.html
 
 Dies ist eine Liste von Dingen, die ich gerne haben möchte. Ihr könnt sie als Inspiration für ein Geschenk verwenden, wenn ihr wollt, aber sie dient mir eher dazu, meine Wünsche und Ideen zu notieren.
 
-<!-- **Siehe auch:** [mein Amazon-Wunschzettel](https://www.amazon.de/hz/wishlist/ls/THKDXOZALSBS). Er beinhaltet u. a. Produkte aus dieser Liste. **Aber:** überlegt bitte, die Produkte direkt vom Hersteller oder bei kleineren, lokalen Läden zu holen. -->
+**Siehe auch:** [mein Amazon-Wunschzettel](https://www.amazon.de/hz/wishlist/ls/THKDXOZALSBS). Er beinhaltet u. a. Produkte aus dieser Liste. **Aber:** überlegt bitte, die Produkte direkt vom Hersteller oder bei kleineren, lokalen Läden zu holen.
 
 ## Kleidung
 
@@ -21,12 +21,7 @@ Ein anderer Wunsch auf meiner Liste ist ein [Steam Deck](https://store.steampowe
 
 Wenn ihr mir Bares spenden wollt, folgt die Links auf der [„Spenden“-Seite](@/donate.md) oder fragt mir nach meiner IBAN.
 
-## Haushalt
-
-- [ ] ein hitzefester Messbecher, wie etwa [der von Pyrex](https://www.pyrex.eu/de-eu/products/klassisches-broc-glas-messgerat?variant=49597409296709)
-  - _nicht_ der VARDAGEN von IKEA; der sieht gut aus, aber damit hatte ich schon mal schlechte Erfahrung :(
-- [ ] ein Isolierbecher. Ich bin begeistert von meinem Halbliterbecher von _emsa_, und ich hätte gerne noch einen in der kleineren Größe. Zum Beispiel, Classic 0,36L (in [schwarz](https://www.amazon.de/dp/B0BW8SR17S), [rot](https://www.amazon.de/dp/B0BW8Q7VZM), oder [grau](https://www.amazon.de/dp/B0BW8Q8N17)), [Waves 0,36L](https://www.amazon.de/dp/B0BW8NHDFX), oder [Compact 0,3L](https://www.amazon.de/dp/B08GM7GK8J)
-- [ ] [BRITA Tischwasserfilter Glas](https://www.brita.de/produkte/tischwasserfilter-glas/1051157)
+<!--## Haushalt-->
 
 ## Technik
 
@@ -61,13 +56,11 @@ Wenn ihr mir Bares spenden wollt, folgt die Links auf der [„Spenden“-Seite](
 
 **Gutscheine:** lieber keine, weil ich Bücher lieber als eBooks und direkt vom Autor kaufe statt in Läden
 
-### Brettspiele
-
-- [ ] zwei Kartendecks von [Bicycle](https://de.bicyclecards.com/)
-  - einfach die klassischen: in [blau](https://de.bicyclecards.com/produkt/bicycle-rider-back-standard-index-807-classic-tuck-blau/) oder [rot](https://de.bicyclecards.com/produkt/bicycle-rider-back-standard-index-807-classic-tuck-rot/) (aber dann beide in gleicher Farbe)
+<!--### Brettspiele-->
 
 ## Software
 
 <!-- - [ ] [Yoink](https://eternalstorms.at/yoink/mac) für macOS (9 €) -->
 
 - [ ] [Affinity Photo & Affinity Designer v2](https://affinity.serif.com/affinity-pricing/), entweder als Universallizenz (180 €) oder einzeln (je 75 €)
+- [ ] [MacUpdater](https://www.corecode.io/macupdater/purchase/buy.html) (Standard or Pro)

@@ -40,3 +40,6 @@ license = { name = "CC BY-SA 4.0", href = "https://creativecommons.org/license
 # fediring_host = "kytta.dev"
 
 [languages.de]
+
+title = "@kytta"
+description = "Ein π-förmiger Webentwickler."
