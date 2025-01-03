@@ -1,33 +1,45 @@
 {% extends "base.html" %}
+{%- import "macros/icons.html" as icons -%}
 
 {%- block content -%}
-<section id="blog" class="times">
-	<h2>Blog posts</h2>
+<main>
+	{% if section.content %}
+	<section id="about" class="text-big">
+		{{ section.content | safe }}
+	</section>
+	{% endif %}
 
-	{%- set blog = get_section(path="blog/_index.md") -%}
-	{%- set post_count = blog.pages | length -%}
-	<ol reversed="reversed" start="{{post_count}}">
-	{%- for post in blog.pages | slice(end=10) %}
-	<li><article>
-		<h3><a href="{{- post.path|safe -}}">{{- post.title -}}</a></h3>
-		<time datetime="{{ post.date | date(format="%+")}}">{{ post.date | date(format="%d %h %Y")}}</time>
-	</article></li>
-	{%- endfor %}
-	</ol>
-	{%- if post_count > 10 %}
-	<a class="view-all" href="{{- blog.path|safe -}}">view all posts</a>
-	{%- endif %}
-</section>
-{% if section.content %}
-<section id="introduction">
-  <h2>{{ section.title }}</h2>
-	{{ section.content | safe }}
-</section>
-{% endif %}
-<section id="contact">
-  <h2>Contact me</h2>
-	Just email <a href="mailto:me@kytta.dev">me@kytta.dev</a> or ping <a href="https://fosstodon.org/@kytta" rel="me">me on Mastodon</a>.
-	<small><a class="view-all" href="/contact">OpenPGP, Matrix, XMPP, …</a></small>
-</section>
+	<section id="blog">
+		<header class="blog-header">
+			<h2>Latest posts</h2>
+			<a href="/atom.xml" title="RSS Feed">{{- icons::rss(size="0.75em", hidden=true) -}}</a>
+		</header>
 
+		{%- set blog = get_section(path="blog/_index.md") -%}
+		{%- set post_count = blog.pages | length -%}
+		{% set post_limit = 5 -%}
+		<ol reversed start="{{- post_count -}}" role="list">
+		{%- for post in blog.pages | slice(end=post_limit) %}
+			<li>
+				<a href="{{- post.path|safe -}}">{{- post.title -}}</a>
+				<time datetime="{{- post.date | date(format="%+") -}}" title="{{- post.date | date(format="%A, %-d %B %Y at %H:%M GMT%:::z") -}}">
+					{{- post.date | date(format="%_d %b %Y") -}}
+				</time>
+			</li>
+		{% endfor %}
+		</ol>
+		{%- if post_count > post_limit %}
+		<a class="more" href="{{- blog.path|safe -}}">view all<span aria-hidden="true"> »</span></a>
+		{%- endif %}
+	</section>
+
+	<section id="uses">
+		<h2>I use</h2>
+		MacBook, ZenFone 10, Firefox, Sublime Text, zsh, and <a href="/uses">more</a>.
+	</section>
+	<section id="contact">
+		<h2>Contact</h2>
+		Email <a href="mailto:me@kytta.dev" rel="me">me@kytta.dev</a> (<a href="https://keys.openpgp.org/vks/v1/by-fingerprint/AF6C280C2A34D3F39BED9366D397E9BE9E6898FA" rel="pgpkey">0x9E6898FA</a>), ping <a href="https://fosstodon.org/@kytta" rel="me">@kytta@fosstodon.org</a>, or see <a href="/contact">other ways of contacting me</a>.
+	</section>
+</main>
 {%- endblock content -%}
