@@ -34,11 +34,10 @@ jobs:
         with:
           args: --verbose --no-progress --root-dir "$GITHUB_WORKSPACE/public/" './public/**/*.html'
           output: ./lycheeresult.md
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Create issue
-        if: ${{ github.event_name != 'pull_request' && steps.lychee.outputs.exit_code != 0 }}
-        uses: peter-evans/create-issue-from-file@v4
+        if: ${{ github.repository_owner == 'kytta' && github.event_name != 'pull_request' && steps.lychee.outputs.exit_code != 0 }}
+        uses: peter-evans/create-issue-from-file@v5
         with:
           title: "[lychee] Broken links"
           content-filepath: ./lycheeresult.md
