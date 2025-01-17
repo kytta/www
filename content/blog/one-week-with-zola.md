@@ -48,7 +48,7 @@ Zola also doesn't have any Git integration. In Hugo, one can use Git commit date
 
 Zola is by no means a finished project (heck, even Hugo isn't), so there are a lot of things that I am missing from it.
 
-The thing that irritates me the most is poor footnote management. [There is an issue](https://github.com/getzola/zola/issues/1285), but it's not Zola's fault, but rather [one of pulldown-cmark](https://github.com/raphlinus/pulldown-cmark/issues/142), the CommonMark parser that Zola uses. Footnotes as they are now look pretty ugly and do not play nicely with RSS readers, which is why I can't post some old posts of mine for the moment.
+The thing that irritates me the most is poor footnote management. [There is an issue](https://github.com/getzola/zola/issues/1285), but it's not Zola's fault, but rather [one of pulldown-cmark](https://github.com/pulldown-cmark/pulldown-cmark/issues/142), the CommonMark parser that Zola uses. Footnotes as they are now look pretty ugly and do not play nicely with RSS readers, which is why I can't post some old posts of mine for the moment.
 
 Another thing I'd really like to have is CSS post-processing. I know, I could run PostCSS over the generated content after running `zola build`, but this would not fix the problem for the preview server, which means I am limited to a very small subset of PostCSS plugins. It would also mean that I would need to regenerate hashes for the SRI, which complicates the process even further. It's not that I write very complicated CSS full of Stage 3 features and Modules and whatnot, but I'd still appreciate being able to use Autoprefixer and CSSO.
 
