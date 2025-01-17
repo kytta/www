@@ -20,7 +20,7 @@ jobs:
           tool: zola@0.19.1
 
       - name: Build
-        run: zola build --drafts
+        run: zola build --drafts --base-url '/'
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
@@ -59,3 +59,4 @@ jobs:
           SMOKESHOW_AUTH_KEY: ${{ secrets.SMOKESHOW_AUTH_KEY }}
           SMOKESHOW_GITHUB_STATUS_DESCRIPTION: Preview
           SMOKESHOW_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SMOKESHOW_GITHUB_PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
