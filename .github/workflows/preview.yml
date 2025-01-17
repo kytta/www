@@ -20,7 +20,7 @@ jobs:
           tool: zola@0.19.1
 
       - name: Build
-        run: zola build --drafts
+        run: zola build --drafts --base-url '/'
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
