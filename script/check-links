@@ -1,6 +1,0 @@
-#!/bin/sh
-
-set -eu
-
-lychee \
-	'./public/**/*.html'
