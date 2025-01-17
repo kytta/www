@@ -1,21 +1,10 @@
-# Enable link caching.
+# Cache
 cache = true
-
-# Discard all cached requests older than one day.
 max_cache_age = "1d"
 
-# Maximum number of allowed retries before a link is declared dead.
-max_retries = 3
+# Requests
+timeout = 15
+retry_wait_time = 5
 
-# User agent to send with each request.
-# https://www.useragents.me/#most-common-desktop-useragents
-user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML%2C like Gecko) Chrome/127.0.0.0 Safari/537.3"
-
-# Minimum wait time in seconds between retries of failed requests.
-retry_wait_time = 3
-
-# Comma-separated list of accepted status codes for valid links.
-accept = [200, 429]
-
-# Exclude all private IPs from checking.
+# Exclusions
 exclude_all_private = true

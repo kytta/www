@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -eu
+
+lychee \
+	--cache-exclude-status '429, 500..599' \
+	--root-dir "$(pwd)/public/" \
+	--include-fragments \
+	'./public/**/*.html'
