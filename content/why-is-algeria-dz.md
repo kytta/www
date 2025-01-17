@@ -5,6 +5,8 @@ path: blog/why-is-algeria-dz
 date: 2024-05-28T22:31:00+02:00
 updated: 2024-12-29T14:41:00+01:00
 in_search_index: false
+extra:
+  feeds: false
 ---
 
 I was working on the translations for my Fediverse share page (you can contribute [on Weblate](https://hosted.weblate.org/engage/share2fedi/)), when I stumbled upon a language code I've never seen before: `ar-DZ`. It was clear that `ar` is Arabic, but what's `DZ`? A quick search in the ISO 3166 list showed that it was, in fact, Algeria. Okay, but why? I decided to find out.
