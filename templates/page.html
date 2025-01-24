@@ -17,6 +17,9 @@
 
 {%- block extra_head %}
 <meta name="author" content="{{- config.author -}}" />
+{%- if config.extra.fediverse_creator %}
+<meta name="fediverse:creator" content="{{- config.extra.fediverse_creator -}}">
+{%- endif %}
 
 <link rel="stylesheet" type="text/css" href="/syntax-theme-dark.css" media="(prefers-color-scheme: dark)" />
 <link rel="stylesheet" type="text/css" href="/syntax-theme-light.css" media="(prefers-color-scheme: light)" />
