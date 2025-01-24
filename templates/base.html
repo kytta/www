@@ -8,7 +8,6 @@
 
 <link rel="canonical" href="{{- current_url|safe -}}" />
 <title>{% block title %}{{- config.title -}}{% endblock title %}</title>
-<meta name="author" content="{{- config.author -}}" />
 <meta name="description" content="{%- block description -%}{{- config.description -}}{%- endblock description -%}" />
 <link rel="alternate" type="application/atom+xml" title="Blog posts" href="{{ get_url(path="/blog/atom.xml", trailing_slash=false) }}" />
 <link rel="manifest" href="/manifest.webmanifest" />
