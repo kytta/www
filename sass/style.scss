@@ -15,8 +15,7 @@ Universal
 Root
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-:root {
-}
+:root {}
 
 html {
 	font: 16px/1.5 $font-family-text;
@@ -60,14 +59,11 @@ h3 {
 	font-weight: normal;
 }
 
-h4 {
-}
+h4 {}
 
-h5 {
-}
+h5 {}
 
-h6 {
-}
+h6 {}
 
 header,
 footer {
@@ -105,11 +101,9 @@ footer {
 	}
 }
 
-nav {
-}
+nav {}
 
-main {
-}
+main {}
 
 .owl {
 	> * + * {
@@ -125,8 +119,7 @@ main {
 	}
 }
 
-article {
-}
+article {}
 
 section {
 	& + & {
@@ -173,14 +166,11 @@ section {
 	}
 }
 
-aside {
-}
+aside {}
 
-search {
-}
+search {}
 
-address {
-}
+address {}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Text block content
@@ -194,25 +184,19 @@ pre,
 blockquote,
 figure,
 hr,
-dl {
-}
+dl {}
 
-p {
-}
+p {}
 
 ol,
 ul {
 	ol,
-	ul {
-	}
+	ul {}
 }
-ol {
-}
-ul {
-}
+ol {}
+ul {}
 li {
-	li {
-	}
+	li {}
 }
 
 pre {
@@ -227,10 +211,8 @@ pre {
 		background-color: rgba(128, 128, 128, 0.05);
 	}
 
-	code {
-	}
-	samp {
-	}
+	code {}
+	samp {}
 }
 
 blockquote {
@@ -262,12 +244,9 @@ hr {
 	opacity: 0.25;
 }
 
-dl {
-}
-dt {
-}
-dd {
-}
+dl {}
+dt {}
+dd {}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Inline text semantics
@@ -306,36 +285,26 @@ strong,
 b {
 	font-weight: bolder;
 }
-strong {
-}
-b {
-}
+strong {}
+b {}
 
-em {
-}
-i {
-}
+em {}
+i {}
 
-q {
-}
-cite {
-}
+q {}
+cite {}
 
-s {
-}
+s {}
 
-mark {
-}
+mark {}
 
 /* If you specify a font size, consider using the `em` unit so that it works
 universally, e.g. for both `h1 small` and `p small` */
 small {
 	font-size: 80%;
 }
-sub {
-}
-sup {
-}
+sub {}
+sup {}
 
 code,
 kbd,
@@ -348,39 +317,30 @@ code {
 	font-size: 80%;
 }
 
-dfn {
-}
+dfn {}
 abbr {
 	&[title] {
 		text-decoration: underline dotted;
 	}
 }
 
-var {
-}
+var {}
 kbd {
-	kbd {
-	}
+	kbd {}
 }
-samp {
-}
+samp {}
 
-u {
-}
+u {}
 
-data {
-}
-time {
-}
+data {}
+time {}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Demarcating edits
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-del {
-}
-ins {
-}
+del {}
+ins {}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Embedded content
@@ -391,71 +351,49 @@ img {
 	max-width: 100%;
 	margin: 0 auto;
 }
-svg {
-}
-video {
-}
-canvas {
-}
-audio {
-}
-object {
-}
+svg {}
+video {}
+canvas {}
+audio {}
+object {}
 
-noscript {
-}
+noscript {}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Table content
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-table {
-}
-caption {
-}
-col:first-child {
-}
-thead {
-}
-tbody {
-}
-tfoot {
-}
-tr {
-}
-th {
-}
-td {
-}
+table {}
+caption {}
+col:first-child {}
+thead {}
+tbody {}
+tfoot {}
+tr {}
+th {}
+td {}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Forms
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 fieldset {
-	&:disabled {
-	}
+	&:disabled {}
 }
-legend {
-}
+legend {}
 
-form {
-}
+form {}
 
-label {
-}
+label {}
 
-::placeholder {
-}
-:focus::placeholder {
-}
+::placeholder {}
+:focus::placeholder {}
 
 /* Overall styling, e.g. vertical spacing */
 input,
 textarea,
 select,
-button {
-}
+button {}
 
 /* `textarea` and `input` elements that share a similar look and similar styling
 capabilities */
@@ -472,80 +410,50 @@ input[type="date"],
 input[type="datetime-local"],
 input[type="month"],
 input[type="week"],
-input[type="time"] {
-}
+input[type="time"] {}
 /* - individual styling */
-textarea {
-}
-input[type="text"] {
-}
-input[type="password"] {
-}
-input[type="email"] {
-}
-input[type="tel"] {
-}
-input[type="number"] {
-}
-input[type="search"] {
-}
-input[type="url"] {
-}
-input[type="date"] {
-}
-input[type="datetime-local"] {
-}
-input[type="month"] {
-}
-input[type="week"] {
-}
-input[type="time"] {
-}
+textarea {}
+input[type="text"] {}
+input[type="password"] {}
+input[type="email"] {}
+input[type="tel"] {}
+input[type="number"] {}
+input[type="search"] {}
+input[type="url"] {}
+input[type="date"] {}
+input[type="datetime-local"] {}
+input[type="month"] {}
+input[type="week"] {}
+input[type="time"] {}
 /* Tick boxes */
 input[type="checkbox"],
-input[type="radio"] {
-}
+input[type="radio"] {}
 input[type="checkbox"]:checked,
-input[type="radio"]:checked {
-}
-input[type="checkbox"] {
-}
-input[type="checkbox"]:checked {
-}
-input[type="radio"] {
-}
-input[type="radio"]:checked {
-}
+input[type="radio"]:checked {}
+input[type="checkbox"] {}
+input[type="checkbox"]:checked {}
+input[type="radio"] {}
+input[type="radio"]:checked {}
 /* Other input fields, some with limited styling capabilities */
-input[type="file"] {
-}
-input[type="color"] {
-}
-input[type="range"] {
-}
+input[type="file"] {}
+input[type="color"] {}
+input[type="range"] {}
 
-select {
-}
-optgroup {
-}
+select {}
+optgroup {}
 option {
-	&:checked {
-	}
+	&:checked {}
 }
-datalist {
-}
+datalist {}
 
 button,
 input[type="submit"] {
-	&:disabled {
-	}
+	&:disabled {}
 }
 button.secondary {
-	&:disabled {
-	}
+	&:disabled {}
 }
-button.secondary:disabled {
-}
+button.secondary:disabled {}
 
 /* This matches forms or form elements that are invalid *and* have been
 interacted with. Note that:
@@ -557,26 +465,19 @@ Form validation error messages will appear (in capable browsers) regardless of
 this styling. You can omit 1) and 2) and still have working forms. Perfect
 example of progressive enhancement. */
 /* Applies to invalid forms */
-form.interacted:invalid {
-}
+form.interacted:invalid {}
 /* Applies to invalid form fields. You would need to repeat your declarations
 for the following three groups of selectors individually. Browsers completely
 ignore any rule that contains a selector they do not know. */
 form.interacted :invalid,
-form .touched:invalid {
-}
-:user-invalid {
-}
-:-moz-ui-invalid {
-}
+form .touched:invalid {}
+:user-invalid {}
+:-moz-ui-invalid {}
 
-output {
-}
+output {}
 
-progress {
-}
-meter {
-}
+progress {}
+meter {}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Interactive elements
@@ -584,8 +485,7 @@ Interactive elements
 
 details {
 	&[open] {
-		summary {
-		}
+		summary {}
 	}
 }
 summary {
@@ -593,8 +493,7 @@ summary {
 }
 
 dialog {
-	&::backdrop {
-	}
+	&::backdrop {}
 }
 
 /* Some form fields, `details`, elements with `tabindex`, and possibly other
@@ -604,16 +503,12 @@ as follows:
 1) Set styling on focus
 2) If browser supports `:focus-visible`, revert/unset the styling from 1)
 3) If the element matches `:focus-visible`, apply the styling again */
-:focus {
-}
-:focus:not(:focus-visible) {
-}
-:focus-visible {
-}
+:focus {}
+:focus:not(:focus-visible) {}
+:focus-visible {}
 
 [inert],
-[inert] * {
-}
+[inert] * {}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Media queries
@@ -625,17 +520,13 @@ Media queries
 	}
 }
 
-@media (prefers-color-scheme: dark) {
-}
+@media (prefers-color-scheme: dark) {}
 
-@media (orientation: portrait) {
-}
+@media (orientation: portrait) {}
 
-@media (orientation: landscape) {
-}
+@media (orientation: landscape) {}
 
-@media print {
-}
+@media print {}
 
 /*
 This file evolved from Natural Selection:

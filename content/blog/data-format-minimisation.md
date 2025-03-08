@@ -10,7 +10,7 @@ The article 5 of the EU General Data Protection Regulation defines the principl
 
 > Personal data shall be: [...] adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed
 
-This is referred to as 'data minimisation'. [For example](<https://gdprhub.eu/index.php?title=Article_5_GDPR#(c)_Data_minimisation>), if a processor wants to know whether you're over 18 or not, but doesn't verify it, then it shouldn't need your full date of birth (looking at you, Steam).
+This is referred to as 'data minimisation'. [For example](https://gdprhub.eu/index.php?title=Article_5_GDPR#(c)_Data_minimisation), if a processor wants to know whether you're over 18 or not, but doesn't verify it, then it shouldn't need your full date of birth (looking at you, Steam).
 
 I have recently realized, however, that this principle can be applied to areas outside of data processing. The area that I wish it would be applied to are the various data formats.
 

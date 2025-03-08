@@ -50,7 +50,7 @@ Here, as in the previous paragraphs, most of the time I will talk about what oth
 
 **Is this a necessary newsletter?** _Read it_. If there’s no time, _snooze it_. After reading it, _archive it_. If you wish to save something for a longer period of time, email was not created for that. Pay attention to the bookmarking services, such as [Pocket](https://getpocket.com) or [Instapaper](https://instapaper.com).
 
-**Is this an unnecessary newsletter?** Scroll to the end of the email and _click “Unsubscribe”_. The process is different for each site — make sure that all the checkboxes are ticked in your favour. After all these actions, the email should be *deleted* — do not clutter up the archive.
+**Is this an unnecessary newsletter?** Scroll to the end of the email and _click “Unsubscribe”_. The process is different for each site — make sure that all the checkboxes are ticked in your favour. After all these actions, the email should be _deleted_ — do not clutter up the archive.
 
 **Is this a promo code?** I had a tantrum with letters like that at first. It’s a necessary newsletter that I would like to keep for the future, but not long enough to clutter up the bookmarker. For promo codes, I have invented my own workflow. The promo code from the letter is to be _moved to a note-taking app_, where it is tagged correspondingly — “#promocode”. The letter is _deleted_ or _archived_ if it contains an important link. A _reminder_ is placed on the note, which will be displayed on the last day of the code validity. If I haven’t used this code at all, the _note shall be deleted_ on the last day.
 

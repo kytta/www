@@ -34,6 +34,7 @@ Wenn ihr mir Bares spenden wollt, folgt die Links auf der [„Spenden“-Seite](
 ### Smart Home
 
 - [ ] [Aqara Smartes Heizkörperthermostat E1](https://amzn.eu/d/8PKiiBB). Je mehr, desto besser (aber höchstens fünf :D)
+
 <!-- - [ ] [Raspberry Pi 5](https://www.raspberrypi.com/products/raspberry-pi-5/), mit entweder 4 GB oder 8 GB RAM, oder die Accesoires dafür:
   - [ ]  -->
 

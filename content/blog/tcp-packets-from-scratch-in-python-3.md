@@ -58,7 +58,7 @@ We start by composing a function that will calculate our checksum. The spec t
 
 > The checksum field is the 16 bit one’s complement of the one’s complement sum of all 16 bit words in the header and text.
 
-I don’t know about you, but I didn’t understand it even after I’ve read it for the twentieth time. So instead I referred to *scapy*’s source code and this is what I’ve composed:
+I don’t know about you, but I didn’t understand it even after I’ve read it for the twentieth time. So instead I referred to _scapy_’s source code and this is what I’ve composed:
 
 ```py
 def chksum(packet: bytes) -> int:
