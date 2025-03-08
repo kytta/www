@@ -1,7 +1,12 @@
 @use "sass:color";
 
-$font-family-text: "Helvetica Neue", Helvetica, "FreeSans", "Nimbus Sans L",
-	system-ui, sans-serif;
+$font-family-text:
+	"Helvetica Neue",
+	Helvetica,
+	"FreeSans",
+	"Nimbus Sans L",
+	system-ui,
+	sans-serif,;
 $font-family-headings: "InterDisplay", "Inter", $font-family-text;
 $font-family-mono: ui-monospace, SFMono-Regular, Monaco, monospace;
 
