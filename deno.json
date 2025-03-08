@@ -1,0 +1,12 @@
+{
+	"fmt": {
+		"useTabs": true,
+		"proseWrap": "preserve",
+		"exclude": [
+			"templates/",
+			"static/blog/",
+			"static/syntax-theme-*.css",
+			"content/.obsidian/"
+		]
+	}
+}
