@@ -16,6 +16,7 @@ highlight_code = true
 highlight_theme = "two-dark"
 
 smart_punctuation = true
+bottom_footnotes = true
 
 [extra]
 menu = [
