@@ -1,6 +1,6 @@
 ---
 title: Why it’s important to not have repeating passwords
-description: Please, just use Bitwarden or something.
+description: I know, I'm guilty — I have been using the same password on various different websites. And this has taught me a lesson. Please, just use Bitwarden or something.
 date: 2018-12-18T21:10:28Z
 ---
 
