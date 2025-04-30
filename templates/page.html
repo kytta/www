@@ -52,6 +52,7 @@
 <p>
 <b>Reply:</b>
 {% if page.extra.mastodon_id -%}<a href="https://fosstodon.org/@kytta/{{- page.extra.mastodon_id -}}">via Mastodon</a>, {% endif %}
+{% if page.extra.fediverse_url -%}<a href="{{- page.extra.fediverse_url | safe -}}">on the Fediverse</a>, {% endif %}
 <a href="mailto:me@kytta.dev?subject=Re:%20{{page.title | urlencode}}">via email</a>
 </p>
 <ul class="reply">
