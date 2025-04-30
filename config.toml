@@ -27,7 +27,7 @@ menu = [
 ]
 
 license = { name = "CC BY-SA 4.0", href = "https://creativecommons.org/licenses/by-sa/4.0/" }
-fediverse_creator = "@kytta@fosstodon.org"
+fediverse_creator = "@kytta@polymaths.social"
 
 # fediring_host = "kytta.dev"
 

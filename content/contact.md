@@ -8,7 +8,7 @@ If you ever want to talk to me, tell me something, get or stay in touch, then do
 - email <me@kytta.dev>
   - PGP key: `0xD397E9BE9E6898FA` ([armoured](https://keys.openpgp.org/vks/v1/by-fingerprint/AF6C280C2A34D3F39BED9366D397E9BE9E6898FA), [Keyoxide](https://keyoxide.org/af6c280c2a34d3f39bed9366d397e9be9e6898fa))
   - to force SSL/TLS encryption: <nikita@secure.mailbox.org>
-- <a href="https://fosstodon.org/@kytta" rel="me">@kytta</a> on Fosstodon
+- <a href="https://polymaths.social/@kytta" rel="me">@kytta</a> on Polymaths.social
 - [`DMZKXPNM`](https://threema.id/DMZKXPNM) on Threema
 - [@kytta:matrix.org](https://matrix.to/#/@kytta:matrix.org) on Matrix
 - [kytta@404.city](xmpp:kytta@404.city) on XMPP; OMEMO fingerprints:
