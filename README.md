@@ -1,3 +1,11 @@
+# Source for [www.kytta.dev][site] is now on Codeberg
+
+I've had enough with GitHub. This repository is now on Codeberg: https://codeberg.org/kytta/www.git
+
+The repository on GitHub will stay archived (read-only) for a few months before I delete it for good.
+
+<details><summary>Previous README</summary>
+
 # [www.kytta.dev][site]
 
 This is the source code for [www.kytta.dev][site] as well as all its content.
@@ -68,3 +76,5 @@ This project is hosted on GitHub:
 [site]: https://www.kytta.dev/
 [skyr]: https://os.kytta.dev/skyr/
 [zola]: https://www.getzola.org/
+
+</details>
